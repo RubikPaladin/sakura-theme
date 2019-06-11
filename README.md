@@ -26,7 +26,7 @@ requires variable change  --user-popout-top: -35px;
 my theme displays image details on hover, to keep the theme simplistic in nature
 
 
-The testing version is my personal current, due to the nature CSS changes in one area can and does affect other parts of discord so I will have new features and ideas up on this for a week or so before they are pushed to the normal versions.
+The testing version is my personal current, is set up for colour blind mode because i enjoy the extra icons (haven't figured out how to have it know or not yet) and due to the nature CSS changes in one area can and does affect other parts of discord so I will have new features and ideas up on this for a week or so before they are pushed to the normal versions.
 
 only available in horizontal servers, errors are relitively common but are fixed quicker; just the usual benifits and disbenifits of being on the bleeding edge
 
