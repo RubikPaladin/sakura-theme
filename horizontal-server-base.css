@@ -188,7 +188,7 @@
     --user-playing: rgba(255, 200, 255, 0.45); 	/* now playing background shade */
     --user-popout-right: -290px;				/* these move the user popup 290px*/
     --user-popout-left: 30px;					/* to make it seem more spacious  */
-    --user-popout-top: -35px;           /*blurd birthday-plugin: -35  default: -25*/
+    --user-popout-top: -25px;           /*blurd birthday-plugin: -35  default: -25*/
     --user-top-difference: 25px;
 	
     /* normal context menus */
@@ -1646,9 +1646,9 @@ div.categories-1feg4n.da-categories {
 
 
 /* user-edition edit */
-/* on hover pics, 2 commented out because useless in colour blind mode *
+/* on hover pics, 2 commented out because useless in colour blind mode */
 .alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.idle-3DEnRT:after,
-.alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.dnd-1_xrcq:after, */
+.alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.dnd-1_xrcq:after,
 .alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.online-2S838R:after,
 .alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.invisible-1kp8Z0:after {
 	content: " ";
