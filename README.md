@@ -25,6 +25,8 @@ requires variable change  --user-popout-top: -35px;
 8) Show Image Details: https://discordplugins.com/plugin/show-image-details
 my theme displays image details on hover, to keep the theme simplistic in nature
 
+9) Reverse Image Search by DevilBro: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ReverseImageSearch
+
 
 The testing version is my personal current, is set up for colour blind mode because i enjoy the extra icons (haven't figured out how to have it know or not yet) and due to the nature CSS changes in one area can and does affect other parts of discord so I will have new features and ideas up on this for a week or so before they are pushed to the normal versions.
 
