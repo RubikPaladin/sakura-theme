@@ -1308,17 +1308,19 @@ div.categories-1feg4n.da-categories {
     transition: 300ms !important;
 }
 
-/* custom CSS editor on hover*/
+/* custom CSS editor on hover*
 #bd-customcss-detach-container:hover {
 	width: 41%;
 	z-index: 1000 !important;
     transition: 400ms !important;
+    
 } 
 
 /* colour of the line numbers */
 .ace-monokai .ace_gutter {
 	color:var(--secondary-color) !important;
 }
+
 
 /* normal inner CSS colours
 .ace_content { background: #292d30 !important; }
@@ -1346,7 +1348,7 @@ div.categories-1feg4n.da-categories {
     transition: 350ms !important;
 }
 
-/* setting the left over transition speed  */
+/* setting the left over transition speed  *
 #bd-customcss-detach-container .ui-standard-sidebar-view #bd-customcss-attach-controls,
 #bd-customcss-detach-container .bd-detached-css-editor #bd-customcss-attach-controls,
 #bd-customcss-detach-container .standardSidebarView-3F1I7i #bd-customcss-attach-controls {
