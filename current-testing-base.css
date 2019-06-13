@@ -1383,7 +1383,7 @@ a[href = "https://github.com/RubikPaladin/sakura-theme"]::before { content: "The
 a[href = "https://rubikpaladin.github.io/sakura-theme/current-testing-base.css"]::before,
 a[href = "https://rubikpaladin.github.io/sakura-theme/horizontal-server-base.css"]::before,
 a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]::before {
-    content: "CSS ";
+    content: "CSS " !important;
 }
 
 
