@@ -383,9 +383,6 @@
 
 
 	testing area  */
-span.username-_4ZSMR.da-username {
-	color: var(--DM-username-colour);
-}
 
 
 
@@ -420,6 +417,9 @@ span.username-_4ZSMR.da-username {
 
 /* hides the defalut discord pic */
 .homeIcon-tEMBK1 { display: none; }
+
+/* colour of DM's and users without roles */
+span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
 
 /* he forgot the some border lines, so here they are (if u want to change their colour edit --border-lines-color as well)*/
 .members-1998pB  { border-left: var(--borders) }
@@ -1432,6 +1432,15 @@ div.categories-1feg4n.da-categories {
     white-space: pre;
 	color: var(--secondary-color);
 }
+
+/* making my theme sorce and website links a lil more accurate */
+a[href = "https://github.com/RubikPaladin/sakura-theme"]::before { content: "Theme "; }
+a[href = "https://rubikpaladin.github.io/sakura-theme/current-testing-base.css"]::before,
+a[href = "https://rubikpaladin.github.io/sakura-theme/horizontal-server-base.css"]::before,
+a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]::before {
+    content: "CSS ";
+}
+
 
 
 
