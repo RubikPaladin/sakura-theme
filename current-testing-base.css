@@ -1340,7 +1340,7 @@ div.categories-1feg4n.da-categories {
 	margin-top: 10px !important;
 }
 
-/* making the buttons stay still so its easy to press them */
+/* making the buttons stay still so its easy to press them *
 #bd-customcss-detach-container:hover .ui-standard-sidebar-view #bd-customcss-attach-controls,
 #bd-customcss-detach-container:hover .bd-detached-css-editor #bd-customcss-attach-controls,
 #bd-customcss-detach-container:hover .standardSidebarView-3F1I7i #bd-customcss-attach-controls {
@@ -1349,7 +1349,7 @@ div.categories-1feg4n.da-categories {
 }
 
 
-/* setting the left over transition speed  *
+/* setting the left over transition speed  */
 #bd-customcss-detach-container .ui-standard-sidebar-view #bd-customcss-attach-controls,
 #bd-customcss-detach-container .bd-detached-css-editor #bd-customcss-attach-controls,
 #bd-customcss-detach-container .standardSidebarView-3F1I7i #bd-customcss-attach-controls {
