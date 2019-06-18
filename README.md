@@ -17,15 +17,11 @@ is supported by the horizontal theme creator https://betterdiscordlibrary.com/th
 
 5) MemberCount by Arashiryuu: https://betterdiscordlibrary.com/plugins/MemberCount
 
-6) RoleMembers by Zerebos: https://betterdiscordlibrary.com/plugins/RoleMembers
-
-7) User Birthdays by Metalloriff: https://betterdiscordlibrary.com/plugins/User%20Birthdays
+6) User Birthdays by Metalloriff: https://betterdiscordlibrary.com/plugins/User%20Birthdays
 requires variable change  --user-popout-top: -35px;  
 
-8) Show Image Details: https://discordplugins.com/plugin/show-image-details
+7) Show Image Details: https://discordplugins.com/plugin/show-image-details
 my theme displays image details on hover, to keep the theme simplistic in nature
-
-9) Reverse Image Search by DevilBro: https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/ReverseImageSearch
 
 
 
