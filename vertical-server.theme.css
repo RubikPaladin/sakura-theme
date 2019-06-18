@@ -3,6 +3,8 @@
 @import url(https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css);
 :root { 
 
+        /* i keep the text a lil smoll so if u want to make it bigger the var is below */
+
 
         /* Edit this to change your background *
         --background-image: url(https://i.imgur.com/hLulxgq.png);
@@ -35,8 +37,9 @@
 
 
         /*  
-            The full theme has some 200 variables, if u want to customize more specifically 
-            just copy the `import` link into your browser and take a look around
-            pull variables u like over here and modify them as u please
+            The full theme has some 200+ variables, if u want to customize the theme more specifically 
+            just copy the `import` link into your browser or click "CSS Source" in the themes menu
+            take a look around, pull variables u like over here or into the custom CSS
+            and modify them as u please
         */
 }

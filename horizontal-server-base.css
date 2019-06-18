@@ -2062,93 +2062,57 @@ div.theme-dark.popouts-3dRSmE.da-popouts.a11y-font-scaled-down .popout-googletra
 
 /*
 Code for Better Role Colours Modification -
-place this snippet of code into `patchMentions()`  
-it will make dark names visiable 
+place this anywhere *outside* of a method
 
-                //section modified by Rubiko~
-                //Convert RGB it to HEX: http://gist.github.com/983661
-                var color = member.colorString;
-                color = +("0x" + color.slice(1).replace( 
-                color.length < 5 && /./g, '$&$&'));
-                const r = color >> 16, g = color >> 8 & 255, b = color & 255;
+        isTooDark(color) {
 
-                // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
-                const hsp = Math.sqrt(
-                    0.299 * (r * r) +
-                    0.587 * (g * g) +
-                    0.114 * (b * b)
-                );
+            //section modified by Rubiko~
+            //Convert HEX to RGB: http://gist.github.com/983661
+            color = +("0x" + color.slice(1).replace( 
+            color.length < 5 && /./g, '$&$&'));
+            const r = color >> 16, g = color >> 8 & 255, b = color & 255;
 
-                //checking darkness
-                if(hsp < 80) return;
+            // HSP grey scale equation from http://alienryderflex.com/hsp.html
+            const hsp = Math.sqrt(
+                0.299 * (r * r) +
+                0.587 * (g * g) +
+                0.114 * (b * b)
+            );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//this has become depricated in recent updates use instead paste the code above into areas u dont want names to be too dark
- patchMentions() {
-            const brc = this;
-            const mentionMount = function() {
-                if (!brc.settings.modules.mentions) return;
-                if (!this || !this.props || !this.props.children || !this.props.children.props || this.props.children.props.className != "mention") return;
-                const props = this.props.render().props;
-                if (!props || !props.user) return;
-                const member = GuildMemberStore.getMember(SelectedGuildStore.getGuildId(), props.user.id);
-                if (!member || !member.colorString) return;
-                const elem = ReactDOM.findDOMNode(this);
-
-
-                //section modified by Rubiko~
-                //Convert RGB it to HEX: http://gist.github.com/983661
-                var color = member.colorString;
-                color = +("0x" + color.slice(1).replace( 
-                color.length < 5 && /./g, '$&$&'));
-                const r = color >> 16, g = color >> 8 & 255, b = color & 255;
-
-                // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
-                const hsp = Math.sqrt(
-                    0.299 * (r * r) +
-                    0.587 * (g * g) +
-                    0.114 * (b * b)
-                );
-
-                //checking the HSP value (lower values are darker)
-                color = (hsp < 80)? "var(--dark-role-recolour)": member.colorString;
-                elem.style.setProperty("color", color, "important");
-                elem.style.setProperty("background", "transparent", "important"); //ColorConverter.rgbToAlpha(member.colorString,0.05)
-                elem.style.setProperty("border-radius", "6px", "important");
-                elem.style.setProperty("padding-left", "3px", "important");
-                elem.style.setProperty("padding-right", "5px", "important");
-                elem.style.setProperty("padding-bottom", "1px", "important");
-                elem.style.setProperty("margin-right", "-3px", "important");
-                elem.style.setProperty("margin-left", "-3px", "important");
-
-
-                if (!brc.settings.mentions.changeOnHover) return;
-                elem.addEventListener("mouseenter", (e) =>{
-                    e.target.style.setProperty("color", "var(--role-onhover)", "important"); //ColorConverter.rgbToAlpha("#FFF", 0.95)
-                    e.target.style.setProperty("background", "var(--role-onhover-background)" , "important");   //ColorConverter.rgbToAlpha(member.colorString,0.12)
-                });
-                elem.addEventListener("mouseleave", (e) => {
-                    e.target.style.setProperty("color", color, "important");
-                    e.target.style.setProperty("background", "transparent", "important");  //ColorConverter.rgbToAlpha(member.colorString,0.05)
-                });
-
-                //modification end
-            };
-
-            Patcher.after(PopoutWrapper.prototype, "componentDidMount", (thisObject) => {
-                const bound = mentionMount.bind(thisObject); bound();
-            });
+            //checking color shade, dark returns true making user default colour via return/continue
+            return (hsp < 80);
         }
+
+
+then add this into the sections u want to have visible black names
+add it right after if(!member) or if(!username)
+
+
+
+        //checking color shade, section modified by Rubiko~
+        if( this.isTooDark(member.colorString) ) return;
+
+
+
+        this goes in `patchMentions()`
+        make sure u delete the original style variables
+
+        //checking color shade, section modified by Rubiko~
+        if( this.isTooDark(member.colorString) ) return;
+        const defaultStyle = { color: member.colorString, background: ColorConverter.rgbToAlpha(member.colorString, 0) };
+        const hoverStyle = { color: "var(--role-onhover)", background: "var(--role-onhover-background)" };
+
+
+
+
+        tpying users is done in a loop
+        this code is not exact use it as a guide 
+        i.e inside the for loop, right after `member` check
+
+
+        for (let m = 0; m < typingUsers.length; m++) {
+                    if (!member) continue;
+
+                    //checking color shade, section modified by Rubiko~
+                    if( this.isTooDark(member.colorString) ) continue;
 */
