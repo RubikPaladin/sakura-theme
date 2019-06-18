@@ -1924,7 +1924,7 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 }
 
 /* member count plugin */
-#MemberCount::before { content: "server members — "; }
+/* #MemberCount::before { content: "server members — "; } */
 #MemberCount {
     
     /*
