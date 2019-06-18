@@ -181,6 +181,11 @@
 	--chat-width: 100%; 		/* if u add margin-left, ull need to make width smaller default: 100%*/
 
 
+    /* server banner fade settings */
+    --server-banner-fade: 5%; /* sets where the fade begins to transition */
+    --server-banner-opacity: .75;
+
+
     /* context menus and user popout design */
     /* user */
     --user-body: rgba(25, 21, 17, .99);			/* user-edition */
@@ -495,6 +500,12 @@ span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
 .ellipsis-19qdx6 {
     margin-right: 5px;
     margin-left: 5px;
+}
+
+/* banner image modifications */
+.bannerImage-1jOskm {
+    -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 95%);
+    opacity: var(--server-banner-opacity) !important;
 }
 
 /* category colour */
@@ -1123,6 +1134,17 @@ div.categories-1feg4n.da-categories {
 /* making emote menu taller  - tallemoto*/
 .emojiPicker-3m1S-j.da-emojiPicker { height: var(--emote-menu-height); }
 .emojiPicker-3m1S-j.da-emojiPicker .scrollerFade-1Ijw5y.da-scrollerFade.scrollerTrack-1ZIpsv.da-scrollerTrack > div { height: 100%; }
+
+/* setting emoji display - changing emote margins in chat; to make it clean af */
+.emoji.jumboable { margin: 0 !important; }
+div.contentCozy-3XX413.content-3dzVd8.da-contentCozy.da-content > div.containerCozy-336-Cz.container-206Blv.da-containerCozy.da-container {
+    margin-top: 3px;
+}
+
+/* nitro boost menu design */
+div.modal-1UGdnR.da-modal > div.inner-1JeGVc.da-inner > div > div.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1R_AjF.da-header { background: var(--light-menu-colour); }
+div.modal-1UGdnR.da-modal > div.inner-1JeGVc.da-inner > div > div.scrollerWrap-2lJEkd.firefoxFixScrollFlex-cnI2ix.da-scrollerWrap.da-firefoxFixScrollFlex.content-2BXhLs.da-content.scrollerThemed-2oenus.da-scrollerThemed.themeHidden-2yP93k { background: var(--dark-menu-colour); }
+div.modal-1UGdnR.da-modal > div.inner-1JeGVc.da-inner > div > div.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontalReverse-2eTKWD.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.footer-2yfCgX.da-footer.footer-1o3nCu.da-footer { background: var(--dark-grey);     }
 
 
 
@@ -1861,21 +1883,6 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
     background: var(--main-transparency) !important;
 }
 
-/* Server Folders by DevilBro *
-.wrapper-1Rf91z.foldercontent {
-	/*
-	padding-left: var(--folder-left); *
-	padding-top: calc(var(--folder-left) - 15px) !important;
-    background: var(--main-transparency);
-}
-
-/* Separator *
-.wrapper-1Rf91z .da-scrollerWrap .da-scroller > div:not(.da-listItem) + div, .wrapper-1Rf91z .da-scrollerWrap .da-scroller > .da-listItem:first-child + .da-listItem {
-    margin: 10px 5px !important;
-    width: auto;
-    height: auto;
-}
-
 /* correcting distance */
 .wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller {
 	padding-top: calc(var(--HSL-size) + 18px) !important;
@@ -1885,22 +1892,43 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 	padding-right: 10px !important;
 }
 
-/* Server Folders by DevilBro *
-.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem:nth-child(3){
-	display: inline-block;
-	right: -9px;
-}
-
-/* turning off rainbow animation *
-.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem:nth-child(1){
-    animation: none !important;
-}
-
-
-
 /* no message delete */
 .NoDeleteMessages-deleted-message .da-markup{ color: var(--deleted-text) !important; }
 .NoDeleteMessages-deleted-message .NoDeleteMessages-edited-message > .NoDeleteMessages-edited-message:last-child > .NoDeleteMessages-edited-message { color: var(--deleted-text) !important; }
+
+
+
+/* Translator Menu */
+div.theme-dark.popouts-3dRSmE.da-popouts.a11y-font-scaled-down .popout-googletranslate.BDFDB-modal > div {
+    background: var(--dark-menu-colour);
+    border-width: 0px !important;
+    padding: 0;
+}
+
+/* header design */
+.popout-googletranslate.BDFDB-modal > div > div:first-child {
+    background: var(--light-menu-colour);
+    margin: 0 !important;
+    top: -1px !important;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    border-radius: 7px 7px 0 0;
+}
+
+/* correcting weird compact auto translate switch */
+.popout-googletranslate.BDFDB-modal > div > div:last-child {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+
+/* normal element design */
+.popout-googletranslate.BDFDB-modal > div > div {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--accent) !important;
+}
+
 
 
 
@@ -1948,15 +1976,6 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 /* char counter primary midifications */
 #charcounter.over2k { color: var(--deleted-text) !important; }
 .message-1PNnaP #charcounter {
-    /*
-    position: relative !important;
-    width: 70px;
-    text-align: right;
-    left: -5px !important;
-    margin-left: 0 !important;
-    */
-    
-    
     width: 55px;
     text-align: right;
     left: -70px !important;
@@ -1966,35 +1985,7 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 }
 
 /* member count plugin */
-/* #MemberCount::before { content: "server members — "; } */
 #MemberCount {
-    
-    /*
-    background: transparent !important; /* var(--on-hover-transparency) !important;*
-    position: absolute !important;
-    top: -27px; /* -42 normal*
-    height: 25px;
-    padding-top: 3px !important;
-    right: 375px;
-    width: 230px;
-    border-radius: 15px 0 0 15px;
-	text-align: right;
-	
-    */
-    
-
-    /*  */
-	/* height: 25px;
-	text-align: right;
-	top: 10px !important;
-	padding-top: 2px !important;
-	position: relative !important;
-	background: var(--on-hover-transparency) !important;
-	margin-bottom: -15px !important;
-	padding-right: 7px !important;
-    border-radius: 0 15px 15px 0; */
-    
-
     position: relative;
     background: transparent !important;
     text-align: left !important;
