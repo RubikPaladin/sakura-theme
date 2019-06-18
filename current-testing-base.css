@@ -1376,7 +1376,14 @@ div.categories-1feg4n.da-categories {
 }
 
 /* making my theme sorce and website links a lil more accurate */
-a[href = "https://github.com/RubikPaladin/sakura-theme"]::before { content: "Theme "; }
+/* theme page */
+a[href = "https://github.com/RubikPaladin/sakura-theme"]{ font-size: 0%; }
+a[href = "https://github.com/RubikPaladin/sakura-theme"]::before {
+    content: "Theme Page";
+    font-size: 12px;
+    font-weight: 700;
+}
+/* css source */
 a[href = "https://rubikpaladin.github.io/sakura-theme/current-testing-base.css"]::before,
 a[href = "https://rubikpaladin.github.io/sakura-theme/horizontal-server-base.css"]::before,
 a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]::before {
