@@ -1743,9 +1743,9 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 
 /* user-edition */
 /* on hover pics, 2 commented out because useless */
-.alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.idle-3DEnRT:after,
-div.app-19_DXt:not(.colorblind-mode) .alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.dnd-1_xrcq:after,
-div.app-19_DXt:not(.colorblind-mode) .alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.online-2S838R:after,
+div.popouts-3dRSmE:not(.colorblind-mode) .alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.idle-3DEnRT:after,
+div.popouts-3dRSmE:not(.colorblind-mode) .alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.dnd-1_xrcq:after,
+.alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.online-2S838R:after,
 .alt-3btY0e.menu-Sp6bN1 .item-1GzJrl .status-3fQvEa.invisible-1kp8Z0:after {
 	content: " ";
 	display: block;
