@@ -183,7 +183,7 @@
 
     /* server banner fade settings */
     --server-banner-fade: 5%; /* sets where the fade begins to transition */
-    --server-banner-opacity: .75;
+    --server-banner-opacity: .80;
 
 
     /* context menus and user popout design */
@@ -504,7 +504,7 @@ span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
 
 /* banner image modifications */
 .bannerImage-1jOskm {
-    -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 95%);
+    -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 100%);
     opacity: var(--server-banner-opacity) !important;
 }
 
