@@ -942,6 +942,13 @@ div.headerText-2sdzFM.userSelectText-1o1dQ7.da-headerText.da-userSelectText > di
 .note-3HfJZ5 textarea { background: transparent !important; }
 .footer-1fjuF6 {  left: -10px; }
 
+/* removing user popout pro tip */
+div.userPopout-3XzG_A.da-userPopout > 
+div.footer-1fjuF6.da-footer > 
+div.protip-YaFfgO.da-protip {
+    display: none;
+}
+
 /* popout user header*/
 .headerTop-1QGMLs,
 .headerTop-27AvhA,
@@ -1090,9 +1097,20 @@ div.contentCozy-3XX413.content-3dzVd8.da-contentCozy.da-content > div.containerC
 }
 
 /* nitro boost menu design */
-div.modal-1UGdnR.da-modal > div.inner-1JeGVc.da-inner > div > div.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-1R_AjF.da-header { background: var(--light-menu-colour); }
-div.modal-1UGdnR.da-modal > div.inner-1JeGVc.da-inner > div > div.scrollerWrap-2lJEkd.firefoxFixScrollFlex-cnI2ix.da-scrollerWrap.da-firefoxFixScrollFlex.content-2BXhLs.da-content.scrollerThemed-2oenus.da-scrollerThemed.themeHidden-2yP93k { background: var(--dark-menu-colour); }
-div.modal-1UGdnR.da-modal > div.inner-1JeGVc.da-inner > div > div.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontalReverse-2eTKWD.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.footer-2yfCgX.da-footer.footer-1o3nCu.da-footer { background: var(--dark-grey);     }
+div.modal-36zFtW.da-modal > div.inner-2VEzy9.da-inner div.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-2nhbou.da-header { background: var(--light-menu-colour); }
+div.modal-36zFtW.da-modal > div.inner-2VEzy9.da-inner div.scrollerWrap-2lJEkd.firefoxFixScrollFlex-cnI2ix.da-scrollerWrap.da-firefoxFixScrollFlex.content-2KoCOZ.da-content.scrollerThemed-2oenus.da-scrollerThemed.themeHidden-2yP93k { background: var(--dark-menu-colour); }
+div.modal-36zFtW.da-modal > div.inner-2VEzy9.da-inner div.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontalReverse-2eTKWD.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.footer-30ewN8.da-footer.footer-1o3nCu.da-footer { background: var(--dark-grey); }
+
+/* correcting carousel fade height */
+div.carouselRightGradientEdge-2Z3H8D.carouselGradientEdge-2W94ou.da-carouselRightGradientEdge.da-carouselGradientEdge, 
+div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftGradientEdge.da-carouselGradientEdge {
+    height: 94%;
+}
+
+/* making blurb a lil spaced out/ tidyer */
+.blurb-2l3plc.da-blurb {
+    padding-top: 10px !important;
+}
 
 
 
@@ -1579,6 +1597,11 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 .friendsTable-133bsv .friendsRow-2yicud .friendsColumnActions-1LT3_M .friendsAction-__WNE9.friendsActionVoiceCall-3EdPsR { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNi41NCA1Yy4wNi44OS4yMSAxLjc2LjQ1IDIuNTlsLTEuMiAxLjJjLS40MS0xLjItLjY3LTIuNDctLjc2LTMuNzloMS41MW05Ljg2IDEyLjAyYy44NS4yNCAxLjcyLjM5IDIuNi40NXYxLjQ5Yy0xLjMyLS4wOS0yLjU5LS4zNS0zLjgtLjc1bDEuMi0xLjE5TTcuNSAzSDRjLS41NSAwLTEgLjQ1LTEgMSAwIDkuMzkgNy42MSAxNyAxNyAxNyAuNTUgMCAxLS40NSAxLTF2LTMuNDljMC0uNTUtLjQ1LTEtMS0xLTEuMjQgMC0yLjQ1LS4yLTMuNTctLjU3LS4xLS4wNC0uMjEtLjA1LS4zMS0uMDUtLjI2IDAtLjUxLjEtLjcxLjI5bC0yLjIgMi4yYy0yLjgzLTEuNDUtNS4xNS0zLjc2LTYuNTktNi41OWwyLjItMi4yYy4yOC0uMjguMzYtLjY3LjI1LTEuMDJDOC43IDYuNDUgOC41IDUuMjUgOC41IDRjMC0uNTUtLjQ1LTEtMS0xeiIvPjwvc3ZnPg==) !important; }
 .friendsTable-133bsv .friendsRow-2yicud .friendsColumnActions-1LT3_M .friendsAction-__WNE9.friendsActionRemove-qu8nnl { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNiAxOWMwIDEuMS45IDIgMiAyaDhjMS4xIDAgMi0uOSAyLTJWN0g2djEyek04IDloOHYxMEg4Vjl6bTcuNS01bC0xLTFoLTVsLTEgMUg1djJoMTRWNGgtMy41eiIvPjwvc3ZnPg==) !important; }
 .topPill-30KHOu .separator-gCa7yv { display: none; }
+
+/* adding bottom border to calls and videos */
+div.videoHeight-Qp_9vC > div {
+    border-bottom: var(--borders);
+}
 
 
 
