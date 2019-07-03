@@ -507,10 +507,29 @@ span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
     margin-left: 5px;
 }
 
+
+/* banner edit */
 /* banner image modifications */
 .bannerImage-1jOskm {
     -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 100%);
     opacity: var(--server-banner-opacity) !important;
+}
+
+/* hides server name */
+header.header-2o-2hj.da-header.withBanner-3j8ruM.da-withBanner {
+    animation: expand-out 70ms;
+    animation-name: expand-out;
+    opacity: 0;
+    transition: 220ms;
+}
+
+/*setts banner z-index + makes it visible on hover or while menu is open */
+div.bannerImage-1jOskm.da-bannerImage { z-index: 1; }
+header.header-2o-2hj.da-header.withBanner-3j8ruM.da-withBanner.popout-open,
+div.flexChild-faoVW3.da-flexChild:hover > div > header.header-2o-2hj.da-header.withBanner-3j8ruM.da-withBanner {
+    opacity: 1;
+	animation: top-pop-in 70ms;
+	transition: 10ms;
 }
 
 
@@ -895,6 +914,15 @@ div.headerText-2sdzFM.userSelectText-1o1dQ7.da-headerText.da-userSelectText > di
     top: -2px !important;
 }
 
+/* changing user popout boty + footer */
+div.body-3iLsc4.da-body { padding-bottom: 0px; padding-top: 20px;}
+.quickMessage-1yeL4E { width: 105% !important; padding-top: 6px; z-index: 999999 !important;}
+div.footer-1fjuF6.da-footer { padding-top: 0px; }
+
+/* moving new wumpus */
+.wumpusWrapper-yrvoR3{
+    margin-top: 30px;
+}
 
 /* other popout types */
 /* popup colors 
@@ -1881,6 +1909,11 @@ div.videoHeight-Qp_9vC > div {
     opacity: 0.5;
     color: var(--accent-colour);
     font-size: var(--counter-font) !important;
+}
+
+/* removing char counter in channel settinges where it already has one */
+#app-mount > div.app-19_DXt div.layers-3iHuyZ div.contentRegion-3nDuYy.da-contentRegion div.contentColumn-2hrIYH.da-contentColumn.contentColumnDefault-1VQkGM.da-contentColumnDefault div.inputMaxLength-1vRluy.da-inputMaxLength > span {
+    display: none;
 }
 
 
