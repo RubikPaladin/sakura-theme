@@ -286,7 +286,7 @@
 
     /* windows buttons margins (both top, and right margins) */
 	/* those being the - O x  buttons for minimizing and closing windows*/
-    --space: 5px;
+    --space: 2px;
     
 	/* default anim */
 	--default-animation: cubic-bezier(0.4,0,0.2,1);
