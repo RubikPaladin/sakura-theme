@@ -221,7 +221,7 @@
 	/* status-picker variables - feel free to adjust them for a different feel */
 	--picker-width: 240px;
 	--option-height: 52px;
-	--margin-bottom: 1px;
+	--margin-bottom: -3px;
 	--option-width: calc(var(--picker-width) / 4); /*cause 4 options*/
 	--status-picker-background: /* set as nothing cause i like the default */ ;
 	--status-anim: bottom-pop-in; 	/* animation options:  expand-in, bottom-pop-in, top-pop-in, left-pop-in, right-pop-in (type "none" to remove animation or feel free to build ur own, examples below) */
@@ -1646,6 +1646,7 @@ div.videoHeight-Qp_9vC > div {
 */
 
 /* without this u cant set picked pos to fixed */
+div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrowAlignmentTop-1yftWI,
 .popout-3sVMXz.popoutTop-3uu9vG,
 .popout-3sVMXz.popoutTopLeft-b5Eb3O,
 .popout-3sVMXz.popout-top,
@@ -1805,14 +1806,17 @@ div.videoHeight-Qp_9vC > div {
 } */
 
 /* making the user card slightly taller */
+.container-3baos1,
 .container-iksrDt,
 .container-2Thooq {
 	height: 60px !important;
 	top: 0;
 	margin: 0;
 	z-index: 100 !important;
-	background: transparent !important;
+    background: transparent !important;
+    border-top: var(--borders);
 }
+
 
 
 
