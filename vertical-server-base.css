@@ -4,10 +4,18 @@
 	/* if u want to change the full colour scope of the theme 
 	    the best colours to look at first
 	        
-	        --title-colour 
+	        --title-color 
 	        --accent-colour
             --on-hover-transparency
+            --dark-menu-colour
+            --light-menu-colour 
             
+
+            set these variables like this if u just want menus organized
+            --context-menu-colour: var(--dark-menu-colour); 
+            --user-body: var(--dark-menu-colour);
+
+            `--user-header` will still need its own colour
 
         discords element inspector `CTRL + SHIFT + i`
     */
@@ -66,6 +74,7 @@
 	/* ping colors*/
 	/* each ping visible on the screen has a coloured line*/
     --ping-inline-colour: rgba(255,170,212, .2); 
+
     /* each ping creates an embed (that thicc coloured line to the left when u do bot commands) */
 	--ping-embed-colour: 4px solid #FFAAD4; 
 	
@@ -97,22 +106,6 @@
 	/* typing indicator colour */
 	--type-indicator: var(--accent-colour);
 
-	/* menu colour */
-	--light-menu-colour: var(--scroll-bar-color);
-	--dark-menu-colour: rgba(32,22,20, .99);
-	--upload-colour: var(--dark-menu-colour);
-	--upload-footer-colour: var(--light-menu-colour); /* default: rgba(0,0,0,.4); */
-	--pins-colour: var(--dark-menu-colour);  /* default: rgba(33,33,33,.6); */
-	--pins-header-colour: var(--light-menu-colour); 
-    --emote-auto-colour: rgba(10, 5, 4, .95);
-    --emote-menu: var(--dark-menu-colour);
-    --emote-search: rgba(200,150,200, .2);
-    --emote-header: var(--light-menu-colour);
-    --emote-footer: var(--dark-grey); /*need a darker grey */
-    --emote-menu-height: 450px; /* changing the menu height, will mean u need to adjust the footer height*/
-	--emote-footer-height: 12%; /* i like menu: 450px & footer: 12% */
-								/* if the emote menu is causing lag, press `CTR: + F` and search   tallemoto*/
-								/* and delete the backshalsh from it and save the file, that will set emote menu to default height */
 	
 	/* 	Audio Colour
 		when in VC the server ur in will have a audio symbol and animation 
@@ -135,17 +128,8 @@
 	/* new server and server search icon colour */
 	--server-icon-colour: var(--icon-colour);
     
-    /*
-    max count colour has a fucked up overlay
     
-    rgba(45, 32, 22, 1);
-    rgba(155,90,52, 0.3);
-    rgba(175,110,72, 0.3)
-    rgba(102,75,63, 0.55)
-    rgba(91,67,56, .6)
-    */
-	
-	
+
 	
 	
 	
@@ -161,16 +145,16 @@
 	/* general hover colours */
     --category-hover-colour: rgba(152, 116, 95, 1); /* rgba(255,170,212, .4);
     
+    
     /* unread colours*/
-    --unread-dot: rgba(255,170,212, .8);
+    --unread-dot: var(--accent-colour); /* rgba(255,170,212, .8); */
     --unread-text-color: var(--accent-colour); /* default: #dcddde */
     --unread-text-hover: var(--accent-colour); /* rgba(236, 202, 235, 1); */
     --chat-name: var(--on-hover-transparency); /* this gives text channels that white shade on hover
                                                  to disabled or activate it change the var name to: --on-hover-transparency or --onhover-transparency */
-	
 
-	/* members list "Playing" info */
-	--user-game-size: 11px;
+    /* members list "Playing" info */
+    --user-game-size: 11px;
     --user-game-Playing: 0%;
     --user-game-font-weight: 600;
 
@@ -187,13 +171,35 @@
 
 
     /* context menus and user popout design */
+	/* menu colour - menu footers i use var(--dark-grey)*/
+	--light-menu-colour: #7A6176; /* var(--scroll-bar-color); */
+    --dark-menu-colour: rgba(32,22,20, .99);
+    
+    /* pins/uploads/mentions */
+	--upload-colour: var(--dark-menu-colour);
+	--upload-footer-colour: var(--light-menu-colour);  /* default: rgba(0,0,0,.4); */
+	--pins-colour: var(--dark-menu-colour);            /* default: rgba(33,33,33,.6); */
+	--pins-colour: var(--dark-menu-colour);            /* default: rgba(33,33,33,.6); */
+    --pins-header-colour: var(--light-menu-colour); 
+    
+    /* emote menu, includes when emotes are typed +  the emote selector*/
+    --emote-auto-colour: rgba(10, 5, 4, .95);
+    --emote-menu: var(--dark-menu-colour);
+    --emote-search: rgba(200,150,200, .2);
+    --emote-header: var(--light-menu-colour);
+    --emote-footer: var(--dark-grey); /*need a darker grey */
+    --emote-menu-height: 450px; /* changing the menu height, will mean u need to adjust the footer height*/
+	--emote-footer-height: 12%; /* i like menu: 450px & footer: 12% */
+								/* if the emote menu is causing lag, press `CTR: + F` and search   tallemoto*/
+								/* and delete the backshalsh from it and save the file, that will set emote menu to default height */
+
     /* user */
-    --user-body: rgba(25, 21, 17, .99);			/* user-edition */
-    --user-header: rgba(255, 200, 255, 0.3);	/* user header shade, where pfp sits*/
-    --user-playing: rgba(255, 200, 255, 0.45); 	/* now playing background shade */
+    --user-body: rgba(25, 21, 17, .99);	/* user-edition edit */
+    --user-header: #A783A4; /* rgba(255, 200, 255, 0.3);	/* user header shade, where pfp sits*/
+    --user-playing: var(--light-menu-colour); /* rgba(255, 200, 255, 0.45); 	/* now playing background shade */
     --user-popout-right: -290px;				/* these move the user popup 290px*/
     --user-popout-left: 30px;					/* to make it seem more spacious  */
-    --user-popout-top: -25px;           /*blurd birthday-plugin: -35  default: -25*/
+    --user-popout-top: -10px;           /*blurd birthday-plugin: -63  default:-10*/
     --user-top-difference: 25px;
 	
     /* normal context menus */
@@ -233,7 +239,9 @@
     --bot-text: var(--accent-colour);
     --bot-tag-colour: transparent;
 
-
+    /* emote sizes */
+    --small-emote: 18px;
+    --normal-emote: 32px;  /* Default: 32 - if u have an emote plugin change these sizes to match better*/
     
 
 
@@ -625,42 +633,24 @@ div.flexChild-faoVW3.da-flexChild:hover > div > header.header-2o-2hj.da-header.w
     background: var(--on-hover-transparency) !important;
 }
 
-/* changing channel on hover stuff 
-.contentSelectedText-3wUhMi,
-body #app-mount .channel-2QD9_O.selected-1HYmZZ a {
-	background: var(--main-color);
-}
-#app-mount .wrapper-1ucjTd.modeSelected-1zApJ_ .content-3at_AU {
-    background:var(--main-color) !important;
-}
-.wrapper-1ucjTd:hover .content-3at_AU {
-    background:var(--main-color-faded) !important;
-}
+/* removing on hover for edited messages */
+/*time, :not(.ml-edited) > .ml-edited, div.ml-deleted { pointer-events: none; }*/
+time { pointer-events: none; }
 
-.contentSelectedText-3wUhMi,
-body #app-mount .channel-2QD9_O.selected-1HYmZZ a {
-	background: var(--main-color)
 
-.da-contentHoveredText,
-.channel-2QD9_O:hover a,
-.contentConnectedVoice-qL-YrL:active,
-.contentHoveredText-2D9B-x,
-.contentHoveredVoice-3p_NEO:active,
-.contentSelectedVoice-1WDIBM:active {
-	background: var(--main-color-faded);
-	transition: 100ms all linear;
+/* editing tool tips */
+/*.layer-v9HyYc.da-layer { display: inline !important; }*/
+.layer-v9HyYc.da-layer > div {
+    color: var(--accent-colour) !important;
+    background: var(--dark-menu-colour);
+} div.tooltipPointer-3ZfirK {
+    border-top-color: var(--dark-menu-colour) !important;
 }
-#app-mount .wrapper-1ucjTd.modeSelected-1zApJ_ .content-3at_AU {
-    background:var(--main-color) !important;
-}
-.wrapper-1ucjTd .content-3at_AU {
-	transition: 100ms background linear;
-}
-.wrapper-1ucjTd:hover .content-3at_AU {
-    background:var(--main-color-faded) !important;
-}
-.wrapper-1ucjTd.modeSelected-1zApJ_ .content-3at_AU .icon-1_QxNX {
-    color:#fff;
+ 
+ 
+/* removes plugin tool tips */
+div.tooltip-2QfLtc.tooltipLeft-3EDOk1.tooltipBlack-PPG47z {
+     display: none;
 }
 
 
@@ -960,7 +950,7 @@ div.headerCozy-2N9HOL.da-headerCozy > div:hover + h2,
 .popout-3sVMXz { box-shadow: none; }
 .da-userPopout {
     box-shadow: none;
-    transform: translateY( calc(var(--user-popout-top) - 5px) ) !important; /* translateX( var(--user-popout-left) ) */
+    transform: translateY( var(--user-popout-top) ); /* translateX( var(--user-popout-left) ) */
 }
 
 /* moves bot popout -bot tag  back inline */
@@ -978,31 +968,15 @@ div.footer-1fjuF6.da-footer { padding-top: 0px; }
     margin-top: 30px;
 }
 
-/* other popout types */
-/* popup colors 
-.popout-3sVMXz { background: rgba(15, 0, 15, 0.9); transform: translateX(7%) translateY(0) translateZ(0) !important;}
-
-/* popout when u click on in chat user name *
-.popout-3sVMXz { transform: translateX( var(--user-popout-left) ) translateY(-3%) translateZ(0px) !important; }
-.popout-3sVMXz.popoutBottomRight-2JrySt{ transform: translateX(-100%) translateY(0) translateZ(0) !important; }
-.popout-3sVMXz.popoutTopRight-3BzFIE { transform: translateX(-100%) translateY(-100%) translateZ(0) !important; }
-
-/*
-.popout-3sVMXz.popoutBottom-1YbShG,
-.popout-3sVMXz.popoutBottomLeft-JehOp2,
-.popout-3sVMXz.popoutTopLeft-b5Eb3O {
-    transform: translateX(-100%) translateY(0) translateZ(0) !important;
-} *
-
-.popout-3sVMXz .emojiPicker-3g68GS,
-.popout-3sVMXz.popout-top-left .emojiPicker-3g68GS {
-	transform: translateX(100%) translateY(0) translateZ(0) !important; 
+/* this is the popout for users in VC */
+div[id^="popout"] .userPopout-3XzG_A.da-userPopout {
+    transform: none !important;
 }
 
 /* user pop out modifications -289px */
-.popout-3sVMXz.popoutLeft-30WmrD.noArrow-3BYQ0Z.noShadow-321ZPm {
+/* .popout-3sVMXz.popoutLeft-30WmrD.noArrow-3BYQ0Z.noShadow-321ZPm {
 	transform: translateX( var(--user-popout-right) ) translateX( var(--user-popout-left) ) translateY( calc( var(--user-popout-top) + var(--user-top-difference) ) ) !important;
-} 
+}  */
 
 /* unknown play image changed */
 .gameIcon-_0rmMm[style='background-image: url("/assets/a5eba102f5b5e413df2b65c73f288afa.svg");'] {
@@ -1179,9 +1153,15 @@ div.contentCozy-3XX413.content-3dzVd8.da-contentCozy.da-content > div.containerC
 }
 
 /* nitro boost menu design */
-div.modal-36zFtW.da-modal > div.inner-2VEzy9.da-inner div.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontal-1ae9ci.horizontal-2EEEnY.flex-1O1GKY.directionRow-3v3tfG.justifyStart-2NDFzi.alignCenter-1dQNNs.noWrap-3jynv6.header-2nhbou.da-header { background: var(--light-menu-colour); }
-div.modal-36zFtW.da-modal > div.inner-2VEzy9.da-inner div.scrollerWrap-2lJEkd.firefoxFixScrollFlex-cnI2ix.da-scrollerWrap.da-firefoxFixScrollFlex.content-2KoCOZ.da-content.scrollerThemed-2oenus.da-scrollerThemed.themeHidden-2yP93k { background: var(--dark-menu-colour); }
-div.modal-36zFtW.da-modal > div.inner-2VEzy9.da-inner div.flex-1xMQg5.flex-1O1GKY.da-flex.da-flex.horizontalReverse-2eTKWD.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3.noWrap-3jynv6.footer-30ewN8.da-footer.footer-1o3nCu.da-footer { background: var(--dark-grey); }
+div.modal-yWgWj-.da-modal > div.header-2tA9Os.da-header { 
+    background: var(--light-menu-colour); 
+}
+div.modal-yWgWj-.da-modal > div.content-1EtbQh.da-content {
+    background: var(--dark-menu-colour); 
+}
+div.modal-yWgWj-.da-modal > div.footer-1o3nCu.da-footer {
+    background: var(--dark-grey); 
+}
 
 /* correcting carousel fade height */
 div.carouselRightGradientEdge-2Z3H8D.carouselGradientEdge-2W94ou.da-carouselRightGradientEdge.da-carouselGradientEdge, 
@@ -1194,6 +1174,16 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
     padding-top: 10px !important;
 }
 
+/* Readability Upgrade */
+time,
+div.roleName-32vpEy,
+div.markup-2BOw-j.da-markup,
+div.note-3HfJZ5.da-note.note-3kmerW {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+  letter-spacing: .015em;
+}
 
 
 
@@ -1986,14 +1976,53 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 	padding-right: 10px !important;
 }
 
+
+
+/* message log plugs are not officially supported by to plugin comunity */
 /* no message delete */
 .NoDeleteMessages-deleted-message .da-markup{ color: var(--deleted-text) !important; }
 .NoDeleteMessages-deleted-message .NoDeleteMessages-edited-message > .NoDeleteMessages-edited-message:last-child > .NoDeleteMessages-edited-message { color: var(--deleted-text) !important; }
 
+/*  sets shade of eddited text to be darker 
+    to make large sections more intuitive to read 
+    + extends colour changes */
+:not(.ml-edited) > .ml-edited,
+div.ml-edited:not(:last-child) > div {
+    color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* changing size slightly */
+:not(.ml-edited) > .ml-edited { font-size: 95%; }
+div.ml-edited:not(:last-child) > div { font-size: 100%; }
+    
+/* correcting eddited emotes */
+:not(.ml-edited) > .ml-edited .emoji,
+div.ml-edited:not(:last-child) .emoji {
+    filter: grayscale(100%) !important;
+    height: var(--small-emote) !important;
+    width: var(--small-emote) !important;
+}
+
+/* final edit is true version */
+div.ml-edited > .ml-edited:last-child .emoji {
+    padding-top: 4px;
+    filter: grayscale(0%) !important;
+    height: var(--normal-emote) !important;
+    width: var(--normal-emote) !important;
+}
+
+/* correcting multi-edit delete colour text*/
+div.ml-deleted div.ml-edited:not(:last-child) > div {
+    color: var(--deleted-text) !important;
+    opacity: 0.6;
+}
+
+
+    
 
 
 /* Translator Menu */
-div.theme-dark.popouts-3dRSmE.da-popouts.a11y-font-scaled-down .popout-googletranslate.BDFDB-modal > div {
+.popout-2iWAc-.popout-googletranslate .themedPopout-1TrfdI {
     background: var(--dark-menu-colour);
     border-width: 0px !important;
     padding: 0;
@@ -2013,6 +2042,11 @@ div.theme-dark.popouts-3dRSmE.da-popouts.a11y-font-scaled-down .popout-googletra
 .popout-googletranslate.BDFDB-modal > div > div:last-child {
     padding-top: 10px;
     padding-bottom: 20px;
+    background: var(--dark-grey);
+    margin-bottom: 0;
+    margin-top: 10px;
+    border-radius: 0 0 7px 7px;
+    height: 20px;
     
 }
 
@@ -2022,6 +2056,7 @@ div.theme-dark.popouts-3dRSmE.da-popouts.a11y-font-scaled-down .popout-googletra
     padding-right: 10px;
     color: var(--accent) !important;
 }
+
 
 
 
@@ -2071,6 +2106,15 @@ div.theme-dark.popouts-3dRSmE.da-popouts.a11y-font-scaled-down .popout-googletra
 .image-details-wrapper { margin-top: 20px; }
 .image-details-wrapper:hover { margin-top: 0px; }
 .image-details-wrapper:hover .image-details { display: inline; }
+
+/* deleted images */
+div.ml-deleted .image-details:after {
+    content: "Image Deleted";
+    margin-left: 15px !important;
+    color: var(--deleted-text);
+} div.ml-deleted:hover img { filter: grayscale(100%) !important; }
+
+
 
 
 
