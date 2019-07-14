@@ -270,6 +270,9 @@
 	
     /* Edit this to change your friends icon picture, zoom  */
     --friends-icon-zoom: 100%; 						/* default: 100% */
+
+    /* compact emotes - made smaller so emote use doesn't make shit look dumb */
+    --compact-emote-size: 18px;
 	
 	/* separator, refers to the line dividing the home button from ur server list */
     --separator-color: var(); /* default: --scroll-bar-color*/
@@ -1549,7 +1552,8 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 .content-3at_AU:hover,
 .content-20Aix8:hover { background: var(--chat-name); }
 .content-3at_AU,
-.content-20Aix8 {	height: 34px;
+.content-20Aix8 {	
+    height: 34px;
 	border-radius: 0 17px 17px 0;
     padding-right: 9px;
 }
@@ -1585,6 +1589,47 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 
 
 
+
+
+
+
+
+
+
+
+/* Compact Mode Edits */
+/* makes emotes smol to make it clean */
+div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact .emoji {
+    height: var(--compact-emote-size) !important;
+    width: var(--compact-emote-size) !important;
+}
+/*  */
+/* spacing out the time after correcting header */
+div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact {
+    padding-left: 5px;
+}
+
+/* making suer my username on hover still functions */
+div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact > h2.headerCompact-3wRt2W.da-headerCompact:hover {
+    background: var(--on-hover-transparency);
+	border-radius: 0 17px 17px 0;
+}
+
+/* lining up header with text */
+div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact > h2.headerCompact-3wRt2W.da-headerCompact {
+   margin-left: -7px;  
+   margin-right: 10px;
+}
+
+/* spacing out username */
+div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact span.username-_4ZSMR.da-username {
+    padding-left: 3px;
+}
+
+/* correcting bot tag position */
+div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact span.da-botTag {
+    top: -1px;
+}
 
 
 
