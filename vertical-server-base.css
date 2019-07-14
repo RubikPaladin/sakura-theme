@@ -1181,7 +1181,9 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
 time,
 div.roleName-32vpEy,
 div.markup-2BOw-j.da-markup,
-div.note-3HfJZ5.da-note.note-3kmerW {
+span.username-2BIRiC.da-username,
+div.note-3HfJZ5.da-note.note-3kmerW,
+div.discriminator-3-Lf_x.da-discriminator{
   -webkit-font-smoothing: antialiased !important;
   -moz-font-smoothing: antialiased !important;
   text-rendering: optimizelegibility !important;
@@ -1587,7 +1589,10 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 .activity-1IYsbk.da-activity > div { font-size: var(--user-game-Playing); }
 .activity-1IYsbk.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
 
-
+/* changes the size of the user number tag thing fuck idk its name */
+div.nameTag-3uD-yy.da-nameTag div.discriminator-3-Lf_x.da-discriminator {
+    font-size: 12px;
+}
 
 
 
