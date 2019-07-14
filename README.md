@@ -18,7 +18,7 @@ is supported by the horizontal theme creator https://betterdiscordlibrary.com/th
 5) MemberCount by Arashiryuu: https://betterdiscordlibrary.com/plugins/MemberCount
 
 6) User Birthdays by Metalloriff: https://betterdiscordlibrary.com/plugins/User%20Birthdays
-requires variable change  --user-popout-top: -35px;  
+requires variable change  --user-popout-top: -63px;  
 
 7) Show Image Details: https://discordplugins.com/plugin/show-image-details
 my theme displays image details on hover, to keep the theme simplistic in nature
