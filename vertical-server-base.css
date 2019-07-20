@@ -227,7 +227,7 @@
 	/* status-picker variables - feel free to adjust them for a different feel */
 	--picker-width: 239px;
 	--option-height: 52px;
-	--margin-bottom: 1px;
+	--margin-bottom: 0px;
 	--option-width: calc(var(--picker-width) / 4); /*cause 4 options*/
 	--status-picker-background: /* set as nothing cause i like the default */ ;
 	--status-anim: bottom-pop-in; 	/* animation options:  expand-in, bottom-pop-in, top-pop-in, left-pop-in, right-pop-in (type "none" to remove animation or feel free to build ur own, examples below) */
