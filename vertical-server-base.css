@@ -1595,11 +1595,6 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
     margin-left: var(--chat-margin-left);
 }
 
-/* corrects member padding */
-div.da-content div.da-membersWrap div.da-member {
-    margin-left: 10px !important;
-}
-
 /* chat shape and on hover, is unsure of the design */
 .content-3at_AU:hover,
 .content-20Aix8:hover { background: var(--chat-name); }
@@ -1611,7 +1606,7 @@ div.da-content div.da-membersWrap div.da-member {
 }
 
 /* adds some space to member avatars */
-.content-OzHfo4 {
+div.da-content div.da-membersWrap div.da-member {
 	padding-left: 15px; 
 	/*
 	border-right: 2px solid #fff !important;
@@ -1619,8 +1614,8 @@ div.da-content div.da-membersWrap div.da-member {
 }
 
 /* member hover colours*/
-.content-OzHfo4:hover { background: var(--on-hover-transparency) !important; }
-.memberOnline-1CIh-0.popout-open .content-OzHfo4 { background: var(--on-select-transparency) !important; }
+div.da-content div.da-membersWrap div.da-member:hover { background: var(--on-hover-transparency) !important; }
+div.da-content div.da-membersWrap div.da-member.popout-open { background: var(--on-select-transparency) !important; }
 
 /*  display music icons */
 .icon-3BcwQu path {
