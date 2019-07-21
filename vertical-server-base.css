@@ -1635,9 +1635,10 @@ div.da-content div.da-membersWrap div.da-member.popout-open { background: var(--
 .activity-1IYsbk.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
 
 /* changes the size of the user number tag thing fuck idk its name */
-div.nameTag-3uD-yy.da-nameTag div.discriminator-3-Lf_x.da-discriminator {
-    font-size: 12px;
+div.da-nameTag div.da-discriminator {
+    font-size: 11px;
 }
+
 
 
 

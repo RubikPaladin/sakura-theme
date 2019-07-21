@@ -1613,9 +1613,10 @@ div.da-content div.da-membersWrap div.da-member.popout-open { background: var(--
 
 
 /* changes the size of the user number tag thing fuck idk its name */
-div.nameTag-3uD-yy.da-nameTag div.discriminator-3-Lf_x.da-discriminator {
-    font-size: 12px;
+div.da-nameTag div.da-discriminator {
+    font-size: 11px;
 }
+
 
 
 
