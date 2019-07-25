@@ -179,6 +179,11 @@
 	--pins-colour: var(--dark-menu-colour);            /* default: rgba(33,33,33,.6); */
 	--pins-colour: var(--dark-menu-colour);            /* default: rgba(33,33,33,.6); */
     --pins-header-colour: var(--light-menu-colour); 
+
+    /* autocomplete menu colours */
+    --autocomplete-menu-colour: rgba(10,5,3,.9); 
+    --autocomplete-pointer-events: none;            /* this makes it so u cant use mouse to click on people ur tying to ping or emotes ur typing
+                                                       change `none` to something weird for mouse selection, i use `non` cause #Cabbage */
     
     /* emote menu, includes when emotes are typed +  the emote selector*/
     --emote-auto-colour: rgba(10, 5, 4, .95);
@@ -940,6 +945,21 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
     context menu modifications
 */
 
+div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
+div[role="menu"] button.da-item.da-button:hover { background-color: var(--menu-item-hover) !important; }
+div[role="menu"] button.da-item.da-button {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	box-shadow: none !important;
+    border-radius: 0;
+}
+
+/* correcting smol context menu rounding + shadow dumb */
+div[role="menu"] button.da-item.da-button:last-child { border-radius: 0 0 5px 5px; }
+div[role="menu"] button.da-item.da-button:first-child { border-radius: 5px 5px 0 0; }
+div.da-popout { box-shadow: none; }
+
 /* general menu colors */
 .theme-dark .menu-Sp6bN1,
 .theme-dark.contextMenu-HLZMGh {
@@ -1159,6 +1179,23 @@ div.contentCozy-3XX413.content-3dzVd8.da-contentCozy.da-content > div.containerC
     margin-top: 3px;
 }
 
+/* auto complete stuffz */
+/* onHover and general aesthetic */
+div.da-autocomplete { background-color: var(--autocomplete-menu-colour) !important; }
+div.da-autocompleteInner div.da-selectorSelected.da-selector.da-selectable div div { color: #fff; }
+div.da-autocompleteInner div.da-autocompleteRowVertical.da-autocompleteRow div.da-selectorSelected.da-selector.da-selectable { background: var(--menu-item-hover); /* var(--on-hover-transparency); */ }
+div.da-autocompleteInner div.da-autocompleteRowVertical.da-autocompleteRow div.da-selector.da-selectable {
+    border-radius: 0 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}div.da-autocompleteInner div.da-autocompleteRowVertical.da-autocompleteRow {
+	padding: 0;
+	border-radius: 0 !important;
+}
+
+/* personal set code block to stop triggering me */
+div.da-autocomplete { pointer-events: var(--autocomplete-pointer-events); }
+
 /* nitro boost menu design */
 div.modal-yWgWj-.da-modal > div.header-2tA9Os.da-header { 
     background: var(--light-menu-colour); 
@@ -1197,17 +1234,21 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
 time,
 div.roleName-32vpEy,
 div.da-wumpusTooltip,
+div[role="button"] span,
 div.markup-2BOw-j.da-markup,
 span.da-playTime.da-textRow,
 div.da-name, div.da-roleName,
 span.username-2BIRiC.da-username,
+div.da-header, div.da-option span,
 span.da-usernameOnline.da-username,
 div.note-3HfJZ5.da-note.note-3kmerW,
 div.da-headerTextNormal.da-headerText,
+button[role="menuitem"] div.da-contents,
 div.da-nameNormal.da-ellipsis.da-textRow,
 div.discriminator-3-Lf_x.da-discriminator,
 div.da-bodyTitle, div.da-note, div.da-botTag,
-div.da-headerTag, div.da-nameTag, div.da-headerText {
+div.da-headerTag, div.da-nameTag, div.da-headerText,
+div.da-autocompleteInner div.da-selector.da-selectable div div  {
   -webkit-font-smoothing: antialiased !important;
   -moz-font-smoothing: antialiased !important;
   text-rendering: optimizelegibility !important;
@@ -1296,6 +1337,34 @@ div.da-headerTag, div.da-nameTag, div.da-headerText {
 	box-shadow: none;
 	width: calc(100% + 1px);
 }
+
+/* other notifications */
+/* general aesthetic + cross icon */
+div.da-notice.da-noticeInfo { margin-top: -12px; }
+div.da-notice.da-noticeInfo > div.da-dismiss {
+    margin-top: 5px !important;
+    background-size: 8px 8px;
+}
+
+/* notice better discord icon */
+div.da-notice.da-noticeInfo > i {
+    margin-top: 2px !important;
+    width: 20px;
+    height: 20px;
+}
+
+/* notice words */
+div.da-notice.da-noticeInfo > span  {
+    vertical-align: middle;
+    position: sticky;
+    top: 15px;
+}
+
+/* correcting voice channel leaving */
+div.da-flex.da-base > div.da-flexChild > div > div.da-noticeDefault.da-notice {
+    margin-right: 0;
+}
+
 
 
 
@@ -1669,6 +1738,26 @@ div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact span.da-botTag {
 
 
 
+
+/* Server Discovery page */
+/* correcting background fade */
+img.da-bg {
+    -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 100%);
+    opacity: var(--server-banner-opacity) !important;
+}
+
+/* correcting currently selected round button stuff */
+div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-colour); }
+
+
+
+
+
+
+
+
+
+
 /* 
     table of friends & DM's   
 */
@@ -1753,9 +1842,10 @@ div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact span.da-botTag {
 .topPill-30KHOu .separator-gCa7yv { display: none; }
 
 /* adding bottom border to calls and videos */
-div.videoHeight-Qp_9vC > div {
-    border-bottom: var(--borders);
-}
+div.da-chat.da-inCall div.da-videoHeight > div { border-bottom: var(--borders); }
+div.da-chat.da-inCall div.da-videoHeight.da-animated { padding-bottom: 2px; }
+
+
 
 
 
