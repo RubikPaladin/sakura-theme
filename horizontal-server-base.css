@@ -216,6 +216,16 @@
     --slider-foreground: var(--slider-background);
     --audio-animation-scale: 4px; 					/* size of the largest animation the others scale */
 
+    
+    /* sets picker things - if u want square status pick items set to 50%  & 1px */
+    --status-picker-bgsize: 40%;
+    --status-picker-margin: 0px;
+    --status-picker-blend-mode: multiply;           /* this is a basic attempt at transparency, but it will fail on complex backgrounds */
+    --status-picker-bg: var(--background-image);    /* if that happens feel free to change it to something custom */
+    --status-picker-color: var(--main-transparency);/* i.e for custom colour, set blend-mode: none;  & bg: none;  then color to ur choice #111114 is the default grey color (and looks pretty good)
+                                                       for custom image, set blend-mode: none; &  color: none;  then bg to ur choice
+                                                       the picker dimensions are about 240 x 52 
+
 
 	/* colour for selected chats */
     --selected-background: rgba(255,255,255,0.1);
@@ -694,6 +704,9 @@ div.tooltip-2QfLtc.tooltipLeft-3EDOk1.tooltipBlack-PPG47z {
 	
 } .toast { display:none; }
 
+/* making sure open pop-outs dont troll me */
+h2.da-headerCozyMeta > span.popout-open > span { display: inline-flex; }
+
 /* user name header */
 .headerCozy-2N9HOL.da-headerCozy > h2{
     border-radius: 0 12px 12px 0;
@@ -945,6 +958,54 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
     context menu modifications
 */
 
+/* search menu design */
+/* editing the popout slightly*/
+div.da-popout > div.da-container.da-elevationBorderHigh {
+    background-color: var(--dark-menu-colour);/* var(--context-menu-colour); */
+    box-shadow: none;
+}
+
+/* general aestethic */
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-searchClearHistory,
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-searchLearnMore { top: 8px; }
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-resultsGroup + div.da-resultsGroup { padding-bottom: 0; }
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-header {
+    padding-top: 10px;
+    margin-bottom: 5px;
+    background: var(--light-menu-colour);
+} div.da-popout > div.da-container.da-elevationBorderHigh div.da-resultsGroup {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+/* changing serach option design + compactness */
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-option {
+	margin: 0;
+	width: 88%;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 0;
+	height: 30px;
+}
+
+/* search menu onHover + weird fade */
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected svg { top: 6px; }
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected span { color: #caccce; }
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected { background-color: var(--menu-item-hover); }
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected::before,
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected::after {
+    background: none;  /* linear-gradient(90deg,rgba(35,38,42,0), var(--dark-menu-colour) 50%); */
+    /*height: calc(100% + 2px);*/
+}
+
+/* search menu querry suggestion */
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer,
+div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da-focused {
+    background: var(--light-menu-colour);
+}
+
+
+/* general context menus */
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
 div[role="menu"] button.da-item.da-button:hover { background-color: var(--menu-item-hover) !important; }
 div[role="menu"] button.da-item.da-button {
@@ -1228,10 +1289,10 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
 
 
 
-
-
 /* Readability Upgrade */
 time,
+div.ace_line > span,
+div.ace_gutter-cell, 
 div.roleName-32vpEy,
 div.da-wumpusTooltip,
 div[role="button"] span,
@@ -1517,6 +1578,12 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
 	color: var(--secondary-color);
 } .bda-slist li {
     box-shadow:0px 0px 1px rgba(255,183,197, .7);
+}
+
+/* removing the dumb af error things */
+div.ace_gutter div.ace_gutter-cell {
+    margin-left: -20px;
+    padding-left: 23px !important;
 }
 
 /* Custom CSS Editor tab design*/
@@ -1899,9 +1966,9 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
     /* border-left: var(--borders);  */
     /* background: #111114 !important;   trans-fail*/ 
     
-    background-image: var(--background-image);
-    background-color: var(--main-transparency);
-    background-blend-mode: multiply;
+    background-image: var(--status-picker-bg);
+    background-color: var(--status-picker-color);
+    background-blend-mode: var(--status-picker-blend-mode);
 }
 
 /* box colours and size of individual options */
@@ -1971,8 +2038,8 @@ div.da-menu.da-alt div.da-item foreignObject[mask="url(#svg-mask-status-offline)
 	left: 0;
 	right: 0;
 	bottom: 0;
-	margin: 1px;
-	background-size: 50% !important;
+	margin: var(--status-picker-margin);
+	background-size: var(--status-picker-bgsize) !important;
 	background-repeat: no-repeat !important;
     background-position: 50% 50% !important;
 	opacity: 1;
