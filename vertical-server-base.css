@@ -219,14 +219,23 @@
     --audio-animation-scale: 4px; 					/* size of the largest animation the others scale */
 
     
-    /* sets picker things - if u want square status pick items set to 50%  & 1px */
-    --status-picker-bgsize: 40%;
-    --status-picker-margin: 0px;
+      /* sets picker things */
+    /*picker menu background */
     --status-picker-blend-mode: multiply;           /* this is a basic attempt at transparency, but it will fail on complex backgrounds */
     --status-picker-bg: var(--background-image);    /* if that happens feel free to change it to something custom */
     --status-picker-color: var(--main-transparency);/* i.e for custom colour, set blend-mode: none;  & bg: none;  then color to ur choice #111114 is the default grey color (and looks pretty good)
                                                        for custom image, set blend-mode: none; &  color: none;  then bg to ur choice
-                                                       the picker dimensions are about 240 x 52 
+                                                       the picker dimensions are about 240 x 52 */
+
+    /* these are for the picker items only - bgsize refers to the size of the picker icon when compared to its circle container */
+    --status-picker-bgsize: 40%;  /* if u want square status pick items set bgsize: 50%  & margin: 1px */
+    --status-picker-margin: 0px;
+    --status-left: var(--status-picker-margin);     /* for more personalized shapes - changing margins or bgsize will move the icons slightly */
+    --status-right: var(--status-picker-margin);    /* use the x & y percentage to move the icon locations properly */
+    --status-top: var(--status-picker-margin);      /* i like...  margin: 1px;  bszie: 50%;  status-bottom: 0px;  icon-y-axis: 40% */
+    --status-bottom: var(--status-picker-margin);
+    --icon-y-axis: 50%;
+    --icon-x-axis: 50%;
 
 
 	/* colour for selected chats */
@@ -2014,10 +2023,13 @@ div.da-menu.da-alt div.da-item foreignObject[mask="url(#svg-mask-status-offline)
 	left: 0;
 	right: 0;
 	bottom: 0;
-	margin: var(--status-picker-margin);
+    margin-left: var(--status-left);
+    margin-right: var(--status-right);
+    margin-top: var(--status-top);
+    margin-bottom: var(--status-bottom);
 	background-size: var(--status-picker-bgsize) !important;
 	background-repeat: no-repeat !important;
-    background-position: 50% 50% !important;
+    background-position: var(--icon-x-axis) var(--icon-y-axis) !important;
 	opacity: 1;
 	visibility: visible;
 	transition: 20ms var(--default-animation); 
