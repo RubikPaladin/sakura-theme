@@ -661,6 +661,20 @@ div.flexChild-faoVW3.da-flexChild:hover > div > header.header-2o-2hj.da-header.w
     background: var(--on-hover-transparency) !important;
 }
 
+/* making bot tag in members list more centered */
+div.da-membersWrap span.da-botTagRegular.da-botTag.da-bot {
+    margin-top: 5px;
+}
+
+/* moving in chat bot tag */
+h2.da-headerCozyMeta span.da-botTag {
+    top: 1px;
+}
+
+/* correcting member + bot tag with no activity */
+div.da-memberContent:only-child { margin-top: -2px; }
+div.da-memberContent:only-child span.da-botTag.da-bot{ margin-top: 1px !important; }
+
 /* removing on hover for edited messages */
 /*time, :not(.ml-edited) > .ml-edited, div.ml-deleted { pointer-events: none; }*/
 time { pointer-events: none; }
@@ -698,8 +712,8 @@ div.tooltip-2QfLtc.tooltipLeft-3EDOk1.tooltipBlack-PPG47z {
 } .toast { display:none; }
 
 /* changing time display */
-div.headerCozy-2N9HOL.da-headerCozy > div:hover + h2 time,
-.headerCozy-2N9HOL.da-headerCozy > h2:hover time { display: inline; }
+div.da-headerCozy > div:hover + h2 time,
+.da-headerCozy > h2:hover time { display: inline; }
 time { display: var(--time-display); }
 
 /* bot tag dimensions and stuff */
