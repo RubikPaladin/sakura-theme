@@ -661,14 +661,20 @@ div.flexChild-faoVW3.da-flexChild:hover > div > header.header-2o-2hj.da-header.w
     background: var(--on-hover-transparency) !important;
 }
 
+/* correcting time location */
+time {
+    vertical-align: 14%;
+    margin-left: 5px !important;
+    margin-right: 1px;
+}
+
 /* making bot tag in members list more centered */
 div.da-membersWrap span.da-botTagRegular.da-botTag.da-bot {
     margin-top: 5px;
 }
 
-/* moving in chat bot tag */
 h2.da-headerCozyMeta span.da-botTag {
-    top: 1px;
+    top: -1px;
 }
 
 /* correcting member + bot tag with no activity */
@@ -753,8 +759,17 @@ h2.da-headerCozyMeta > span.popout-open > span { display: inline-flex; }
 }
 
 /* username */
-.da-username {
-    margin-top: 2px;
+.da-username { margin-top: 2px; }
+
+/* making sure the name doesnt get too long */
+h2.da-headerCozyMeta span.da-username {
+    padding-top: 3px;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    margin-top: 0;
+    z-index: 1;
 }
 
 /* on hover shitty fix, also displays on pfp hover */
@@ -979,7 +994,15 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
     color: var(--server-icon-colour);
 }
 
-
+/* changing mentions + channel links */
+div.da-markup > span {
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5px;
+} div.da-markup > span:hover {
+    color: var(--role-onhover) !important;
+    background: var(--role-onhover-background) !important;
+}
 
 
 
@@ -1304,14 +1327,15 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
 
 
 
-
-
 /* Readability Upgrade */
 time,
+blockquote,
+span.da-username,
 div.ace_line > span,
 div.ace_gutter-cell, 
 div.roleName-32vpEy,
 div.da-wumpusTooltip,
+div.da-markup > span,
 div[role="button"] span,
 div.markup-2BOw-j.da-markup,
 span.da-playTime.da-textRow,
@@ -1785,12 +1809,12 @@ div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact > h2.headerCompact-3wR
 }
 
 /* spacing out username */
-div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact span.username-_4ZSMR.da-username {
+div.da-markup.da-isCompact span.da-username {
     padding-left: 3px;
 }
 
 /* correcting bot tag position */
-div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact span.da-botTag {
+div.da-markup.da-isCompact span.da-botTag {
     top: -1px;
 }
 
@@ -2291,12 +2315,23 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
 
 
 /* discord badges plugin*/
-.BE-badge { 
-	height: var(--badge-height) !important; 
+.BE-badge {  height: var(--badge-height) !important;  }
+.BE-badge.BE-badge-chat { margin-top: var(--badge-bottom) !important;  }
+
+/* correcting first and last */
+/*.BE-badge:not(.BE-badge-settings):first-of-type { margin-left: 0 !important; }*/
+.BE-badge:not(.BE-badge-settings):last-of-type { margin-right: 0px !important; }
+.BE-badge:not(.BE-badge-settings){ 
+    z-index: 1; 
+    margin-top: -2px !important; 
+    background-position: 50% 50% !important;
+    background-size: 90%;
+} div.BE-badge.BE-badge-CurrentGuildBoost.BE-badge-chat svg {
+    background-position: 50% 50% !important;
+    height: 90% !important;
+    width: 90% !important;
 }
-.BE-badge.BE-badge-chat {
-	margin-top: var(--badge-bottom) !important; 
-}
+
 
 
 /* image details plug */
