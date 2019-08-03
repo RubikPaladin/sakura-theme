@@ -510,21 +510,10 @@ span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
     background-color: var(--separator-color);
 }
 
-/* hypertext boarder, the colour is set in ROOT --main-colour */
-.theme-dark .markup-2BOw-j pre,
-.theme-dark .markup-2BOw-j pre {
-    border-color: var(--code-block-colour);
-    border-radius: 3px;
-    border-width: var(--code-block-width);
-}
 
 /* unread notification for text channel colour  rgba(193,145,96, .6)*/
 .theme-dark .unread-3zKkbm, .theme-light .unread-3zKkbm,
 .unread-1Dp-OI { background-color: var(--unread-dot) !important; }
-
-/* code for changing ping colour */
-.isMentionedCozy-3isp7y:after { border-left: var(--ping-embed-colour) !important; } 
-.theme-dark .isMentioned-N-h9aa { background: var(--ping-inline-colour) !important; }
 
 /* typing indicator colour location */
 .ellipsis-19qdx6 .spinnerItem-2HfQC8 {
@@ -785,36 +774,6 @@ div.headerCozy-2N9HOL.da-headerCozy > div:hover + h2,
     border-bottom-width: 1.2px;
 }
 
-/*
-.headerCozyMeta-rdohGq .popout-open,
-.headerCozyMeta-rdohGq:not(.popout-open):hover {
-    background: var(--username-on-hover);
-}
-/* username on hover, so i can see black names *
-.headerCozyMeta-rdohGq:hover,
-.headerCozyMeta-rdohGq .popout-open { 
-    background: var(--username-on-hover);
-}
-
-/* removing double hover double shade *
-.headerCozyMeta-rdohGq .popout-open:hover{ 
-    background: rgba(0, 0, 0, 0);
-}
-
-/* when u click on an in-chat username, this moves the time (so u cant see it) 
-   also colours the user name so its obvious which u clicked on*
-.headerCozyMeta-rdohGq .popout-open {
-    border-radius: 0 12px 12px 0;
-    padding: 2.6px 50px 3px 80px;
-    margin-left: -80px;
-    
-    /* settings for pill shape
-    border-radius: 12px;
-    padding: 6px 30px 3px 10px;
-    margin-top: -10px;
-    margin-left: -10px;*
-}
-
 /* text bar auto-emote animation */
 .autocomplete-1vrmpx {
 	animation: bottom-pop-out var(--emote-anim-speed) var(--emote-animation) !important; 
@@ -848,37 +807,9 @@ div.headerCozy-2N9HOL.da-headerCozy > div:hover + h2,
     border-radius: 25% !important;
 }
 
-/* changed the on hover to rainbow because that cunt is shit *
-.container-1ETFDs:hover {
-    transform: scale(1);
-    animation: var(--unread-server-animation) 1.5s linear infinite 
-}
-
 /* makes home button rainbow on hover */
 .wrapper-1Rf91z .scroller-2TZvBN:hover > div.listItem-2P_4kh:nth-child(1):hover {
     animation: var(--unread-server-animation) 3s linear infinite;
-}
-
-/* size of clickable home box space *
-.wrapper-1Rf91z .da-scrollerWrap .da-scroller {
-    padding-left: calc(var(--HSL-size) + 15px) !important; /*was plus 15*
-}
-
-/* correcting one of the option spaccings *
-.wrapper-1Rf91z .da-scrollerWrap .da-scroller .da-listItem:nth-child(2) {
-	padding-right: 5px !important;
-}
-
-/* *
-.wrapper-1Rf91z .da-scrollerWrap .da-scroller .da-listItem .da-pill span,
-.wrapper-1Rf91z .da-scrollerWrap .da-scroller .da-listItem {
-    padding-left: 5px;
-    padding-right: 5x;
-}
-
-/* secret hidden item took up too much space *
-.wrapper-1Rf91z .da-scrollerWrap .da-scroller .da-listItem:nth-child(3) {
-    display: none;
 }
 
 /* Unread Bar */
@@ -891,6 +822,48 @@ div.headerCozy-2N9HOL.da-headerCozy > div:hover + h2,
     background: var(--rainbow-seed);
     animation: var(--unread-server-animation) 3s linear infinite;
     transition: 100ms ease all !important;
+}
+
+
+
+
+
+
+
+
+
+/* 
+    in Chat Mark up edits
+*/
+
+/* setting regular code block sections */
+da-markup pre {
+    border-color: var(--code-block-colour);
+    border-width: var(--code-block-width);
+    border-radius: 3px;
+}
+
+/* editing quote block */
+blockquote { border: none !important; }
+blockquote:before {
+    font-style: normal;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 2px !important;
+    content: "  " !important;
+    border-radius: 3px 0 0 3px;
+    margin-left: -10px !important;
+    border-left: var(--ping-embed-colour) !important;
+}
+
+/* code for changing ping colour */
+div.da-isMentioned:after { border-left: var(--ping-embed-colour) !important; } 
+div.da-isMentioned  { background: var(--ping-inline-colour) !important; }
+
+/* make mentions clean */
+div.da-isMentioned > div.da-markup > span.mention,
+div.da-isMentioned > div.da-markup > span.mention:hover{
+    background: none !important;
 }
 
 
@@ -993,15 +966,21 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
     color: var(--server-icon-colour);
 }
 
-/* changing mentions + channel links */
-div.da-markup > span {
+/* markup special object rounding */
+div.da-markup > span,
+div.da-embed div.da-markup span {
     padding-left: 4px;
     padding-right: 4px;
     border-radius: 5px;
-} div.da-markup > span:hover {
+}
+
+/* also making things nice */
+div.da-markup > span:not(.da-spoilerText):hover,
+div.da-embed div.da-markup span:not(.da-spoilerText):hover {
     color: var(--role-onhover) !important;
     background: var(--role-onhover-background) !important;
 }
+
 
 
 
@@ -1093,6 +1072,11 @@ div.da-popout { box-shadow: none; }
     box-shadow: none;
     transform: translateY( var(--user-popout-top) ); /* translateX( var(--user-popout-left) ) */
 }
+
+/* moving member list user popup a lil to the left */
+/* div.da-noArrow.da-noShadow.da-popout.popoutLeft-3aViER.arrowAlignmentTop-1yftWI div.da-userPopout {
+    transform: translateX( -6% ) translateY( var(--user-popout-top) ) !important;
+} */
 
 /* setting pop out bot tag*/
 div.da-userPopout div.da-headerTag span.da-botTag {
