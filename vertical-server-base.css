@@ -837,7 +837,7 @@ div.headerCozy-2N9HOL.da-headerCozy > div:hover + h2,
 */
 
 /* setting regular code block sections */
-da-markup pre {
+div.da-container > div.da-markup pre {
     border-color: var(--code-block-colour);
     border-width: var(--code-block-width);
     border-radius: 3px;
@@ -858,7 +858,9 @@ blockquote:before {
 
 /* code for changing ping colour */
 div.da-isMentioned:after { border-left: var(--ping-embed-colour) !important; } 
-div.da-isMentioned  { background: var(--ping-inline-colour) !important; }
+div.da-content > div.da-isMentioned { 
+    background: var(--ping-inline-colour) !important; 
+}
 
 /* make mentions clean */
 div.da-isMentioned > div.da-markup > span.mention,
