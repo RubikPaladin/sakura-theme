@@ -1446,11 +1446,14 @@ div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems { pa
 div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText + div {  display: none; }
 div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { font-size: 0; }
 div.platform-win.da-app > div.da-container.da-fixClipping {
-    width: 100%;
-    height: 7px;
     display: inline-table;
-    top: 65px;
+    z-index: 999999;
+    width: 100%;
+    left: -90px;
+    height: 7px;
+    top: -25px;
 }
+
 
 /* making the message smexy */
 div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText:before {
