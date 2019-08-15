@@ -354,8 +354,20 @@
     --voice-hover-color: var(--accent-colour) ; /* default: #f6f6f7 */
     --selected-text-voice-color: #f6f6f7; /* default: #f6f6f7 */
 
+
+
+
+    /* Messages */
+
     /* message on plugins and themes page - type `none` do remove entirely  */
     --changelog-content: "Using Rubiko's Theme...\a\a I see we have a cultured boio";
+
+    /* message onConnectionSevered */
+    --offline-content: "You have been disconnected from Discord!  Rubik's suppressing the full screen takeover!";
+
+
+
+
 
 
 
@@ -1336,7 +1348,6 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
 time,
 blockquote,
 span.da-username,
-div.ace_line > span,
 div.ace_gutter-cell, 
 div.roleName-32vpEy,
 div.da-markup > span, 
@@ -1473,6 +1484,26 @@ div.da-flex.da-base > div.da-flexChild > div > div.da-noticeDefault.da-notice {
     margin-right: 0;
 }
 
+/* redesigning the offline message */
+div.platform-win.da-app > div.da-container.da-fixClipping > div.da-content  { display: none; }
+div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems { padding: 0; }
+div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText + div {  display: none; }
+div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { font-size: 0; }
+div.platform-win.da-app > div.da-container.da-fixClipping {
+    width: 100%;
+    height: 7px;
+    display: inline-table;
+    top: 65px;
+}
+
+/* making the message smexy */
+div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText:before {
+    font-size: 14px;
+    content: var(--offline-content);
+}
+
+
+
 
 
 
@@ -1603,16 +1634,12 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
 	margin-right: var(--margins);
 }
 
-
-/*
-.theme-dark #bd-settingspane-container .ui-switch-item .style-description {
-    color: var(--settings-title-color);
-} 
-
-.theme-dark #bd-settings-sidebar .ui-tab-bar-header,
-.theme-dark .header-2RyJ0Y {
-    color: var(--settings-title-color);
-    font-size: 13px;
+/* changes light theme to its true name */
+#user-settings div.container-1RjyoP > div > div:nth-child(2) > div > div:nth-child(1) > div.da-info > div.da-title  { font-size: 0; }
+#user-settings div.container-1RjyoP > div > div:nth-child(2) > div > div:nth-child(1) > div.da-info > div.da-title:after {
+    content: "The Light of 5,000 Suns";
+    font-weight: 500;
+    font-size: 16px;
 }
 
 /* BD Settings sub colours*/
