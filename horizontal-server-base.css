@@ -1493,7 +1493,7 @@ div.platform-win.da-app > div.da-container.da-fixClipping {
     width: 100%;
     height: 7px;
     display: inline-table;
-    top: 65px;
+    top: var(--HSL-size); 
 }
 
 /* making the message smexy */
