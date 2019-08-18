@@ -1473,10 +1473,11 @@ div.da-notice.da-noticeInfo > i {
 }
 
 /* notice words */
+div.da-notice.da-noticeInfo > strong,
 div.da-notice.da-noticeInfo > span  {
     vertical-align: middle;
     position: sticky;
-    top: 15px;
+    top: 13px;
 }
 
 /* correcting voice channel leaving */
