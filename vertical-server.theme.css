@@ -1,4 +1,4 @@
-/*//META{"name":"Rubii'z Vertical Sakura Scheme","description":"Vertical Server Version: Sakura modified by Rubii, this is a modified combination of 2 themes... NotAnotherAnimeThemeSCSL, Material Theme; make sure you're up to date with the OG creators. The removal of the third theme means you can NO LONGER select server size","author":"Modified by RubikPaladin#0003","version":"4.77", "website":"https://github.com/RubikPaladin/sakura-theme", "source":"https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"}*//**/
+/*//META{"name":"Rubii'z Vertical Sakura Scheme","description":"Vertical Server Version: Sakura modified by Rubii, this is a modified combination of 2 themes... NotAnotherAnimeThemeSCSL, Material Theme; make sure you're up to date with the OG creators. The removal of the third theme means you can NO LONGER select server size","author":"Modified by RubikPaladin#0003","version":"4.78", "website":"https://github.com/RubikPaladin/sakura-theme", "source":"https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"}*//**/
 
 @import url(https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css);
 :root { 
@@ -9,8 +9,12 @@
         /* Edit this to change your background *
         --background-image: url(https://i.imgur.com/hLulxgq.png);
 	
-        /* home button pic - a square is better*
-        --friends-icon: url(https://i.imgur.com/ky3iygN.png); 
+        /*  for customization u can change the friend icon colour with --friends-icon-hue-rotation: ; --friends-icon-brightness: ;
+            but this means a custom image, will be like purple or some rando colour, to make it normal just turn colours off with these
+            --friends-icon-hue-rotation: none; --friends-icon-brightness: none;
+
+        home button pic - a square is better*
+        --friends-icon: url(https://i.imgur.com/ky3iygN.png);  
         
         /* server icon size - default: 55 *
         --HSL-size: 50px;
@@ -45,6 +49,6 @@
 
 
 
-            Last Update - 77th commit
+            Last Update - 78th commit
         */
 }
