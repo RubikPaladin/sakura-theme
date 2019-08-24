@@ -32,7 +32,7 @@
     --background-image: url(https://i.imgur.com/hLulxgq.png);
 	
     /* home button pic - a square is better*/
-    --friends-icon: url(https://i.imgur.com/DPgNZ46.png); 
+    --friends-icon: url(https://i.imgur.com/ky3iygN.png);
 	
 	/* server icon size - default: 55 */
     --HSL-size: 50px;
@@ -127,6 +127,10 @@
 	
 	/* new server and server search icon colour */
     --server-icon-colour: var(--icon-colour);
+
+    /* use this to change the colour of the friends/home icon */
+    --friends-icon-hue-rotation: 300deg;
+    --friends-icon-brightness: 30%;
     
 	
 	
@@ -294,7 +298,7 @@
 	--home-button-extra: 2px; 						/* increases the size of home button can also decrease it, manual adjustments needed for different position thoe*/
 	
     /* Edit this to change your friends icon picture, zoom  */
-    --friends-icon-zoom: 100%; 						/* default: 100% */
+    --friends-icon-zoom: 90%; 						/* default: 100% */
 
     /* compact emotes - made smaller so emote use doesn't make shit look dumb */
     --compact-emote-size: 18px;
@@ -645,6 +649,13 @@ div.flexChild-faoVW3.da-flexChild:hover > div > header.header-2o-2hj.da-header.w
     color: var(--accent-colour) !important;/*#f6f6f7   (67, 220, 129)*/
 }
 
+/* changes made to allow colour setting of the friend icon - Horizontal Server Version */
+div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) > div.da-pill:not(.bd-selected) { display: none; }
+div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper > svg > foreignObject > a { border-radius: 0 !important; }
+div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper {
+    filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
+}
+
 /* :hover, */
 .theme-dark .wrapper-1ucjTd.modeSelected-1zApJ_ .name-3_Dsmg,
 .theme-dark .wrapper-1ucjTd.modeSelected-1zApJ_:hover .name-3_Dsmg,
@@ -847,7 +858,8 @@ div.pill-2uzAFe.da-pill {
 */
 
 /* setting regular code block sections */
-div.da-container > div.da-markup pre {
+div.da-container > div.da-markup pre,
+div.da-embedContent > div.da-markup pre {
     border-color: var(--code-block-colour);
     border-width: var(--code-block-width);
     border-radius: 3px;
@@ -989,6 +1001,23 @@ div.da-embed div.da-markup span:not(.da-spoilerText):hover {
     color: var(--role-onhover) !important;
     background: var(--role-onhover-background) !important;
 }
+
+/* title icon colours */
+div.da-title.da-container div.da-children div.da-iconWrapper svg > path { fill: #fff }
+div.da-title.da-container div.da-iconWrapper.da-clickable:hover { background: var(--on-hover-transparency); }
+div.da-title.da-container div.da-iconWrapper.da-clickable {
+    border-radius: 3px;
+    margin: 0 5px;
+    padding: 4px;
+    height: 32px;
+    margin-top: 0px;
+}
+
+/* changing channel icon colours */
+div.da-channels.da-directionColumn button.da-button { opacity: 1; }
+div.da-channels.da-directionColumn button.da-button:hover { background: var(--on-hover-transparency); }
+div.da-channels.da-directionColumn button.da-button svg > path { fill: var(--icon-colour); }
+div.da-channels.da-directionColumn div.da-gameWrapper > div { color: var(--accent-colour); }
 
 
 
@@ -1343,7 +1372,6 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
 
 
 
-
 /* Readability Upgrade */
 time,
 blockquote,
@@ -1366,12 +1394,15 @@ button[role="menuitem"] div.da-contents,
 div.da-nameNormal.da-ellipsis.da-textRow,
 div.discriminator-3-Lf_x.da-discriminator,
 div.da-bodyTitle, div.da-note, div.da-botTag,
+div.da-title.da-container div.da-iconWrapper + h3,
 div.da-headerTag, div.da-nameTag, div.da-headerText,
+div.da-title.da-container div.da-topic.da-expandable,
+div.da-channels.da-directionColumn div.da-gameWrapper > div,
 div.da-autocompleteInner div.da-selector.da-selectable div div  {
-  -webkit-font-smoothing: antialiased !important;
-  -moz-font-smoothing: antialiased !important;
-  text-rendering: optimizelegibility !important;
-  letter-spacing: .015em;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+    letter-spacing: .015em;
 }
 
 
@@ -1822,11 +1853,38 @@ div.da-content div.da-membersWrap div.da-member.popout-open { background: var(--
 .activity-1IYsbk.da-activity > div { font-size: var(--user-game-Playing); }
 .activity-1IYsbk.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
 
+/* for the current game activity */
+div.da-channels.da-directionColumn > div.da-panel.da-activityPanel {
+    border-top: var(--borders);
+    border-bottom: none;
+    background: none;
+}
 
 /* changes the size of the user number tag thing fuck idk its name */
 div.da-nameTag div.da-discriminator {
     font-size: 11px;
 }
+
+/* fixes stream popout in channels chat */
+div.da-streamPreviewWrapper.da-mounted { padding: 0; }
+div.da-layer > div.da-didRender { border-radius: 5px }
+div.da-streamPreviewWrapper { background: var(--user-body); }
+div.da-streamPreviewWrapper.da-mounted div.da-protip > div { display: none; }
+div.da-streamPreviewWrapper.da-mounted div.da-streamPreview > div.da-previewContainer { background: var(--user-header); }
+div.da-streamPreviewWrapper.da-mounted div.da-streamPreview div.da-body div.da-actionsStreamPreview { margin-top: 20px; }
+div.da-streamPreviewWrapper.da-mounted div.da-streamPreview {
+	background-color: none;
+	border-radius: 10px	
+} div.da-streamPreviewWrapper.da-mounted div.da-streamPreview div.da-body {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+
+
+
+
+
 
 
 
