@@ -1,4 +1,4 @@
-/*//META{"name":"Rubii'z Horizontal Sakura Scheme","description":"Horizontal Server Version: Sakura modified by Rubii, this is a modified combination of 3 themes... NotAnotherAnimeThemeSCSL, Horizontal Serverlist, Material Theme; make sure you're up to date with the OG creators","author":"Modified by RubikPaladin#0003","version":"4.09", "website":"https://github.com/RubikPaladin/sakura-theme", "source":"https://rubikpaladin.github.io/sakura-theme/horizontal-server-base.css"}*//**/
+/*//META{"name":"Rubii'z Horizontal Sakura Scheme","description":"Horizontal Server Version: Sakura modified by Rubii, this is a modified combination of 3 themes... NotAnotherAnimeThemeSCSL, Horizontal Serverlist, Material Theme; make sure you're up to date with the OG creators","author":"Modified by RubikPaladin#0003","version":"4.77", "website":"https://github.com/RubikPaladin/sakura-theme", "source":"https://rubikpaladin.github.io/sakura-theme/horizontal-server-base.css"}*//**/
 
 @import url(https://rubikpaladin.github.io/sakura-theme/horizontal-server-base.css);
 :root { 
@@ -9,10 +9,10 @@
         /* Edit this to change your background *
         --background-image: url(https://i.imgur.com/hLulxgq.png);
 	
-        /* home button pic - a square is better*/
-        --friends-icon: url(https://i.imgur.com/DPgNZ46.png); 
+        /* home button pic - a square is better*
+        --friends-icon: url(https://i.imgur.com/ky3iygN.png); 
         
-        /* server icon size - default: 55 */
+        /* server icon size - default: 55 *
         --HSL-size: 50px;
         
         /* Change global transparency */
@@ -41,5 +41,10 @@
             just copy the `import` link into your browser or click "CSS Source" in the themes menu
             take a look around, pull variables u like over here or into the custom CSS
             and modify them as u please
+
+
+
+
+            Last Update - 77th commit
         */
 }

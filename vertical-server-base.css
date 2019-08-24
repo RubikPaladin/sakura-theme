@@ -33,7 +33,7 @@
     --background-image: url(https://i.imgur.com/hLulxgq.png);
 	
     /* home button pic - a square is better*/
-    --friends-icon: url(https://i.imgur.com/ky3iygN.png)
+    --friends-icon: url(https://i.imgur.com/ky3iygN.png);
 	
 	/* default: 55 */
 	/* DONT CHANGE THIS, in vertical mode, it does NOT change emote size, it is still used as a size reference in other variables thoe */
