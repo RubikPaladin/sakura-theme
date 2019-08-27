@@ -1340,7 +1340,7 @@ div.da-autocompleteInner div.da-autocompleteRowVertical.da-autocompleteRow div.d
 }
 
 /* personal set code block to stop triggering me */
-div.da-autocomplete { pointer-events: var(--autocomplete-pointer-events); }
+div.da-autocomplete > div.da-autocompleteInner { pointer-events: var(--autocomplete-pointer-events); }
 
 /* nitro boost menu design */
 div.modal-yWgWj-.da-modal > div.header-2tA9Os.da-header { 
