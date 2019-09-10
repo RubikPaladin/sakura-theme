@@ -1919,6 +1919,20 @@ div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
 
 /* Mod/Admin Icons */
 /* editing the mod/admin icon locations */
+/* Mod/Admin Icons */
+/* editing the mod/admin icon locations + dealing with ping logic */
+div.content-3at_AU div.da-children div.da-mentionsBadge { right: 5px; }
+div.content-3at_AU:hover div.da-children div.da-mentionsBadge { display: none; }
+div.content-3at_AU div.da-children [aria-label="Edit Channel"] { bottom: 8px; display: none; }
+div.content-3at_AU div.da-children [aria-label="Create Instant Invite"] { top: 17px; display: none; }
+div.content-3at_AU div.da-children > div:nth-child(2)[aria-label="Edit Channel"] { bottom: 17px; }
+div.content-3at_AU div.da-children > [aria-label="Create Instant Invite"]:only-child { top: 8px; } 
+div.da-sidebar div.da-containerDefault:hover div.da-children [aria-label="Create Instant Invite"],
+div.da-sidebar div.da-containerDefault:hover div.da-children [aria-label="Edit Channel"] {
+    display: block;
+}
+
+/*
 div.da-sidebar div.da-containerDefault.da-selected div.da-children { display: none; }
 div.content-3at_AU div.da-children > div.da-iconItem:not(:only-child):last-child { bottom: 17px; }
 div.content-3at_AU div.da-children > div.da-iconItem:not(:only-child):first-child {
@@ -1926,14 +1940,14 @@ div.content-3at_AU div.da-children > div.da-iconItem:not(:only-child):first-chil
     left: 1px;
 }
 
-/* making mod/admin icons display in blocks */
+/* making mod/admin icons display in blocks *
 div.da-sidebar div.da-containerDefault.da-selected:hover div.da-children,
 div.content-3at_AU div.da-children {
     display: block;
     margin-right: 2px;
 }
 
-/* when only access to one item */
+/* when only access to one item *
 div.content-3at_AU div.da-children > div:only-child {
     bottom: 8px;
     left: 2px;
