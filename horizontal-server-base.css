@@ -1823,10 +1823,10 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 
 
 /* 
-    still dont know about member and chat select 
+    still dont know about member, chat & DM select 
 */
 
-/* setting member shape and size*/
+/* setting member shape and size*
 .membersGroup-v9BXpm { padding: 20px 0 0 15px !important; }
 .content-3at_AU,
 .content-20Aix8,
@@ -1846,7 +1846,7 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
     margin-left: var(--chat-margin-left);
 }
 
-/* chat shape and on hover, is unsure of the design */
+/* chat shape and on hover, is unsure of the design *
 .content-3at_AU:hover,
 .content-20Aix8:hover { background: var(--chat-name); }
 .content-3at_AU,
@@ -1855,10 +1855,95 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
     padding-right: 9px;
 }
 
+
+/* Channel Aestethic */
+div.da-sidebar > div.da-container div.da-containerDefault div.da-content {
+    width: 100%;
+	margin: 0 !important;
+	padding: 0px;
+	border-radius: 0 8px 8px 0;
+	height: 34px;
+    padding-left: var(--chat-padd-left);
+    margin-left: var(--chat-margin-left);
+}
+
+/* editing the DM's */
+div.da-sidebar > div.da-privateChannels a {
+    width: var(--chat-width) !important;
+    padding-left: var(--chat-padd-left);
+    margin-left: var(--chat-margin-left);
+	margin: 0 !important;
+	padding: 0px;
+	border-radius: 0 8px 8px 0;
+    padding-right: -5px;
+}
+
+/* DM size and border radius */
+div.da-sidebar > div.da-privateChannels a > div.da-layout {
+    border-radius: 0 8px 8px 0;
+    width: 100% !important;
+}
+
+/* DM onHover*/
+/* editing layouts */
+div.da-sidebar > div.da-privateChannels a.da-selected > div.da-layout,
+div.da-sidebar > div.da-privateChannels a:hover > div.da-layout {
+    background: var(--on-hover-transparency);
+} div.da-sidebar > div.da-privateChannels a > div.da-layout {
+    width: 100%;
+    padding-right: 0;
+}
+
+/* moving the *Delete DM* cross */
+div.da-sidebar > div.da-privateChannels a div.da-children > div.da-closeButton svg {
+    height: 15px;
+    width: 15px;
+} div.da-sidebar > div.da-privateChannels a div.da-children > div.da-closeButton {
+    margin: -10px;
+    margin-top: -18px;
+    margin-left: -16px;
+}
+
+/* editing child size */
+div.content-3at_AU div.da-children svg {
+    height: 16px;
+    width: 16px;
+}
+
+/* colouring the unread octothropes */
+div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
+    display: var(--VC-icons);
+    color: var(--VC-icon-colour);   
+}
+
+
+/* Mod/Admin Icons */
+/* editing the mod/admin icon locations */
+div.da-sidebar div.da-containerDefault.da-selected div.da-children { display: none; }
+div.content-3at_AU div.da-children > div.da-iconItem:not(:only-child):last-child { bottom: 17px; }
+div.content-3at_AU div.da-children > div.da-iconItem:not(:only-child):first-child {
+    top: 17px;
+    left: 1px;
+}
+
+/* making mod/admin icons display in blocks */
+div.da-sidebar div.da-containerDefault.da-selected:hover div.da-children,
+div.content-3at_AU div.da-children {
+    display: block;
+    margin-right: 2px;
+}
+
+/* when only access to one item */
+div.content-3at_AU div.da-children > div:only-child {
+    bottom: 8px;
+    left: 2px;
+}
+
+
 /* basic aestethic */
 div.da-content div.da-membersWrap div.da-member div.da-layout{ padding: 0; }
 div.da-content div.da-membersWrap div.da-member {
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 8px 8px 0;
 	padding-left: 15px; 
 	margin: 0;
 }
