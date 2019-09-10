@@ -664,6 +664,14 @@ div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1
     filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
 }
 
+/* fixing friend icon */
+div.da-wrapper:not(.foldercontent) div.da-childWrapper {
+    background: var(--friends-icon) !important;
+    background-position: var(--friends-icon-position) !important;
+    background-repeat: no-repeat !important;
+    background-size: var(--friends-icon-zoom) !important;
+}
+
 /* :hover, */
 .theme-dark .wrapper-1ucjTd.modeSelected-1zApJ_ .name-3_Dsmg,
 .theme-dark .wrapper-1ucjTd.modeSelected-1zApJ_:hover .name-3_Dsmg,
