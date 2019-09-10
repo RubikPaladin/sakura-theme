@@ -481,6 +481,11 @@ span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
 /* he forgot the some border lines, so here they are (if u want to change their colour edit --border-lines-color as well)*/
 .members-1998pB  { border-left: var(--borders) }
 .container-1UB9sr { border-top: var(--borders) }
+div.da-base > div.da-content > div.da-sidebar { /* borders for side bar */
+    border-right: var(--borders);
+    border-left:  var(--borders);
+}
+
 
 /* title bar (also includes the windows minus, full screen & exit) */
 .typeWindows-1za-n7 { 
@@ -546,23 +551,24 @@ span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
 
 /* banner edits */
 /* banner image modifications */
+div.da-sidebar div.da-animatedContainer { background: none; }
 .bannerImage-1jOskm {
     -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 100%);
     opacity: var(--server-banner-opacity) !important;
 }
 
-/* hides server name */
-header.header-2o-2hj.da-header.withBanner-3j8ruM.da-withBanner {
+/* making server header invis on banners */
+div.da-sidebar div.da-hasBanner.da-bannerVisible > header.da-header {
     animation: expand-out 70ms;
     animation-name: expand-out;
     opacity: 0;
     transition: 220ms;
 }
 
-/*setts banner z-index + makes it visible on hover or while menu is open */
-div.bannerImage-1jOskm.da-bannerImage { z-index: 1; }
-header.header-2o-2hj.da-header.withBanner-3j8ruM.da-withBanner.popout-open,
-div.flexChild-faoVW3.da-flexChild:hover > div > header.header-2o-2hj.da-header.withBanner-3j8ruM.da-withBanner {
+/* times u should see server name */
+div.da-sidebar div.da-hasBanner.da-bannerVisible { z-index: 1; }
+div.da-sidebar div.da-hasBanner.da-selected > header.da-header,
+div.da-sidebar div.da-hasBanner:hover > header.da-header {
     opacity: 1;
 	animation: top-pop-in 70ms;
 	transition: 10ms;
@@ -570,6 +576,10 @@ div.flexChild-faoVW3.da-flexChild:hover > div > header.header-2o-2hj.da-header.w
 
 
 /* category colour */
+div.da-sidebar div.da-name.da-container {
+    color: var(--category-color);
+}
+
 .wrapper-CU3qI5, .nameCollapsed-34uFWo, .nameDefault-2DI02H {
     color: var(--category-color) !important;
 }
@@ -1011,10 +1021,11 @@ div.da-title.da-container div.da-iconWrapper.da-clickable {
 }
 
 /* changing channel icon colours */
-div.da-channels.da-directionColumn button.da-button { opacity: 1; }
-div.da-channels.da-directionColumn button.da-button:hover { background: var(--on-hover-transparency); }
-div.da-channels.da-directionColumn button.da-button svg > path { fill: var(--icon-colour); }
-div.da-channels.da-directionColumn div.da-gameWrapper > div { color: var(--accent-colour); }
+/* user panel icons - clean color + onhover color */
+div.da-sidebar  button.da-button { opacity: 1; }
+div.da-sidebar button.da-button:hover { background: var(--on-hover-transparency); }
+div.da-sidebar div.da-panels svg > path { color: var(--icon-colour); }
+div.da-sidebar div.da-gameWrapper > div { color: var(--accent-colour); }
 
 
 
@@ -1085,19 +1096,27 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
 
 /* general context menu */
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
-div[role="menu"] button.da-item.da-button:hover { background-color: var(--menu-item-hover) !important; }
-div[role="menu"] button.da-item.da-button {
+div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
+div[role="menu"] div.da-item {
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%;
 	box-shadow: none !important;
     border-radius: 0;
+    font-weight: 300;
 }
 
 /* correcting smol context menu rounding + shadow dumb */
-div[role="menu"] button.da-item.da-button:last-child { border-radius: 0 0 5px 5px; }
-div[role="menu"] button.da-item.da-button:first-child { border-radius: 5px 5px 0 0; }
+div[role="menu"] div.da-item:last-child { border-radius: 0 0 5px 5px; }
+div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0; }
 div.da-popout { box-shadow: none; }
+
+
+/* changes colour of icons in the chat */
+div.da-containerCozy.da-container div.da-reactionBtn svg path,
+div.da-containerCozy.da-container div.da-buttonContainer svg path + path {
+    fill: var(--icon-colour);
+}
 
 /* general menu colors */
 .theme-dark .menu-Sp6bN1,
@@ -1355,12 +1374,14 @@ blockquote,
 span.da-username,
 div.ace_gutter-cell, 
 div.roleName-32vpEy,
+div.da-markup > span, 
+div.da-markup > span, 
 div.da-wumpusTooltip,
-div.da-markup > span,
 div[role="button"] span,
 div.markup-2BOw-j.da-markup,
 span.da-playTime.da-textRow,
 div.da-name, div.da-roleName,
+div[role="menu"] div.da-item,
 span.username-2BIRiC.da-username,
 div.da-header, div.da-option span,
 span.da-usernameOnline.da-username,
@@ -1368,12 +1389,18 @@ div.note-3HfJZ5.da-note.note-3kmerW,
 div.da-headerTextNormal.da-headerText,
 button[role="menuitem"] div.da-contents,
 div.da-nameNormal.da-ellipsis.da-textRow,
+div.da-membersWrap div.da-activity > div,
 div.discriminator-3-Lf_x.da-discriminator,
 div.da-bodyTitle, div.da-note, div.da-botTag,
 div.da-title.da-container div.da-iconWrapper + h3,
+div.da-membersWrap div.da-activity > div > strong,
 div.da-headerTag, div.da-nameTag, div.da-headerText,
 div.da-title.da-container div.da-topic.da-expandable,
+div.da-content div.da-membersWrap div.da-membersGroup,
 div.da-channels.da-directionColumn div.da-gameWrapper > div,
+div.da-container div.da-panel.da-activityPanel div.da-title,
+div.da-container div.da-scroller.da-firefoxFixScrollFlex div.da-name,
+div.da-userPopout > div.da-footer div.da-wumpus.da-wumpusShown > span 
 div.da-autocompleteInner div.da-selector.da-selectable div div {
   -webkit-font-smoothing: antialiased !important;
   -moz-font-smoothing: antialiased !important;
@@ -1784,17 +1811,23 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
     padding-right: 9px;
 }
 
-/* adds some space to member avatars */
+/* basic aestethic */
+div.da-content div.da-membersWrap div.da-member div.da-layout{ padding: 0; }
 div.da-content div.da-membersWrap div.da-member {
+    border-radius: 0 5px 5px 0;
 	padding-left: 15px; 
-	/*
-	border-right: 2px solid #fff !important;
-	border-radius: 20px 0 0 20px; */
+	margin: 0;
 }
 
-/* member hover colours*/
-div.da-content div.da-membersWrap div.da-member:hover { background: var(--on-hover-transparency) !important; }
-div.da-content div.da-membersWrap div.da-member.popout-open { background: var(--on-select-transparency) !important; }
+/* member hover colours */
+div.da-content div.da-membersWrap div.da-member:hover { background: var(--on-hover-transparency); }
+div.da-content div.da-membersWrap div.da-member.da-selected { background: var(--on-select-transparency); }
+div.da-content div.da-membersWrap div.da-member:hover > div.da-layout,
+div.da-content div.da-membersWrap div.da-member.da-selected > div.da-layout { background: none; }
+div.da-content div.da-membersWrap div.da-membersGroup {
+    margin-top: 5px !important;
+    font-weight: 500;
+}
 
 /*  display music icons */
 .icon-3BcwQu path {
@@ -1809,20 +1842,26 @@ div.da-content div.da-membersWrap div.da-member.popout-open { background: var(--
 }
 
 /* activity modification - genious actually */
-.activity-1IYsbk.da-activity > svg{ display: none; }
-.activity-1IYsbk.da-activity > div { font-size: var(--user-game-Playing); }
-.activity-1IYsbk.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
+div.da-sidebar div.da-activity > svg{ display: none; }
+div.da-activity > div { font-size: var(--user-game-Playing); }
+div.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
 
 /* for the current game activity */
-div.da-channels.da-directionColumn > div.da-panel.da-activityPanel {
+div.da-container div.da-panel.da-activityPanel {
     border-top: var(--borders);
     border-bottom: none;
     background: none;
 }
 
+/* correcting weird weighting */
+div.da-container div.da-panel.da-activityPanel div.da-title,
+div.da-sidebar div.da-nameTag div.da-title {
+    font-weight: 400;
+}
+
 /* changes the size of the user number tag thing fuck idk its name */
-div.da-nameTag div.da-discriminator {
-    font-size: 11px;
+div.da-sidebar div.da-nameTag div.da-subtext {
+    font-size: 10.68px;
 }
 
 /* fixes stream popout in channels chat */
@@ -2448,6 +2487,9 @@ div.ml-deleted .image-details:after {
     background: transparent !important;
     text-align: left !important;
     margin-bottom: -20px !important;
+    margin-top: -5px !important;
+    font-weight: 500;
+    opacity: 0.85;
 }
 
 
