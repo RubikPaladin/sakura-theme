@@ -874,11 +874,6 @@ div.pill-2uzAFe.da-pill {
     in Chat Mark up edits
 */
 
-/* WHY DISCORD DUST U LOVE TO EX-FUCKING-PLODE */
-div.da-base {
-    height: 100%;
-}
-
 /* setting regular code block sections */
 div.da-container > div.da-markup pre,
 div.da-embedContent > div.da-markup pre {
