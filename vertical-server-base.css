@@ -1932,9 +1932,9 @@ div.content-3at_AU div.da-children [aria-label="Edit Channel"] { bottom: 8px; di
 div.content-3at_AU div.da-children [aria-label="Create Instant Invite"] { top: 17px; display: none; }
 div.content-3at_AU div.da-children > div:nth-child(2)[aria-label="Edit Channel"] { bottom: 17px; }
 div.content-3at_AU div.da-children > [aria-label="Create Instant Invite"]:only-child { top: 8px; } 
-div.da-sidebar div.da-containerDefault:hover div.da-children [aria-label="Create Instant Invite"],
-div.da-sidebar div.da-containerDefault:hover div.da-children [aria-label="Edit Channel"] { display: block; }
-div.da-sidebar div.da-containerDefault.da-selected:hover div.da-children,
+div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Create Instant Invite"],
+div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Edit Channel"] { display: block; }
+div.da-sidebar div.da-containerDefault.da-selected >div:hover div.da-children,
 div.content-3at_AU div.da-children {
     display: block;
     margin-right: 2px;
