@@ -785,7 +785,7 @@ h2.da-headerCozyMeta > span.popout-open > span { display: inline-flex; }
 
 /* making sure the name doesnt get too long */
 h2.da-headerCozyMeta span.da-username {
-    padding-top: 3px;
+    padding-top: 1.5px;
     max-width: 500px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -964,6 +964,14 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
 }
 
 /* VC settings */
+/* correcting voice user outline and onHover*/
+div.da-sidebar div.da-containerDefault div.da-voiceUser { border-radius: 8px; }
+div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-content { padding-left: 0; }
+div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons { display: block; margin-right: 4px; margin-bottom: 2px;}
+div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons > div > svg { height: 15px; width: 15px; }
+div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons > div:nth-child(2) > svg { height: 12px; width: 12px;}
+div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons > div:only-child { height: 17px; width: 17px; }
+
 /* number of current members in VC */
 .users-i_3-kL {
   background-color: var(--VC-count-colour);
@@ -1138,6 +1146,12 @@ div.da-containerCozy.da-container div.da-buttonContainer svg path + path {
 .da-userPopout {
     box-shadow: none;
     transform: translateY( var(--user-popout-top) ); /* translateX( var(--user-popout-left) ) */
+}
+
+/* correcting user popout text slightly */
+div.da-userPopout div.da-activity div.da-headerText {
+    font-size: 100%;
+    font-weight: 600;
 }
 
 /* moving member list user popup a lil to the left */
@@ -1391,6 +1405,7 @@ span.da-playTime.da-textRow,
 div.da-name, div.da-roleName,
 div[role="menu"] div.da-item,
 span.username-2BIRiC.da-username,
+div.da-activity div.da-headerText
 div.da-header, div.da-option span,
 span.da-usernameOnline.da-username,
 div.note-3HfJZ5.da-note.note-3kmerW,
@@ -1399,6 +1414,7 @@ button[role="menuitem"] div.da-contents,
 div.da-nameNormal.da-ellipsis.da-textRow,
 div.da-membersWrap div.da-activity > div,
 div.discriminator-3-Lf_x.da-discriminator,
+div.da-activity div.da-nameWrap.da-textRow,
 div.da-bodyTitle, div.da-note, div.da-botTag,
 div.da-title.da-container div.da-iconWrapper + h3,
 div.da-membersWrap div.da-activity > div > strong,
@@ -1882,8 +1898,6 @@ div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
 
 
 /* Mod/Admin Icons */
-/* editing the mod/admin icon locations */
-/* Mod/Admin Icons */
 /* editing the mod/admin icon locations + dealing with ping logic */
 div.content-3at_AU div.da-children div.da-mentionsBadge { right: 5px; }
 div.content-3at_AU:hover div.da-children div.da-mentionsBadge { display: none; }
@@ -1897,6 +1911,15 @@ div.da-sidebar div.da-containerDefault.da-selected:hover div.da-children,
 div.content-3at_AU div.da-children {
     display: block;
     margin-right: 2px;
+}
+
+/* making sure Mod/Admin options swap correctly */
+div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Edit Channel"],
+div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Create Instant Invite"] {
+    display: none;
+} div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label="Edit Channel"],
+  div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label="Create Instant Invite"] {
+    display: block;
 }
 
 /*
@@ -1920,7 +1943,7 @@ div.content-3at_AU div.da-children > div:only-child {
     left: 2px;
 }
 
-/* basic aestethic */
+/* basic aestethic *
 div.da-content div.da-membersWrap div.da-member div.da-layout{ padding: 0; }
 div.da-content div.da-membersWrap div.da-member {
     border-radius: 0 8px 8px 0;
@@ -1928,7 +1951,7 @@ div.da-content div.da-membersWrap div.da-member {
 	margin: 0;
 }
 
-/* member hover colours */
+/* member hover colours *
 div.da-content div.da-membersWrap div.da-member:hover { background: var(--on-hover-transparency); }
 div.da-content div.da-membersWrap div.da-member.da-selected { background: var(--on-select-transparency); }
 div.da-content div.da-membersWrap div.da-member:hover > div.da-layout,
@@ -1937,6 +1960,26 @@ div.da-content div.da-membersWrap div.da-membersGroup {
     margin-top: 5px !important;
     font-weight: 500;
 }
+
+/* fixing member on Hover*/
+div.da-membersWrap div.da-member { padding: 0; }
+div.da-membersWrap div.da-member div.da-layout {
+    width: 97%;
+    margin-left: -10px;
+    padding: 1px 0 !important;
+    border-radius: 0 8px 8px 0;
+    padding-left: 18px !important;
+}
+
+/* member hover colours */
+div.da-content div.da-membersWrap div.da-member:hover { background: none; }
+div.da-content div.da-membersWrap div.da-member:hover div.da-layout { background: var(--on-hover-transparency);  }
+div.da-content div.da-membersWrap div.da-member.da-selected div.da-layout { background: var(--on-select-transparency); }
+div.da-content div.da-membersWrap div.da-membersGroup {
+    margin-top: 5px !important;
+    font-weight: 500;
+}
+
 
 /*  display music icons */
 .icon-3BcwQu path {
