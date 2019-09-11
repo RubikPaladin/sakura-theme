@@ -902,6 +902,11 @@ div.da-isMentioned > div.da-markup > span.mention:hover{
     background: none !important;
 }
 
+/* changing the size of emotes */
+.emoji.jumboable {
+    height: var(--normal-emote) !important;
+    width: var(--normal-emote) !important;
+}
 
 
 
@@ -1043,6 +1048,14 @@ div.da-sidebar button.da-button:hover { background: var(--on-hover-transparency)
 div.da-sidebar div.da-panels svg > path { color: var(--icon-colour); }
 div.da-sidebar div.da-gameWrapper > div { color: var(--accent-colour); }
 
+/* trying to make wumnpus user popout text clearer */
+div.da-userPopout > div.da-footer div.da-wumpus.da-wumpusShown > span:after { border-color: transparent var(--accent-colour) transparent transparent; }
+div.da-userPopout > div.da-footer div.da-wumpus.da-wumpusShown > span {
+    background: var(--accent-colour);
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 13px;
+}
 
 
 
@@ -1381,6 +1394,13 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
 .blurb-2l3plc.da-blurb {
     padding-top: 10px !important;
 }
+
+/* channel description onClick disable */
+div.da-title.da-container div.da-topic.da-expandable {
+    pointer-events: none;
+}
+
+
 
 
 

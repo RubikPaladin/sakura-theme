@@ -22,7 +22,7 @@
         --HSL-size: 50px;
         
         /* Change global transparency */
-        --main-transparency: rgba(0, 0, 0, .7);		/* default: rgba(0, 0, 0, 0.8); */
+        --main-transparency: rgba(0, 0, 0, .5);		/* default: rgba(0, 0, 0, 0.8); */
         
         /* Change chat messages font size, you can use any unit: px, em, rem, %, etc. */
         --font-size: 14px; 							/*default: 16px */
