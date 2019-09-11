@@ -870,6 +870,11 @@ div.headerCozy-2N9HOL.da-headerCozy > div:hover + h2,
     in Chat Mark up edits
 */
 
+/* WHY DISCORD DUST U LOVE TO EX-FUCKING-PLODE */
+div.da-base {
+    height: 100%;
+}
+
 /* setting regular code block sections */
 div.da-container > div.da-markup pre,
 div.da-embedContent > div.da-markup pre {
