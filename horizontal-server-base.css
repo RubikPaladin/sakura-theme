@@ -488,9 +488,10 @@ span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
 /* he forgot the some border lines, so here they are (if u want to change their colour edit --border-lines-color as well)*/
 .members-1998pB  { border-left: var(--borders) }
 .container-1UB9sr { border-top: var(--borders) }
-div.da-base > div.da-content > div.da-sidebar { /* borders for side bar */
+div.da-base > div.da-content > div.da-sidebar > div {
     border-right: var(--borders);
 }
+
 
 
 /* title bar (also includes the windows minus, full screen & exit) */
@@ -971,7 +972,7 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
 /* VC settings */
 /* correcting voice user outline and onHover*/
 div.da-sidebar div.da-containerDefault div.da-voiceUser { border-radius: 8px; }
-div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-content { padding-left: 0; }
+div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-content { padding-left: 0 !important; }
 div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons { display: block; margin-right: 4px; margin-bottom: 2px;}
 div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons > div > svg { height: 15px; width: 15px; }
 div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons > div:nth-child(2) > svg { height: 12px; width: 12px;}
