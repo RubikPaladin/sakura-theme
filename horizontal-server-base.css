@@ -1923,6 +1923,10 @@ div.da-sidebar > div.da-privateChannels a > div.da-layout {
     width: 100% !important;
 }
 
+/* changing width to deal with weird scroll bar */
+div.da-base > div.da-content > div.da-sidebar > div { border-right: var(--borders);  }
+div.da-base > div.da-content > div.da-sidebar { width: 241px; }
+
 /* DM onHover*/
 /* editing layouts */
 div.da-sidebar > div.da-privateChannels a.da-selected > div.da-layout,
