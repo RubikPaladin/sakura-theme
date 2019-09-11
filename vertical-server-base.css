@@ -2221,6 +2221,7 @@ div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-
 /* adding bottom border to calls and videos */
 div.da-chat.da-inCall div.da-videoHeight > div { border-bottom: var(--borders); }
 div.da-chat.da-inCall div.da-videoHeight.da-animated { padding-bottom: 2px; }
+div.da-chat div.da-videoHeight { border-bottom: var(--borders); }
 
 
 
