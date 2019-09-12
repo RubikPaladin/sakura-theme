@@ -1543,24 +1543,31 @@ div.da-messagesWrapper div.da-jumpToPresentBar button:last-child {
 }
 
 /* redesigning the offline message */
-div.platform-win.da-app > div.da-container.da-fixClipping > div.da-content  { display: none; }
-div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems { padding: 0; }
-div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText + div {  display: none; }
-div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { font-size: 0; }
-div.platform-win.da-app > div.da-container.da-fixClipping {
+div.da-app div.da-container.da-fixClipping > div.da-content  { display: none; }
+div.da-app div.da-container.da-fixClipping > div.da-problems { padding: 0; }
+div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText + div {  display: none; }
+div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { font-size: 0; }
+div.da-app div.da-container.da-fixClipping {
     display: inline-table;
     z-index: 999999;
     width: 100%;
     left: -90px;
     height: 7px;
-    top: -25px;
+    top: -27px;
 }
 
 
 /* making the message smexy */
-div.platform-win.da-app > div.da-container.da-fixClipping > div.da-problems > div.da-problemsText:before {
+div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText::before {
     font-size: 14px;
     content: var(--offline-content);
+}
+
+/* new messages red divider */
+div.da-dividerRed.da-divider > span.da-dividerContent:after,
+div.da-dividerRed.da-divider > span.da-dividerContent:before {
+    border-radius: 1px;
+    height: 2px;
 }
 
 
