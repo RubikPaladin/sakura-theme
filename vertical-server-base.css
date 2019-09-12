@@ -2657,12 +2657,13 @@ div.ml-deleted .image-details:after {
 
 
 
-/* char counter primary midifications */
+/* char counter primary modifications */
 #charcounter.over2k { color: var(--deleted-text) !important; }
-.message-1PNnaP #charcounter {
+div.da-contentCozy.da-content div.da-channelTextArea { margin-top: 12px; }
+div.da-contentCozy.da-content #charcounter {
     width: 55px;
     text-align: right;
-    left: -70px !important;
+    left: -76px !important;
     margin-left: 0 !important;
     top: 16px;
     height: 10px;
