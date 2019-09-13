@@ -1125,8 +1125,11 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
 
 
 /* general context menu */
-div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
+div.da-layerContainer div.da-contextMenu,
+div[role="menu"] { background-color: var(--context-menu-colour); padding: 0; box-shadow: none !important; }
+div.da-layerContainer div.da-contextMenu div.da-clickable:hover,
 div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
+div.da-layerContainer div.da-contextMenu div.da-clickable,
 div[role="menu"] div.da-item {
 	margin-left: 0;
 	margin-right: 0;
@@ -1137,9 +1140,24 @@ div[role="menu"] div.da-item {
 }
 
 /* correcting smol context menu rounding + shadow dumb */
-div[role="menu"] div.da-item:last-child { border-radius: 0 0 5px 5px; }
-div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0; }
+div[role="menu"] div.da-item:last-child { border-radius: 0 0 5px 5px !important; }
+div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0 !important; }
 div.da-popout { box-shadow: none; }
+
+/* setting common design */
+div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
+div.da-layerContainer div.da-contextMenu div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
+div.da-layerContainer div.da-contextMenu div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
+div.da-itemBase div.da-label { font-weight: 400; }
+
+/* setting up general submenu */
+div.da-subMenuContext div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
+div.da-subMenuContext div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
+
+/* setting up scoll menu */
+div.da-scroller.da-contextMenu div.da-itemBase { margin: 0; }
+div.da-scroller.da-contextMenu div.da-itemBase:first-child { border-radius: 5px 0 0 0 !important;  }
+div.da-scroller.da-contextMenu div.da-itemBase:last-child { border-radius: 0 0 0 5px !important;  }
 
 
 /* changes colour of icons in the chat */
@@ -1435,6 +1453,7 @@ div.da-title.da-container div.da-topic.da-expandable {
 /* Readability Upgrade */
 time,
 blockquote,
+div.da-itemBase,
 span.da-username,
 div.ace_gutter-cell, 
 div.roleName-32vpEy,
@@ -2695,6 +2714,12 @@ div.da-contentCozy.da-content #charcounter {
     font-weight: 500;
     opacity: 0.85;
 }
+
+
+/* correcting role member plugin */
+div.da-popouts div.role-members-popout { background: var(--context-menu-colour); }
+div.da-popouts div.role-members-popout div.role-member:hover { background: var(--menu-item-hover); }
+
 
 
 
