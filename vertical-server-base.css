@@ -1957,10 +1957,10 @@ div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
 div.content-3at_AU div.da-children div.da-mentionsBadge { right: 5px; }
 div.content-3at_AU:hover div.da-children div.da-mentionsBadge { display: none; }
 div.content-3at_AU div.da-children [aria-label="Edit Channel"] { bottom: 8px; display: none; }
-div.content-3at_AU div.da-children [aria-label="Create Instant Invite"] { top: 17px; display: none; }
+div.content-3at_AU div.da-children [aria-label="Create Invite"] { top: 17px; display: none; }
 div.content-3at_AU div.da-children > div:nth-child(2)[aria-label="Edit Channel"] { bottom: 17px; }
-div.content-3at_AU div.da-children > [aria-label="Create Instant Invite"]:only-child { top: 8px; } 
-div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Create Instant Invite"],
+div.content-3at_AU div.da-children > [aria-label="Create Invite"]:only-child { top: 8px; } 
+div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Create Invite"],
 div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Edit Channel"] { display: block; }
 div.da-sidebar div.da-containerDefault.da-selected >div:hover div.da-children,
 div.content-3at_AU div.da-children {
@@ -1970,10 +1970,10 @@ div.content-3at_AU div.da-children {
 
 /* making sure Mod/Admin options swap correctly */
 div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Edit Channel"],
-div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Create Instant Invite"] {
+div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Create Invite"] {
     display: none;
 } div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label="Edit Channel"],
-  div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label="Create Instant Invite"] {
+  div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label="Create Invite"] {
     display: block;
 }
 
@@ -2054,14 +2054,14 @@ div.da-activity > div { font-size: var(--user-game-Playing); }
 div.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
 
 /* for the current game activity */
-div.da-container div.da-panel.da-activityPanel {
+div.da-container div.da-panel {
     border-top: var(--borders);
     border-bottom: none;
     background: none;
 }
 
 /* correcting weird weighting */
-div.da-container div.da-panel.da-activityPanel div.da-title,
+div.da-container div.da-panel div.da-title,
 div.da-sidebar div.da-nameTag div.da-title {
     font-weight: 400;
 }
