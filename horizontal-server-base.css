@@ -1124,7 +1124,7 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
 }
 
 
-//* general context menu */
+/* general context menu */
 div.da-layerContainer div.da-contextMenu,
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
 div.da-layerContainer div.da-contextMenu div.da-clickable:hover,
