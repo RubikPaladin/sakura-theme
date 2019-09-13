@@ -1127,7 +1127,7 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
 
 /* general context menu */
 div.da-layerContainer div.da-contextMenu,
-div[role="menu"] { background-color: var(--context-menu-colour); padding: 0; box-shadow: none !important; }
+div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
 div.da-layerContainer div.da-contextMenu div.da-clickable:hover,
 div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
 div.da-layerContainer div.da-contextMenu div.da-clickable,
@@ -1141,8 +1141,8 @@ div[role="menu"] div.da-item {
 }
 
 /* correcting smol context menu rounding + shadow dumb */
-div[role="menu"] div.da-item:last-child { border-radius: 0 0 5px 5px !important; }
-div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0 !important; }
+div[role="menu"] div.da-item:last-child { border-radius: 0 0 5px 5px !important; margin-bottom: 0; }
+div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0 !important; margin-top: 0; }
 div.da-popout { box-shadow: none; }
 
 /* setting common design */
@@ -1429,9 +1429,11 @@ div.da-title.da-container div.da-topic.da-expandable {
 
 
 
+
 /* Readability Upgrade */
 time,
 blockquote,
+div.da-label,
 div.da-itemBase,
 span.da-username,
 div.ace_gutter-cell, 
