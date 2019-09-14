@@ -1992,11 +1992,11 @@ div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
 /* editing the mod/admin icon locations + dealing with ping logic */
 div.content-3at_AU div.da-children div.da-mentionsBadge { right: 5px; }
 div.content-3at_AU:hover div.da-children div.da-mentionsBadge { display: none; }
-div.content-3at_AU div.da-children [aria-label="Edit Channel"] { bottom: 8px; display: none; }
-div.content-3at_AU div.da-children [aria-label="Create Invite"] { top: 17px; display: none; }
-div.content-3at_AU div.da-children > div:nth-child(2)[aria-label="Edit Channel"] { bottom: 17px; }
-div.content-3at_AU div.da-children > [aria-label="Create Invite"]:only-child { top: 8px; } 
-div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Create Invite"],
+div.content-3at_AU div.da-children [aria-label = "Edit Channel"] { bottom: 8px; display: none; }
+div.content-3at_AU div.da-children [aria-label ~= "Invite"] { top: 17px; display: none; }
+div.content-3at_AU div.da-children > div:nth-child(2)[aria-label = "Edit Channel"] { bottom: 17px; }
+div.content-3at_AU div.da-children > [aria-label ~= "Invite"]:only-child { top: 8px; } 
+div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label ~="Invite"],
 div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Edit Channel"] { display: block; }
 div.da-sidebar div.da-containerDefault.da-selected >div:hover div.da-children,
 div.content-3at_AU div.da-children {
@@ -2006,11 +2006,17 @@ div.content-3at_AU div.da-children {
 
 /* making sure Mod/Admin options swap correctly */
 div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Edit Channel"],
-div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Create Invite"] {
+div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label ~= "Invite"] {
     display: none;
 } div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label="Edit Channel"],
-  div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label="Create Invite"] {
+  div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label ~= "Invite"] {
     display: block;
+}
+
+
+/* for that redLive button */
+div.da-voiceUser div.da-icons div.da-textBadge {
+    margin-right: 15px;
 }
 
 /*
