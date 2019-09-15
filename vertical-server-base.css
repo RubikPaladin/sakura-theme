@@ -1922,7 +1922,7 @@ div.da-sidebar > div.da-privateChannels a > div.da-layout {
 
 /* changing width to deal with weird scroll bar */
 div.da-base > div.da-content > div.da-sidebar > div { border-right: var(--borders);  }
-div.da-base > div.da-content > div.da-sidebar { width: 241px; }
+div.da-base > div.da-content > div.da-sidebar { width: 242px; }
 
 /* DM onHover*/
 /* editing layouts */
