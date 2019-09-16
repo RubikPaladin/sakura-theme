@@ -171,6 +171,10 @@
     --server-banner-fade: 5%; /* sets where the fade begins to transition */
     --server-banner-opacity: .80;
 
+    /*  allows the override of banner fade settings
+        display/removal of the banner fade without setting loss
+        type `default` to add the fade, type `none` to delete it */
+    --banner-fade: none;
 
     /* context menus and user popout design */
 	/* menu colour - menu footers i use var(--dark-grey)*/
@@ -558,9 +562,15 @@ div.da-base > div.da-content > div.da-sidebar > div {
 /* banner edit */
 /* banner image modifications */
 div.da-sidebar div.da-animatedContainer { background: none; }
-.bannerImage-1jOskm {
+div.da-bannerImage {
+    
+    /* preset default */
     -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 100%);
     opacity: var(--server-banner-opacity) !important;
+    
+    /* allows disabling it */
+    -webkit-mask: var(--banner-fade);
+    opacity: var(--banner-fade) !important;
 }
 
 /* making server header invis on banners */
@@ -578,6 +588,13 @@ div.da-sidebar div.da-hasBanner:hover > header.da-header {
     opacity: 1;
 	animation: top-pop-in 70ms;
 	transition: 10ms;
+}
+
+/* editing regular server name */
+div.da-sidebar div.da-container > header.da-header { box-shadow: none; }
+div.da-sidebar div.da-container.da-selected > header.da-header,
+div.da-sidebar div.da-container > header.da-header:hover {
+    background: var(--on-hover-transparency);
 }
 
 /* category colour */
@@ -1066,6 +1083,10 @@ div.da-userPopout > div.da-footer div.da-wumpus.da-wumpusShown > span {
     font-size: 13px;
 }
 
+/* temp removing the home button counter icon */
+div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper div.da-badgeWrapper { display: none; }
+div.da-privateChannels div.da-children div.da-numberBadge { margin-right: 10px; }
+
 
 
 
@@ -1132,11 +1153,11 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
 
 
 /* general context menu */
-div.da-layerContainer div.da-contextMenu,
+#popout_4988 div.da-menu, div.da-layerContainer div.da-contextMenu,
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
 div.da-layerContainer div.da-contextMenu div.da-clickable:hover,
 div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
-div.da-layerContainer div.da-contextMenu div.da-clickable,
+#popout_4988 div.da-menu div.da-item, div.da-layerContainer div.da-contextMenu div.da-clickable,
 div[role="menu"] div.da-item {
 	margin-left: 0;
 	margin-right: 0;
@@ -1152,7 +1173,7 @@ div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0 !important
 div.da-popout { box-shadow: none; }
 
 /* setting common design */
-div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
+#popout_4988 div.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
 div.da-layerContainer div.da-contextMenu div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
 div.da-layerContainer div.da-contextMenu div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
 div.da-itemBase div.da-label { font-weight: 400; }
