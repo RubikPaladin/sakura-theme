@@ -1150,12 +1150,12 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
     background: var(--light-menu-colour);
 }
 
-/* general context menu */
-#popout_5524 div.da-menu, div.da-layerContainer div.da-contextMenu,
+/* general context menus */
+[id ^= "popout_"] div.da-menu, div.da-layerContainer div.da-contextMenu,
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
 div.da-layerContainer div.da-contextMenu div.da-clickable:hover,
 div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
-#popout_5524 div.da-menu div.da-item, div.da-layerContainer div.da-contextMenu div.da-clickable,
+[id ^= "popout_"] div.da-menu div.da-item, div.da-layerContainer div.da-contextMenu div.da-clickable,
 div[role="menu"] div.da-item {
 	margin-left: 0;
 	margin-right: 0;
@@ -1171,15 +1171,15 @@ div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0 !important
 div.da-popout { box-shadow: none; }
 
 /* setting common design */
-#popout_5524 div.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
+[id ^= "popout_"] div.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
 div.da-layerContainer div.da-contextMenu div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
 div.da-layerContainer div.da-contextMenu div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
 div.da-itemBase div.da-label { font-weight: 400; }
 
 /* correcting minor errors in server right click */
-#popout_5524 div.da-menu div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important; padding-top: 8px; }
-#popout_5524 div.da-menu div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important; padding-bottom: 8px; }
-#popout_5524 div.da-menu > div.da-separator { height: 2px; }
+[id ^= "popout_"] div.da-menu div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important; padding-top: 8px; }
+[id ^= "popout_"] div.da-menu div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important; padding-bottom: 8px; }
+[id ^= "popout_"] div.da-menu > div.da-separator { height: 2px; }
 
 /* setting up general submenu */
 div.da-subMenuContext div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
