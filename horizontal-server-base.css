@@ -170,11 +170,10 @@
     /* server banner fade settings */
     --server-banner-fade: 5%; /* sets where the fade begins to transition */
     --server-banner-opacity: .80;
+    --server-banner-default: linear-gradient(black var(--server-banner-fade), transparent 100%);
 
-    /*  allows the override of banner fade settings
-        display/removal of the banner fade without setting loss
-        type `default` to add the fade, type `none` to delete it */
-    --banner-fade: none;
+    /*  allows the override of banner fade settings */
+    --banner-fade: none; 
 
     /* context menus and user popout design */
 	/* menu colour - menu footers i use var(--dark-grey)*/
@@ -563,14 +562,14 @@ div.da-base > div.da-content > div.da-sidebar > div {
 /* banner image modifications */
 div.da-sidebar div.da-animatedContainer { background: none; }
 div.da-bannerImage {
-    
-    /* preset default */
-    -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 100%);
-    opacity: var(--server-banner-opacity) !important;
-    
-    /* allows disabling it */
     -webkit-mask: var(--banner-fade);
-    opacity: var(--banner-fade) !important;
+    opacity: var(--server-banner-opacity) !important;
+}
+
+/* deleting border shit */
+div.da-hasBanner div.da-animatedContainer {
+    border-bottom: none;
+    box-shadow: none;
 }
 
 /* making server header invis on banners */
