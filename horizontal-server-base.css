@@ -597,7 +597,7 @@ div.da-sidebar div.da-container > header.da-header:hover {
 }
 
 /* category colour */
-div.da-sidebar div.da-name.da-container {
+div.da-sidebar header.da-name.da-container {
     color: var(--category-color);
 }
 
