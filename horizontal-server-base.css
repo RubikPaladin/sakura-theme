@@ -1397,6 +1397,47 @@ div.protip-YaFfgO.da-protip {
 	left: 10px !important;
 }
 
+
+/* Going Live Menu */
+/* general design made to be same as upload */
+div.da-modalOverhang div.da-modalBody { background: var(--dark-menu-colour); }
+div.da-modalOverhang div.da-modalHeader {
+    border-radius: 10px 10px 0 0;
+	background: var(--dark-menu-colour);
+}
+
+/* making art properly vis + setting body radius */
+div.da-modalOverhang > div.da-art { z-index: 999; }
+div.da-modalOverhang > div.da-modal { border-radius: 12px; }
+div.da-modalOverhang div.da-modalBody div.da-cardPrimaryEditable.da-card {
+	background: rgba(255,255,255,0.075) !important;
+	border-radius: 20px;
+}
+
+/* footer settings */
+div.da-modalOverhang div.da-footer {
+	background: var(--light-menu-colour);
+	border-radius: 0 0 10px 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* cancle button */
+div.da-modalOverhang div.da-footer button[type="button"] { background: none; }
+div.da-modalOverhang div.da-footer button[type="button"]:hover{
+    background: none;
+    text-decoration: underline;
+}
+
+/* submit button */
+div.da-modalOverhang div.da-footer button[type="submit"]:hover { background-color: rgba(255,255,255,.25) !important; }
+div.da-modalOverhang div.da-footer button[type="submit"] {
+    background-color: rgba(255,255,255,.15) !important;
+    border-radius: 5px;
+}
+
+
+
 /* pop up colours */
 .theme-dark .messagesPopoutWrap-1MQ1bW .header-ykumBX { background-color: var(--pins-header-colour) !important; }
 .theme-dark .messagesPopoutWrap-1MQ1bW { background-color: var(--pins-colour) !important; }
