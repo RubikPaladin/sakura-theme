@@ -1579,6 +1579,44 @@ div.da-autocompleteInner div.da-selector.da-selectable div div {
 
 
 
+
+/* 
+    Transparaency + Background
+*/
+div.da-app > div.da-app {
+    background-color: var(--background-image);
+}
+
+
+div.da-base div.da-sidebar,
+div.da-baseLayer div.da-wrapper.da-guilds {
+    background-color: rgba(0, 0, 0, .5);
+    /*background-color: var(--main-transparency);*/
+}
+
+div.da-app,
+div.da-scrollerWrap,
+div.da-scrollerWrap > div,
+div.da-app > div.da-spacer,
+div.da-sidebar div.da-panels,
+div.da-base div.da-privateChannels,
+div.da-app > div.da-spacer > div.da-baseLayer,
+div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
     recent messages notification colours
 */
