@@ -1292,6 +1292,68 @@ div.da-modal div.da-tabBarContainer {
 }
 
 
+
+/* editing the check domain */
+/* general design */
+form.da-modal div.da-content { background: var(--dark-menu-colour); }
+form.da-modal {
+    border-radius: 10px;
+    width:500px;
+}
+
+/* footer settings */
+form.da-modal div.da-footer {
+	background: var(--light-menu-colour);
+	border-radius: 0 0 10px 10px;
+	padding-top: 12.5px;
+	padding-bottom: 12.5px;
+}
+
+/* cancle button */
+form.da-modal div.da-footer button[type="button"]:hover{
+    background: none;
+    text-decoration: underline;
+} form.da-modal div.da-footer button[type="button"] { 
+    background: none; 
+    flex: none; 
+    padding: 0; 
+    margin-right: 96px;
+}
+
+/* submit button */
+form.da-modal div.da-footer button[type="submit"]:hover { background-color: rgba(255,255,255,.25) !important; }
+form.da-modal div.da-footer button[type="submit"] {
+    background-color: rgba(255,255,255,.15) !important;
+    color: white !important;
+    border-radius: 5px;
+    flex: none;
+    position: fixed;
+    padding: 0; 
+    margin: 0;
+}
+
+/* making the footer buttons a clean size */
+form.da-modal div.da-footer button {
+    width: 96px;
+    height: 38px;
+    min-width: 0px;
+    min-height: 0px;
+}
+
+/* editing the trust domain action */
+form.da-modal div.da-footer div.da-minorAction {
+    opacity: 1;
+    margin: 0;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+}
+
+
+
 /* user pop out modifications -289px */
 /* .popout-3sVMXz.popoutLeft-30WmrD.noArrow-3BYQ0Z.noShadow-321ZPm {
 	transform: translateX( var(--user-popout-right) ) translateX( var(--user-popout-left) ) translateY( calc( var(--user-popout-top) + var(--user-top-difference) ) ) !important;

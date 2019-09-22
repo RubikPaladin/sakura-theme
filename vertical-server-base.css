@@ -1292,6 +1292,67 @@ div.da-modal div.da-tabBarContainer {
     border-top: none;
 }
 
+
+/* editing the check domain */
+/* general design */
+form.da-modal div.da-content { background: var(--dark-menu-colour); }
+form.da-modal {
+    border-radius: 10px;
+    width:500px;
+}
+
+/* footer settings */
+form.da-modal div.da-footer {
+	background: var(--light-menu-colour);
+	border-radius: 0 0 10px 10px;
+	padding-top: 12.5px;
+	padding-bottom: 12.5px;
+}
+
+/* cancle button */
+form.da-modal div.da-footer button[type="button"]:hover{
+    background: none;
+    text-decoration: underline;
+} form.da-modal div.da-footer button[type="button"] { 
+    background: none; 
+    flex: none; 
+    padding: 0; 
+    margin-right: 96px;
+}
+
+/* submit button */
+form.da-modal div.da-footer button[type="submit"]:hover { background-color: rgba(255,255,255,.25) !important; }
+form.da-modal div.da-footer button[type="submit"] {
+    background-color: rgba(255,255,255,.15) !important;
+    color: white !important;
+    border-radius: 5px;
+    flex: none;
+    position: fixed;
+    padding: 0; 
+    margin: 0;
+}
+
+/* making the footer buttons a clean size */
+form.da-modal div.da-footer button {
+    width: 96px;
+    height: 38px;
+    min-width: 0px;
+    min-height: 0px;
+}
+
+/* editing the trust domain action */
+form.da-modal div.da-footer div.da-minorAction {
+    opacity: 1;
+    margin: 0;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+}
+
+
 /* unknown play image changed */
 .gameIcon-_0rmMm[style='background-image: url("/assets/a5eba102f5b5e413df2b65c73f288afa.svg");'] {
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE1LjA3LDExLjI1TDE0LjE3LDEyLjE3QzEzLjQ1LDEyLjg5IDEzLDEzLjUgMTMsMTVIMTFWMTQuNUMxMSwxMy4zOSAxMS40NSwxMi4zOSAxMi4xNywxMS42N0wxMy40MSwxMC40MUMxMy43OCwxMC4wNSAxNCw5LjU1IDE0LDlDMTQsNy44OSAxMy4xLDcgMTIsN0EyLDIgMCAwLDAgMTAsOUg4QTQsNCAwIDAsMSAxMiw1QTQsNCAwIDAsMSAxNiw5QzE2LDkuODggMTUuNjQsMTAuNjcgMTUuMDcsMTEuMjVNMTMsMTlIMTFWMTdIMTNNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQzIyLDYuNDcgMTcuNSwyIDEyLDJaIiAvPjwvc3ZnPg==) !important;
