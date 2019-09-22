@@ -1618,6 +1618,40 @@ div.da-autocompleteInner div.da-selector.da-selectable div div {
 
 
 
+/* transparency edit */
+div.da-base div.da-sidebar,
+div.da-base > div.da-content > div,
+div.da-baseLayer div.da-wrapper.da-guilds,
+div.da-base > div.da-content > div.da-container {
+    background-color: var(--main-transparency);
+}
+
+
+div.da-app,
+div.da-scrollerWrap,
+div.da-homeWrapper > div,
+div.da-scrollerWrap > div,
+div.da-app > div.da-spacer,
+div.da-sidebar div.da-panels,
+div.da-standardSidebarView > div,
+div.da-base div.da-privateChannels,
+div.content-region-scroller.scroller,
+div.da-base > div.da-content > div > div,
+div.da-app > div.da-spacer > div.da-baseLayer,
+div.da-base > div.da-content > div.da-container > div,
+div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
