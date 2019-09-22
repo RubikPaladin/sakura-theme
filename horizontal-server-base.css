@@ -1092,6 +1092,9 @@ div.da-userPopout > div.da-footer div.da-wumpus.da-wumpusShown > span {
 div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper div.da-badgeWrapper { display: none; }
 div.da-privateChannels div.da-children div.da-numberBadge { margin-right: 10px; }
 
+/* server butons "Add Server"  +  "Search Server" */
+div.da-listItem div.da-circleIconButton { background: rgba(0, 0, 0, 0); }
+div.da-listItem div.da-circleIconButton:hover { background: var(--on-hover-transparency); }
 
 
 
