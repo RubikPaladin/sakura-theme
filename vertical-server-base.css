@@ -1096,6 +1096,12 @@ div.da-privateChannels div.da-children div.da-numberBadge { margin-right: 10px; 
 div.da-listItem div.da-circleIconButton { background: rgba(0, 0, 0, 0); }
 div.da-listItem div.da-circleIconButton:hover { background: var(--on-hover-transparency); }
 
+/* making the red dot more normal */ 
+div.da-toolbar span.da-iconBadge {
+    top: 18px;
+    right: 7px;
+}
+
 
 
 
@@ -1295,7 +1301,7 @@ div.da-modal div.da-tabBarContainer {
 
 /* editing the check domain */
 /* general design */
-form.da-modal div.da-content { background: var(--dark-menu-colour); }
+form.da-modal div.da-content { background: var(--dark-menu-colour) !important; border-radius: 8px 8px 0 0; }
 form.da-modal {
     border-radius: 10px;
     width:500px;
@@ -2564,7 +2570,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 }
 
 /* shape and size of the box */
-#popout_1 div.da-menu {
+#popout_2 div.da-menu {
     position: fixed;
 	left: -10px;
 	bottom: 1px;
@@ -2581,8 +2587,8 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 
 
 /* status picker box colour */
-#popout_1 div.da-menu div.da-separator { display: none; }
-#popout_1 div.da-menu, .listeningAlong-13-Udx {
+#popout_2 div.da-menu div.da-separator { display: none; }
+#popout_2 div.da-menu, .listeningAlong-13-Udx {
     border-top: var(--borders);
     /*border-right: var(--borders);*/
     /* border-left: var(--borders);  */
@@ -2595,7 +2601,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 
 /* box colours and size of individual options */
 .listeningAlong-13-Udx { margin: 0 !important; }
-#popout_1 div.da-menu div.da-statusItem {
+#popout_2 div.da-menu div.da-statusItem {
     margin: 0;
 	position: relative;
 	display: inline-block;
@@ -2606,13 +2612,13 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 	overflow: hidden;
 	animation: var(--status-anim) 70ms var(--default-animation) backwards;
 }
-#popout_1 div.da-menu div.da-statusItem:nth-child(1) { animation-delay: 0ms !important; }
-#popout_1 div.da-menu div.da-statusItem:nth-child(3) { animation-delay: 15ms !important; }
-#popout_1 div.da-menu div.da-statusItem:nth-child(4) { animation-delay: 30ms !important; }
-#popout_1 div.da-menu div.da-statusItem:nth-child(5) { animation-delay: 45ms !important; }
-#popout_1 div.da-menu div.da-statusItem:hover .status-3Kz6VS { transform: scale(2.8); }
-#popout_1 div.da-menu div.da-statusItem .status-3Kz6VS,
-#popout_1 div.da-menu div.da-statusItem .statusIconText-3b4TkH {
+#popout_2 div.da-menu div.da-statusItem:nth-child(1) { animation-delay: 0ms !important; }
+#popout_2 div.da-menu div.da-statusItem:nth-child(3) { animation-delay: 15ms !important; }
+#popout_2 div.da-menu div.da-statusItem:nth-child(4) { animation-delay: 30ms !important; }
+#popout_2 div.da-menu div.da-statusItem:nth-child(5) { animation-delay: 45ms !important; }
+#popout_2 div.da-menu div.da-statusItem:hover .status-3Kz6VS { transform: scale(2.8); }
+#popout_2 div.da-menu div.da-statusItem .status-3Kz6VS,
+#popout_2 div.da-menu div.da-statusItem .statusIconText-3b4TkH {
 	position: absolute;
 	width: 30px !important;
 	height: 30px !important;
@@ -2627,21 +2633,21 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 }
 
 
-#popout_1 div.da-menu div.da-statusItem .status-3Kz6VS { box-shadow: none !important; }
-#popout_1 div.da-menu div.da-statusItem:hover foreignObject:after {
+#popout_2 div.da-menu div.da-statusItem .status-3Kz6VS { box-shadow: none !important; }
+#popout_2 div.da-menu div.da-statusItem:hover foreignObject:after {
 	opacity: 1;
 	visibility: visible;
 }
 
 /* giving each item its icon */
-#popout_1 div.da-menu div.da-statusItem:nth-child(1) foreignObject:after { background: rgb(67, 181, 129); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMjEsN0w5LDE5TDMuNSwxMy41TDQuOTEsMTIuMDlMOSwxNi4xN0wxOS41OSw1LjU5TDIxLDdaIiAvPjwvc3ZnPg==); }
-#popout_1 div.da-menu div.da-statusItem:nth-child(3) foreignObject:after { background: rgb(250, 166, 26); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xMiw0QTksOSAwIDAsMCAzLDEzQTksOSAwIDAsMCAxMiwyMkE5LDkgMCAwLDAgMjEsMTNBOSw5IDAgMCwwIDEyLDRNMTIuNSw4SDExVjE0TDE1Ljc1LDE2Ljg1TDE2LjUsMTUuNjJMMTIuNSwxMy4yNVY4TTcuODgsMy4zOUw2LjYsMS44NkwyLDUuNzFMMy4yOSw3LjI0TDcuODgsMy4zOU0yMiw1LjcyTDE3LjQsMS44NkwxNi4xMSwzLjM5TDIwLjcxLDcuMjVMMjIsNS43MloiIC8+PC9zdmc+); }
-#popout_1 div.da-menu div.da-statusItem:nth-child(4) foreignObject:after { background: rgb(240, 71, 71); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTksMTNINVYxMUgxOVYxM1oiIC8+PC9zdmc+); }
-#popout_1 div.da-menu div.da-statusItem:nth-child(5) foreignObject:after { background: rgb(116, 127, 141); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIgNmMzLjc5IDAgNy4xNyAyLjEzIDguODIgNS41LS41OSAxLjIyLTEuNDIgMi4yNy0yLjQxIDMuMTJsMS40MSAxLjQxYzEuMzktMS4yMyAyLjQ5LTIuNzcgMy4xOC00LjUzQzIxLjI3IDcuMTEgMTcgNCAxMiA0Yy0xLjI3IDAtMi40OS4yLTMuNjQuNTdsMS42NSAxLjY1QzEwLjY2IDYuMDkgMTEuMzIgNiAxMiA2em0tMS4wNyAxLjE0TDEzIDkuMjFjLjU3LjI1IDEuMDMuNzEgMS4yOCAxLjI4bDIuMDcgMi4wN2MuMDgtLjM0LjE0LS43LjE0LTEuMDdDMTYuNSA5LjAxIDE0LjQ4IDcgMTIgN2MtLjM3IDAtLjcyLjA1LTEuMDcuMTR6TTIuMDEgMy44N2wyLjY4IDIuNjhDMy4wNiA3LjgzIDEuNzcgOS41MyAxIDExLjUgMi43MyAxNS44OSA3IDE5IDEyIDE5YzEuNTIgMCAyLjk4LS4yOSA0LjMyLS44MmwzLjQyIDMuNDIgMS40MS0xLjQxTDMuNDIgMi40NSAyLjAxIDMuODd6bTcuNSA3LjVsMi42MSAyLjYxYy0uMDQuMDEtLjA4LjAyLS4xMi4wMi0xLjM4IDAtMi41LTEuMTItMi41LTIuNSAwLS4wNS4wMS0uMDguMDEtLjEzem0tMy40LTMuNGwxLjc1IDEuNzVjLS4yMy41NS0uMzYgMS4xNS0uMzYgMS43OCAwIDIuNDggMi4wMiA0LjUgNC41IDQuNS42MyAwIDEuMjMtLjEzIDEuNzctLjM2bC45OC45OGMtLjg4LjI0LTEuOC4zOC0yLjc1LjM4LTMuNzkgMC03LjE3LTIuMTMtOC44Mi01LjUuNy0xLjQzIDEuNzItMi42MSAyLjkzLTMuNTN6Ii8+PC9zdmc+); }
+#popout_2 div.da-menu div.da-statusItem:nth-child(1) foreignObject:after { background: rgb(67, 181, 129); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMjEsN0w5LDE5TDMuNSwxMy41TDQuOTEsMTIuMDlMOSwxNi4xN0wxOS41OSw1LjU5TDIxLDdaIiAvPjwvc3ZnPg==); }
+#popout_2 div.da-menu div.da-statusItem:nth-child(3) foreignObject:after { background: rgb(250, 166, 26); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xMiw0QTksOSAwIDAsMCAzLDEzQTksOSAwIDAsMCAxMiwyMkE5LDkgMCAwLDAgMjEsMTNBOSw5IDAgMCwwIDEyLDRNMTIuNSw4SDExVjE0TDE1Ljc1LDE2Ljg1TDE2LjUsMTUuNjJMMTIuNSwxMy4yNVY4TTcuODgsMy4zOUw2LjYsMS44NkwyLDUuNzFMMy4yOSw3LjI0TDcuODgsMy4zOU0yMiw1LjcyTDE3LjQsMS44NkwxNi4xMSwzLjM5TDIwLjcxLDcuMjVMMjIsNS43MloiIC8+PC9zdmc+); }
+#popout_2 div.da-menu div.da-statusItem:nth-child(4) foreignObject:after { background: rgb(240, 71, 71); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTksMTNINVYxMUgxOVYxM1oiIC8+PC9zdmc+); }
+#popout_2 div.da-menu div.da-statusItem:nth-child(5) foreignObject:after { background: rgb(116, 127, 141); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIgNmMzLjc5IDAgNy4xNyAyLjEzIDguODIgNS41LS41OSAxLjIyLTEuNDIgMi4yNy0yLjQxIDMuMTJsMS40MSAxLjQxYzEuMzktMS4yMyAyLjQ5LTIuNzcgMy4xOC00LjUzQzIxLjI3IDcuMTEgMTcgNCAxMiA0Yy0xLjI3IDAtMi40OS4yLTMuNjQuNTdsMS42NSAxLjY1QzEwLjY2IDYuMDkgMTEuMzIgNiAxMiA2em0tMS4wNyAxLjE0TDEzIDkuMjFjLjU3LjI1IDEuMDMuNzEgMS4yOCAxLjI4bDIuMDcgMi4wN2MuMDgtLjM0LjE0LS43LjE0LTEuMDdDMTYuNSA5LjAxIDE0LjQ4IDcgMTIgN2MtLjM3IDAtLjcyLjA1LTEuMDcuMTR6TTIuMDEgMy44N2wyLjY4IDIuNjhDMy4wNiA3LjgzIDEuNzcgOS41MyAxIDExLjUgMi43MyAxNS44OSA3IDE5IDEyIDE5YzEuNTIgMCAyLjk4LS4yOSA0LjMyLS44MmwzLjQyIDMuNDIgMS40MS0xLjQxTDMuNDIgMi40NSAyLjAxIDMuODd6bTcuNSA3LjVsMi42MSAyLjYxYy0uMDQuMDEtLjA4LjAyLS4xMi4wMi0xLjM4IDAtMi41LTEuMTItMi41LTIuNSAwLS4wNS4wMS0uMDguMDEtLjEzem0tMy40LTMuNGwxLjc1IDEuNzVjLS4yMy41NS0uMzYgMS4xNS0uMzYgMS43OCAwIDIuNDggMi4wMiA0LjUgNC41IDQuNS42MyAwIDEuMjMtLjEzIDEuNzctLjM2bC45OC45OGMtLjg4LjI0LTEuOC4zOC0yLjc1LjM4LTMuNzkgMC03LjE3LTIuMTMtOC44Mi01LjUuNy0xLjQzIDEuNzItMi42MSAyLjkzLTMuNTN6Ii8+PC9zdmc+); }
 
 
 /* items base settings */
-#popout_1 div.da-menu div.da-statusItem foreignObject:after {
+#popout_2 div.da-menu div.da-statusItem foreignObject:after {
 	content: " ";
 	display: block;
 	position: absolute;
@@ -2662,8 +2668,8 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 }
 
 /* removing old menu information */
-#popout_1 div.da-menu div.da-statusItem div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }
-#popout_1 div.da-menu div.da-statusItem div.da-helper { display: none; }
+#popout_2 div.da-menu div.da-statusItem div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }
+#popout_2 div.da-menu div.da-statusItem div.da-helper { display: none; }
 
 
 /* setting up most of the user panels (bottom left) */
