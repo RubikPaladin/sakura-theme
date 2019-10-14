@@ -278,6 +278,8 @@
     --small-emote: 18px;
     --normal-emote: 32px;  /* Default: 32 - if u have an emote plugin change these sizes to match better*/
 
+    /* discords server folder when opened */
+    --opened-folder-colour: var(--on-hover-transparency);
 
 
 
@@ -687,6 +689,18 @@ div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1
     filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
 }
 
+/* down guilds */
+div.da-listItemWrapper > a.da-guildsError {
+    background-color: var(--on-hover-transparency);
+    border-width: 1px;
+}
+
+/* setting folder backgrounds */
+div.da-wrapper > span.da-expandedFolderBackground.da-collapsed { background: none; }
+div.da-wrapper > span.da-expandedFolderBackground {
+    background-color: var(--opened-folder-colour);
+}
+
 /* fixing friend icon */
 div.da-wrapper:not(.foldercontent) div.da-childWrapper {
     background: var(--friends-icon) !important;
@@ -994,12 +1008,13 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
 
 /* VC settings */
 /* correcting voice user outline and onHover*/
-div.da-sidebar div.da-containerDefault div.da-voiceUser > div {  border-radius: 8px !important; }
-div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-content {  padding-left: 0 !important; }
-div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons {  display: block; margin-right: 6px; margin-bottom: 2px;}
-div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons > div > svg { height: 15.5px; width: 15.5px; }
-div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons > div:nth-child(2) > svg { height: 13px; width: 13px; }
-div.da-sidebar div.da-containerDefault div.da-voiceUser div.da-icons > div:only-child {  height: 17px; width: 17px; }
+div.da-sidebar div.da-voiceUser > div {  border-radius: 8px !important; }
+div.da-sidebar div.da-voiceUser > div.da-content { height: 32px !important; }
+div.da-sidebar div.da-voiceUser div.da-content {  padding-left: 0 !important; }
+div.da-sidebar div.da-voiceUser div.da-icons {  display: block; margin-right: 6px; margin-bottom: 2px;}
+div.da-sidebar div.da-voiceUser div.da-icons > div > svg { height: 15.5px; width: 15.5px; }
+div.da-sidebar div.da-voiceUser div.da-icons > div:nth-child(2) > svg { height: 13px; width: 13px; }
+div.da-sidebar div.da-voiceUser div.da-icons > div:only-child {  height: 17px; width: 17px; }
 
 /* making it only display 1 at a time */
 div.da-voiceUser div.da-icons > div { display: none; }
@@ -1101,6 +1116,18 @@ div.da-toolbar span.da-iconBadge {
     top: 18px;
     right: 7px;
 }
+
+/* changing general badge */
+div.da-numberBadge { border-radius: 6px; }
+div.da-guilds div.da-lowerBadge { margin-bottom: 1px; }
+div.da-guilds div.da-numberBadge.da-base { padding-left: 1px; }
+div.da-listItem:nth-child(1) div.da-lowerBadge { display: none; }
+div.da-privateChannels div.da-numberBadge.da-base { padding-bottom: 1.5% !important; }
+div.da-container div.da-numberBadge.da-base {
+    padding-right: 1.5px !important;
+    padding-bottom: 0.5%;
+}
+
 
 
 
@@ -1350,12 +1377,42 @@ form.da-modal div.da-footer button {
 form.da-modal div.da-footer div.da-minorAction {
     opacity: 1;
     margin: 0;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     width: fit-content;
     height: fit-content;
     font-weight: 400;
     font-size: 14px;
     color: white;
+    text-align: left;
+    flex: 1;
+}
+
+
+
+
+/* menu aesthetic for server folder settings */
+div.da-layer div.da-root { border-radius: 8px; }
+div.da-layer div.da-root > div.da-header { border-radius: 8px 8px 0 0; }
+div.da-layer div.da-root > div.da-content { border-radius: 0; }
+div.da-layer div.da-root > div.da-header,
+div.da-layer div.da-root > div.da-content {
+	background-color: var(--dark-menu-colour) !important;
+}
+
+/* footer */
+div.da-layer div.da-root > div.da-footer {
+    background: var(--light-menu-colour) !important;
+	border-radius: 0 0 8px 8px;
+	padding-top: 12.5px !important;
+	padding-bottom: 12.5px !important;
+}
+
+/* submit button */
+div.da-layer div.da-root > div.da-footer > button[type="submit"]:hover { background-color: rgba(255,255,255, .30) !important; }
+div.da-layer div.da-root > div.da-footer > button[type="submit"] {
+	background-color: rgba(255,255,255, .15) !important;
+	color: white !important;
+    border-radius: 5px;
 }
 
 
@@ -1573,6 +1630,11 @@ div.categories-1feg4n.da-categories {
 /* making emote menu taller  - tallemoto*/
 .emojiPicker-3m1S-j.da-emojiPicker { height: var(--emote-menu-height); }
 .emojiPicker-3m1S-j.da-emojiPicker .scrollerFade-1Ijw5y.da-scrollerFade.scrollerTrack-1ZIpsv.da-scrollerTrack > div { height: 100%; }
+div.da-emojiPicker div.da-scroller { background-color: var(--emote-menu) !important; }
+div.da-emojiPicker div.da-noSearchResultsContainer {
+    background-color: var(--emote-menu);
+    height: 80%;
+}
 
 /* setting emoji display - changing emote margins in chat; to make it clean af */
 .emoji.jumboable { margin: 0 !important; }
