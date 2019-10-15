@@ -708,6 +708,12 @@ div.da-wrapper:not(.foldercontent) div.da-childWrapper {
     background-size: var(--friends-icon-zoom) !important;
 }
 
+/* making server add + search normal again */
+div.da-listItem {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 /* :hover, */
 .theme-dark .wrapper-1ucjTd.modeSelected-1zApJ_ .name-3_Dsmg,
 .theme-dark .wrapper-1ucjTd.modeSelected-1zApJ_:hover .name-3_Dsmg,
