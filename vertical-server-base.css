@@ -1069,8 +1069,7 @@ div.da-voiceUser div.da-icons div.da-textBadge { margin-right: 5px !important; }
 }
 
 /* markup special object rounding */
-div.da-markup > span,
-div.da-embed div.da-markup span {
+div.da-markup span {
     padding-left: 4px;
     padding-right: 4px;
     border-radius: 5px;
@@ -1134,6 +1133,13 @@ div.da-container div.da-numberBadge.da-base {
     padding-right: 1.5px !important;
     padding-bottom: 0.5%;
 }
+
+/* correcting server notifications and DM's */
+div.da-listItem div.da-numberBadge.da-base { border-radius: 50%; padding-right: 0 !important;}
+:not(.da-listItem) div.da-listItem div.da-lowerBadge {
+    display: inherit;
+}
+
 
 
 
