@@ -702,7 +702,7 @@ div.da-wrapper > span.da-expandedFolderBackground {
     background-color: var(--opened-folder-colour);
     border-radius: 15px 24px 24px 15px;
     left: 0 !important;
-    width: 90% !important;
+    width: 95% !important;
 }
 
 /* setting folder backgrounds */
