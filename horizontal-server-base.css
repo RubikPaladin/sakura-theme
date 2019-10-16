@@ -695,11 +695,23 @@ div.da-listItemWrapper > a.da-guildsError {
     border-width: 1px;
 }
 
+/* horizontal server version */
 /* setting folder backgrounds */
 div.da-wrapper > span.da-expandedFolderBackground.da-collapsed { background: none; }
 div.da-wrapper > span.da-expandedFolderBackground {
     background-color: var(--opened-folder-colour);
+    border-radius: 15px 24px 24px 15px;
+    left: 0 !important;
+    width: 90% !important;
 }
+
+/* setting folder backgrounds */
+div.da-wrapper > span.da-expandedFolderBackground.da-collapsed { background: none; }
+div.da-wrapper > span.da-expandedFolderBackground + div.da-listItem div.da-folder {
+    background-color: var(--opened-folder-colour);
+    border-radius: 15px;
+}
+
 
 /* fixing friend icon */
 div.da-wrapper:not(.foldercontent) div.da-childWrapper {
