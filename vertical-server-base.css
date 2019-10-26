@@ -1378,7 +1378,7 @@ div.da-modal div.da-tabBarContainer {
 /* correcting button and dropdown menu design */
 div.da-layer div.da-root div.da-footer button.da-button.da-grow:first-child:hover { background: rgba(255,255,255,.3) !important; }
 div[role="dialog"].da-popout div.da-option:hover { background-color: var(--menu-item-hover); }
-div[role="dialog"].da-popout { background-color: #0D0705; }
+div[role="dialog"].da-popout > div.da-scrollerWrap { background-color: #0D0705 !important; }
 div.da-layer div.da-root div.da-inputContainer div.da-input {
 	border-radius: 15px;
 	border-color: transparent;
