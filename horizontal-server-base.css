@@ -1309,8 +1309,8 @@ div.da-userPopout div.da-headerTag span.da-botTag {
 /* custom status user popout text */
 /* div.da-userPopout div.da-customStatus { padding-top: 10px; } */
 div.da-userPopout div.da-customStatus span {
-    font-weight: var(--user-game-font-weight);
-    vertical-align: super;
+    /* font-weight: var(--user-game-font-weight);
+    vertical-align: super; */
     color: #f2f2f2;
 }
 
