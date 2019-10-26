@@ -1736,9 +1736,6 @@ div.da-modal > div.da-header { border-radius: 10px 10px 0 0; }
 div.da-modal > div.da-footer {
 	border-radius: 0 0 10px 10px;
 	background-color: var(--light-menu-colour);
-} div.da-modal {
-	border-radius: 11px;
-	background-color: var(--dark-menu-colour);
 }
 
 
