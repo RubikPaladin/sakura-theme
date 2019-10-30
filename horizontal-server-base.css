@@ -2472,13 +2472,14 @@ div.da-content div.da-membersWrap div.da-membersGroup {
 
 
 /* general custom activity in member list */
-div.da-member div.da-activity div.da-text { padding-top: 1px; }
-div.da-privateChannels div.da-activity div.da-text > span,
-div.da-member div.da-activity div.da-text > span {
+div.da-member div.da-activity { padding-top: 1px; }
+div.da-privateChannels div.da-activity div.da-activityText,
+div.da-member div.da-activity div.da-activityText {
     vertical-align: middle;
     display: inline;
     font-size: var(--user-game-size);
     font-weight: calc(var(--user-game-font-weight) - 50);
+    
 }
 
 /*  display music icons */
