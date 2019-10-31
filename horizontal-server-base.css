@@ -2349,6 +2349,7 @@ div.da-base > div.da-content > div.da-sidebar { width: 241px; }
 
 /* DM onHover*/
 /* editing layouts */
+div.da-sidebar div.da-privateChannels a.da-channel.da-container:hover { background: none; }
 div.da-sidebar > div.da-privateChannels a.da-selected > div.da-layout,
 div.da-sidebar > div.da-privateChannels a:hover > div.da-layout {
     background: var(--on-hover-transparency);

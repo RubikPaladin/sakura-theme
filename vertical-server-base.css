@@ -2308,6 +2308,7 @@ div.da-base > div.da-content > div.da-sidebar { width: 242px; }
 
 /* DM onHover*/
 /* editing layouts */
+div.da-sidebar div.da-privateChannels a.da-channel.da-container:hover { background: none; }
 div.da-sidebar > div.da-privateChannels a.da-selected > div.da-layout,
 div.da-sidebar > div.da-privateChannels a:hover > div.da-layout {
     background: var(--on-hover-transparency);
@@ -2438,7 +2439,6 @@ div.da-member div.da-activity div.da-activityText {
     display: inline;
     font-size: var(--user-game-size);
     font-weight: calc(var(--user-game-font-weight) - 50);
-    
 }
 
 
