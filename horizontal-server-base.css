@@ -2474,13 +2474,12 @@ div.da-content div.da-membersWrap div.da-membersGroup {
 
 /* general custom activity in member list */
 div.da-member div.da-activity { padding-top: 1px; }
-div.da-privateChannels div.da-activity div.da-activityText,
-div.da-member div.da-activity div.da-activityText {
+div.da-privateChannels div.da-activity img + div.da-activityText,
+div.da-member div.da-activity img + div.da-activityText {
     vertical-align: middle;
     display: inline;
-    font-size: var(--user-game-size);
+    font-size: var(--user-game-size) !important;
     font-weight: calc(var(--user-game-font-weight) - 50);
-    
 }
 
 /*  display music icons */
@@ -2497,8 +2496,11 @@ div.da-member div.da-activity div.da-activityText {
 
 /* activity modification - genious actually */
 div.da-sidebar div.da-activity > svg{ display: none; }
-div.da-activity > div { font-size: var(--user-game-Playing); }
+div.da-activity > div { font-size: var(--user-game-Playing) !important; }
 div.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
+
+
+/* div.da-activity > img + div { } */
 
 /* for the current game activity */
 div.da-container div.da-panel {
