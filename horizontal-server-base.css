@@ -157,7 +157,7 @@
 
     /* members list "Playing" info */
     --user-game-size: 11px;
-    --user-game-Playing: 0%;
+    --user-game-Playing: 100%;
     --user-game-font-weight: 600;
 
 
