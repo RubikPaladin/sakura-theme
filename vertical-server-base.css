@@ -2340,8 +2340,46 @@ div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
 }
 
 
+
 /* Mod/Admin Icons */
 /* editing the mod/admin icon locations + dealing with ping logic */
+div.content-3at_AU div.da-children div.da-mentionsBadge { right: 5px; }
+div.content-3at_AU:hover div.da-children div.da-mentionsBadge { display: none; }
+div.content-3at_AU div.da-children [role = "button"] { bottom: 8px; display: none; }
+div.content-3at_AU div.da-children > div:nth-child(2)[role = "button"] { 
+    bottom: 17px;
+    position: absolute !important;
+} div.content-3at_AU div.da-children [aria-label ~= "Invite"] { 
+    top: 8px; 
+    display: none; 
+}
+
+/* onHover corrections */
+div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label ~="Invite"],
+div.da-sidebar div.da-containerDefault > div:hover div.da-children [role = "button"] { display: block; }
+div.da-sidebar div.da-containerDefault.da-selected > div:hover div.da-children,
+div.content-3at_AU div.da-children {
+    display: block;
+    margin-right: 2px;
+}
+
+/* making sure Mod/Admin options swap correctly */
+div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z svg[name = "Gear"],
+div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label ~= "Invite"] {
+    display: none;
+} div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover [role = "button"],
+  div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label ~= "Invite"] {
+    display: block;
+}
+
+
+/*div.da-sidebar div.da-containerDefault div.da-children svg[name = "Gear"]{*/
+/*    color: #f1f !important;*/
+/*}*/
+
+
+/* Mod/Admin Icons */
+/* editing the mod/admin icon locations + dealing with ping logic *
 div.content-3at_AU div.da-children div.da-mentionsBadge { right: 5px; }
 div.content-3at_AU:hover div.da-children div.da-mentionsBadge { display: none; }
 div.content-3at_AU div.da-children [aria-label = "Edit Channel"] { bottom: 8px; display: none; }
@@ -2353,7 +2391,7 @@ div.content-3at_AU div.da-children > div:nth-child(2)[aria-label = "Edit Channel
     display: none; 
 }
 
-/* onHover corrections */
+/* onHover corrections *
 div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label ~="Invite"],
 div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Edit Channel"] { display: block; }
 div.da-sidebar div.da-containerDefault.da-selected > div:hover div.da-children,
@@ -2362,7 +2400,7 @@ div.content-3at_AU div.da-children {
     margin-right: 2px;
 }
 
-/* making sure Mod/Admin options swap correctly */
+/* making sure Mod/Admin options swap correctly *
 div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Edit Channel"],
 div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label ~= "Invite"] {
     display: none;
