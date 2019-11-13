@@ -133,7 +133,7 @@
     --friends-icon-brightness: 30%;
 
     /* colour of bot embeds, will add 40% opacity to background and 60% to border thoe */
-    --embed-colour: 46,48,54;
+    --embed-colour: 58,48,54;  /* Discord Default: 46,48,54 */
     
     
 
