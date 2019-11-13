@@ -132,6 +132,8 @@
     --friends-icon-hue-rotation: 300deg;
     --friends-icon-brightness: 30%;
     
+    /* colour of bot embeds, will add 40% opacity to background and 60% to border thoe */
+    --embed-colour: 46,48,54;
 	
 	
 	
@@ -972,6 +974,13 @@ div.da-isMentioned > div.da-markup > span.mention:hover{
     height: var(--normal-emote) !important;
     width: var(--normal-emote) !important;
 }
+
+/* embed recolour */
+div.da-chatContent div.da-embed div.da-embedInner {
+    background-color: rgba(var(--embed-colour), .4) !important;
+    border-color: rgba(var(--embed-colour), .6) ;
+}
+
 
 
 
