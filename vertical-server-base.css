@@ -1156,7 +1156,6 @@ div.da-toolbar span.da-iconBadge {
 div.da-numberBadge { border-radius: 6px; }
 div.da-guilds div.da-lowerBadge { margin-bottom: 1px; }
 div.da-guilds div.da-numberBadge.da-base { padding-left: 1px; }
-div.da-listItem:nth-child(1) div.da-lowerBadge { display: none; }
 div.da-privateChannels div.da-numberBadge.da-base { padding-bottom: 1.5% !important; }
 div.da-container div.da-numberBadge.da-base {
     padding-right: 1.5px !important;
@@ -1169,6 +1168,8 @@ div.da-listItem div.da-numberBadge.da-base { border-radius: 50%; padding-right: 
     display: inherit;
 }
 
+
+div.da-listItem:nth-child(1) div.da-lowerBadge { display: none; }
 
 
 
@@ -1189,6 +1190,13 @@ div.da-listItem div.da-numberBadge.da-base { border-radius: 50%; padding-right: 
 /*
     context menu modifications
 */
+
+/* changing layer stuffz*/
+div.da-layer > div {
+    border-radius: 20px;
+}
+
+
 
 /* search menu design */
 /* editing the popout slightly*/
@@ -1698,6 +1706,29 @@ div.da-emojiPicker div.da-noSearchResultsContainer {
     background-color: var(--emote-menu);
     height: 80%;
 }
+
+/* more emote menu stufffff*/
+div.da-emojiPicker { border-radius: 15px 15px 10px 10px; }
+div.da-emojiPicker div.da-header div.da-searchBar {
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+div.da-emojiPicker div.da-infoBarWrapper.da-infoBarExpanded {
+    background: var(--emote-footer) !important;
+    height: 40px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+
+div.da-emojiPicker div.da-infoBarExpanded + div.da-categories { padding-bottom: 5px; }
+div.da-emojiPicker div.da-infoBarExpanded div.da-infoBar {
+    background: var(--emote-footer) !important;
+    height: 40px;
+}
+
+
 
 /* setting emoji display - changing emote margins in chat; to make it clean af */
 .emoji.jumboable { margin: 0 !important; }
@@ -2765,7 +2796,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 /* shape and size of the box */
 #popout_1 div.da-menu {
     position: fixed;
-	left: -10px;
+	left: -8px;
 	bottom: 1px;
 	width: var(--picker-width) !important;
 	top: initial !important;
