@@ -740,7 +740,7 @@ div.da-wrapper:not(.foldercontent) div.da-childWrapper {
 
 /* correcting time location */
 time {
-    vertical-align: 14%;
+    vertical-align: 0%;
     margin-left: 5px !important;
     margin-right: 1px;
 }
@@ -3176,6 +3176,7 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
 /* discord badges plugin*/
 .BE-badge {  height: var(--badge-height) !important;  }
 .BE-badge.BE-badge-chat { margin-top: var(--badge-bottom) !important;  }
+div.BE-badge.BE-badge-chat:not(.BE-badge-CurrentGuildBoost) { top: 4px; }
 
 /* correcting first and last */
 /*.BE-badge:not(.BE-badge-settings):first-of-type { margin-left: 0 !important; }*/
