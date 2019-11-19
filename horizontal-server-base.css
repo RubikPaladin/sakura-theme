@@ -1179,12 +1179,6 @@ div.da-listItem div.da-numberBadge.da-base { border-radius: 50%; padding-right: 
     context menu modifications
 */
 
-/* changing layer stuffz*/
-div.da-layer > div {
-    border-radius: 20px;
-}
-
-
 /* search menu design */
 /* editing the popout slightly*/
 div.da-popout > div.da-container.da-elevationBorderHigh {
@@ -1738,6 +1732,12 @@ div.da-emojiPicker div.da-infoBarExpanded div.da-infoBar {
     background: var(--emote-footer) !important;
     height: 40px;
 }
+
+/* changing emoji layer stuffz*/
+#popout_42330 > div {
+    border-radius: 20px;
+}
+
 
 
 

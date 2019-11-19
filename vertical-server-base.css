@@ -1186,13 +1186,6 @@ div.da-listItem div.da-numberBadge.da-base { border-radius: 50%; padding-right: 
     context menu modifications
 */
 
-/* changing layer stuffz*/
-div.da-layer > div {
-    border-radius: 20px;
-}
-
-
-
 /* search menu design */
 /* editing the popout slightly*/
 div.da-popout > div.da-container.da-elevationBorderHigh {
@@ -1730,6 +1723,12 @@ div.da-emojiPicker div.da-infoBarExpanded div.da-infoBar {
 div.contentCozy-3XX413.content-3dzVd8.da-contentCozy.da-content > div.containerCozy-336-Cz.container-206Blv.da-containerCozy.da-container {
     margin-top: 3px;
 }
+
+/* changing emoji layer stuffz*/
+#popout_42330 > div {
+    border-radius: 20px;
+}
+
 
 /* auto complete stuffz */
 /* onHover and general aesthetic */
