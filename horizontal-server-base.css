@@ -1159,13 +1159,8 @@ div.da-container div.da-numberBadge.da-base {
 }
 
 /* correcting server notifications and DM's */
+div.da-scroller > div.da-listItem:nth-child(1) div.da-lowerBadge { display: none; }
 div.da-listItem div.da-numberBadge.da-base { border-radius: 50%; padding-right: 0 !important;}
-:not(.da-listItem) div.da-listItem div.da-lowerBadge {
-    display: inherit;
-}
-
-
-div.da-listItem:nth-child(1) div.da-lowerBadge { display: none; }
 
 
 
