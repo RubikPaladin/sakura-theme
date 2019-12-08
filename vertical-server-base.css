@@ -261,10 +261,10 @@
     --username-on-hover: rgba(255, 200, 255, .15);
 	
 	/* status-picker variables - feel free to adjust them for a different feel */
-	--picker-width: 239px;
+	--picker-width: 241px;
 	--option-height: 52px;
 	--margin-bottom: 0px;
-	--option-width: calc(var(--picker-width) / 4); /*cause 4 options*/
+	--option-width: calc((var(--picker-width) / 4) - 0.25px); /*cause 4 options + 1px border */
 	--status-picker-background: /* set as nothing cause i like the default */ ;
 	--status-anim: bottom-pop-in; 	/* animation options:  expand-in, bottom-pop-in, top-pop-in, left-pop-in, right-pop-in (type "none" to remove animation or feel free to build ur own, examples below) */
 	
@@ -1624,6 +1624,9 @@ div.protip-YaFfgO.da-protip {
 	left: 10px !important;
 }
 
+/* general text area */
+div.da-channelTextArea div.da-textArea span { margin-left: -4px; }
+
 
 /* Going Live Menu */
 /* general design made to be same as upload */
@@ -2808,7 +2811,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 #popout_1 div.da-menu div.da-separator { display: none; }
 #popout_1 div.da-menu, .listeningAlong-13-Udx {
     border-top: var(--borders);
-    /*border-right: var(--borders);*/
+    border-right: var(--borders);
     /* border-left: var(--borders);  */
     /* background: #111114 !important;   trans-fail*/ 
     
