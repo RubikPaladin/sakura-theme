@@ -220,7 +220,7 @@
     --leave-server-text-colour: #fff; 				/* was 99aab5*/
     --slider-bubble-width: 2px; 					/* default for volume slider is a ball, has values    width: 10px;    radius: 50%;    display-left: 20px; */
     --slider-bubble-radius: 3px;                    /* volbal */
-    --slider-display-left: -24px;
+    --slider-display-left: 6px;
     --slider-background: #aaa;
     --slider-foreground: var(--slider-background);
     --audio-animation-scale: 4px; 					/* size of the largest animation the others scale */
