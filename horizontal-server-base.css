@@ -685,9 +685,9 @@ div.da-scroller::-webkit-scrollbar-thumb {
 }
 
 /* changes made to allow colour setting of the friend icon - Horizontal Server Version */
-div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) > div.da-pill:not(.bd-selected) { display: none; }
-div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper > svg > foreignObject > a { border-radius: 0 !important; }
-div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper {
+nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) > div.da-pill:not(.bd-selected) { display: none; }
+nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper > svg > foreignObject > a { border-radius: 0 !important; }
+nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper {
     filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
 }
 
@@ -716,7 +716,7 @@ div.da-wrapper > span.da-expandedFolderBackground + div.da-listItem div.da-folde
 
 
 /* fixing friend icon */
-div.da-wrapper:not(.foldercontent) div.da-childWrapper {
+nav.da-wrapper:not(.foldercontent) div.da-childWrapper {
     background: var(--friends-icon) !important;
     background-position: var(--friends-icon-position) !important;
     background-repeat: no-repeat !important;
@@ -1135,7 +1135,7 @@ div.da-userPopout > div.da-footer div.da-wumpus.da-wumpusShown > span {
 }
 
 /* temp removing the home button counter icon */
-div.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper div.da-badgeWrapper { display: none; }
+nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper div.da-badgeWrapper { display: none; }
 div.da-privateChannels div.da-children div.da-numberBadge { margin-right: 10px; }
 
 /* server butons "Add Server"  +  "Search Server" */
