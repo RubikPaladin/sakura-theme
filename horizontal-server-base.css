@@ -1001,14 +1001,14 @@ div.da-messagesWrapper div.da-scroller.da-systemPad {
 div.da-chatContent div.da-isUnread {
     background-color: #F04747;
     height: 1.1px;
-    left: 33%;
-    width: 60%;
+    left: 33% !important;
+    width: 60% !important;
 }
 
 /* making my line come from the center of the "new" tag*/
 div.da-chatContent div.da-isUnread > span {
-    top: -7px;
-    right: -7%;
+    top: -7px !important;
+    right: -7% !important;
 }
 
 /* cleaning up date dividers */
