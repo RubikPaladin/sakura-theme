@@ -365,6 +365,9 @@
     --voice-hover-color: var(--accent-colour) ; /* default: #f6f6f7 */
     --selected-text-voice-color: #f6f6f7; /* default: #f6f6f7 */
 
+    /* I removed discords message on hover BG colour just set this to 'none' to get it back*/
+    --discords-message-hover: rgba(0,0,0,0);
+
 
 
 
@@ -738,7 +741,7 @@ nav.da-wrapper:not(.foldercontent) div.da-childWrapper {
     background: var(--on-hover-transparency) !important;
 }
 
-/* correcting time location */
+/* correcting time location *
 time {
     vertical-align: 0%;
     margin-left: 5px !important;
@@ -746,9 +749,12 @@ time {
 }
 
 /* changing time display */
-div.da-headerCozy > div:hover + h2 time,
-.da-headerCozy > h2:hover time { display: inline; }
-time { display: var(--time-display); }
+h2.da-header:hover span.da-timestamp,
+img:hover + h2.da-header span.da-timestamp { display: inline-block; }
+span.da-timestamp { 
+    height: 1rem; 
+    display: var(--time-display); 
+}
 
 /* bot tag dimensions and stuff */
 span.da-botTag {
@@ -756,7 +762,7 @@ span.da-botTag {
     color: var(--bot-text);
     margin-left: 3px;
     height: 10px;
-    top: 3px;
+    top: -1px;
 }
 
 /* making bot tag in members list more centered */
@@ -764,7 +770,7 @@ div.da-membersWrap span.da-botTagRegular.da-botTag.da-bot {
     margin-top: 5px;
 }
 
-/* moving in chat bot tag */
+/* moving in chat bot tag *
 h2.da-headerCozyMeta span.da-botTag {
     top: -1px;
 }
@@ -774,7 +780,7 @@ div.da-memberContent:only-child { margin-top: -2px; }
 div.da-memberContent:only-child span.da-botTag.da-bot{ margin-top: 1px !important; }
 
 /* removing on hover for edited messages */
-/*time, :not(.ml-edited) > .ml-edited, div.ml-deleted { pointer-events: none; }*/
+/*time, :not(.ml-edited) > .ml-edited, div.ml-deleted { pointer-events: none; }*
 time { pointer-events: none; }
 
 
@@ -809,13 +815,14 @@ div.tooltip-2QfLtc.tooltipLeft-3EDOk1.tooltipBlack-PPG47z {
 } .toast { display:none; }
 
 /* making sure open pop-outs dont troll me */
-h2.da-headerCozyMeta > span.popout-open > span { display: inline-flex; }
+h2.da-header > span.popout-open > span { display: inline-flex; }
 
 /* username */
 .da-username { margin-top: 2px; }
 
 /* user name header */
-.headerCozy-2N9HOL.da-headerCozy > h2{
+div.da-contents > h2{
+    display: inline-block;
     border-radius: 0 12px 12px 0;
     padding-right: 7px;
     padding-left: 80px;
@@ -824,7 +831,7 @@ h2.da-headerCozyMeta > span.popout-open > span { display: inline-flex; }
 }
 
 /* making sure the name doesnt get too long */
-h2.da-headerCozyMeta span.da-username {
+h2.da-header span.da-username {
     padding-top: 1.5px;
     max-width: 500px;
     overflow: hidden;
@@ -833,11 +840,9 @@ h2.da-headerCozyMeta span.da-username {
     margin-top: 0;
 }
 
-
-/* on hover shitty fix, also displays on pfp hover */
-div.headerCozy-2N9HOL.da-headerCozy > div:hover + h2,
-.headerCozy-2N9HOL.da-headerCozy > h2:hover {
-    background: var(--username-on-hover);
+/*header on hover stuffz*/
+h2.da-header:hover, img:hover + h2.da-header  {
+    background-color: var(--username-on-hover);
 }
 
 /* removes that darken thing discord does on user pfp hover, so my on hover looks nicer */
@@ -980,6 +985,16 @@ div.da-chatContent div.da-embed div.da-embedInner {
     background-color: rgba(var(--embed-colour), .4) !important;
     border-color: rgba(var(--embed-colour), .6) ;
 }
+
+/*dicsords chat on hover stuff*/
+.mouse-mode .da-message:hover {
+    background-color: var(--discords-message-hover);
+}
+
+/* weird chat hight error*/
+div.da-messagesWrapper div.da-scroller.da-systemPad {
+    height: 99.2% !important;
+} 
 
 
 
