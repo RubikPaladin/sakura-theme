@@ -74,7 +74,7 @@
     --ping-inline-colour: rgba(255,170,212, .2); 
 
     /* each ping creates an embed (that thicc coloured line to the left when u do bot commands) */
-    --ping-embed-colour: 2px solid #FFAAD4; 
+    --ping-embed-colour: 1px solid #FFAAD4; 
 	
 	
 	/* code block edges */
