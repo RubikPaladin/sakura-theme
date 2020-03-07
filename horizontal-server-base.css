@@ -963,7 +963,7 @@ div.da-blockquoteDivider {
 
 
 /* code for changing ping colour */
-div.da-mentioned:before { border-left: var(--ping-embed-colour) !important; } 
+div.da-mentioned:before { border: var(--ping-embed-colour) !important; } 
 div.da-mentioned { 
     background: var(--ping-inline-colour) !important; 
     border-radius: 0 6px 6px 0;
