@@ -74,7 +74,7 @@
     --ping-inline-colour: rgba(255,170,212, .2); 
 
     /* each ping creates an embed (that thicc coloured line to the left when u do bot commands) */
-	--ping-embed-colour: 4px solid #FFAAD4; 
+    --ping-embed-colour: 2px solid #FFAAD4; 
 	
 	
 	/* code block edges */
@@ -963,12 +963,13 @@ div.da-blockquoteDivider {
 
 
 /* code for changing ping colour */
-div.da-isMentioned:after { border-left: var(--ping-embed-colour) !important; } 
-div.da-content > div.da-isMentioned { 
+div.da-mentioned:before { border-left: var(--ping-embed-colour) !important; } 
+div.da-mentioned { 
     background: var(--ping-inline-colour) !important; 
+    border-radius: 0 6px 6px 0;
 }
 
-/* make mentions clean */
+/* make mentions clean *
 div.da-isMentioned > div.da-markup > span.mention,
 div.da-isMentioned > div.da-markup > span.mention:hover{
     background: none !important;
@@ -995,6 +996,28 @@ div.da-chatContent div.da-embed div.da-embedInner {
 div.da-messagesWrapper div.da-scroller.da-systemPad {
     height: 99.2% !important;
 } 
+
+/* correcting New chat thing*/
+div.da-chatContent div.da-isUnread {
+    background-color: #F04747;
+    height: 1.1px;
+    left: 33%;
+    width: 60%;
+}
+
+/* making my line come from the center of the "new" tag*/
+div.da-chatContent div.da-isUnread > span {
+    top: -7px;
+    right: -7%;
+}
+
+/* cleaning up date dividers */
+div.da-divider.da-hasContent > span { padding-bottom: 30px; }
+div.da-divider.da-hasContent {
+    padding-top: 25px;
+    margin-top: 60px;
+}
+
 
 
 
