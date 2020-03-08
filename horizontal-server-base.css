@@ -1016,6 +1016,11 @@ div.da-divider.da-hasContent > span { padding-bottom: 30px; }
 div.da-divider.da-hasContent {
     padding-top: 25px;
     margin-top: 60px;
+} div.da-chatContent div.da-divider.da-hasContent.da-isUnread span.da-content { margin-top: 25px; }
+div.da-chatContent div.da-divider.da-hasContent.da-isUnread span,
+div.da-chatContent div.da-divider.da-hasContent.da-isUnread {
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 
