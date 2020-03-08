@@ -995,7 +995,7 @@ div.da-chatContent div.da-embed div.da-embedInner {
 /* weird chat hight error*/
 div.da-messagesWrapper div.da-scroller.da-systemPad {
     height: 99.2% !important;
-} 
+}
 
 /* correcting New chat thing*/
 div.da-chatContent div.da-isUnread {
@@ -2023,6 +2023,12 @@ div.da-messagesWrapper div.da-jumpToPresentBar button:last-child {
 	font-size: 0;
 	width: 30px;
 }
+
+/* moving the jump to pressent bar up */
+div.da-messagesWrapper div.da-jumpToPresentBar {
+    padding-bottom: 0;
+    margin-bottom: 8px;
+} 
 
 /* new unreads colour and size*/
 .bar-30k2ka {
