@@ -1000,7 +1000,7 @@ div.da-messagesWrapper div.da-scroller.da-systemPad {
     height: 99.2% !important;
 } 
 
-/* correcting New chat thing*/
+/* correcting New chat thing
 div.da-chatContent div.da-isUnread {
     background-color: #F04747;
     height: 1.1px;
@@ -1008,13 +1008,13 @@ div.da-chatContent div.da-isUnread {
     width: 60% !important;
 }
 
-/* making my line come from the center of the "new" tag*/
+/* making my line come from the center of the "new" tag*
 div.da-chatContent div.da-isUnread > span {
     top: -7px !important;
     right: -7% !important;
 }
 
-/* cleaning up date dividers */
+/* cleaning up date dividers *
 div.da-divider.da-hasContent > span { padding-bottom: 30px; }
 div.da-divider.da-hasContent {
     padding-top: 25px;
@@ -1024,7 +1024,19 @@ div.da-chatContent div.da-divider.da-hasContent.da-isUnread span,
 div.da-chatContent div.da-divider.da-hasContent.da-isUnread {
     padding-bottom: 0;
     padding-top: 0;
+} */
+
+/* making the unread lines a bit cleaner */
+div.da-chatContent div.da-isUnread > span.da-unreadPill { display:none; }
+div.da-divider.da-hasContent > span.da-content { margin-top: 30px; }
+div.da-divider.da-hasContent {
+    margin-bottom: 30px;
+    margin-top: 50px;
+} div.da-divider.da-beforeGroup.da-isUnread{
+    margin-bottom: 10px;
+    margin-top: 25px;
 }
+
 
 
 
