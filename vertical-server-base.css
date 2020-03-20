@@ -991,7 +991,7 @@ div.da-chatContent div.da-embed div.da-embedInner {
 }
 
 /*dicsords chat on hover stuff*/
-.mouse-mode .da-message:hover {
+.mouse-mode.full-motion .da-message:hover {
     background-color: var(--discords-message-hover);
 }
 
@@ -1831,6 +1831,18 @@ div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftG
 div.da-title.da-container div.da-topic.da-expandable {
     pointer-events: none;
 }
+
+/* editing context menu reactions */
+div.da-contextMenu div.da-wrapper > [aria-label^="Add Reaction:"] { background-color: transparent; }
+div.da-contextMenu div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-icon {
+    height: 28px;
+    width: 28px;
+}
+
+
+
+
+
 
 
 
