@@ -626,9 +626,15 @@ div.da-sidebar h2.da-name { color: var(--category-color);}
     margin-bottom: 4px;
 }
 
-/* category hover colour */
-.wrapper-CU3qI5:hover, .iconHovered-2L3-fB, .iconHoveredCollapsed-3caIIZ, .nameHovered-1gxhWH, .nameHoveredCollapsed-2orEWB {
-    color: var(--category-hover-colour) !important;
+/* category arrows */
+div.da-containerDefault[role="listitem"] svg path {
+    color: var(--category-color);
+}
+
+/* category on hover - category-hover*/ 
+div.da-containerDefault[role="listitem"] svg path,
+div.da-containerDefault[role="listitem"] > div:hover h2 {
+    color: var(--category-color) !important;
 }
 
 /* */
@@ -2436,8 +2442,9 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 }
 
 
+
 /* Channel Aestethic */
-div.da-sidebar > div.da-container div.da-containerDefault div.da-content {
+div.da-sidebar > nav.da-container div.da-containerDefault div.da-content {
     width: 100%;
 	margin: 0 !important;
 	padding: 0px;
@@ -2451,7 +2458,7 @@ div.da-sidebar > div.da-container div.da-containerDefault div.da-content {
 div.da-chat > div.da-content:before { display: none; }
 
 /* editing the DM's */
-div.da-sidebar > div.da-privateChannels a {
+div.da-sidebar > nav.da-privateChannels a {
     width: var(--chat-width) !important;
     padding-left: var(--chat-padd-left);
     margin-left: var(--chat-margin-left);
@@ -2462,31 +2469,38 @@ div.da-sidebar > div.da-privateChannels a {
 }
 
 /* DM size and border radius */
-div.da-sidebar > div.da-privateChannels a > div.da-layout {
+div.da-sidebar > nav.da-privateChannels a > div.da-layout {
     border-radius: 0 8px 8px 0;
     width: 100% !important;
 }
 
+/* DM side bar on hover/selected */
+div.da-sidebar > nav.da-privateChannels a.da-selected > div.da-layout div.da-name,
+div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout div.da-name{
+    color: var(--unread-text-color) ;
+}
+
 /* changing width to deal with weird scroll bar */
-div.da-base > div.da-content > div.da-sidebar > div { border-right: var(--borders);  }
+section.da-panels { border-right: var(--borders); }
+div.da-base > div.da-content > div.da-sidebar > nav { border-right: var(--borders);  }
 div.da-base > div.da-content > div.da-sidebar { width: 241px; }
 
 /* DM onHover*/
 /* editing layouts */
-div.da-sidebar div.da-privateChannels a.da-channel.da-container:hover { background: none; }
-div.da-sidebar > div.da-privateChannels a.da-selected > div.da-layout,
-div.da-sidebar > div.da-privateChannels a:hover > div.da-layout {
+div.da-sidebar nav.da-privateChannels a.da-channel.da-container:hover { background: none; }
+div.da-sidebar > nav.da-privateChannels a.da-selected > div.da-layout,
+div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout {
     background: var(--on-hover-transparency);
-} div.da-sidebar > div.da-privateChannels a > div.da-layout {
+} div.da-sidebar > nav.da-privateChannels a > div.da-layout {
     width: 100%;
     padding-right: 0;
 }
 
 /* moving the *Delete DM* cross */
-div.da-sidebar > div.da-privateChannels a div.da-children > div.da-closeButton svg {
+div.da-sidebar > nav.da-privateChannels a div.da-children > div.da-closeButton svg {
     height: 15px;
     width: 15px;
-} div.da-sidebar > div.da-privateChannels a div.da-children > div.da-closeButton {
+} div.da-sidebar > nav.da-privateChannels a div.da-children > div.da-closeButton {
     margin: -10px;
     margin-top: -18px;
     margin-left: -16px;
@@ -2498,11 +2512,20 @@ div.content-3at_AU div.da-children svg {
     width: 16px;
 }
 
+/*colour chat octothropes*/
+div.da-sidebar div.da-content svg path{
+    color: var(--channels-default);
+}
+
 /* colouring the unread octothropes */
+div.da-sidebar div.da-selected svg path,
+div.da-sidebar div.da-selected svg path,
+div.da-sidebar div.da-content:hover svg path,
 div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
     display: var(--VC-icons);
     color: var(--VC-icon-colour);   
 }
+
 
 
 
@@ -2702,6 +2725,10 @@ div.da-streamPreviewWrapper div.da-streamPreview {
     box-shadow: none;
 }
 
+/* fixing now play on hover */
+div.da-tabBody div.da-nowPlayingColumn div.da-itemCard:hover {
+    background: var(--on-hover-transparency);
+}
 
 
 
