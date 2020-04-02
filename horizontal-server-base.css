@@ -2475,9 +2475,15 @@ div.da-sidebar > nav.da-privateChannels a > div.da-layout {
 }
 
 /* DM side bar on hover/selected */
+div.da-sidebar > nav.da-privateChannels a.da-selected > div.da-layout svg,
+div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout svg,
 div.da-sidebar > nav.da-privateChannels a.da-selected > div.da-layout div.da-name,
 div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout div.da-name{
     color: var(--unread-text-color) ;
+}
+div.da-sidebar > nav.da-privateChannels a.da-selected > div.da-layout div.da-subtext,
+div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout div.da-subtext {
+    color:  var(--channels-default);
 }
 
 /* changing width to deal with weird scroll bar */
