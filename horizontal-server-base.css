@@ -493,7 +493,7 @@
 .homeIcon-tEMBK1 { display: none; }
 
 /* colour of DM's and users without roles */
-span.username-_4ZSMR.da-username { color: var(--DM-username-colour); }
+span.da-username { color: var(--DM-username-colour); }
 
 /* he forgot the some border lines, so here they are (if u want to change their colour edit --border-lines-color as well)*/
 .members-1998pB  { border-left: var(--borders) }
@@ -610,10 +610,7 @@ div.da-sidebar div.da-container > header.da-header:hover {
 }
 
 /* category colour */
-div.da-sidebar header.da-name.da-container {
-    color: var(--category-color);
-}
-
+div.da-sidebar h2.da-name { color: var(--category-color);}
 .wrapper-CU3qI5, .nameCollapsed-34uFWo, .nameDefault-2DI02H {
     color: var(--category-color) !important;
 }
@@ -693,6 +690,12 @@ nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1
 nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper {
     filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
 }
+
+/* makes home button proper width */
+nav.da-wrapper.guilds-1SWlCJ div.tutorialContainer-1v44GL {
+    width: fit-content;
+}
+
 
 /* down guilds */
 div.da-listItemWrapper > a.da-guildsError {
