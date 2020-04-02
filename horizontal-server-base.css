@@ -493,7 +493,10 @@
 .homeIcon-tEMBK1 { display: none; }
 
 /* colour of DM's and users without roles */
-span.da-username { color: var(--DM-username-colour); }
+div.da-tabBody h3.da-textContent,
+div.da-tabBody h4.da-textContent,
+div.da-tabBody span.da-username,
+[aria-label = " (channel)"] span.da-username { color: var(--DM-username-colour); }
 
 /* he forgot the some border lines, so here they are (if u want to change their colour edit --border-lines-color as well)*/
 .members-1998pB  { border-left: var(--borders) }
@@ -610,6 +613,7 @@ div.da-sidebar div.da-container > header.da-header:hover {
 }
 
 /* category colour */
+[aria-label="Private channels"] h2 span { color: var(--category-color); }
 div.da-sidebar h2.da-name { color: var(--category-color);}
 .wrapper-CU3qI5, .nameCollapsed-34uFWo, .nameDefault-2DI02H {
     color: var(--category-color) !important;
@@ -2125,6 +2129,7 @@ div.da-app div.da-container.da-fixClipping {
     height: 7px;
     display: inline-table;
     top: var(--HSL-size); 
+    position: inherit;
 }
 
 /* making the message smexy */
