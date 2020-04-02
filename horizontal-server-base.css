@@ -684,10 +684,17 @@ div.da-scroller::-webkit-scrollbar-thumb {
     color: var(--accent-colour) !important;/*#f6f6f7   (67, 220, 129)*/
 }
 
-/* changes made to allow colour setting of the friend icon - Horizontal Server Version */
+/* changes made to allow colour setting of the friend icon - Horizontal Server Version *
 nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) > div.da-pill:not(.bd-selected) { display: none; }
 nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper > svg > foreignObject > a { border-radius: 0 !important; }
 nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper {
+    filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
+}
+
+/* corrected friend icon */
+nav.da-wrapper div.da-tutorialContainer div.da-pill { display: none; }
+nav.da-wrapper div.da-tutorialContainer div.da-listItemWrapper > svg > foreignObject > a { border-radius: 0 !important; } 
+nav.da-wrapper div.da-tutorialContainer div.da-listItemWrapper {
     filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
 }
 
@@ -891,9 +898,13 @@ h2.da-header:hover, img:hover + h2.da-header  {
     border-radius: 25% !important;
 }
 
-
-/* makes home button rainbow on hover */
+/* makes home button rainbow on hover -old *
 .wrapper-1Rf91z .scroller-2TZvBN:hover > div.listItem-2P_4kh:nth-child(1):hover {
+    animation: var(--unread-server-animation) 3s linear infinite;
+}
+
+/* home button rainbow new */
+nav.da-wrapper div.da-tutorialContainer div.da-listItem:hover {
     animation: var(--unread-server-animation) 3s linear infinite;
 }
 
