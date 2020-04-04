@@ -1236,6 +1236,10 @@ div.da-container div.da-numberBadge.da-base {
 div.da-scroller > div.da-listItem:nth-child(1) div.da-lowerBadge { display: none; }
 div.da-listItem div.da-numberBadge.da-base { border-radius: 50%; padding-right: 0 !important;}
 
+/* correcting notification for friend requests */
+nav.da-privateChannels div.da-numberBadge { margin-right: 10px; }
+div.da-tutorialContainer div.da-lowerBadge { display: none; }
+
 
 
 
@@ -2681,6 +2685,12 @@ div.da-member div.da-activity img + div.da-activityText {
 .icon-3BcwQu path {
 	display: var(--VC-icons);
 	color: var(--VC-icon-colour);
+}
+
+/* correcting vc icon locations */
+div.da-voiceUser div.da-iconSpacing { margin-right: 3px; }
+div.da-voiceUser div.da-icons > div:last-child {
+    display: flex;
 }
 
 /* spaces out invite option */
