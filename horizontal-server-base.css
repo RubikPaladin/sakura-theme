@@ -1218,8 +1218,8 @@ div.da-listItem div.da-circleIconButton:hover { background: var(--on-hover-trans
 
 /* making the red dot more normal */ 
 div.da-toolbar span.da-iconBadge {
-    top: 18px;
-    right: 7px;
+    top: 14px;
+    right: 2px;
 }
 
 /* changing general badge */
