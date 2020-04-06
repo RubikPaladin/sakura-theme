@@ -582,7 +582,8 @@ div.da-applicationStore div.da-heroCarousel > span {
     opacity: var(--server-banner-opacity) !important;
 }
 
-/* deleting border shit */
+/* deleting weird border shit */
+div.da-hasBanner.da-bannerVisible:hover header.da-header { border: none; }
 div.da-hasBanner div.da-animatedContainer {
     border-bottom: none;
     box-shadow: none;
