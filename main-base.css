@@ -370,7 +370,7 @@
     /* Messages */
 
     /* message on plugins and themes page - type `none` do remove entirely  */
-    --changelog-content: "REFORMAT WORKS BIIIITTTCCCHHH"; /*"Using Rubiko's Theme...\a\a I see we have a cultured boio";*/
+    --changelog-content: "/aREFORMAT WORKS BIIIITTTCCCHHH"; /*"Using Rubiko's Theme...\a\a I see we have a cultured boio";*/
 
     /* message onConnectionSevered */
     --offline-content: "You have been disconnected from Discord!  Rubik's suppressing the full screen takeover!";
@@ -2055,6 +2055,34 @@ div.da-messagesWrapper div.da-jumpToPresentBar {
 	width: calc(100% + 1px);
 }
 
+/* other notifications */
+/* general aesthetic + cross icon */
+div.da-notice.da-noticeInfo { margin-top: -12px; }
+div.da-notice.da-noticeInfo > div.da-dismiss {
+    margin-top: 5px !important;
+    background-size: 8px 8px;
+}
+
+/* notice better discord icon */
+div.da-notice.da-noticeInfo > i {
+    margin-top: 2px !important;
+    width: 20px;
+    height: 20px;
+}
+
+/* notice words */
+div.da-notice.da-noticeInfo > strong,
+div.da-notice.da-noticeInfo > span  {
+    vertical-align: middle;
+    position: sticky;
+    top: 13px;
+}
+
+/* correcting voice channel leaving */
+div.da-flex.da-base > div.da-flexChild > div > div.da-noticeDefault.da-notice {
+    margin-right: 0;
+}
+
 /* redesigning the offline message */
 div.da-app div.da-container.da-fixClipping > div.da-content  { display: none; }
 div.da-app div.da-container.da-fixClipping > div.da-problems { padding: 0; }
@@ -3223,13 +3251,13 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
     font-size: var(--counter-font) !important;
 }
 
-.wrapper-1Rf91z.foldercontent .scroller-2TZvBN:hover > div.listItem-2P_4kh:nth-child(1):hover {
-    animation: none !important;
-}
-
 /* removing char counter in channel settinges where it already has one */
 #app-mount > div.app-19_DXt div.layers-3iHuyZ div.contentRegion-3nDuYy.da-contentRegion div.contentColumn-2hrIYH.da-contentColumn.contentColumnDefault-1VQkGM.da-contentColumnDefault div.inputMaxLength-1vRluy.da-inputMaxLength > span {
     display: none;
+}
+
+.wrapper-1Rf91z.foldercontent .scroller-2TZvBN:hover > div.listItem-2P_4kh:nth-child(1):hover {
+    animation: none !important;
 }
 
 
@@ -3312,6 +3340,26 @@ div.da-popouts div.role-members-popout { background: var(--context-menu-colour);
 div.da-popouts div.role-members-popout div.role-member:hover { background: var(--menu-item-hover); }
 
 
+/* server folders correcting distance *
+.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller {
+    padding-left: calc(var(--HSL-size) + 14px) !important;
+}
+
+/* TODO pill edits */
+/* correcting rainbow anim speed *
+.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem .da-pill span { transition: 100ms ease all !important; }
+.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem .da-pill span[style*="opacity: 0.7; height: 8px;"] {
+    transition: 50ms ease all !important;
+    opacity: 1 !important;
+}
+
+/* pill shape modifications *
+#app-mount .wrapper-1Rf91z.foldercontent .listItem-2P_4kh div[class*='pill'] span {
+    width: 50% !important;
+    transform: none !important; 
+    left: 25% !important;
+    transition: 50ms ease all !important;
+}
 
 
 

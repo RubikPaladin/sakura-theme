@@ -575,13 +575,13 @@ div.da-tutorialContainer div.da-lowerBadge { display: none; }
 */
 
 /* search menu design */
-/* editing the popout slightly*/
+/* editing the popout slightly*
 div.da-popout > div.da-container.da-elevationBorderHigh {
-    background-color: var(--dark-menu-colour);/* var(--context-menu-colour); */
+    background-color: var(--dark-menu-colour);/* var(--context-menu-colour); *
     box-shadow: none;
 }
 
-/* searchbar general aestethic */
+/* searchbar general aestethic *
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-searchClearHistory,
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-searchLearnMore { top: 8px; }
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-resultsGroup + div.da-resultsGroup { padding-bottom: 0; }
@@ -594,12 +594,12 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-header {
     padding-bottom: 20px;
 }
 
-/* making the surch bar curved */
+/* making the surch bar curved *
 div.da-search > div.da-searchBar {
     border-radius: 6px;
 }
 
-/* changing serach option design + compactness */
+/* changing serach option design + compactness *
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-option {
 	margin: 0;
 	width: 88%;
@@ -609,23 +609,23 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-option {
 	height: 30px;
 }
 
-/* search menu onHover + weird fade */
+/* search menu onHover + weird fade *
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected svg { top: 6px; }
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected span { color: #caccce; }
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected { background-color: var(--menu-item-hover); }
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected::before,
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-option.da-selected::after {
     background: none;  /* linear-gradient(90deg,rgba(35,38,42,0), var(--dark-menu-colour) 50%); */
-    /*height: calc(100% + 2px);*/
+    /*height: calc(100% + 2px);*
 }
 
-/* search menu querry suggestion */
+/* search menu querry suggestion *
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer,
 div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da-focused {
     background: var(--light-menu-colour);
 }
 
-/* general context menus */
+/* general context menus *
 [id ^= "popout_"] div.da-menu, div.da-layerContainer div.da-contextMenu,
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
 div.da-layerContainer div.da-contextMenu div.da-clickable:hover,
@@ -640,74 +640,74 @@ div[role="menu"] div.da-item {
     font-weight: 300;
 }
 
-/* correcting smol context menu rounding + shadow dumb */
+/* correcting smol context menu rounding + shadow dumb *
 div[role="menu"] div.da-item:last-child { border-radius: 0 0 5px 5px !important; margin-bottom: 0; }
 div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0 !important; margin-top: 0; }
 div.da-popout { box-shadow: none; }
 
-/* setting common design */
+/* setting common design *
 [id ^= "popout_"] div.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
 div.da-layerContainer div.da-contextMenu div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
 div.da-layerContainer div.da-contextMenu div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
 div.da-itemBase div.da-label { font-weight: 400; }
 
-/* correcting minor errors in server right click */
+/* correcting minor errors in server right click *
 [id ^= "popout_"] div.da-menu div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important; padding-top: 8px; }
 [id ^= "popout_"] div.da-menu div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important; padding-bottom: 8px; }
 [id ^= "popout_"] div.da-menu > div.da-separator { height: 2px; }
 
-/* setting up general submenu */
+/* setting up general submenu *
 div.da-subMenuContext div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
 div.da-subMenuContext div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
 
-/* setting up scoll menu */
+/* setting up scoll menu *
 div.da-scroller.da-contextMenu div.da-itemBase { margin: 0; }
 div.da-scroller.da-contextMenu div.da-itemBase:first-child { border-radius: 5px 0 0 0 !important;  }
 div.da-scroller.da-contextMenu div.da-itemBase:last-child { border-radius: 0 0 0 5px !important;  }
 
 
-/* changes colour of icons in the chat */
+/* changes colour of icons in the chat *
 div.da-containerCozy.da-container div.da-reactionBtn svg path,
 div.da-containerCozy.da-container div.da-buttonContainer svg path + path {
     fill: var(--icon-colour);
 }
 
-/* general menu colors */
+/* general menu colors *
 .theme-dark .menu-Sp6bN1,
 .theme-dark.contextMenu-HLZMGh {
     box-shadow: none;
     background: var(--context-menu-colour);
 }
 
-/* moves the user popout slightly */
+/* moves the user popout slightly *
 .popout-3sVMXz { box-shadow: none; }
 .da-userPopout {
     box-shadow: none;
-    transform: translateY( var(--user-popout-top) ); /* translateX( var(--user-popout-left) ) */
+    transform: translateY( var(--user-popout-top) ); /* translateX( var(--user-popout-left) ) *
 }
 
-/* correcting user popout text slightly */
+/* correcting user popout text slightly *
 div.da-userPopout div.da-activity div.da-headerText {
     font-size: 100%;
     font-weight: 600;
 }
 
-/* moving member list user popup a lil to the left */
+/* moving member list user popup a lil to the left *
 /* div.da-noArrow.da-noShadow.da-popout.popoutLeft-3aViER.arrowAlignmentTop-1yftWI div.da-userPopout {
     transform: translateX( -6% ) translateY( var(--user-popout-top) ) !important;
 } */
 
-/* setting pop out bot tag*/
+/* setting pop out bot tag*
 div.da-userPopout div.da-headerTag span.da-botTag {
     margin-top: 2px !important;
 }
 
 /* custom status */
 /* custom status user popout text */
-/* div.da-userPopout div.da-customStatus { padding-top: 10px; } */
+/* div.da-userPopout div.da-customStatus { padding-top: 10px; } *
 div.da-userPopout div.da-customStatus span {
     /* font-weight: var(--user-game-font-weight);
-    vertical-align: super; */
+    vertical-align: super; *
     color: #f2f2f2;
 }
 
@@ -718,28 +718,28 @@ div.da-userPopout div.da-customStatus > img {
 }
 
 
-/* moves bot popout -bot tag  back inline */
+/* moves bot popout -bot tag  back inline *
 div.headerText-2sdzFM.userSelectText-1o1dQ7.da-headerText.da-userSelectText > div > span.botTagInvert-18-95s.botTag-2WPJ74.da-botTagInvert.da-botTag.headerBotTag-35luy-.da-headerBotTag.bot-2Fta1w.da-bot {
     top: -2px !important;
 }
 
-/* changing user popout boty + footer */
+/* changing user popout boty + footer *
 div.body-3iLsc4.da-body { padding-bottom: 0px; padding-top: 20px;}
 .quickMessage-1yeL4E { width: 105% !important; padding-top: 6px; z-index: 999999 !important;}
 div.footer-1fjuF6.da-footer { padding-top: 0px; }
 
-/* moving new wumpus */
+/* moving new wumpus *
 .wumpusWrapper-yrvoR3{
     margin-top: 30px;
 }
 
-/* this is the popout for users in VC */
+/* this is the popout for users in VC *
 div[id^="popout"] .userPopout-3XzG_A.da-userPopout {
     transform: none !important;
 }
 
 /* user profile popout */
-/* correcting button + making details fill */
+/* correcting button + making details fill *
 div.da-modal div.da-topSectionPlaying button,
 div.da-modal div.da-topSectionNormal button { width: 160px; }
 div.da-modal div.da-root > div.da-body {
@@ -750,7 +750,7 @@ div.da-modal div.da-root > div.da-body {
     /* --user-body  
     
     natural: rgba(33,33,33,.6)
-    */
+    *
 }
 
 div.da-modal div.da-topSectionNormal,
@@ -769,7 +769,7 @@ div.da-modal div.da-tabBarContainer {
 
 
 /* custom status menu */
-/* correcting button and dropdown menu design */
+/* correcting button and dropdown menu design *
 div.da-layer div.da-root div.da-footer button.da-button.da-grow:first-child:hover { background: rgba(255,255,255,.3) !important; }
 div[role="dialog"].da-popout div.da-option:hover { background-color: var(--menu-item-hover); }
 div[role="dialog"].da-popout > div.da-scrollerWrap { background-color: #0D0705 !important; }
@@ -778,7 +778,7 @@ div.da-layer div.da-root div.da-inputContainer div.da-input {
 	border-color: transparent;
 }
 
-/* general look of drop-down */
+/* general look of drop-down *
 div.da-layer div.da-root div.da-inputContainer input.da-input:focus { border-color: var(--code-block-colour); }
 div.da-layer div.da-root div.da-selectOpen { border-radius: 15px 15px 3px 3px; }
 div.da-layer div.da-root div.da-selectClosed {
@@ -786,7 +786,7 @@ div.da-layer div.da-root div.da-selectClosed {
 	border-color: transparent;
 }
 
-/* setting the drop-down focus colour */
+/* setting the drop-down focus colour *
 div.da-layer div.da-root div.da-selectOpen,
 div.da-layer div.da-root div.da-selectOpen:hover,
 div.da-layer div.da-root div.da-selectOpen:focus,
@@ -796,14 +796,14 @@ div.da-layer div.da-root div.da-selectClosed:focus {
 
 
 /* editing the check domain */
-/* general design */
+/* general design *
 form.da-modal div.da-content { background: var(--dark-menu-colour) !important; border-radius: 8px 8px 0 0; }
 form.da-modal {
     border-radius: 10px;
     width:500px;
 }
 
-/* footer settings */
+/* footer settings *
 form.da-modal div.da-footer {
 	background: var(--light-menu-colour);
 	border-radius: 0 0 10px 10px;
@@ -811,7 +811,7 @@ form.da-modal div.da-footer {
 	padding-bottom: 12.5px;
 }
 
-/* cancle button */
+/* cancle button *
 form.da-modal div.da-footer button[type="button"]:hover{
     background: none;
     text-decoration: underline;
@@ -822,7 +822,7 @@ form.da-modal div.da-footer button[type="button"]:hover{
     margin-right: 96px;
 }
 
-/* submit button */
+/* submit button *
 form.da-modal div.da-footer button[type="submit"]:hover { background-color: rgba(255,255,255,.25) !important; }
 form.da-modal div.da-footer button[type="submit"] {
     background-color: rgba(255,255,255,.15) !important;
@@ -834,7 +834,7 @@ form.da-modal div.da-footer button[type="submit"] {
     margin: 0;
 }
 
-/* making the footer buttons a clean size */
+/* making the footer buttons a clean size *
 form.da-modal div.da-footer button {
     width: 96px;
     height: 38px;
@@ -842,7 +842,7 @@ form.da-modal div.da-footer button {
     min-height: 0px;
 }
 
-/* editing the trust domain action */
+/* editing the trust domain action *
 form.da-modal div.da-footer div.da-minorAction {
     opacity: 1;
     margin: 0;
@@ -857,7 +857,7 @@ form.da-modal div.da-footer div.da-minorAction {
 }
 
 
-/* menu aesthetic for server folder settings */
+/* menu aesthetic for server folder settings *
 div.da-layer div.da-root { border-radius: 8px; }
 div.da-layer div.da-root > div.da-header { border-radius: 8px 8px 0 0; }
 div.da-layer div.da-root > div.da-content { border-radius: 0; }
@@ -866,7 +866,7 @@ div.da-layer div.da-root > div.da-content {
 	background-color: var(--dark-menu-colour) !important;
 }
 
-/* footer */
+/* footer *
 div.da-layer div.da-root > div.da-footer {
     background: var(--light-menu-colour) !important;
 	border-radius: 0 0 8px 8px;
@@ -874,7 +874,7 @@ div.da-layer div.da-root > div.da-footer {
 	padding-bottom: 12.5px !important;
 }
 
-/* submit button */
+/* submit button *
 div.da-layer div.da-root > div.da-footer > button[type="submit"]:hover { background-color: rgba(255,255,255, .30) !important; }
 div.da-layer div.da-root > div.da-footer > button[type="submit"] {
 	background-color: rgba(255,255,255, .15) !important;
@@ -884,12 +884,12 @@ div.da-layer div.da-root > div.da-footer > button[type="submit"] {
 
 
 
-/* unknown play image changed */
+/* unknown play image changed *
 .gameIcon-_0rmMm[style='background-image: url("/assets/a5eba102f5b5e413df2b65c73f288afa.svg");'] {
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE1LjA3LDExLjI1TDE0LjE3LDEyLjE3QzEzLjQ1LDEyLjg5IDEzLDEzLjUgMTMsMTVIMTFWMTQuNUMxMSwxMy4zOSAxMS40NSwxMi4zOSAxMi4xNywxMS42N0wxMy40MSwxMC40MUMxMy43OCwxMC4wNSAxNCw5LjU1IDE0LDlDMTQsNy44OSAxMy4xLDcgMTIsN0EyLDIgMCAwLDAgMTAsOUg4QTQsNCAwIDAsMSAxMiw1QTQsNCAwIDAsMSAxNiw5QzE2LDkuODggMTUuNjQsMTAuNjcgMTUuMDcsMTEuMjVNMTMsMTlIMTFWMTdIMTNNMTIsMkExMCwxMCAwIDAsMCAyLDEyQTEwLDEwIDAgMCwwIDEyLDIyQTEwLDEwIDAgMCwwIDIyLDEyQzIyLDYuNDcgMTcuNSwyIDEyLDJaIiAvPjwvc3ZnPg==) !important;
 }
 
-/* quick message style and position */
+/* quick message style and position *
 .quickMessage-1yeL4E {
 	left: 0px;
 	padding: 0 12px !important;
@@ -900,19 +900,18 @@ div.da-layer div.da-root > div.da-footer > button[type="submit"] {
 	border-radius: 0 var(--bar-radius) var(--bar-radius) 0 !important;
 }
 
-/* the footer holds quick message */
+/* the footer holds quick message *
 .note-3HfJZ5 textarea { background: transparent !important; }
 .footer-1fjuF6 {  left: -10px; }
 
-/* removing user popout pro tip */
+/* removing user popout pro tip *
 div.userPopout-3XzG_A.da-userPopout > 
 div.footer-1fjuF6.da-footer > 
 div.protip-YaFfgO.da-protip {
     display: none;
 }
 
-
-/* popout user header*/
+/* popout user header*
 .headerTop-1QGMLs,
 .headerTop-27AvhA,
 .headerTop-3C2Zn0,
@@ -922,59 +921,44 @@ div.protip-YaFfgO.da-protip {
 	background: var(--user-header);
 }
 
-/* user popout body color */
+/* user popout body color *
 .userPopout-3XzG_A {
     background: var(--user-body);
 }
 
-/* playing background */
+/* playing background *
 .headerPlaying-2eYqm9,
 .headerPlaying-2Q7mBy,
 .headerPlaying-j0WQBV {
 	background: var(--user-playing) !important;
 }
 
-/* is having errors so i removed it */
-/* context menu item designs *
-.item-1Yvehc, .itemSubMenu-1vN_Yn,
-.item-1Yvehc.itemSubMenu-1vN_Yn {
-	margin: 0 !important;
-	padding: 5px 10px !important;
-	border-radius: 0 !important;
-	cursor: pointer !important;
-}
-
-/* submenu made smoller cause i like smol mini menus :zoomeyes:*
-.item-1Yvehc.itemSubMenu-1vN_Yn .item-1Yvehc {
-	padding: 3px 10px;
-} */
-
 .item-1Yvehc, .itemSubMenu-1vN_Yn,
 .item-1Yvehc.itemSubMenu-1vN_Yn {
     border-radius: 0 !important;
 }
 
-/* context menu on hover */
+/* context menu on hover *
 .theme-dark .item-1GzJrl:hover,
 .contextMenu-HLZMGh .item-1Yvehc:hover { 
     background-color: var(--menu-item-hover); 
 }
 
-/* changing the leave hover colour */
+/* changing the leave hover colour *
 .item-1GzJrl:hover,
 .item-1Yvehc:last-child:hover, 
 .theme-dark .item-1GzJrl:last-child:hover {
     color: var(--leave-server-text-colour) !important;
 }
 
-/* volume bar settings and colours*/
+/* volume bar settings and colours*
 .bar-2Qqk5Z { background: var(--slider-background) !important; }
 .barFill-23-gu- { background: var(--slider-foreground) !important;  }
 
-/* bar height */
+/* bar height *
 .item-1Yvehc .mini-dmm9yo .bar-2Qqk5Z { height: 2px; }
 
-/* design of volume grab thingy */
+/* design of volume grab thingy *
 .item-1Yvehc .mini-dmm9yo .grabber-3mFHz2 {
 	width: var(--slider-bubble-width);
 	height: 10px;
@@ -982,13 +966,13 @@ div.protip-YaFfgO.da-protip {
 	top: 9px;
 }
 
-/* bubble position */
+/* bubble position *
 .bubble-3we2di {
 	position: absolute !important;
 	left: var(--slider-display-left);
 }
 
-/* audio button color */
+/* audio button color *
 .audio-2KA0-x:after,
 .audio-3sNR7M:after,
 .video-3I9W8t:after,
@@ -1001,14 +985,14 @@ div.protip-YaFfgO.da-protip {
 }
 
 /* upload menu */
-/* upload colors */
+/* upload colors *
 .uploadModal-2ifh8j .footer-3mqk7D {background-color: var(--upload-footer-colour) !important; }
 .uploadModal-2ifh8j {
     background-color: var(--upload-colour) !important;
     color: #f1f;
 }
 
-/* upload icon look */
+/* upload icon look *
 .uploadModal-2ifh8j .inner-1JeGVc, .uploadModal-2ifh8j .inner-3nWsbo { border-color: var(--accent-colour); }
 .uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.image-2yrs5j {
 	border-radius: 20%;
@@ -1019,7 +1003,7 @@ div.protip-YaFfgO.da-protip {
 	border-radius: 18px;
 }
 
-/* upload text box size and char counter plugin edit */
+/* upload text box size and char counter plugin edit *
 .uploadModal-2ifh8j .inner-zqa7da .textArea-2Spzkt { margin: 0; }
 .uploadModal-2ifh8j .inner-zqa7da .buttons-205you { height: 36px; }
 .uploadModal-2ifh8j .textArea-2Spzkt { padding: 8px 16px 8px !important; }
@@ -1028,20 +1012,20 @@ div.protip-YaFfgO.da-protip {
 	left: 10px !important;
 }
 
-/* general text area + removing the dumb line */
+/* general text area + removing the dumb line *
 div.da-channelTextArea div.da-textArea span { margin-left: -3px; }
 div.da-channelTextArea div.da-attachWrapper { border: none; }
 
 
 /* Going Live Menu */
-/* general design made to be same as upload */
+/* general design made to be same as upload *
 div.da-modalOverhang div.da-modalBody { background: var(--dark-menu-colour); }
 div.da-modalOverhang div.da-modalHeader {
     border-radius: 10px 10px 0 0;
 	background: var(--dark-menu-colour);
 }
 
-/* making art properly vis + setting body radius */
+/* making art properly vis + setting body radius *
 div.da-modalOverhang > div.da-art { z-index: 999; }
 div.da-modalOverhang > div.da-modal { border-radius: 12px; }
 div.da-modalOverhang div.da-modalBody div.da-cardPrimaryEditable.da-card {
@@ -1049,7 +1033,7 @@ div.da-modalOverhang div.da-modalBody div.da-cardPrimaryEditable.da-card {
 	border-radius: 20px;
 }
 
-/* footer settings */
+/* footer settings *
 div.da-modalOverhang div.da-footer {
 	background: var(--light-menu-colour);
 	border-radius: 0 0 10px 10px;
@@ -1057,14 +1041,14 @@ div.da-modalOverhang div.da-footer {
 	padding-bottom: 10px;
 }
 
-/* cancle button */
+/* cancle button *
 div.da-modalOverhang div.da-footer button[type="button"] { background: none; }
 div.da-modalOverhang div.da-footer button[type="button"]:hover{
     background: none;
     text-decoration: underline;
 }
 
-/* submit button */
+/* submit button *
 div.da-modalOverhang div.da-footer button[type="submit"]:hover { background-color: rgba(255,255,255,.25) !important; }
 div.da-modalOverhang div.da-footer button[type="submit"] {
     background-color: rgba(255,255,255,.15) !important;
@@ -1073,11 +1057,11 @@ div.da-modalOverhang div.da-footer button[type="submit"] {
 
 
 
-/* pop up colours */
+/* pop up colours *
 .theme-dark .messagesPopoutWrap-1MQ1bW .header-ykumBX { background-color: var(--pins-header-colour) !important; }
 .theme-dark .messagesPopoutWrap-1MQ1bW { background-color: var(--pins-colour) !important; }
 
-/* edding emote menu */
+/* edding emote menu *
 div.header-1nkwgG.da-header { background: var(--emote-header); }
 div.header-1nkwgG.da-header > div.searchBar-2pWH0_.da-searchBar.container-2XeR5Z.da-container > div { background: var(--emote-search); }
 .scrollerFade-1Ijw5y.da-scrollerFade.scrollerTrack-1ZIpsv.da-scrollerTrack > div > div.stickyHeader-1SS0JU.da-stickyHeader { display: none !important; }
@@ -1091,10 +1075,10 @@ div.categories-1feg4n.da-categories {
     margin-left: 0px !important;
 }
 
-/* removing emote "ok" emote */
+/* removing emote "ok" emote *
 .emojiPicker-3m1S-j.da-emojiPicker div.diversitySelector-tmmMv0.da-diversitySelector { display: none; }
 
-/* making emote menu taller  - tallemoto*/
+/* making emote menu taller  - tallemoto*
 .emojiPicker-3m1S-j.da-emojiPicker { height: var(--emote-menu-height); }
 .emojiPicker-3m1S-j.da-emojiPicker .scrollerFade-1Ijw5y.da-scrollerFade.scrollerTrack-1ZIpsv.da-scrollerTrack > div { height: 100%; }
 div.da-emojiPicker div.da-scroller { background-color: var(--emote-menu) !important; }
@@ -1103,7 +1087,7 @@ div.da-emojiPicker div.da-noSearchResultsContainer {
     height: 80%;
 }
 
-/* more emote menu stufffff*/
+/* more emote menu stufffff*
 div.da-emojiPicker { border-radius: 15px 15px 10px 10px; }
 div.da-emojiPicker div.da-header div.da-searchBar {
     border-radius: 15px;
@@ -1124,25 +1108,22 @@ div.da-emojiPicker div.da-infoBarExpanded div.da-infoBar {
     height: 40px;
 }
 
-/* changing emoji layer stuffz*/
+/* changing emoji layer stuffz*
 #popout_42330 > div {
     border-radius: 20px;
 }
 
-
-
-
-/* setting emoji display - changing emote margins in chat; to make it clean af */
+/* setting emoji display - changing emote margins in chat; to make it clean af *
 .emoji.jumboable { margin: 0 !important; }
 div.contentCozy-3XX413.content-3dzVd8.da-contentCozy.da-content > div.containerCozy-336-Cz.container-206Blv.da-containerCozy.da-container {
     margin-top: 3px;
 }
 
 /* auto complete stuffz */
-/* onHover and general aesthetic */
+/* onHover and general aesthetic *
 div.da-autocomplete { background-color: var(--autocomplete-menu-colour) !important; }
 div.da-autocompleteInner div.da-selectorSelected.da-selector.da-selectable div div { color: #fff; }
-div.da-autocompleteInner div.da-autocompleteRowVertical.da-autocompleteRow div.da-selectorSelected.da-selector.da-selectable { background: var(--menu-item-hover); /* var(--on-hover-transparency); */ }
+div.da-autocompleteInner div.da-autocompleteRowVertical.da-autocompleteRow div.da-selectorSelected.da-selector.da-selectable { background: var(--menu-item-hover); /* var(--on-hover-transparency); * }
 div.da-autocompleteInner div.da-autocompleteRowVertical.da-autocompleteRow div.da-selector.da-selectable {
     border-radius: 0 !important;
     padding-left: 10px;
@@ -1152,34 +1133,33 @@ div.da-autocompleteInner div.da-autocompleteRowVertical.da-autocompleteRow div.d
 	border-radius: 0 !important;
 }
 
-/* personal set code block to stop triggering me */
+/* personal set code block to stop triggering me *
 div.da-autocomplete > div.da-autocompleteInner { pointer-events: var(--autocomplete-pointer-events); }
 
-/* general menu design */
+/* general menu design *
 div.da-modal > div.da-header { border-radius: 10px 10px 0 0; }
 div.da-modal > div.da-footer {
 	border-radius: 0 0 10px 10px;
 	background-color: var(--light-menu-colour);
 }
 
-
-/* correcting carousel fade height */
+/* correcting carousel fade height *
 div.carouselRightGradientEdge-2Z3H8D.carouselGradientEdge-2W94ou.da-carouselRightGradientEdge.da-carouselGradientEdge, 
 div.carouselLeftGradientEdge-3P4spl.carouselGradientEdge-2W94ou.da-carouselLeftGradientEdge.da-carouselGradientEdge {
     height: 94%;
 }
 
-/* making blurb a lil spaced out/ tidyer */
+/* making blurb a lil spaced out/ tidyer *
 .blurb-2l3plc.da-blurb {
     padding-top: 10px !important;
 }
 
-/* channel description onClick disable */
+/* channel description onClick disable *
 div.da-title.da-container div.da-topic.da-expandable {
     pointer-events: none;
 }
 
-/* editing context menu reactions */
+/* editing context menu reactions *
 div.da-contextMenu div.da-wrapper > [aria-label^="Add Reaction:"] { background-color: transparent; }
 div.da-contextMenu div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-icon {
     height: 28px;
@@ -1200,8 +1180,7 @@ div.da-contextMenu div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-icon 
 
 
 
-
-/* Readability Upgrade */
+/* Readability Upgrade *
 time,
 blockquote,
 button > div
@@ -1256,8 +1235,7 @@ div.da-autocompleteInner div.da-selector.da-selectable div div {
 
 
 
-
-/* transparency edit */
+/* transparency edit *
 div.da-base div.da-sidebar,
 div.da-base > div.da-content > div,
 div.da-baseLayer div.da-wrapper.da-guilds,
@@ -1296,7 +1274,7 @@ div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
 
 /* 
     Transparaency + Background
-*/
+*
 div.da-app > div.da-app {
     background-color: var(--background-image);
 }
@@ -1305,7 +1283,7 @@ div.da-app > div.da-app {
 div.da-base div.da-sidebar,
 div.da-baseLayer div.da-wrapper.da-guilds {
     background-color: rgba(0, 0, 0, .5);
-    /*background-color: var(--main-transparency);*/
+    /*background-color: var(--main-transparency);*
 }
 
 div.da-app,
@@ -1335,7 +1313,7 @@ div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
     recent messages notification colours
 */
 
-/* new messages bar colour */ 
+/* new messages bar colour *
 div.da-messagesWrapper div.da-newMessagesBar {
     background-color: var(--new-messages-bar);
 	border-radius: 0 0 var(--bar-radius) 0;
@@ -1343,12 +1321,12 @@ div.da-messagesWrapper div.da-newMessagesBar {
 	left: 0;
 } 
 
-/* new message on hover */
+/* new message on hover *
 div.da-messagesWrapper div.da-newMessagesBar:hover {
     background: var(--new-messages-hover);
 }
 
-/* new message image + removes default message icon*/
+/* new message image + removes default message icon*
 div.da-messagesWrapper div.da-newMessagesBar svg.da-barButtonIcon { display: none; }
 div.da-messagesWrapper div.da-newMessagesBar:active { padding: 0 !important; }
 div.da-messagesWrapper div.da-newMessagesBar button:last-child {
@@ -1361,7 +1339,7 @@ div.da-messagesWrapper div.da-newMessagesBar button:last-child {
 	font-size: 0;
 }
 
-/* changing colour setting to left size */
+/* changing colour setting to left size *
 div.da-messagesWrapper div.da-jumpToPresentBar {
 	background: var(--to-present-bar) !important;
 	border-radius: 0 var(--bar-radius) var(--bar-radius) 0;
@@ -1369,7 +1347,7 @@ div.da-messagesWrapper div.da-jumpToPresentBar {
     left: 0;
 }
 
-/* setting up image */
+/* setting up image *
 div.da-messagesWrapper div.da-jumpToPresentBar svg { display: none; }
 div.da-messagesWrapper div.da-jumpToPresentBar button:last-child {
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTcuNDEsOC41OEwxMiwxMy4xN0wxNi41OSw4LjU4TDE4LDEwTDEyLDE2TDYsMTBMNy40MSw4LjU4WiIgLz48L3N2Zz4=);
@@ -1380,13 +1358,13 @@ div.da-messagesWrapper div.da-jumpToPresentBar button:last-child {
 	width: 30px;
 }
 
-/* moving the jump to pressent bar up */
+/* moving the jump to pressent bar up *
 div.da-messagesWrapper div.da-jumpToPresentBar {
     padding-bottom: 0;
     margin-bottom: 8px;
 } 
 
-/* new unreads colour and size*/
+/* new unreads colour and size*
 .bar-30k2ka {
     height: 100%;
 	background: var(--new-unread);
@@ -1396,12 +1374,12 @@ div.da-messagesWrapper div.da-jumpToPresentBar {
 	transition: 100ms ease all;
 }
 
-/* bar on hover */
+/* bar on hover *
 .bar-30k2ka:hover {
     background: var(--new-unread-hover);
 }
 
-/* new unreads padding */
+/* new unreads padding *
 .container-35XQWE {
 	padding: 0;
 	height: 26px;
@@ -1411,21 +1389,21 @@ div.da-messagesWrapper div.da-jumpToPresentBar {
 }
 
 /* other notifications */
-/* general aesthetic + cross icon */
+/* general aesthetic + cross icon *
 div.da-notice.da-noticeInfo { margin-top: -12px; }
 div.da-notice.da-noticeInfo > div.da-dismiss {
     margin-top: 5px !important;
     background-size: 8px 8px;
 }
 
-/* notice better discord icon */
+/* notice better discord icon *
 div.da-notice.da-noticeInfo > i {
     margin-top: 2px !important;
     width: 20px;
     height: 20px;
 }
 
-/* notice words */
+/* notice words *
 div.da-notice.da-noticeInfo > strong,
 div.da-notice.da-noticeInfo > span  {
     vertical-align: middle;
@@ -1433,31 +1411,33 @@ div.da-notice.da-noticeInfo > span  {
     top: 13px;
 }
 
-/* correcting voice channel leaving */
+/* correcting voice channel leaving *
 div.da-flex.da-base > div.da-flexChild > div > div.da-noticeDefault.da-notice {
     margin-right: 0;
 }
 
-/* redesigning the offline message */
+/* redesigning the offline message *
 div.da-app div.da-container.da-fixClipping > div.da-content  { display: none; }
 div.da-app div.da-container.da-fixClipping > div.da-problems { padding: 0; }
 div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText + div {  display: none; }
+
+/*  */
 div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { font-size: 0; }
 div.da-app div.da-container.da-fixClipping {
+    display: inline-table;
     width: 100%;
     height: 7px;
-    display: inline-table;
     top: var(--HSL-size); 
     position: inherit;
 }
 
-/* making the message smexy */
-div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText:before {
+/* making the message smexy *
+div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText::before {
     font-size: 14px;
     content: var(--offline-content);
 }
 
-/* new messages red divider */
+/* new messages red divider *
 div.da-dividerRed.da-divider > span.da-dividerContent:after,
 div.da-dividerRed.da-divider > span.da-dividerContent:before {
     border-radius: 1px;
@@ -1486,12 +1466,11 @@ div.da-dividerRed.da-divider > span.da-dividerContent:before {
 
 
 
-
 /* 
     Settings design
 */
 
-/* trying to correct settings menu scroll */
+/* trying to correct settings menu scroll *
 div.da-contentTransitionWrap { height: 100% !important; }
 div.da-contentTransitionWrap .contentRegionScrollerWrap-3YZXdm,
 div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
@@ -1499,20 +1478,20 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
     height: 100%;
 }
 
-/* forces settings to the left size */
+/* forces settings to the left size *
 .sidebarRegion-VFTUkN {
 	flex: 0;
 	margin-top: -35px;
 }
 
-/* widens area for curved selection*/
+/* widens area for curved selection*
 .sidebar-CFHs9e {
 	width: 240px;
 	margin: 0 6px 0 0;
 	padding: 60px 6px 40px 0;
 }
 
-/* actual curve */
+/* actual curve *
 .side-8zPYf6 .item-PXvHYJ,
 #bd-settings-sidebar .ui-tab-bar-item {
 	width: 240px;
@@ -1523,7 +1502,7 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
 	border-radius: 0 16px 16px 0;
 }
 
-/* setting title text  - delete the display: none; if u want the text back*/ 
+/* setting title text  - delete the display: none; if u want the text back*
 .socialLinks-3jqNFy,
 .theme-dark .header-2RyJ0Y,
 .side-8zPYf6 .header-2RyJ0Y,
@@ -1546,7 +1525,7 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
   color: #f1f;
 } */
 
-/* selected object colour */
+/* selected object colour *
 #app-mount .button-mM-y8i,
 #app-mount .moreUsers-1s5Her,
 .side-8zPYf6 .itemSelected-1qLhcL,
@@ -1567,7 +1546,7 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
   color: var(--accent-colour);
 }
 
-/* removes weird line design */
+/* removes weird line design *
 .side-8zPYf6 .separator-gCa7yv,
 #bd-settings-sidebar .ui-tab-bar-separator {
 	position: relative;
@@ -1575,7 +1554,7 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
 	background: transparent !important;
 }
 
-/* adds lines to menu options */
+/* adds lines to menu options *
 .side-8zPYf6 .separator-gCa7yv:after,
 #bd-settings-sidebar .ui-tab-bar-separator:after {
 	position: absolute;
@@ -1585,7 +1564,7 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
 	background: rgba(114,118,125,0.3);
 }
 
-/* menu width and position */
+/* menu width and position *
 .contentColumnDefault-1VQkGM,
 .contentColumnMinimal-2iX-kP,
 .customColumn-Rb6toI,
@@ -1596,7 +1575,7 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
 	margin-right: var(--margins);
 }
 
-/* changes light theme to its true name */
+/* changes light theme to its true name *
 #user-settings div.container-1RjyoP > div > div:nth-child(2) > div > div:nth-child(1) > div.da-info > div.da-title  { font-size: 0; }
 #user-settings div.container-1RjyoP > div > div:nth-child(2) > div > div:nth-child(1) > div.da-info > div.da-title:after {
     content: "The Light of 5,000 Suns";
@@ -1604,7 +1583,7 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
     font-size: 16px;
 }
 
-/* BD Settings sub colours*/
+/* BD Settings sub colours*
 .bda-slist .bda-footer a {
 	color: var(--secondary-color);
 } h2.ui-form-title {
@@ -1616,26 +1595,26 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
     box-shadow:0px 0px 1px rgba(255,183,197, .7);
 }
 
-/* removing the dumb af error things */
+/* removing the dumb af error things *
 div.ace_gutter div.ace_gutter-cell {
     margin-left: -20px;
     padding-left: 23px !important;
 }
 
-/* Custom CSS Editor tab design*/
+/* Custom CSS Editor tab design*
 #bd-customcss-detach-container {
 	z-index: 1000 !important;
     transition: 300ms !important;
 }
 
-/* custom CSS editor on hover*/
+/* custom CSS editor on hover*
 #bd-customcss-detach-container:hover {
 	width: 41%;
 	z-index: 1000 !important;
     transition: 400ms !important;
 } 
 
-/* colour of the line numbers */
+/* colour of the line numbers *
 .ace-monokai .ace_gutter {
 	color:var(--secondary-color) !important;
 }
@@ -1643,7 +1622,7 @@ div.ace_gutter div.ace_gutter-cell {
 /* normal inner CSS colours
 .ace_content { background: #292d30 !important; }
 .ace-monokai .ace_gutter-active-line { background: rgba(0,0,0,0.25) !important; }
-.ace-monokai .ace_marker-layer .ace_active-line { background: transparent !important; } */
+.ace-monokai .ace_marker-layer .ace_active-line { background: transparent !important; } *
 .ui-standard-sidebar-view #bd-customcss-attach-controls button,
 .bd-detached-css-editor #bd-customcss-attach-controls button,
 .standardSidebarView-3F1I7i #bd-customcss-attach-controls button {
@@ -1651,14 +1630,14 @@ div.ace_gutter div.ace_gutter-cell {
 	height: 33px;
 	margin: 6px 6px 0 0 !important;
 	padding: 0 16px !important;
-	/* background: #2c2f33 !important; */
+	/* background: #2c2f33 !important; *
 	border-radius: 4px!important;
 	border: none !important;
 	font-weight: normal;
 	margin-top: 10px !important;
 }
 
-/* making the buttons stay still so its easy to press them */
+/* making the buttons stay still so its easy to press them *
 #bd-customcss-detach-container:hover .ui-standard-sidebar-view #bd-customcss-attach-controls,
 #bd-customcss-detach-container:hover .bd-detached-css-editor #bd-customcss-attach-controls,
 #bd-customcss-detach-container:hover .standardSidebarView-3F1I7i #bd-customcss-attach-controls {
@@ -1666,7 +1645,7 @@ div.ace_gutter div.ace_gutter-cell {
     transition: 350ms !important;
 }
 
-/* setting the left over transition speed  */
+/* setting the left over transition speed  *
 #bd-customcss-detach-container .ui-standard-sidebar-view #bd-customcss-attach-controls,
 #bd-customcss-detach-container .bd-detached-css-editor #bd-customcss-attach-controls,
 #bd-customcss-detach-container .standardSidebarView-3F1I7i #bd-customcss-attach-controls {
@@ -1678,10 +1657,14 @@ div.ace_gutter div.ace_gutter-cell {
 #bd-customcss-detach-container {
     padding-top: 25px;
     background: var(--main-transparency);
+
+
 }
 
-/* Changelog */
+/* Changelog *
 #bd-settingspane-container .bda-slist::before {
+    /* content:"What's new in Aurora 2.x\A -Collapsed Search bar \A -Many new addons \A-Light Theme Blocker \A-New Unread/Selected Indicators \A-Redesigned User Profile Modal\A-New Titlebar \A-Remove Compatibility Tags \A-Changed Server Dropdown \A-New Context Menu Animations \A-Redesigned Account Details Container \A-Members List Tweaks \A-Rework Variable System for var(--main-color); \A-Color Discords Grey SVG's\A-New Group DM Icon \A-Category Animations \A-Redesign Reactions \A-Tall Emoji Picker \A-New Loading Screen Container \A Support server:https://bit.ly/derealised."; *
+
     content: var(--changelog-content);
     display: block;
     line-height:10px;
@@ -1695,14 +1678,14 @@ div.ace_gutter div.ace_gutter-cell {
 }
 
 /* making my theme sorce and website links a lil more accurate */
-/* theme page */
+/* theme page *
 a[href = "https://github.com/RubikPaladin/sakura-theme"]{ font-size: 0%; }
 a[href = "https://github.com/RubikPaladin/sakura-theme"]::before {
     content: "Theme Page";
     font-size: 12px;
     font-weight: 700;
 }
-/* css source */
+/* css source *
 a[href = "https://rubikpaladin.github.io/sakura-theme/current-testing-base.css"]::before,
 a[href = "https://rubikpaladin.github.io/sakura-theme/horizontal-server-base.css"]::before,
 a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]::before {
@@ -1749,14 +1732,15 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 .content-3at_AU:hover,
 .content-20Aix8:hover { background: var(--chat-name); }
 .content-3at_AU,
-.content-20Aix8 {	height: 34px;
+.content-20Aix8 {	
+    height: 34px;
 	border-radius: 0 17px 17px 0;
     padding-right: 9px;
 }
 
 
 
-/* Channel Aestethic */
+/* Channel Aestethic *
 div.da-sidebar > nav.da-container div.da-containerDefault div.da-content {
     width: 100%;
 	margin: 0 !important;
@@ -1767,10 +1751,10 @@ div.da-sidebar > nav.da-container div.da-containerDefault div.da-content {
     margin-left: var(--chat-margin-left);
 }
 
-/* removes weird shadow in chat title */
+/* removes weird shadow in chat title *
 div.da-chat > div.da-content:before { display: none; }
 
-/* editing the DM's */
+/* editing the DM's *
 div.da-sidebar > nav.da-privateChannels a {
     width: var(--chat-width) !important;
     padding-left: var(--chat-padd-left);
@@ -1781,13 +1765,13 @@ div.da-sidebar > nav.da-privateChannels a {
     padding-right: -5px;
 }
 
-/* DM size and border radius */
+/* DM size and border radius *
 div.da-sidebar > nav.da-privateChannels a > div.da-layout {
     border-radius: 0 8px 8px 0;
     width: 100% !important;
 }
 
-/* DM side bar on hover/selected */
+/* DM side bar on hover/selected *
 div.da-sidebar > nav.da-privateChannels a.da-selected > div.da-layout svg,
 div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout svg,
 div.da-sidebar > nav.da-privateChannels a.da-selected > div.da-layout div.da-name,
@@ -1799,7 +1783,7 @@ div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout div.da-subtext {
     color:  var(--channels-default);
 }
 
-/* changing width to deal with weird scroll bar */
+/* changing width to deal with weird scroll bar *
 section.da-panels { 
     border-right: var(--borders); 
     border-top: var(--borders); 
@@ -1808,7 +1792,7 @@ div.da-base > div.da-content > div.da-sidebar > nav { border-right: var(--border
 div.da-base > div.da-content > div.da-sidebar { width: 241px; }
 
 /* DM onHover*/
-/* editing layouts */
+/* editing layouts *
 div.da-sidebar nav.da-privateChannels a.da-channel.da-container:hover { background: none; }
 div.da-sidebar > nav.da-privateChannels a.da-selected > div.da-layout,
 div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout {
@@ -1818,7 +1802,7 @@ div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout {
     padding-right: 0;
 }
 
-/* moving the *Delete DM* cross */
+/* moving the *Delete DM* cross *
 div.da-sidebar > nav.da-privateChannels a div.da-children > div.da-closeButton svg {
     height: 15px;
     width: 15px;
@@ -1828,18 +1812,18 @@ div.da-sidebar > nav.da-privateChannels a div.da-children > div.da-closeButton s
     margin-left: -16px;
 }
 
-/* editing child size */
+/* editing child size *
 div.content-3at_AU div.da-children svg {
     height: 16px;
     width: 16px;
 }
 
-/*colour chat octothropes*/
+/*colour chat octothropes*
 div.da-sidebar div.da-content svg path{
     color: var(--channels-default);
 }
 
-/* colouring the unread octothropes */
+/* colouring the unread octothropes *
 div.da-sidebar div.da-selected svg path,
 div.da-sidebar div.da-selected svg path,
 div.da-sidebar div.da-content:hover svg path,
@@ -1852,7 +1836,7 @@ div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
 
 
 /* Mod/Admin Icons */
-/* editing the mod/admin icon locations + dealing with ping logic */
+/* editing the mod/admin icon locations + dealing with ping logic *
 div.content-3at_AU div.da-children div.da-mentionsBadge { right: 5px; }
 div.content-3at_AU:hover div.da-children div.da-mentionsBadge { display: none; }
 div.content-3at_AU div.da-children [role = "button"] { bottom: 8px; display: none; }
@@ -1864,7 +1848,7 @@ div.content-3at_AU div.da-children > div:nth-child(2)[role = "button"] {
     display: none; 
 }
 
-/* onHover corrections */
+/* onHover corrections *
 div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label ~="Invite"],
 div.da-sidebar div.da-containerDefault > div:hover div.da-children [role = "button"] { display: block; }
 div.da-sidebar div.da-containerDefault.da-selected > div:hover div.da-children,
@@ -1873,7 +1857,7 @@ div.content-3at_AU div.da-children {
     margin-right: 2px;
 }
 
-/* making sure Mod/Admin options swap correctly */
+/* making sure Mod/Admin options swap correctly *
 div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z svg[name = "Gear"],
 div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label ~= "Invite"] {
     display: none;
@@ -1940,7 +1924,6 @@ div.content-3at_AU div.da-children > div:only-child {
     left: 2px;
 }
 
-
 /* basic aestethic *
 div.da-content div.da-membersWrap div.da-member div.da-layout{ padding: 0; }
 div.da-content div.da-membersWrap div.da-member {
@@ -1959,7 +1942,7 @@ div.da-content div.da-membersWrap div.da-membersGroup {
     font-weight: 500;
 }
 
-/* fixing member on Hover*/
+/* fixing member on Hover*
 div.da-membersWrap div.da-member { padding: 0; }
 div.da-membersWrap div.da-member div.da-layout {
     width: 97%;
@@ -1969,7 +1952,7 @@ div.da-membersWrap div.da-member div.da-layout {
     padding-left: 18px !important;
 }
 
-/* member hover colours */
+/* member hover colours *
 div.da-content div.da-membersWrap div.da-member:hover { background: none; }
 div.da-content div.da-membersWrap div.da-member:hover div.da-layout { background: var(--on-hover-transparency);  }
 div.da-content div.da-membersWrap div.da-member.da-selected div.da-layout { background: var(--on-select-transparency); }
@@ -1978,8 +1961,7 @@ div.da-content div.da-membersWrap div.da-membersGroup {
     font-weight: 500;
 }
 
-
-/* general custom activity in member list */
+/* general custom activity in member list *
 div.da-member div.da-activity { padding-top: 1px; }
 div.da-privateChannels div.da-activity img + div.da-activityText,
 div.da-member div.da-activity img + div.da-activityText {
@@ -1989,51 +1971,48 @@ div.da-member div.da-activity img + div.da-activityText {
     font-weight: calc(var(--user-game-font-weight) - 50);
 }
 
-/*  display music icons */
+/*  display music icons *
 .icon-3BcwQu path {
 	display: var(--VC-icons);
 	color: var(--VC-icon-colour);
 }
 
-/* correcting vc icon locations */
+/* correcting vc icon locations *
 div.da-voiceUser div.da-iconSpacing { margin-right: 3px; }
 div.da-voiceUser div.da-icons > div:last-child {
     display: flex;
 }
 
-/* spaces out invite option */
+/* spaces out invite option *
 .iconItem-1-bXkn {
 	position: relative !important;
 	margin: 0 0 0 var(--invite-icon-space) !important;
 }
 
-/* activity modification - genious actually */
+/* activity modification - genious actually *
 div.da-sidebar div.da-activity > svg{ display: none; }
 div.da-activity > div { font-size: var(--user-game-Playing) !important; }
 div.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
 
-
-/* div.da-activity > img + div { } */
-
-/* for the current game activity */
+/* for the current game activity *
 div.da-container div.da-panel {
     border-top: var(--borders);
     border-bottom: none;
     background: none;
 }
 
-/* correcting weird weighting */
+/* correcting weird weighting *
 div.da-container div.da-panel div.da-title,
 div.da-sidebar div.da-nameTag div.da-title {
     font-weight: 400;
 }
 
-/* changes the size of the user number tag thing fuck idk its name */
+/* changes the size of the user number tag thing fuck idk its name *
 div.da-sidebar div.da-nameTag div.da-subtext {
     font-size: 10.68px;
 }
 
-/* fixes stream popout in channels chat */
+/* fixes stream popout in channels chat *
 div.da-streamPreviewWrapper div.da-body { background: var(--user-body);  }
 div.da-didRender div.da-streamPreview { box-shadow: none; }
 div.da-streamPreviewWrapper.da-mounted {  padding: 0;  }
@@ -2053,7 +2032,7 @@ div.da-streamPreviewWrapper div.da-streamPreview {
     box-shadow: none;
 }
 
-/* fixing now play on hover */
+/* fixing now play on hover *
 div.da-tabBody div.da-nowPlayingColumn div.da-itemCard:hover {
     background: var(--on-hover-transparency);
 }
@@ -2073,37 +2052,36 @@ div.da-tabBody div.da-nowPlayingColumn div.da-itemCard:hover {
 
 
 
-
 /* Compact Mode Edits */
-/* makes emotes smol to make it clean */
+/* makes emotes smol to make it clean *
 div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact .emoji {
     height: var(--compact-emote-size) !important;
     width: var(--compact-emote-size) !important;
 }
 /*  */
-/* spacing out the time after correcting header */
+/* spacing out the time after correcting header *
 div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact {
     padding-left: 5px;
 }
 
-/* making suer my username on hover still functions */
+/* making suer my username on hover still functions *
 div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact > h2.headerCompact-3wRt2W.da-headerCompact:hover {
     background: var(--on-hover-transparency);
 	border-radius: 0 17px 17px 0;
 }
 
-/* lining up header with text */
+/* lining up header with text *
 div.markup-2BOw-j.da-markup.isCompact-1hsne1.da-isCompact > h2.headerCompact-3wRt2W.da-headerCompact {
    margin-left: -7px;  
    margin-right: 10px;
 }
 
-/* spacing out username */
+/* spacing out username *
 div.da-markup.da-isCompact span.da-username {
     padding-left: 3px;
 }
 
-/* correcting bot tag position */
+/* correcting bot tag position *
 div.da-markup.da-isCompact span.da-botTag {
     top: -1px;
 }
@@ -2118,13 +2096,13 @@ div.da-markup.da-isCompact span.da-botTag {
 
 
 /* Server Discovery page */
-/* correcting background fade */
+/* correcting background fade *
 img.da-bg {
     -webkit-mask: linear-gradient(black var(--server-banner-fade), transparent 100%);
     opacity: var(--server-banner-opacity) !important;
 }
 
-/* correcting currently selected round button stuff */
+/* correcting currently selected round button stuff *
 div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-colour); }
 
 
@@ -2140,7 +2118,7 @@ div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-
     table of friends & DM's   
 */
 
-/* DM design  */
+/* DM design  *
 .privateChannels-1nO12o .channel-2QD9_O a,
 .privateChannels-1nO12o .channel-2QD9_O.selected a {
 	height: var(--dm-height);
@@ -2150,7 +2128,7 @@ div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-
 	border-radius: 0 20px 20px 0;
 }
 
-/* friend table look */
+/* friend table look *
 .friendsTable-133bsv .friendsRow-2yicud {
 	position: relative;
 	margin: 0;
@@ -2158,20 +2136,20 @@ div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-
 	overflow: visible;
 }
 
-/* correcting on hover*/
+/* correcting on hover*
 .friendsTable-133bsv .friendsRow-2yicud:hover {
 	margin: 0 !important;
 	padding: 16px 0px 16px 0 !important;
 	background: transparent !important;
 }
 
-/* making on hover more subtle*/
+/* making on hover more subtle*
 .friendsTable-133bsv .friendsRow-2yicud:hover,
 .friendsTable-133bsv .friendsRow-2yicud:hover + .friendsRow-2yicud {
 	border-color: #36383a !important;
 }
 
-/* spacing out the name and pfp */
+/* spacing out the name and pfp *
 .friendsTable-133bsv .friendsRow-2yicud .friendsColumnName-1zBOKm {
 	width: 220px !important;
 	margin: 0 0 0 16px !important;
@@ -2179,7 +2157,7 @@ div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-
 	transition: 200ms ease all;
 }
 
-/* removing the status dot */
+/* removing the status dot *
 .friendsTable-133bsv .friendsRow-2yicud .friendsColumnStatus-ZH4ho2 .status-mz5rqq {
 	position: absolute !important;
 	width: 12px !important;
@@ -2188,12 +2166,12 @@ div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-
 	left: 40px !important;
 }
 
-/* lining up titles and removing seperators */
+/* lining up titles and removing seperators *
 .friendsTable-133bsv .friendsTableHeader-32yE7d .friendsColumn-eVHFqJ { width: 205px !important; }
 .friendsTable-133bsv .friendsTableHeader-32yE7d .friendsColumnSeparator-3MqtMA { opacity: 0; }
 
 
-/* option animations*/
+/* option animations*
 .friendsTable-133bsv .friendsRow-2yicud .friendsColumnActions-1LT3_M {
 	transition: 200ms ease all;
 	opacity: 0;
@@ -2213,13 +2191,13 @@ div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-
 	border-radius: 50%;
 }
 
-/* new icons */
+/* new icons *
 .friendsTable-133bsv .friendsRow-2yicud .friendsColumnActions-1LT3_M .friendsAction-__WNE9.friendsActionVideoCall-2_PKeP { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTUgOHY4SDVWOGgxMG0xLTJINGMtLjU1IDAtMSAuNDUtMSAxdjEwYzAgLjU1LjQ1IDEgMSAxaDEyYy41NSAwIDEtLjQ1IDEtMXYtMy41bDQgNHYtMTFsLTQgNFY3YzAtLjU1LS40NS0xLTEtMXoiLz48L3N2Zz4=) !important; }
 .friendsTable-133bsv .friendsRow-2yicud .friendsColumnActions-1LT3_M .friendsAction-__WNE9.friendsActionVoiceCall-3EdPsR { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNi41NCA1Yy4wNi44OS4yMSAxLjc2LjQ1IDIuNTlsLTEuMiAxLjJjLS40MS0xLjItLjY3LTIuNDctLjc2LTMuNzloMS41MW05Ljg2IDEyLjAyYy44NS4yNCAxLjcyLjM5IDIuNi40NXYxLjQ5Yy0xLjMyLS4wOS0yLjU5LS4zNS0zLjgtLjc1bDEuMi0xLjE5TTcuNSAzSDRjLS41NSAwLTEgLjQ1LTEgMSAwIDkuMzkgNy42MSAxNyAxNyAxNyAuNTUgMCAxLS40NSAxLTF2LTMuNDljMC0uNTUtLjQ1LTEtMS0xLTEuMjQgMC0yLjQ1LS4yLTMuNTctLjU3LS4xLS4wNC0uMjEtLjA1LS4zMS0uMDUtLjI2IDAtLjUxLjEtLjcxLjI5bC0yLjIgMi4yYy0yLjgzLTEuNDUtNS4xNS0zLjc2LTYuNTktNi41OWwyLjItMi4yYy4yOC0uMjguMzYtLjY3LjI1LTEuMDJDOC43IDYuNDUgOC41IDUuMjUgOC41IDRjMC0uNTUtLjQ1LTEtMS0xeiIvPjwvc3ZnPg==) !important; }
 .friendsTable-133bsv .friendsRow-2yicud .friendsColumnActions-1LT3_M .friendsAction-__WNE9.friendsActionRemove-qu8nnl { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNiAxOWMwIDEuMS45IDIgMiAyaDhjMS4xIDAgMi0uOSAyLTJWN0g2djEyek04IDloOHYxMEg4Vjl6bTcuNS01bC0xLTFoLTVsLTEgMUg1djJoMTRWNGgtMy41eiIvPjwvc3ZnPg==) !important; }
 .topPill-30KHOu .separator-gCa7yv { display: none; }
 
-/* editing friends menu */
+/* editing friends menu *
 div.da-friendsRow:hover div.da-friendsColumnActions{ transition-duration: 160ms !important; }
 div.da-friendsRow div.da-friendsColumnActions {
     transition-duration: 0ms !important;
@@ -2231,20 +2209,20 @@ div.da-friendsRow div.da-friendsColumnActions > div.da-friendsAction {
     padding: 2px;
 }
 
-/* changing friend look */
+/* changing friend look 
 div.da-friendsTable div.da-friendsRow {
     border: none !important;
     border-radius: 0 12px 12px 0 !important;
     
 }
 
-/* friend on hover */
+/* friend on hover *
 div.da-friendsTable div.da-friendsRow:hover {
     border: none;
     background-color: var(--on-hover-transparency) !important;
 }
 
-/* adding bottom border to calls and videos */
+/* adding bottom border to calls and videos *
 div.da-chat.da-inCall div.da-videoHeight > div { border-bottom: var(--borders); }
 div.da-chat.da-inCall div.da-videoHeight.da-animated { padding-bottom: 2px; }
 div.da-chat div.da-videoHeight { border-bottom: var(--borders); }
@@ -2266,7 +2244,7 @@ div.da-chat div.da-videoHeight { border-bottom: var(--borders); }
     Animated Status Picker 
 */
 
-/* without this u cant set picked pos to fixed */
+/* without this u cant set picked pos to fixed *
 div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrowAlignmentTop-1yftWI,
 .popout-3sVMXz.popoutTop-3uu9vG,
 .popout-3sVMXz.popoutTopLeft-b5Eb3O,
@@ -2292,20 +2270,20 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 
 
 
-/* status picker box colour */
+/* status picker box colour *
 #popout_1 div.da-menu div.da-separator { display: none; }
 #popout_1 div.da-menu, .listeningAlong-13-Udx {
     border-top: var(--borders);
     border-right: var(--borders);
     /* border-left: var(--borders);  */
-    /* background: #111114 !important;   trans-fail*/ 
+    /* background: #111114 !important;   trans-fail* 
     
     background-image: var(--status-picker-bg);
     background-color: var(--status-picker-color) !important;
     background-blend-mode: var(--status-picker-blend-mode) !important;
 }
 
-/* box colours and size of individual options */
+/* box colours and size of individual options *
 .listeningAlong-13-Udx { margin: 0 !important; }
 #popout_1 div.da-menu div.da-statusItem {
     margin: 0;
@@ -2345,14 +2323,14 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 	visibility: visible;
 }
 
-/* giving each item its icon */
+/* giving each item its icon *
 #popout_1 div.da-menu div.da-statusItem:nth-child(1) foreignObject:after { background: rgb(67, 181, 129); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMjEsN0w5LDE5TDMuNSwxMy41TDQuOTEsMTIuMDlMOSwxNi4xN0wxOS41OSw1LjU5TDIxLDdaIiAvPjwvc3ZnPg==); }
 #popout_1 div.da-menu div.da-statusItem:nth-child(3) foreignObject:after { background: rgb(250, 166, 26); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xMiw0QTksOSAwIDAsMCAzLDEzQTksOSAwIDAsMCAxMiwyMkE5LDkgMCAwLDAgMjEsMTNBOSw5IDAgMCwwIDEyLDRNMTIuNSw4SDExVjE0TDE1Ljc1LDE2Ljg1TDE2LjUsMTUuNjJMMTIuNSwxMy4yNVY4TTcuODgsMy4zOUw2LjYsMS44NkwyLDUuNzFMMy4yOSw3LjI0TDcuODgsMy4zOU0yMiw1LjcyTDE3LjQsMS44NkwxNi4xMSwzLjM5TDIwLjcxLDcuMjVMMjIsNS43MloiIC8+PC9zdmc+); }
 #popout_1 div.da-menu div.da-statusItem:nth-child(4) foreignObject:after { background: rgb(240, 71, 71); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTksMTNINVYxMUgxOVYxM1oiIC8+PC9zdmc+); }
 #popout_1 div.da-menu div.da-statusItem:nth-child(5) foreignObject:after { background: rgb(116, 127, 141); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIgNmMzLjc5IDAgNy4xNyAyLjEzIDguODIgNS41LS41OSAxLjIyLTEuNDIgMi4yNy0yLjQxIDMuMTJsMS40MSAxLjQxYzEuMzktMS4yMyAyLjQ5LTIuNzcgMy4xOC00LjUzQzIxLjI3IDcuMTEgMTcgNCAxMiA0Yy0xLjI3IDAtMi40OS4yLTMuNjQuNTdsMS42NSAxLjY1QzEwLjY2IDYuMDkgMTEuMzIgNiAxMiA2em0tMS4wNyAxLjE0TDEzIDkuMjFjLjU3LjI1IDEuMDMuNzEgMS4yOCAxLjI4bDIuMDcgMi4wN2MuMDgtLjM0LjE0LS43LjE0LTEuMDdDMTYuNSA5LjAxIDE0LjQ4IDcgMTIgN2MtLjM3IDAtLjcyLjA1LTEuMDcuMTR6TTIuMDEgMy44N2wyLjY4IDIuNjhDMy4wNiA3LjgzIDEuNzcgOS41MyAxIDExLjUgMi43MyAxNS44OSA3IDE5IDEyIDE5YzEuNTIgMCAyLjk4LS4yOSA0LjMyLS44MmwzLjQyIDMuNDIgMS40MS0xLjQxTDMuNDIgMi40NSAyLjAxIDMuODd6bTcuNSA3LjVsMi42MSAyLjYxYy0uMDQuMDEtLjA4LjAyLS4xMi4wMi0xLjM4IDAtMi41LTEuMTItMi41LTIuNSAwLS4wNS4wMS0uMDguMDEtLjEzem0tMy40LTMuNGwxLjc1IDEuNzVjLS4yMy41NS0uMzYgMS4xNS0uMzYgMS43OCAwIDIuNDggMi4wMiA0LjUgNC41IDQuNS42MyAwIDEuMjMtLjEzIDEuNzctLjM2bC45OC45OGMtLjg4LjI0LTEuOC4zOC0yLjc1LjM4LTMuNzkgMC03LjE3LTIuMTMtOC44Mi01LjUuNy0xLjQzIDEuNzItMi42MSAyLjkzLTMuNTN6Ii8+PC9zdmc+); }
 
 
-/* items base settings */
+/* items base settings *
 #popout_1 div.da-menu div.da-statusItem foreignObject:after {
 	content: " ";
 	display: block;
@@ -2373,44 +2351,42 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 	transition: 20ms var(--default-animation); 
 }
 
-/* removing old menu information */
+/* removing old menu information *
 #popout_1 div.da-menu div.da-statusItem div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }
 #popout_1 div.da-menu div.da-statusItem div.da-helper { display: none; }
 
-/* designing new custom status */
+/* designing new custom status *
 div.da-layerContainer div.da-menu div.da-menuItem:last-child {
     border-radius: 0 !important;
     margin: 0;
     padding: 5px 15px;
-    /*position: absolute;         these where to make it above the other options */
-    /*bottom: 52px;*/
+    /*position: absolute;         these where to make it above the other options *
+    /*bottom: 52px;*
     background-color: var(--on-hover-transparency);
     filter: brightness(70%);
 }
 
-/* custom status on hover */
+/* custom status on hover *
 div.da-layerContainer div.da-menu div.da-menuItem:last-child:hover{
-    /*background-color: var(--light-menu-colour);*/
+    /*background-color: var(--light-menu-colour);*
     background-color: var(--on-hover-transparency);
     filter: brightness(100%);
 }
 
-/* setting up most of the user panels (bottom left) */
+/* setting up most of the user panels (bottom left) *
 div.da-panels div.da-container {
     border-bottom: none;
     background: transparent;
     border-top: var(--borders);
 }
 
-/* making the user card slightly taller */
+/* making the user card slightly taller *
 div.da-panels div.da-container:last-child {
 	height: 60px !important;
 	top: 0;
 	margin: 0;
 	z-index: 100 !important;
 }
-
-
 
 
 
@@ -2495,23 +2471,23 @@ div.da-panels div.da-container:last-child {
 
 
 /* message log plugs are not officially supported by to plugin comunity */
-/* no message delete */
+/* no message delete *
 .NoDeleteMessages-deleted-message .da-markup{ color: var(--deleted-text) !important; }
 .NoDeleteMessages-deleted-message .NoDeleteMessages-edited-message > .NoDeleteMessages-edited-message:last-child > .NoDeleteMessages-edited-message { color: var(--deleted-text) !important; }
 
 /*  sets shade of eddited text to be darker 
     to make large sections more intuitive to read 
-    + extends colour changes */
+    + extends colour changes *
 :not(.ml-edited) > .ml-edited,
 div.ml-edited:not(:last-child) > div {
     color: rgba(255, 255, 255, 0.25) !important;
 }
 
-/* changing size slightly */
+/* changing size slightly *
 :not(.ml-edited) > .ml-edited { font-size: 95%; }
 div.ml-edited:not(:last-child) > div { font-size: 100%; }
     
-/* correcting eddited emotes */
+/* correcting eddited emotes *
 :not(.ml-edited) > .ml-edited .emoji,
 div.ml-edited:not(:last-child) .emoji {
     filter: grayscale(100%) !important;
@@ -2519,7 +2495,7 @@ div.ml-edited:not(:last-child) .emoji {
     width: var(--small-emote) !important;
 }
 
-/* final edit is true version */
+/* final edit is true version *
 div.ml-edited > .ml-edited:last-child .emoji {
     padding-top: 4px;
     filter: grayscale(0%) !important;
@@ -2527,7 +2503,7 @@ div.ml-edited > .ml-edited:last-child .emoji {
     width: var(--normal-emote) !important;
 }
 
-/* correcting multi-edit delete colour text*/
+/* correcting multi-edit delete colour text*
 div.ml-deleted div.ml-edited:not(:last-child) > div {
     color: var(--deleted-text) !important;
     opacity: 0.6;
@@ -2535,9 +2511,7 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
 
 
 
-
-
-/* char counter plugin */
+/* char counter plugin *
 #charcounter {
     left: var(--counter-left);
     top: var(--counter-top);
@@ -2546,21 +2520,19 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
     font-size: var(--counter-font) !important;
 }
 
-/* removing char counter in channel settinges where it already has one */
+/* removing char counter in channel settinges where it already has one *
 #app-mount > div.app-19_DXt div.layers-3iHuyZ div.contentRegion-3nDuYy.da-contentRegion div.contentColumn-2hrIYH.da-contentColumn.contentColumnDefault-1VQkGM.da-contentColumnDefault div.inputMaxLength-1vRluy.da-inputMaxLength > span {
     display: none;
 }
 
-
-
-/* Translator Menu */
+/* Translator Menu *
 .popout-2iWAc-.popout-googletranslate .themedPopout-1TrfdI {
     background: var(--dark-menu-colour);
     border-width: 0px !important;
     padding: 0;
 }
 
-/* header design */
+/* header design *
 .popout-googletranslate.BDFDB-modal > div > div:first-child {
     background: var(--light-menu-colour);
     margin: 0 !important;
@@ -2570,7 +2542,7 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
     border-radius: 7px 7px 0 0;
 }
 
-/* correcting weird compact auto translate switch */
+/* correcting weird compact auto translate switch *
 .popout-googletranslate.BDFDB-modal > div > div:last-child {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -2582,35 +2554,11 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
     
 }
 
-/* normal element design */
+/* normal element design *
 .popout-googletranslate.BDFDB-modal > div > div {
     padding-left: 10px;
     padding-right: 10px;
     color: var(--accent) !important;
-}
-
-
-
-
-/* server folders correcting distance */
-.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller {
-    padding-left: calc(var(--HSL-size) + 14px) !important;
-}
-
-/* TODO pill edits */
-/* correcting rainbow anim speed */
-.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem .da-pill span { transition: 100ms ease all !important; }
-.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem .da-pill span[style*="opacity: 0.7; height: 8px;"] {
-    transition: 50ms ease all !important;
-    opacity: 1 !important;
-}
-
-/* pill shape modifications */
-#app-mount .wrapper-1Rf91z.foldercontent .listItem-2P_4kh div[class*='pill'] span {
-    width: 50% !important;
-    transform: none !important; 
-    left: 25% !important;
-    transition: 50ms ease all !important;
 }
 
 .wrapper-1Rf91z.foldercontent .scroller-2TZvBN:hover > div.listItem-2P_4kh:nth-child(1):hover {
@@ -2618,14 +2566,13 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
 }
 
 
-
-/* discord badges plugin*/
+/* discord badges plugin*
 .BE-badge {  height: var(--badge-height) !important;  }
 .BE-badge.BE-badge-chat { margin-top: var(--badge-bottom) !important;  }
 div.BE-badge.BE-badge-chat:not(.BE-badge-CurrentGuildBoost) { top: 4px; }
 
 /* correcting first and last */
-/*.BE-badge:not(.BE-badge-settings):first-of-type { margin-left: 0 !important; }*/
+/*.BE-badge:not(.BE-badge-settings):first-of-type { margin-left: 0 !important; }*
 .BE-badge:not(.BE-badge-settings):last-of-type { margin-right: 0px !important; }
 .BE-badge:not(.BE-badge-settings){ 
     z-index: 1; 
@@ -2639,10 +2586,7 @@ div.BE-badge.BE-badge-chat:not(.BE-badge-CurrentGuildBoost) { top: 4px; }
 }
 
 
-
-
-
-/* image details plug */
+/* image details plug *
 .image-details, 
 .image-details .image-details-size,
 .image-details .image-details-dimensions { font-size: 11px !important; }
@@ -2652,13 +2596,13 @@ div.BE-badge.BE-badge-chat:not(.BE-badge-CurrentGuildBoost) { top: 4px; }
     margin-bottom: 3px;
 }
 
-/* image detail display modifications */
+/* image detail display modifications *
 .image-details { display: none; }
 .image-details-wrapper { margin-top: 20px; }
 .image-details-wrapper:hover { margin-top: 0px; }
 .image-details-wrapper:hover .image-details { display: inline; }
 
-/* deleted images */
+/* deleted images *
 div.ml-deleted .image-details:after {
     content: "Image Deleted";
     margin-left: 15px !important;
@@ -2669,7 +2613,7 @@ div.ml-deleted .image-details:after {
 
 
 
-/* char counter primary modifications */
+/* char counter primary modifications *
 #charcounter.over2k { color: var(--deleted-text) !important; }
 div.da-contentCozy.da-content div.da-channelTextArea { margin-top: 12px; }
 div.da-contentCozy.da-content #charcounter {
@@ -2681,10 +2625,7 @@ div.da-contentCozy.da-content #charcounter {
     height: 10px;
 }
 
-
-
-
-/* member count plugin */
+/* member count plugin *
 #MemberCount {
     position: relative;
     background: transparent !important;
@@ -2696,9 +2637,11 @@ div.da-contentCozy.da-content #charcounter {
 }
 
 
-/* correcting role member plugin */
+/* correcting role member plugin *
 div.da-popouts div.role-members-popout { background: var(--context-menu-colour); }
 div.da-popouts div.role-members-popout div.role-member:hover { background: var(--menu-item-hover); }
+
+
 
 
 
