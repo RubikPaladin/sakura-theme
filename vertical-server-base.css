@@ -2238,8 +2238,11 @@ div.da-chat div.da-videoHeight { border-bottom: var(--borders); }
 
 
 
-
-
+/* fixing friend/home icon location */
+nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem { 
+    width: auto;
+    padding-right: 8px;
+}
 
 
 
@@ -2272,7 +2275,6 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
     border-radius: 0 !important;
     padding: 0;
     cursor: initial;
-    /* background: var(--status-picker-background); */
 }
 
 

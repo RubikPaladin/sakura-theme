@@ -164,7 +164,7 @@
 	/* channel dimensions */
 	--chat-padd-left: 10px;      /*default: 5px*/
 	--chat-margin-left: 0px;    /* default: 0px*/
-	--chat-width: calc(var(--side-bar-width) - 15px); 		/* if u add margin-left, ull need to make width smaller default: 100%*/
+	--chat-width: calc(var(--side-bar-width) - (var(--side-bar-width)/100) - 17px);		/* if u add margin-left, ull need to make width smaller default: 100%*/
 
 
     /* server banner fade settings */
@@ -256,7 +256,7 @@
     --username-on-hover: rgba(255, 200, 255, .15);
 	
 	/* status-picker variables - feel free to adjust them for a different feel */
-	--picker-width: calc(var(--side-bar-width) - 3px);
+	--picker-width: calc(var(--side-bar-width) - (var(--side-bar-width)/100));
 	--option-height: 52px;
 	--margin-bottom: 0px;
 	--option-width: calc(var(--picker-width) / 4); /*cause 4 options + 1px border */
@@ -706,6 +706,7 @@ nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1
 /* corrected friend icon */
 nav.da-wrapper div.tutorialContainer-1v44GL div.da-pill { display: none; }
 nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItemWrapper > svg > foreignObject > a { border-radius: 0 !important; } 
+nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem { left: 0px; }
 nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItemWrapper {
     filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
 }
