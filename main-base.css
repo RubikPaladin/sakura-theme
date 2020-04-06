@@ -787,22 +787,6 @@ div.tooltip-2QfLtc.tooltipLeft-3EDOk1.tooltipBlack-PPG47z {
      display: none;
 }
 
-
-/* toast design and colour*/
-.toast,
-.bd-toast {
-    position: fixed;
-    left: var(--toast-left);
-	padding: 12px 16px !important;
-	background: rgba(60,60,60,0.9) !important;
-	box-shadow: none !important;
-	border-radius: 18px !important;
-	font-size: 1em !important;
-	font-weight: 400 !important;
-	background-color: var(--toast-color) !important;
-	
-} .toast { display:none; }
-
 /* changing time display */
 h2.da-header:hover span.da-timestamp,
 img:hover + h2.da-header span.da-timestamp { display: inline-block; }
