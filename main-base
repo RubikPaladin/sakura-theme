@@ -1,11 +1,7 @@
-@import url(https://rubikpaladin.github.io/sakura-theme/main-base.css);
+@import url(https://8xs4qxklp8.execute-api.us-east-2.amazonaws.com/release/gorawgit?giturl=/puckzxz/NotAnotherAnimeTheme/master/css/scsl.css);
 :root { 
     
-
-    /*  Vertical Server Specific Variables
-    
-    
-        if u want to change the full colour scope of the theme 
+	/* if u want to change the full colour scope of the theme 
 	    the best colours to look at first
 	        
 	        --title-color 
@@ -23,18 +19,446 @@
 
         discords element inspector `CTRL + SHIFT + i`
     */
+	
+
+
+
+	/* 
+		Quick Important Variables
+	*/
+	
+    /* Edit this to change your background */
+    --background-image: url(https://i.imgur.com/hLulxgq.png);
+	
+    /* home button pic - a square is better*/
+    --friends-icon: url(https://i.imgur.com/ky3iygN.png);
+	
+	/* server icon size - default: 55 */
+    --HSL-size: 50px;
+    
+	/* Change global transparency */
+    --main-transparency: rgba(0, 0, 0, .5);		/* default: rgba(0, 0, 0, 0.8); */
+	
+	/* Change chat messages font size, you can use any unit: px, em, rem, %, etc. */
+    --font-size: 14px; 							/*default: 16px */
+	
+	/* colour for member/server  "Categories" 
+	    my Home Button (messages/friend icon) is set to a similar colour as the title colour
+	    if u change the title colour, i would follow the "--friends-icon" link, change the colour of it
+	    to ur title colour, upload it to imgur and add it here for continuity */
+    --title-color: rgba(132, 96, 75, 1);  /* 255,190,152, .4 - 200,152,103, .45 - rgba(193,145,96, .6)*
+    
+        note: alot of colour variables are tied to "--accent-colour" but u may uncouple them */
+    --accent-colour: rgba(236, 212, 225, 1); 		/* mostly used on text (i.e all the smol white icons and text turn a light pink)*/
+	
+	/* the rainbow notification bar requires a color start point */
+	/* this is a dim purple one but u can make it brighter and more colourful */
+	--rainbow-seed: rgba(255,120,255, .4);/* default: --main-color or --title-color; */
+	
+	
 
 	
-	/* default: 55 */
-	/* DONT CHANGE THIS, in vertical mode, it does NOT change emote size, it is still used as a size reference in other variables thoe */
-	--HSL-size: 50px;
+	
+	/*
+		Those Little things that make u feel warm inside
+	*/
+	
+	/* scroll bar - control colour*/
+    --scroll-bar-color: rgba(200,150,200, .35); 		/* default: rgba(255,255,255, .15);*/
+    --chat-scroll-bar-color: rgba(200,150,200, .2); 	/* chat scroll bar is a bit brighter cause CSS layers dumb, so it's a darker shade to match*/
+	
+	
+	/* ping colors*/
+	/* each ping visible on the screen has a coloured line*/
+    --ping-inline-colour: rgba(255,170,212, .2); 
+
+    /* each ping creates an embed (that thicc coloured line to the left when u do bot commands) */
+    --ping-embed-colour: 1px solid #FFAAD4; 
+	
+	
+	/* code block edges */
+    --code-block-colour: rgba(255,200,150, 0.45); 	/* default: rgb(67, 181, 129); */
+	--code-block-width: 1px;
+
+
+    /* sets the time visual thang - if set to `none` it will display the time when u hover on usernames
+                                    if u want the normal mode, remove none and leave it empty (or mis-speel it like I have  #Cabbage)*/
+    --time-display: none;
+
+
+    /* colours users in DM's if u want to set all names to this colour (including in chat names) */
+    --DM-username-colour: #fa7; /* copy the var name and CTRL + F search it, and change the line of code to    color: var(--DM-username-colour) !important; */
+
+
+	/* new messages colour */
+	--new-messages-bar: rgba(100,60,100, .9); 	/* basically scroll bar color, but more vis*/
+	--new-messages-hover: rgba(120,80,120, .9);
+	--new-unread: var(--new-messages-bar);
+	--new-unread-hover: var(--new-messages-hover);
+	--to-present-bar: var(--new-messages-bar);
+	--notification-bar: var(--new-messages-bar);
+	--bar-radius: 8px; 						/* 12 - 15 my usual (0 for dem right angles) */
+	
+	/* DM and friend variables - default: 42px */
+    --dm-height: 38px;
+	
+	/* typing indicator colour */
+	--type-indicator: var(--accent-colour);
+
+
+	/* 	Audio Colour
+		when in VC the server ur in will have a audio symbol and animation 
+		this and the animation can be changed, by modifying the animation colour values, theres only 3 u need to change
+		all of them are different shades of this default colour
+	*/
+	--audio-colour: var(--new-messages-bar);
+	
+	/* Icon colour */
+	--icon-colour: var(--accent-colour);
+	
+	/* voice chat member colours  */
+	--VC-count-colour: var(--on-hover-transparency);
+	--max-count-colour: rgba(132, 96, 75, .4);
+	--VC-text-colour: var(--icon-colour);
+	
+	/* ping, bell, people & pin icon colours */
+	--title-icon-colour: var(--icon-colour);
+	
+	/* new server and server search icon colour */
+    --server-icon-colour: var(--icon-colour);
+
+    /* use this to change the colour of the friends/home icon */
+    --friends-icon-hue-rotation: 300deg;
+    --friends-icon-brightness: 30%;
+    
+    /* colour of bot embeds, will add 40% opacity to background and 60% to border thoe */
+    --embed-colour: 58,48,54;  /* Discord Default: 46,48,54 */
+	
+	
+	
+	
+	/*
+		Interesting Specifics
+	*/
+    
+    /* this is for "specific" category & member colors */
+    --category-color: var(--title-color);
+    --member-color: var(--title-color); 
+    --settings-title-color: var(--title-color); 
+	
+	/* general hover colours */
+    --category-hover-colour: rgba(152, 116, 95, 1); /* rgba(255,170,212, .4);
+    
+    /* unread colours*/
+    --unread-dot: var(--accent-colour); /* rgba(255,170,212, .8); */
+    --unread-text-color: var(--accent-colour); /* default: #dcddde */
+    --unread-text-hover: var(--accent-colour); /* rgba(236, 202, 235, 1); */
+    --chat-name: var(--on-hover-transparency); /* this gives text channels that white shade on hover
+                                                 to disabled or activate it change the var name to: --on-hover-transparency or --onhover-transparency */
+
+    /* members list "Playing" info */
+    --user-game-size: 11px;
+    --user-game-Playing: 100%;
+    --user-game-font-weight: 600;
+
+
+	/* channel dimensions */
+	--chat-padd-left: 10px;      /*default: 5px*/
+	--chat-margin-left: 0px;    /* default: 0px*/
+	--chat-width: 100%; 		/* if u add margin-left, ull need to make width smaller default: 100%*/
+
+
+    /* server banner fade settings */
+    --server-banner-fade: 5%; /* sets where the fade begins to transition */
+    --server-banner-opacity: .80;
+    --server-banner-default: linear-gradient(black var(--server-banner-fade), transparent 100%);
+
+    /*  allows the override of banner fade settings */
+    --banner-fade: none; 
+
+    /* context menus and user popout design */
+	/* menu colour - menu footers i use var(--dark-grey)*/
+	--light-menu-colour: #7A6176; /* var(--scroll-bar-color); */
+    --dark-menu-colour: rgba(32,22,20, .99);
+    
+    /* pins/uploads/mentions */
+	--upload-colour: var(--dark-menu-colour);
+	--upload-footer-colour: var(--light-menu-colour);  /* default: rgba(0,0,0,.4); */
+	--pins-colour: var(--dark-menu-colour);            /* default: rgba(33,33,33,.6); */
+	--pins-colour: var(--dark-menu-colour);            /* default: rgba(33,33,33,.6); */
+    --pins-header-colour: var(--light-menu-colour); 
+
+    /* autocomplete menu colours */
+    --autocomplete-menu-colour: rgba(10,5,3,.9); 
+    --autocomplete-pointer-events: none;            /* this makes it so u cant use mouse to click on people ur tying to ping or emotes ur typing
+                                                       change `none` to something weird for mouse selection, i use `non` cause #Cabbage */
+    
+    /* emote menu, includes when emotes are typed +  the emote selector*/
+    --emote-auto-colour: rgba(10, 5, 4, .95);
+    --emote-menu: var(--dark-menu-colour);
+    --emote-search: rgba(200,150,200, .2);
+    --emote-header: var(--light-menu-colour);
+    --emote-footer: var(--dark-grey); /*need a darker grey */
+    --emote-menu-height: 450px; /* changing the menu height, will mean u need to adjust the footer height*/
+	--emote-footer-height: 12%; /* i like menu: 450px & footer: 12% */
+								/* if the emote menu is causing lag, press `CTR: + F` and search   tallemoto*/
+								/* and delete the backshalsh from it and save the file, that will set emote menu to default height */
+
+    /* user */
+    --user-body: rgba(25, 21, 17, .99);	/* user-edition edit */
+    --user-header: #A783A4; /* rgba(255, 200, 255, 0.3);	/* user header shade, where pfp sits*/
+    --user-playing: var(--light-menu-colour); /* rgba(255, 200, 255, 0.45); 	/* now playing background shade */
+    --user-popout-right: -290px;				/* these move the user popup 290px*/
+    --user-popout-left: 30px;					/* to make it seem more spacious  */
+    --user-popout-top: -10px;           /*blurd birthday-plugin: -63  default:-10*/
+    --user-top-difference: 25px;
+	
+    /* normal context menus */
+    --context-menu-colour: rgba(35, 29, 23, .99); 
+    --menu-item-hover: var(--scroll-bar-color); 
+    --leave-server-text-colour: #fff; 				/* was 99aab5*/
+    --slider-bubble-width: 2px; 					/* default for volume slider is a ball, has values    width: 10px;    radius: 50%;    display-left: 20px; */
+    --slider-bubble-radius: 3px;                    /* volbal */
+    --slider-display-left: 6px;
+    --slider-background: #aaa;
+    --slider-foreground: var(--slider-background);
+    --audio-animation-scale: 4px; 					/* size of the largest animation the others scale */
+
+    
+    /* sets picker things */
+    /*picker menu background */
+    --status-picker-blend-mode: multiply;           /* this is a basic attempt at transparency, but it will fail on complex backgrounds */
+    --status-picker-bg: var(--background-image);    /* if that happens feel free to change it to something custom */
+    --status-picker-color: var(--main-transparency);/* i.e for custom colour, set blend-mode: none;  & bg: none;  then color to ur choice #111114 is the default grey color (and looks pretty good)
+                                                       for custom image, set blend-mode: none; &  color: none;  then bg to ur choice
+                                                       the picker dimensions are about 240 x 52 */
+
+    /* these are for the picker items only - bgsize refers to the size of the picker icon when compared to its circle container */
+    --status-picker-bgsize: 40%;  /* if u want square status pick items set bgsize: 50%  & margin: 1px */
+    --status-picker-margin: 0px;
+    --status-left: var(--status-picker-margin);     /* for more personalized shapes - changing margins or bgsize will move the icons slightly */
+    --status-right: var(--status-picker-margin);    /* use the x & y percentage to move the icon locations properly */
+    --status-top: var(--status-picker-margin);      /* i like...  margin: 1px;  bszie: 50%;  status-bottom: 0px;  icon-y-axis: 40% */
+    --status-bottom: var(--status-picker-margin);
+    --icon-y-axis: 50%;
+    --icon-x-axis: 50%;
+
+
+	/* colour for selected chats */
+    --selected-background: rgba(255,255,255,0.1);
+    --selected-foreground: rgba(250,190,140, 0.8);
+    --current-colour: var(--selected-foreground);
+    --selected-server: none; /* will use rainbow anim, but changing this would perma set the colour of ur current server */
+    
+    /* on hover shades */
+    --on-hover-transparency: rgba(255, 200, 255, .075); /* rgba(255, 200, 255, 0.02); */
+    --on-select-transparency: var(--on-hover-transparency); /*rgba(255, 210, 255, 0.03); */
+    --username-on-hover: rgba(255, 200, 255, .15);
 	
 	/* status-picker variables - feel free to adjust them for a different feel */
-	--picker-width: 241px;
+	/* --picker-width: px; */
+	--option-height: 52px;
+	--margin-bottom: 0px;
+	--option-width: calc((var(--picker-width) / 4) - 0.25px); /*cause 4 options + 1px border */
+	--status-picker-background: /* set as nothing cause i like the default */ ;
+	--status-anim: bottom-pop-in; 	/* animation options:  expand-in, bottom-pop-in, top-pop-in, left-pop-in, right-pop-in (type "none" to remove animation or feel free to build ur own, examples below) */
+	
+	/* admin invite icon, distance from the settings icon */
+	--invite-icon-space: 8px;
     
-    /* folder spacing from edge */
-    --folder-left: calc(var(--HSL-size) + 21px); 
+    /* horizontal server icons */ 
+    --HSL-roundness: 50%; /* Server non hovered and selected */
+    --HSL-roundnessHover: 25%; /* Server hovered */
+    --HSL-spacing: 6px; /* Space between servers */
+
+    /* bot tag */
+    --bot-text: var(--accent-colour);
+    --bot-tag-colour: transparent;
+
+    /* emote sizes */
+    --small-emote: 18px;
+    --normal-emote: 32px;  /* Default: 32 - if u have an emote plugin change these sizes to match better*/
+
+    /* discords server folder when opened */
+    --opened-folder-colour: var(--on-hover-transparency);
+
+
+
+    
+	/* 
+		changing nearly all important colours should be possible above 
+		the colours below are less important and mostly little smol details
+	
+	
+		Minutiae u can mostly leave
+	*/
+	
+	/* Change the main color */
+	/* main colour changes the server rainbow colour animation along with a few other details colours listed above will be more obvious */
+    --main-color: rgba(255,120,255, .4); 
+	--secondary-color: rgb(255,183,197); /*solid Secondary Accent of the Theme*/
+	
+	/* Friend Icon - is the real name for the Home Button*/
+	/* Edit this to change your friends icon picture, position  */
+    --friends-icon-position: center center; 		/* default: center center */
+	--home-button-extra: 2px; 						/* increases the size of home button can also decrease it, manual adjustments needed for different position thoe*/
+	
+    /* Edit this to change your friends icon picture, zoom  */
+    --friends-icon-zoom: 90%; 						/* default: 100% */
+
+    /* compact emotes - made smaller so emote use doesn't make shit look dumb */
+    --compact-emote-size: 18px;
+	
+	/* separator, refers to the line dividing the home button from ur server list */
+    --separator-color: var(); /* default: --scroll-bar-color*/
+	
+	/* when u toggle a plugin on and off, toasts are the lil message that pops up*/
+    --toast-color: var(--scroll-bar-color);
+    
+    /* dark discord colour */
+    --dark-grey: #252325;
+	
+    /* Change the unread server animation. Replace it with "none" in order to remove any animations */
+    --unread-server-animation: rainbow;
+	
+    /* Change background color when you hover members or friends */
+    --hover-list-bg-color: var(--on-hover-transparency); 	/* default: rgba(255,255,255, .15) */
+
+	/* Write "transparent" in order to make the options sections with the same look as the theme  */
+    --options-transparency: transparent; 					/* default: #2f3136 */		
+	
+    /* Change the tiny border lines color */
+    --border-lines-color: hsla(0,0%,100%,.1); 				/* default: hsla(0,0%,100%,.1);*/
+    --borders: 1px solid var(--border-lines-color); 		/* OG theme forgot some borders */
+
+    /* windows buttons margins (both top, and right margins) */
+	/* those being the - O x  buttons for minimizing and closing windows*/
+    --space: 2px;
+    
+	/* default anim */
+	--default-animation: cubic-bezier(0.4,0,0.2,1);
+    
+    /* text in the top left can be set, but i have it commented out at the bottom */
+    --custom-watermark: "Nailed it";
+    
+    /* sound colour */
+    --speaking-user: rgba(193,145,96, .4); /* code for this is commented out */
+    
+    /* settings page dimensions */
+    --margins: 50px;
+    --max-width: 900px;
+    --toast-left: calc(var(--max-width) / 2 + var(--margins) + 150px);
+	
+	/* in text emote thang*/
+	--emote-animation: cubic-bezier(0.4,0,0.2,1);
+	--emote-anim-speed: 250ms;
+
+    /* id u want to remove VS icons type "none" */
+    --VC-icons: non;
+    --VC-icon-colour: var(--accent-colour);
+    
+    /* Edit this to change the color when you hover over a text channel */
+    --text-hover-color: var(--accent-colour); /* default: #b9bbbe */
+    
+    /* Edit this to change the color when you hover over a voice channel */
+    --voice-hover-color: var(--accent-colour) ; /* default: #f6f6f7 */
+    --selected-text-voice-color: #f6f6f7; /* default: #f6f6f7 */
+
+    /* I removed discords message on hover BG colour just set this to 'none' to get it back*/
+    --discords-message-hover: rgba(0,0,0,0);
+
+
+
+
+    /* Messages */
+
+    /* message on plugins and themes page - type `none` do remove entirely  */
+    --changelog-content: "Using Rubiko's Theme...\a\a I see we have a cultured boio";
+
+    /* message onConnectionSevered */
+    --offline-content: "You have been disconnected from Discord!  Rubik's suppressing the full screen takeover!";
+
+
+
+
+
+
+
+
+	/*
+		Currently Supported Plugins
+	*/
+	
+	/* deleted message variables -originally #f00  */
+    --deleted-text: #ff2b2b;
+    
+    /* folder spacing from edge *
+    --folder-left: 4px;   /* calc(var(--HSL-size) + 21px); */
+
+    /* discord badges */
+    --badge-height: 15px;
+	--badge-bottom: 2px;
+	
+	/* char counter - 	delete all these values for the default look, or feel free to modify its position
+					  	u can choose left or right position by deleting the value for `--counter-left` to make it snap right*/
+	--counter-left: 4px; 
+	--counter-top: -14px;
+	--counter-font: 9px;
+
+
+	/* better role colours - to work properly must be combined with a modifed plugin - code to do so is at the bottom*/
+	--role-onhover: var(--accent-colour);
+	--role-onhover-background: var(--on-hover-transparency);
+	--dark-role-recolour: #6d6268; /* var(--accent-colour); */
 }
+
+
+/* 
+	Main Animations 
+*/
+
+/* Status Picker */
+@keyframes expand-in { from { transform: scale(0); opacity: 0 } }
+@keyframes bottom-pop-in { from { transform: translateY(100%) translateX(0%) translateZ(0px); } }
+@keyframes top-pop-in { from { transform: translateY(-100%) translateX(0%) translateZ(0px); } }
+@keyframes right-pop-in { from { transform: translateY(0%) translateX(400%) translateZ(0px); } }
+@keyframes left-pop-in { from { transform: translateX(-120%) translateY(0%) translateZ(0px); opacity: 0; } }
+
+/* animation telling u where sounds is coming from (the colours used are var(--new-messages-bar) modified*/
+@keyframes audio-flash {
+	0% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 0 0 0px rgba(100,60,100,.3); }
+	50% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 0 0 var(--audio-animation-scale) rgba(100,60,100,0.5); }
+	100% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 0 0 var(--audio-animation-scale) rgba(100,60,100,0); }
+}
+
+
+
+
+/* extra
+
+    Tooltips color
+
+.da-tooltip {
+    background: var(--main-color) !important;
+    color: var(--accent-colour) !important;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.5) !important;
+}
+
+
+
+
+
+	testing area  */
+
+
+
+
+
+
+
+
+
+
 
 
 
