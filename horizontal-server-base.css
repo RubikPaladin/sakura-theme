@@ -40,6 +40,23 @@
 
 
 
+/* full correction of borders */
+div.da-container div.da-sidebar header.da-header { border-bottom: var(--borders); }
+div.da-container div.da-sidebar {
+    border-top: var(--borders);
+    border-left: var(--borders);
+    border-right: var(--borders);
+    border-radius: 0 8px 0 0 !important;
+} div.da-chat div.da-membersWrap {
+    border-top: var(--borders);
+    border-left: var(--borders);
+    border-radius: 8px 0 0 0 !important;
+}
+
+
+
+
+
 
 
 
@@ -2264,7 +2281,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
     border-radius: 0 !important;
     padding: 0;
     cursor: initial;
-    background: var(--status-picker-background);
+    /* background: var(--status-picker-background); */
 }
 
 
