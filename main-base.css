@@ -2896,10 +2896,16 @@ div.da-friendsTable div.da-friendsRow:hover {
 }
 
 /* adding bottom border to calls and videos */
-/* adding bottom border to calls and videos */
 div.da-chat.da-inCall div.da-videoHeight > div { border-bottom: var(--borders); }
 div.da-chat.da-inCall div.da-videoHeight.da-animated { padding-bottom: 2px; }
 div.da-chat div.da-videoHeight { border-bottom: var(--borders); }
+
+/* DM search bar */
+nav.da-privateChannels div.da-searchBar { box-shadow: none; }
+div.da-searchBar button.da-searchBarComponent {
+    background-color: rgba(255,255,255,.15);
+    border-radius: 8px;
+}
 
 
 
@@ -2948,7 +2954,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 #popout_3 div.da-menu div.da-separator { display: none; }
 #popout_3 div.da-menu, .listeningAlong-13-Udx {
     border-top: var(--borders);
-    /* border-right: var(--borders); */
+    border-right: var(--borders);
     /* border-left: var(--borders);  */
     /* background: #111114 !important;   trans-fail*/ 
     
