@@ -2357,7 +2357,8 @@ div.ace_gutter div.ace_gutter-cell {
     font-weight: 500;
     margin-top:-10px;
     white-space: pre;
-	color: var(--secondary-color);
+    color: var(--secondary-color);
+	padding-top: 20px;
 }
 
 /* making my theme sorce and website links a lil more accurate */
