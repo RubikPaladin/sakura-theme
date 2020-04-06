@@ -605,6 +605,14 @@ div.da-sidebar div.da-hasBanner:hover > header.da-header {
 	transition: 10ms;
 }
 
+/* banner on hover */
+div.da-container.da-selected header.da-header,
+div.da-sidebar div.container-2Rl01u.da-clickable header.da-header { border-radius: 0 8px 0 0; }
+div.da-hasBanner.da-bannerVisible header.da-header {
+    border-radius: 0 8px 0 0;
+    border: none;
+}
+
 /* editing regular server name */
 div.da-sidebar div.da-container > header.da-header { box-shadow: none; }
 div.da-sidebar div.da-container.da-selected > header.da-header,
