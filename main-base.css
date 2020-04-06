@@ -32,9 +32,6 @@
 	
     /* home button pic - a square is better*/
     --friends-icon: url(https://i.imgur.com/ky3iygN.png);
-	
-	/* server icon size - default: 55 */
-    --HSL-size: 50px;
     
 	/* Change global transparency */
     --main-transparency: rgba(0, 0, 0, .5);		/* default: rgba(0, 0, 0, 0.8); */
@@ -391,9 +388,6 @@
 	
 	/* deleted message variables -originally #f00  */
     --deleted-text: #ff2b2b;
-    
-    /* folder spacing from edge *
-    --folder-left: 4px;   /* calc(var(--HSL-size) + 21px); */
 
     /* discord badges */
     --badge-height: 15px;
