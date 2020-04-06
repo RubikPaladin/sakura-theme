@@ -43,8 +43,8 @@
 
 /* full correction of borders */
 div.da-container div.da-sidebar header.da-header { border-bottom: var(--borders); }
-div.da-container div.da-sidebar > nav { border-radius: 8px 8px 0 0 !important; }
-div.da-bannerImage { border-radius: 8px 8px 0 0; }
+div.da-container div.da-sidebar > nav { border-radius: 0 8px 0 0 !important; }
+div.da-bannerImage { border-radius: 0 8px 0 0; }
 div.da-container div.da-sidebar > nav,
 div.da-container div.da-sidebar > section {
     border-top: var(--borders);
