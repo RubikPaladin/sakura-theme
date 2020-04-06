@@ -401,8 +401,7 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
 
 /* server music icon */
 /* icon reposition */
-.upperBadge-2XnnGB,
-.lowerBadge-29hYVK {
+.upperBadge-2XnnGB {
 	position: absolute;
 	width: 24px;
 	height: 24px;
