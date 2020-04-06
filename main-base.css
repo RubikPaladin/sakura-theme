@@ -1121,6 +1121,7 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
 
 /* VC settings */
 /* correcting voice user outline and onHover*/
+div.da-sidebar div.da-voiceUser { margin-top: 1px; }
 div.da-sidebar div.da-voiceUser > div {  border-radius: 8px !important; }
 div.da-sidebar div.da-voiceUser > div.da-content { height: 32px !important; }
 div.da-sidebar div.da-voiceUser div.da-content {  padding-left: 0 !important; }
@@ -1133,6 +1134,8 @@ div.da-sidebar div.da-voiceUser div.da-icons > div:only-child {  height: 17px; w
 div.da-voiceUser div.da-icons > div { display: none; }
 div.da-voiceUser div.da-icons > div:last-child { display: inline; }
 div.da-voiceUser div.da-icons div.da-textBadge { margin-right: 5px !important; }
+
+div.da-sidebar div.da-voiceUser { margin-top: 1px; }
 
 /* number of current members in VC */
 .users-i_3-kL {
@@ -2436,7 +2439,7 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/vertical-server-base.css"]
 
 /* Channel Aestethic */
 div.da-sidebar > nav.da-container div.da-containerDefault div.da-content {
-    width: 100%;
+    width: 100% !important;
 	margin: 0 !important;
 	padding: 0px;
 	border-radius: 0 8px 8px 0;
