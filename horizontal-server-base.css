@@ -27,7 +27,7 @@
     --HSL-size: 50px;
 	
 	/* status-picker variables - feel free to adjust them for a different feel */
-	--picker-width: 240px;
+	--picker-width: 241px;
     
     /* folder spacing from edge */
     --folder-left: 4px;   /* calc(var(--HSL-size) + 21px); */
