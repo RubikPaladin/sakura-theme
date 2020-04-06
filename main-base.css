@@ -102,6 +102,8 @@
 	/* typing indicator colour */
 	--type-indicator: var(--accent-colour);
 
+    /* sets the sidebar width - should 'automagically' scale most things for u - 240 default */
+    /* --side-bar-width: 240px; */
 
 	/* 	Audio Colour
 		when in VC the server ur in will have a audio symbol and animation 
@@ -162,13 +164,14 @@
 	/* channel dimensions */
 	--chat-padd-left: 10px;      /*default: 5px*/
 	--chat-margin-left: 0px;    /* default: 0px*/
-	--chat-width: 100%; 		/* if u add margin-left, ull need to make width smaller default: 100%*/
+	--chat-width: calc(var(--side-bar-width) - 15px); 		/* if u add margin-left, ull need to make width smaller default: 100%*/
 
 
     /* server banner fade settings */
     --server-banner-fade: 5%; /* sets where the fade begins to transition */
     --server-banner-opacity: .80;
     --server-banner-default: linear-gradient(black var(--server-banner-fade), transparent 100%);
+    --side-bar-banner-height: calc(var(--side-bar-width) * 0.562);
 
     /*  allows the override of banner fade settings */
     --banner-fade: none; 
@@ -253,7 +256,7 @@
     --username-on-hover: rgba(255, 200, 255, .15);
 	
 	/* status-picker variables - feel free to adjust them for a different feel */
-	/* --picker-width: px; */
+	--picker-width: var(--side-bar-width);
 	--option-height: 52px;
 	--margin-bottom: 0px;
 	--option-width: calc((var(--picker-width) / 4) - 0.25px); /*cause 4 options + 1px border */
@@ -554,6 +557,16 @@ div.da-base > div.da-content > div.da-sidebar > div { /* borders for side bar */
     margin-left: 5px;
 }
 
+/* Side bar */
+/* basic scaling */
+div.da-container div.da-sidebar { width: var(--side-bar-width) !important; }
+div.da-animatedContainer { height: var(--side-bar-banner-height); }
+div.da-sidebar > nav [aria-label="Channels"] > div:nth-child(2) { padding-top: calc(var(--side-bar-banner-height) - 115px); }
+div.da-bannerImage { 
+    border-radius: 8px 8px 0 0; 
+    width: 100%;
+    height: 100%;
+}
 
 /* banner edits */
 /* banner image modifications */
@@ -2792,6 +2805,7 @@ div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-
 */
 
 /* DM design  */
+nav.da-privateChannels a { max-width: none; }
 .privateChannels-1nO12o .channel-2QD9_O a,
 .privateChannels-1nO12o .channel-2QD9_O.selected a {
 	height: var(--dm-height);
