@@ -951,6 +951,7 @@ nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem:hover {
 /* setting regular code block sections */
 div.da-container > div.da-markup pre,
 div.da-embedContent > div.da-markup pre {
+    border: var(--borders);
     border-color: var(--code-block-colour);
     border-width: var(--code-block-width);
     border-radius: 3px;
