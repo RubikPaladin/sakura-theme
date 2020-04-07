@@ -130,7 +130,9 @@ div.da-app div.da-container.da-fixClipping {
     background: var(--main-transparency);
 }
 
-/* shape and size of the box */
+
+/* Animated Status Picker */
+/* shape and size of the box *
 #popout_3 div.da-menu {
     position: fixed;
 	left: -8px;

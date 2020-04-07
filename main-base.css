@@ -2961,7 +2961,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 	overflow: visible !important;
 }
 
-/* shape and size of the box *
+/* shape and size of the box */
 #popout_3 div.da-menu {
     position: fixed;
 	left: -8px;
@@ -2973,7 +2973,6 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
     border-radius: 0 !important;
     padding: 0;
     cursor: initial;
-    background: var(--status-picker-background);
 }
 
 

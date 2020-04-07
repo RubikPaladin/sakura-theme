@@ -127,7 +127,7 @@ nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem {
 
 
 /* Animated Status Picker */
-/* shape and size of the box */
+/* shape and size of the box *
 #popout_3 div.da-menu {
     position: fixed;
 	left: -8px;
@@ -140,3 +140,7 @@ nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem {
     padding: 0;
     cursor: initial;
 }
+
+
+
+
