@@ -2,7 +2,7 @@
 
 
 div.da-base main.da-chatContent::after {
-    content: "  please update your theme file:                                               Days Untill Legacy Support is Dropped:  1 \a\a   go to settings > themes > click 'Theme Home Page' under my theme \a   download the updated SakuraHorizontal.theme.css or SakuraVertical.theme.css";
+    content: "  please update your theme file:                                               Days Untill Legacy Support is Dropped:  5hours \a\a   go to settings > themes > click 'Theme Home Page' under my theme \a   download the updated SakuraHorizontal.theme.css or SakuraVertical.theme.css";
     display: block;
     line-height:13px;
     font-size:14px;
