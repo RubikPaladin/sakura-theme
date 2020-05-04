@@ -818,7 +818,7 @@ span.da-botTag {
     color: var(--bot-text);
     margin-left: 2px;
     height: 10px;
-    top: 3px;
+    top: -3px;
 }
 
 /* toast design and colour*/
@@ -1320,6 +1320,7 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
 /* general context menus *
 [id ^= "popout_"] div.da-menu, div.da-layerContainer div.da-contextMenu,
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
+div.da-layerContainer div.da-selected, div.da-itemSlider:active,
 div.da-layerContainer div.da-contextMenu div.da-clickable:hover,
 div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
 [id ^= "popout_"] div.da-menu div.da-item, div.da-layerContainer div.da-contextMenu div.da-clickable,
@@ -1335,7 +1336,7 @@ div[role="menu"] div.da-item {
 /* temp */
 [id ^= "popout_"] div.da-menu, div.da-layerContainer div.contextMenu-HLZMGh,
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
-div.da-layerContainer div.da-selected,
+div.da-layerContainer div.da-selected, div.da-itemSlider:active,
 div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable:hover,
 div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
 [id ^= "popout_"] div.da-menu div.da-item, div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable,
@@ -1793,11 +1794,15 @@ div.categories-1feg4n.da-categories {
     margin-left: 0px !important;
 }
 
+
 /* removing emote "ok" emote */
 .emojiPicker-3m1S-j.da-emojiPicker div.diversitySelector-tmmMv0.da-diversitySelector { display: none; }
 
 /* making emote menu taller  - tallemoto*/
-.emojiPicker-3m1S-j.da-emojiPicker { height: var(--emote-menu-height); }
+div.da-emojiPicker div.da-noSearchResultsContainer { height: 98%; }
+div.da-emojiPicker > div[data-focus-lock-disabled="false"] { 
+    height: calc(var(--emote-menu-height) - 140px); 
+} .emojiPicker-3m1S-j.da-emojiPicker { height: var(--emote-menu-height); }
 .emojiPicker-3m1S-j.da-emojiPicker .scrollerFade-1Ijw5y.da-scrollerFade.scrollerTrack-1ZIpsv.da-scrollerTrack > div { height: 100%; }
 div.da-emojiPicker div.da-scroller { background-color: var(--emote-menu) !important; }
 div.da-emojiPicker div.da-noSearchResultsContainer {
@@ -1806,11 +1811,13 @@ div.da-emojiPicker div.da-noSearchResultsContainer {
 }
 
 /* more emote menu stufffff*/
-div.da-emojiPicker { border-radius: 15px 15px 10px 10px; }
+div.da-emojiPicker { border-radius: 10px; }
 div.da-emojiPicker div.da-header div.da-searchBar {
-    border-radius: 15px;
+    border-radius: 10px;
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 div.da-emojiPicker div.da-infoBarWrapper.da-infoBarExpanded {
