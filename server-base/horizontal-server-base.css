@@ -130,6 +130,14 @@ div.da-app div.da-container.da-fixClipping {
     background: var(--main-transparency);
 }
 
+/* correcting weird folder height */
+div.da-wrapper > span.da-expandedFolderBackground {
+    background-color: var(--opened-folder-colour);
+    border-radius: 12px !important;
+    left: calc(var(--HSL-size)/2) !important;
+    height: 95%;
+    width: 70% !important;
+}
 
 /* Animated Status Picker */
 /* shape and size of the box *
