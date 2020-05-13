@@ -178,7 +178,7 @@
 
     /* context menus and user popout design */
 	/* menu colour - menu footers i use var(--dark-grey)*/
-	--light-menu-colour: #7A6176; /* var(--scroll-bar-color); */
+	--light-menu-colour: rgba(122, 97, 118, 1); /* var(--scroll-bar-color); */
     --dark-menu-colour: rgba(32,22,20, .99);
     
     /* pins/uploads/mentions */
@@ -199,8 +199,8 @@
     --emote-search: rgba(200,150,200, .2);
     --emote-header: var(--light-menu-colour);
     --emote-footer: var(--dark-grey); /*need a darker grey */
-    --emote-menu-height: 450px; /* changing the menu height, will mean u need to adjust the footer height*/
-	--emote-footer-height: 12%; /* i like menu: 450px & footer: 12% */
+    --emote-menu-height: 500px; /* changing the menu height, will mean u need to adjust the footer height*/
+	--emote-footer-height: 50px; /* i like menu: 450px & footer: 12% or sometimes 50px */
 								/* if the emote menu is causing lag, press `CTR: + F` and search   tallemoto*/
 								/* and delete the backshalsh from it and save the file, that will set emote menu to default height */
 
@@ -1795,10 +1795,10 @@ div.categories-1feg4n.da-categories {
 }
 
 
-/* removing emote "ok" emote */
+/* removing emote "ok" emote *
 .emojiPicker-3m1S-j.da-emojiPicker div.diversitySelector-tmmMv0.da-diversitySelector { display: none; }
 
-/* making emote menu taller  - tallemoto*/
+/* making emote menu taller  - tallemoto
 div.da-emojiPicker div.da-noSearchResultsContainer { height: 98%; }
 div.da-emojiPicker > div[data-focus-lock-disabled="false"] { 
     height: calc(var(--emote-menu-height) - 140px); 
@@ -1810,7 +1810,7 @@ div.da-emojiPicker div.da-noSearchResultsContainer {
     height: 80%;
 }
 
-/* more emote menu stufffff*/
+/* more emote menu stufffff*
 div.da-emojiPicker { border-radius: 10px; }
 div.da-emojiPicker div.da-header div.da-searchBar {
     border-radius: 10px;
@@ -1831,6 +1831,113 @@ div.da-emojiPicker div.da-infoBarExpanded + div.da-categories { padding-bottom: 
 div.da-emojiPicker div.da-infoBarExpanded div.da-infoBar {
     background: var(--emote-footer) !important;
     height: 40px;
+} */
+
+
+
+  /* Emote Menu */
+ /*            
+/* making emote menu taller  - tallemoto*/
+.emojiPicker-3m1S-j.da-emojiPicker { height: var(--emote-menu-height); }
+.emojiPicker-3m1S-j.da-emojiPicker .scrollerFade-1Ijw5y.da-scrollerFade.scrollerTrack-1ZIpsv.da-scrollerTrack > div { height: 100%; }
+div.da-emojiPicker div.da-scroller { background-color: var(--emote-menu) !important; }
+div.da-emojiPicker {  
+    height: var(--emote-menu-height); 
+    border-radius: 10px;
+} main.da-chatContent form.da-form div.da-drawerSizingWrapper div.da-emojiPicker { grid-template-rows: 46px auto var(--emote-footer-height); }
+main.da-chatContent form.da-form div.da-drawerSizingWrapper {
+    height: var(--emote-menu-height);
+    bottom: 10px;
+}
+
+
+/* lil nav tabs for emotes/gifs */
+main.da-chatContent form.da-form div.da-drawerSizingWrapper button.da-navButtonActive{ background-color: var(--emote-header); }
+main.da-chatContent form.da-form div.da-drawerSizingWrapper button.da-navButton { border-radius: 5px 5px 0 0; }
+main.da-chatContent form.da-form div.da-drawerSizingWrapper nav.da-nav {
+    background-color: var(--emote-footer);
+    opacity: 0.7;
+}
+
+/* content wrap edits, the padding is for the nav menu */
+main.da-chatContent form.da-form div.da-drawerSizingWrapper div.da-contentWrapper {
+    background-color: var(--emote-header);    
+    padding-top: 0px;
+    padding-bottom: 0px;   
+}
+
+
+
+/* header settings */
+main.da-chatContent form.da-form div.da-drawerSizingWrapper div.da-header { padding-top: 5px; }
+div.da-emojiPicker div.da-header {
+    background-color: var(--light-menu-colour)
+}
+
+/* category/server menu background colour */
+div.da-emojiPicker header.da-categoryWrapper,
+div.da-emojiPicker + div.da-categoryList div.da-scrollerWrap  {
+    background-color: var(--emote-menu) !important;
+}
+
+/* category title colours */
+div.da-emojiPicker h4 svg,
+div.da-emojiPicker h4 span {
+    color: var(--accent-colour);
+}
+
+
+/* setting gif  body colour*/
+#gif-picker-tab-panel div.da-content { background-color: var(--emote-menu); }
+
+/* emote & gif menu search bar */
+div.da-emojiPicker div.da-diversitySelector { display: none; }
+#gif-picker-tab-panel div.da-searchBar input::placeholder,
+div.da-emojiPicker div.da-header div.da-searchBar input::placeholder { color: var(--accent-colour); }
+div.da-emojiPicker div.da-header div.da-searchBar,
+#gif-picker-tab-panel div.da-searchBar {
+    background-color: var(--emote-search);
+    border-radius: 10px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 112%;
+}
+
+/* no search results aesthetic for gif & emote */
+div.da-emojiPicker div.da-noSearchResultsContainer {
+    background-color: var(--emote-header);
+    height: 100%;
+}
+#gif-picker-tab-panel div.da-wrapper div.da-sadImage,
+div.da-emojiPicker div.da-wrapper div.da-sadImage { background-image: url("https://i.imgur.com/YmHhtZd.png"); }
+#gif-picker-tab-panel div.da-wrapper > div,
+div.da-emojiPicker div.da-wrapper > div { font-size: 0; }
+div.da-emojiPicker div.da-wrapper > div:not(.da-sadImage)::before {
+    font-size: 16px;
+    color: var(--accent-colour);
+    content: "No Emoji Match Your Search Fam";
+} #gif-picker-tab-panel div.da-wrapper > div:not(.da-sadImage)::before {
+    font-size: 16px;
+    color: var(--accent-colour);
+    content: "No GIFs Match Your Search Fam";
+}
+
+/* setting emote menu on-hovers */
+div.da-emojiPicker li.da-emojiItemSelected,
+div.da-emojiPicker + div.da-categoryList div.da-categoryItemDefaultCategorySelected {
+    background-color: var(--on-hover-transparency);
+}
+
+/* inspecter modifications */
+div.da-emojiPicker + div.da-categoryList div.da-unicodeShortcut,
+div.da-emojiPicker div.da-inspector {
+    background-color: var(--emote-footer) !important;
+    height: var(--emote-footer-height);
+} div.da-emojiPicker div.da-inspector img {
+    width: 32px;
+    height: 32px;
 }
 
 
@@ -3006,8 +3113,11 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 	overflow: visible !important;
 }
 
+
+
+/* previous selector #popout_2 status picker menu*/
 /* shape and size of the box */
-#popout_4 div.da-menu {
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu {
     position: fixed;
 	left: -8px;
 	bottom: -3px;
@@ -3023,8 +3133,8 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 
 
 /* status picker box colour */
-#popout_4 div.da-menu div.da-separator { display: none; }
-#popout_4 div.da-menu, .listeningAlong-13-Udx {
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-separator { display: none; }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu, .listeningAlong-13-Udx {
     border-top: var(--borders);
     /* border-right: var(--borders); */
     /* border-left: var(--borders);  */
@@ -3037,7 +3147,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 
 /* box colours and size of individual options */
 .listeningAlong-13-Udx { margin: 0 !important; }
-#popout_4 div.da-menu div.da-statusItem {
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem {
     margin: 0;
 	position: relative;
 	display: inline-block;
@@ -3048,13 +3158,13 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 	overflow: hidden;
 	animation: var(--status-anim) 70ms var(--default-animation) backwards;
 }
-#popout_4 div.da-menu div.da-statusItem:nth-child(1) { animation-delay: 0ms !important; }
-#popout_4 div.da-menu div.da-statusItem:nth-child(3) { animation-delay: 15ms !important; }
-#popout_4 div.da-menu div.da-statusItem:nth-child(4) { animation-delay: 30ms !important; }
-#popout_4 div.da-menu div.da-statusItem:nth-child(5) { animation-delay: 45ms !important; }
-#popout_4 div.da-menu div.da-statusItem:hover .status-3Kz6VS { transform: scale(2.8); }
-#popout_4 div.da-menu div.da-statusItem .status-3Kz6VS,
-#popout_4 div.da-menu div.da-statusItem .statusIconText-3b4TkH {
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(1) { animation-delay: 0ms !important; }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(3) { animation-delay: 15ms !important; }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(4) { animation-delay: 30ms !important; }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(5) { animation-delay: 45ms !important; }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:hover .status-3Kz6VS { transform: scale(2.8); }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem .status-3Kz6VS,
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem .statusIconText-3b4TkH {
 	position: absolute;
 	width: 30px !important;
 	height: 30px !important;
@@ -3069,21 +3179,21 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 }
 
 
-#popout_4 div.da-menu div.da-statusItem .status-3Kz6VS { box-shadow: none !important; }
-#popout_4 div.da-menu div.da-statusItem:hover foreignObject:after {
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem .status-3Kz6VS { box-shadow: none !important; }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:hover foreignObject:after {
 	opacity: 1;
 	visibility: visible;
 }
 
 /* giving each item its icon */
-#popout_4 div.da-menu div.da-statusItem:nth-child(1) foreignObject:after { background: rgb(67, 181, 129); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMjEsN0w5LDE5TDMuNSwxMy41TDQuOTEsMTIuMDlMOSwxNi4xN0wxOS41OSw1LjU5TDIxLDdaIiAvPjwvc3ZnPg==); }
-#popout_4 div.da-menu div.da-statusItem:nth-child(3) foreignObject:after { background: rgb(250, 166, 26); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xMiw0QTksOSAwIDAsMCAzLDEzQTksOSAwIDAsMCAxMiwyMkE5LDkgMCAwLDAgMjEsMTNBOSw5IDAgMCwwIDEyLDRNMTIuNSw4SDExVjE0TDE1Ljc1LDE2Ljg1TDE2LjUsMTUuNjJMMTIuNSwxMy4yNVY4TTcuODgsMy4zOUw2LjYsMS44NkwyLDUuNzFMMy4yOSw3LjI0TDcuODgsMy4zOU0yMiw1LjcyTDE3LjQsMS44NkwxNi4xMSwzLjM5TDIwLjcxLDcuMjVMMjIsNS43MloiIC8+PC9zdmc+); }
-#popout_4 div.da-menu div.da-statusItem:nth-child(4) foreignObject:after { background: rgb(240, 71, 71); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTksMTNINVYxMUgxOVYxM1oiIC8+PC9zdmc+); }
-#popout_4 div.da-menu div.da-statusItem:nth-child(5) foreignObject:after { background: rgb(116, 127, 141); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIgNmMzLjc5IDAgNy4xNyAyLjEzIDguODIgNS41LS41OSAxLjIyLTEuNDIgMi4yNy0yLjQxIDMuMTJsMS40MSAxLjQxYzEuMzktMS4yMyAyLjQ5LTIuNzcgMy4xOC00LjUzQzIxLjI3IDcuMTEgMTcgNCAxMiA0Yy0xLjI3IDAtMi40OS4yLTMuNjQuNTdsMS42NSAxLjY1QzEwLjY2IDYuMDkgMTEuMzIgNiAxMiA2em0tMS4wNyAxLjE0TDEzIDkuMjFjLjU3LjI1IDEuMDMuNzEgMS4yOCAxLjI4bDIuMDcgMi4wN2MuMDgtLjM0LjE0LS43LjE0LTEuMDdDMTYuNSA5LjAxIDE0LjQ4IDcgMTIgN2MtLjM3IDAtLjcyLjA1LTEuMDcuMTR6TTIuMDEgMy44N2wyLjY4IDIuNjhDMy4wNiA3LjgzIDEuNzcgOS41MyAxIDExLjUgMi43MyAxNS44OSA3IDE5IDEyIDE5YzEuNTIgMCAyLjk4LS4yOSA0LjMyLS44MmwzLjQyIDMuNDIgMS40MS0xLjQxTDMuNDIgMi40NSAyLjAxIDMuODd6bTcuNSA3LjVsMi42MSAyLjYxYy0uMDQuMDEtLjA4LjAyLS4xMi4wMi0xLjM4IDAtMi41LTEuMTItMi41LTIuNSAwLS4wNS4wMS0uMDguMDEtLjEzem0tMy40LTMuNGwxLjc1IDEuNzVjLS4yMy41NS0uMzYgMS4xNS0uMzYgMS43OCAwIDIuNDggMi4wMiA0LjUgNC41IDQuNS42MyAwIDEuMjMtLjEzIDEuNzctLjM2bC45OC45OGMtLjg4LjI0LTEuOC4zOC0yLjc1LjM4LTMuNzkgMC03LjE3LTIuMTMtOC44Mi01LjUuNy0xLjQzIDEuNzItMi42MSAyLjkzLTMuNTN6Ii8+PC9zdmc+); }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(1) foreignObject:after { background: rgb(67, 181, 129); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMjEsN0w5LDE5TDMuNSwxMy41TDQuOTEsMTIuMDlMOSwxNi4xN0wxOS41OSw1LjU5TDIxLDdaIiAvPjwvc3ZnPg==); }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(3) foreignObject:after { background: rgb(250, 166, 26); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xMiw0QTksOSAwIDAsMCAzLDEzQTksOSAwIDAsMCAxMiwyMkE5LDkgMCAwLDAgMjEsMTNBOSw5IDAgMCwwIDEyLDRNMTIuNSw4SDExVjE0TDE1Ljc1LDE2Ljg1TDE2LjUsMTUuNjJMMTIuNSwxMy4yNVY4TTcuODgsMy4zOUw2LjYsMS44NkwyLDUuNzFMMy4yOSw3LjI0TDcuODgsMy4zOU0yMiw1LjcyTDE3LjQsMS44NkwxNi4xMSwzLjM5TDIwLjcxLDcuMjVMMjIsNS43MloiIC8+PC9zdmc+); }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(4) foreignObject:after { background: rgb(240, 71, 71); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTksMTNINVYxMUgxOVYxM1oiIC8+PC9zdmc+); }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(5) foreignObject:after { background: rgb(116, 127, 141); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIgNmMzLjc5IDAgNy4xNyAyLjEzIDguODIgNS41LS41OSAxLjIyLTEuNDIgMi4yNy0yLjQxIDMuMTJsMS40MSAxLjQxYzEuMzktMS4yMyAyLjQ5LTIuNzcgMy4xOC00LjUzQzIxLjI3IDcuMTEgMTcgNCAxMiA0Yy0xLjI3IDAtMi40OS4yLTMuNjQuNTdsMS42NSAxLjY1QzEwLjY2IDYuMDkgMTEuMzIgNiAxMiA2em0tMS4wNyAxLjE0TDEzIDkuMjFjLjU3LjI1IDEuMDMuNzEgMS4yOCAxLjI4bDIuMDcgMi4wN2MuMDgtLjM0LjE0LS43LjE0LTEuMDdDMTYuNSA5LjAxIDE0LjQ4IDcgMTIgN2MtLjM3IDAtLjcyLjA1LTEuMDcuMTR6TTIuMDEgMy44N2wyLjY4IDIuNjhDMy4wNiA3LjgzIDEuNzcgOS41MyAxIDExLjUgMi43MyAxNS44OSA3IDE5IDEyIDE5YzEuNTIgMCAyLjk4LS4yOSA0LjMyLS44MmwzLjQyIDMuNDIgMS40MS0xLjQxTDMuNDIgMi40NSAyLjAxIDMuODd6bTcuNSA3LjVsMi42MSAyLjYxYy0uMDQuMDEtLjA4LjAyLS4xMi4wMi0xLjM4IDAtMi41LTEuMTItMi41LTIuNSAwLS4wNS4wMS0uMDguMDEtLjEzem0tMy40LTMuNGwxLjc1IDEuNzVjLS4yMy41NS0uMzYgMS4xNS0uMzYgMS43OCAwIDIuNDggMi4wMiA0LjUgNC41IDQuNS42MyAwIDEuMjMtLjEzIDEuNzctLjM2bC45OC45OGMtLjg4LjI0LTEuOC4zOC0yLjc1LjM4LTMuNzkgMC03LjE3LTIuMTMtOC44Mi01LjUuNy0xLjQzIDEuNzItMi42MSAyLjkzLTMuNTN6Ii8+PC9zdmc+); }
 
 
 /* items base settings */
-#popout_4 div.da-menu div.da-statusItem foreignObject:after {
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem foreignObject:after {
 	content: " ";
 	display: block;
 	position: absolute;
@@ -3104,8 +3214,8 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 }
 
 /* removing old menu information */
-#popout_4 div.da-menu div.da-statusItem div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }
-#popout_4 div.da-menu div.da-statusItem div.da-helper { display: none; }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }
+div[id ^= "popout_"][style = "left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem div.da-helper { display: none; }
 
 /* designing new custom status */
 div.da-layerContainer div.da-menu div.da-menuItem:last-child {
