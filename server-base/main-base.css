@@ -1205,9 +1205,9 @@ div.da-sidebar div.da-gameWrapper > div { color: var(--accent-colour); }
 
 /* correcting streamable game panel */
 div.da-container div.da-panel {
-    border-top: none !important;
-    border-bottom: var(--borders) !important;
-    background: none !important;
+    border-top: none;
+    border-bottom: var(--borders);
+    background: none;
 }
 
 /* trying to make wumnpus user popout text clearer */
@@ -2846,7 +2846,7 @@ div.da-sidebar div.da-activity > svg{ display: none; }
 div.da-activity > div { font-size: var(--user-game-Playing) !important; }
 div.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
 
-/* for the current game activity */
+/* for the current game activity *
 div.da-container div.da-panel {
     border-top: var(--borders);
     border-bottom: none;
