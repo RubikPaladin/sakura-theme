@@ -1875,7 +1875,7 @@ div.da-emojiPicker div.da-header {
 }
 
 /* category/server menu background colour */
-div.da-emojiPicker header.da-categoryWrapper,
+div.da-emojiPicker .da-categoryWrapper,
 div.da-emojiPicker + div.da-categoryList div.da-scrollerWrap  {
     background-color: var(--emote-menu) !important;
 }
