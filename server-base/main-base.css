@@ -1205,9 +1205,9 @@ div.da-sidebar div.da-gameWrapper > div { color: var(--accent-colour); }
 
 /* correcting streamable game panel */
 div.da-container div.da-panel {
-    border-top: none;
-    border-bottom: var(--borders);
-    background: none;
+    border-top: none !important;
+    border-bottom: var(--borders) !important;
+    background: none !important;
 }
 
 /* trying to make wumnpus user popout text clearer */
