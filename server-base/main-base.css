@@ -3116,7 +3116,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 
 
 /* previous selector #popout_2 status picker menu*/
-/* shape and size of the box */
+/* shape and size of the box *
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu {
     position: fixed;
 	left: -8px;
@@ -3132,20 +3132,20 @@ div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu {
 
 
 
-/* status picker box colour */
+/* status picker box colour *
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-separator { display: none; }
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu, .listeningAlong-13-Udx {
     border-top: var(--borders);
     /* border-right: var(--borders); */
     /* border-left: var(--borders);  */
-    /* background: #111114 !important;   trans-fail*/ 
+    /* background: #111114 !important;   trans-fail*
     
     background-image: var(--status-picker-bg);
     background-color: var(--status-picker-color) !important;
     background-blend-mode: var(--status-picker-blend-mode) !important;
 }
 
-/* box colours and size of individual options */
+/* box colours and size of individual options *
 .listeningAlong-13-Udx { margin: 0 !important; }
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem {
     margin: 0;
@@ -3185,14 +3185,14 @@ div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-st
 	visibility: visible;
 }
 
-/* giving each item its icon */
+/* giving each item its icon *
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(1) foreignObject:after { background: rgb(67, 181, 129); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMjEsN0w5LDE5TDMuNSwxMy41TDQuOTEsMTIuMDlMOSwxNi4xN0wxOS41OSw1LjU5TDIxLDdaIiAvPjwvc3ZnPg==); }
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(3) foreignObject:after { background: rgb(250, 166, 26); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xMiw0QTksOSAwIDAsMCAzLDEzQTksOSAwIDAsMCAxMiwyMkE5LDkgMCAwLDAgMjEsMTNBOSw5IDAgMCwwIDEyLDRNMTIuNSw4SDExVjE0TDE1Ljc1LDE2Ljg1TDE2LjUsMTUuNjJMMTIuNSwxMy4yNVY4TTcuODgsMy4zOUw2LjYsMS44NkwyLDUuNzFMMy4yOSw3LjI0TDcuODgsMy4zOU0yMiw1LjcyTDE3LjQsMS44NkwxNi4xMSwzLjM5TDIwLjcxLDcuMjVMMjIsNS43MloiIC8+PC9zdmc+); }
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(4) foreignObject:after { background: rgb(240, 71, 71); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTksMTNINVYxMUgxOVYxM1oiIC8+PC9zdmc+); }
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(5) foreignObject:after { background: rgb(116, 127, 141); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIgNmMzLjc5IDAgNy4xNyAyLjEzIDguODIgNS41LS41OSAxLjIyLTEuNDIgMi4yNy0yLjQxIDMuMTJsMS40MSAxLjQxYzEuMzktMS4yMyAyLjQ5LTIuNzcgMy4xOC00LjUzQzIxLjI3IDcuMTEgMTcgNCAxMiA0Yy0xLjI3IDAtMi40OS4yLTMuNjQuNTdsMS42NSAxLjY1QzEwLjY2IDYuMDkgMTEuMzIgNiAxMiA2em0tMS4wNyAxLjE0TDEzIDkuMjFjLjU3LjI1IDEuMDMuNzEgMS4yOCAxLjI4bDIuMDcgMi4wN2MuMDgtLjM0LjE0LS43LjE0LTEuMDdDMTYuNSA5LjAxIDE0LjQ4IDcgMTIgN2MtLjM3IDAtLjcyLjA1LTEuMDcuMTR6TTIuMDEgMy44N2wyLjY4IDIuNjhDMy4wNiA3LjgzIDEuNzcgOS41MyAxIDExLjUgMi43MyAxNS44OSA3IDE5IDEyIDE5YzEuNTIgMCAyLjk4LS4yOSA0LjMyLS44MmwzLjQyIDMuNDIgMS40MS0xLjQxTDMuNDIgMi40NSAyLjAxIDMuODd6bTcuNSA3LjVsMi42MSAyLjYxYy0uMDQuMDEtLjA4LjAyLS4xMi4wMi0xLjM4IDAtMi41LTEuMTItMi41LTIuNSAwLS4wNS4wMS0uMDguMDEtLjEzem0tMy40LTMuNGwxLjc1IDEuNzVjLS4yMy41NS0uMzYgMS4xNS0uMzYgMS43OCAwIDIuNDggMi4wMiA0LjUgNC41IDQuNS42MyAwIDEuMjMtLjEzIDEuNzctLjM2bC45OC45OGMtLjg4LjI0LTEuOC4zOC0yLjc1LjM4LTMuNzkgMC03LjE3LTIuMTMtOC44Mi01LjUuNy0xLjQzIDEuNzItMi42MSAyLjkzLTMuNTN6Ii8+PC9zdmc+); }
 
 
-/* items base settings */
+/* items base settings *
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem foreignObject:after {
 	content: " ";
 	display: block;
@@ -3213,24 +3213,24 @@ div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-st
 	transition: 20ms var(--default-animation); 
 }
 
-/* removing old menu information */
+/* removing old menu information *
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }
 div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem div.da-helper { display: none; }
 
-/* designing new custom status */
+/* designing new custom status *
 div.da-layerContainer div.da-menu div.da-menuItem:last-child {
     border-radius: 0 !important;
     margin: 0;
     padding: 5px 15px;
     /*position: absolute;         these where to make it above the other options */
-    /*bottom: 52px;*/
+    /*bottom: 52px;*
     background-color: var(--on-hover-transparency);
     filter: brightness(70%);
 }
 
-/* custom status on hover */
+/* custom status on hover *
 div.da-layerContainer div.da-menu div.da-menuItem:last-child:hover{
-    /*background-color: var(--light-menu-colour);*/
+    /*background-color: var(--light-menu-colour);*
     background-color: var(--on-hover-transparency);
     filter: brightness(100%);
 }
@@ -3251,6 +3251,148 @@ section.da-panels div.da-container:last-child {
 }
 
 
+/*  */
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu {
+    position: fixed;
+	left: -8px;
+	bottom: -3px;
+	width: var(--picker-width) !important;
+	top: initial !important;
+	margin-bottom: var(--margin-bottom);
+	z-index: 99 !important;
+    border-radius: 0 !important;
+    padding: 0;
+    cursor: initial;
+}
+
+
+/*div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu svg.da-icon {*/
+/*    width: 100% !important;*/
+/*    height: 100% !important;*/
+/*}*/
+
+
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-scroller {
+    padding: 0;
+}
+
+
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-description,
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-status {
+    display: none;
+}
+
+
+/* status picker box colour */
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-separator { display: none; }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu, .listeningAlong-13-Udx {
+    border-top: var(--borders);
+    /* border-right: var(--borders); */
+    /* border-left: var(--borders);  */
+    /* background: #111114 !important;   trans-fail*/ 
+    
+    background-image: var(--status-picker-bg);
+    background-color: var(--status-picker-color) !important;
+    background-blend-mode: var(--status-picker-blend-mode) !important;
+}
+
+/* box colours and size of individual options */
+.listeningAlong-13-Udx { margin: 0 !important; }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item {
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+	position: relative;
+	display: inline-block;
+	width: var(--option-width);
+	height: var(--option-height);
+	vertical-align: middle;
+	background: transparent;
+	overflow: hidden;
+	animation: var(--status-anim) 70ms var(--default-animation) backwards;
+}
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:nth-child(1) { animation-delay: 0ms !important; }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:nth-child(3) { animation-delay: 15ms !important; }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:nth-child(4) { animation-delay: 30ms !important; }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:nth-child(5) { animation-delay: 45ms !important; }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:hover svg.da-icon { transform: scale(2.8); }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item svg.da-icon,
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item div.da-status {
+	position: absolute;
+	width: 30px !important;
+	height: 30px !important;
+	transform: scale(1);
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	margin: auto !important;
+	border-radius: 50% !important;
+	transition: 70ms var(--default-animation);
+}
+
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item svg.da-icon { box-shadow: none !important; }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:hover foreignObject:after {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* giving each item its icon */
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:nth-child(1) foreignObject:after { background: rgb(67, 181, 129); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMjEsN0w5LDE5TDMuNSwxMy41TDQuOTEsMTIuMDlMOSwxNi4xN0wxOS41OSw1LjU5TDIxLDdaIiAvPjwvc3ZnPg==); }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:nth-child(3) foreignObject:after { background: rgb(250, 166, 26); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xMiw0QTksOSAwIDAsMCAzLDEzQTksOSAwIDAsMCAxMiwyMkE5LDkgMCAwLDAgMjEsMTNBOSw5IDAgMCwwIDEyLDRNMTIuNSw4SDExVjE0TDE1Ljc1LDE2Ljg1TDE2LjUsMTUuNjJMMTIuNSwxMy4yNVY4TTcuODgsMy4zOUw2LjYsMS44NkwyLDUuNzFMMy4yOSw3LjI0TDcuODgsMy4zOU0yMiw1LjcyTDE3LjQsMS44NkwxNi4xMSwzLjM5TDIwLjcxLDcuMjVMMjIsNS43MloiIC8+PC9zdmc+); }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:nth-child(4) foreignObject:after { background: rgb(240, 71, 71); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTksMTNINVYxMUgxOVYxM1oiIC8+PC9zdmc+); }
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item:nth-child(5) foreignObject:after { background: rgb(116, 127, 141); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIgNmMzLjc5IDAgNy4xNyAyLjEzIDguODIgNS41LS41OSAxLjIyLTEuNDIgMi4yNy0yLjQxIDMuMTJsMS40MSAxLjQxYzEuMzktMS4yMyAyLjQ5LTIuNzcgMy4xOC00LjUzQzIxLjI3IDcuMTEgMTcgNCAxMiA0Yy0xLjI3IDAtMi40OS4yLTMuNjQuNTdsMS42NSAxLjY1QzEwLjY2IDYuMDkgMTEuMzIgNiAxMiA2em0tMS4wNyAxLjE0TDEzIDkuMjFjLjU3LjI1IDEuMDMuNzEgMS4yOCAxLjI4bDIuMDcgMi4wN2MuMDgtLjM0LjE0LS43LjE0LTEuMDdDMTYuNSA5LjAxIDE0LjQ4IDcgMTIgN2MtLjM3IDAtLjcyLjA1LTEuMDcuMTR6TTIuMDEgMy44N2wyLjY4IDIuNjhDMy4wNiA3LjgzIDEuNzcgOS41MyAxIDExLjUgMi43MyAxNS44OSA3IDE5IDEyIDE5YzEuNTIgMCAyLjk4LS4yOSA0LjMyLS44MmwzLjQyIDMuNDIgMS40MS0xLjQxTDMuNDIgMi40NSAyLjAxIDMuODd6bTcuNSA3LjVsMi42MSAyLjYxYy0uMDQuMDEtLjA4LjAyLS4xMi4wMi0xLjM4IDAtMi41LTEuMTItMi41LTIuNSAwLS4wNS4wMS0uMDguMDEtLjEzem0tMy40LTMuNGwxLjc1IDEuNzVjLS4yMy41NS0uMzYgMS4xNS0uMzYgMS43OCAwIDIuNDggMi4wMiA0LjUgNC41IDQuNS42MyAwIDEuMjMtLjEzIDEuNzctLjM2bC45OC45OGMtLjg4LjI0LTEuOC4zOC0yLjc1LjM4LTMuNzkgMC03LjE3LTIuMTMtOC44Mi01LjUuNy0xLjQzIDEuNzItMi42MSAyLjkzLTMuNTN6Ii8+PC9zdmc+); }
+
+
+/* items base settings */
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item foreignObject:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    margin-left: var(--status-left);
+    margin-right: var(--status-right);
+    margin-top: var(--status-top);
+    margin-bottom: var(--status-bottom);
+	background-size: var(--status-picker-bgsize) !important;
+	background-repeat: no-repeat !important;
+    background-position: var(--icon-x-axis) var(--icon-y-axis) !important;
+	opacity: 1;
+	visibility: visible;
+	transition: 20ms var(--default-animation); 
+}
+
+/* removing old menu information */
+/*div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }*/
+div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item div.da-helper { display: none; }
+
+
+
+
+/* designing new custom status */
+
+#status-picker-custom-status {
+    border-radius: 0 !important;
+    margin: 0;
+    padding: 5px 15px;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 20px;
+    /*position: absolute;         these where to make it above the other options */
+    /*bottom: 52px;*/
+    background-color: var(--on-hover-transparency);
+    filter: brightness(70%);
+}
+
+/* custom status on hover */
+#status-picker-custom-status:hover{
+    /*background-color: var(--light-menu-colour);*/
+    background-color: var(--on-hover-transparency);
+    filter: brightness(100%);
+}
 
 
 
