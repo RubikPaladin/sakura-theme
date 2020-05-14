@@ -1047,6 +1047,11 @@ div.da-divider.da-hasContent {
     margin-top: 25px;
 }
 
+/* stopping that dumb ass textarea chat overhang */
+div.da-chat form.da-form {
+    margin-top: 0;
+}
+
 
 
 
