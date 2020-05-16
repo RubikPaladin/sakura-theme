@@ -1525,10 +1525,23 @@ div.da-layer div.da-root div.da-selectClosed:focus {
 
 /* editing the check domain */
 /* general design */
-form.da-modal div.da-content { background: var(--dark-menu-colour) !important; border-radius: 8px 8px 0 0; }
 form.da-modal {
     border-radius: 10px;
     width:500px;
+}
+
+/* betterDiscord notification header */
+form.da-modal div.da-header {
+    background-color: var(--light-menu-color);
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+}
+
+/* betterDiscord notification body */
+form.da-modal div.da-content {
+    background: var(--dark-menu-colour) !important;
+    border-radius: 0;
+    padding: 20px;
 }
 
 /* footer settings */
