@@ -3372,13 +3372,20 @@ section.da-panels div.da-container:last-child {
 }
 
 /* removing old menu information */
-/*div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-item div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }*/
 #status-picker div.da-item div.da-helper { display: none; }
 
 
+/* custom status aesthetic */
+#status-picker-custom-status:hover{ filter: brightness(100%);  }
+#status-picker-custom-status {
+    background-color: var(--on-hover-transparency) !important;
+    height: fit-content !important;
+    width: 100% !important;
+    filter: brightness(70%);
+}
 
 
-/* designing new custom status */
+/* designing new custom status *
 
 #status-picker-custom-status {
     border-radius: 0 !important;
@@ -3387,15 +3394,15 @@ section.da-panels div.da-container:last-child {
     width: 100%;
     height: fit-content;
     margin-bottom: 20px;
-    /*position: absolute;         these where to make it above the other options */
-    /*bottom: 52px;*/
+    /*position: absolute;         these where to make it above the other options *
+    /*bottom: 52px;*
     background-color: var(--on-hover-transparency);
     filter: brightness(70%);
 }
 
-/* custom status on hover */
+/* custom status on hover *
 #status-picker-custom-status:hover{
-    /*background-color: var(--light-menu-colour);*/
+    /*background-color: var(--light-menu-colour);*
     background-color: var(--on-hover-transparency);
     filter: brightness(100%);
 }
