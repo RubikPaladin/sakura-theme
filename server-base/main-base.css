@@ -1802,46 +1802,6 @@ div.categories-1feg4n.da-categories {
 }
 
 
-/* removing emote "ok" emote *
-.emojiPicker-3m1S-j.da-emojiPicker div.diversitySelector-tmmMv0.da-diversitySelector { display: none; }
-
-/* making emote menu taller  - tallemoto
-div.da-emojiPicker div.da-noSearchResultsContainer { height: 98%; }
-div.da-emojiPicker > div[data-focus-lock-disabled="false"] { 
-    height: calc(var(--emote-menu-height) - 140px); 
-} .emojiPicker-3m1S-j.da-emojiPicker { height: var(--emote-menu-height); }
-.emojiPicker-3m1S-j.da-emojiPicker .scrollerFade-1Ijw5y.da-scrollerFade.scrollerTrack-1ZIpsv.da-scrollerTrack > div { height: 100%; }
-div.da-emojiPicker div.da-scroller { background-color: var(--emote-menu) !important; }
-div.da-emojiPicker div.da-noSearchResultsContainer {
-    background-color: var(--emote-menu);
-    height: 80%;
-}
-
-/* more emote menu stufffff*
-div.da-emojiPicker { border-radius: 10px; }
-div.da-emojiPicker div.da-header div.da-searchBar {
-    border-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-}
-
-div.da-emojiPicker div.da-infoBarWrapper.da-infoBarExpanded {
-    background: var(--emote-footer) !important;
-    height: 40px;
-    padding-bottom: 15px;
-    padding-top: 5px;
-}
-
-div.da-emojiPicker div.da-infoBarExpanded + div.da-categories { padding-bottom: 5px; }
-div.da-emojiPicker div.da-infoBarExpanded div.da-infoBar {
-    background: var(--emote-footer) !important;
-    height: 40px;
-} */
-
-
-
   /* Emote Menu */
  /*            
 /* making emote menu taller  - tallemoto*/
@@ -2014,6 +1974,15 @@ div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-i
     height: 28px;
     width: 28px;
 }
+
+/* correcting the "more" menu */
+#message-actions div.da-focused { background: var(--menu-item-hover); }
+#message-actions div.da-scroller { 
+    overflow-y:hidden;
+    padding: 0; 
+}
+
+
 
 
 
