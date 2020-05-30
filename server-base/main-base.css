@@ -431,35 +431,6 @@
 
 
 
-/* extra
-
-    Tooltips color
-
-.da-tooltip {
-    background: var(--main-color) !important;
-    color: var(--accent-colour) !important;
-    box-shadow:0px 0px 20px rgba(0,0,0,0.5) !important;
-}
-
-
-
-
-
-	testing area  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -488,7 +459,6 @@ div.da-tabBody span.da-username,
 [aria-label = " (channel)"] span.da-username { color: var(--DM-username-colour); }
 
 /* he forgot the some border lines, so here they are (if u want to change their colour edit --border-lines-color as well)*/
-/* .members-1998pB  { border-left: var(--borders) } */
 .container-1UB9sr { border-top: var(--borders) }
 div.da-base > div.da-content > div.da-sidebar > div { /* borders for side bar */
     border-right: var(--borders);
@@ -513,9 +483,6 @@ div.da-base > div.da-content > div.da-sidebar > div { /* borders for side bar */
 /* correcting and modifying home button width */
 .da-listItemWrapper > div > svg { width: 100% !important; }
 .wrapper-1Rf91z .da-scrollerWrap .da-scroller .container-1ETFDs .da-homeButton {
-    /* manual adjustmenst here, like below
-    top: -5px;  
-    left: -5px;*/
     width: calc(var(--HSL-size) + var(--home-button-extra)) !important;
     height: calc(var(--HSL-size) + var(--home-button-extra)) !important;
 }
@@ -700,12 +667,6 @@ div.da-scroller::-webkit-scrollbar-thumb {
 }
 
 /* changes made to allow colour setting of the friend icon - Horizontal Server Version *
-nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) > div.da-pill:not(.bd-selected) { display: none; }
-nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper > div.da-wrapper > svg > foreignObject > a { border-radius: 0 !important; }
-nav.da-wrapper:not(.foldercontent) div.da-scroller > div.da-listItem:nth-child(1) div.da-listItemWrapper {
-    filter: sepia() saturate(10000%) hue-rotate( var(--friends-icon-hue-rotation)) brightness( var(--friends-icon-brightness));
-}
-
 /* corrected friend icon */
 nav.da-wrapper div.tutorialContainer-1v44GL div.da-pill { display: none; }
 nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItemWrapper > svg > foreignObject > a { border-radius: 0 !important; } 
@@ -726,13 +687,6 @@ div.da-wrapper > span.da-expandedFolderBackground.da-collapsed { background: non
 div.da-wrapper > span.da-expandedFolderBackground {
     background-color: var(--opened-folder-colour);
     border-radius: 15px 15px 24px 24px;
-}
-
-/* setting folder backgrounds */
-div.da-wrapper > span.da-expandedFolderBackground.da-collapsed { background: none; }
-/* div.da-wrapper > span.da-expandedFolderBackground + div.da-listItem div.da-folder { *
-    background-color: var(--opened-folder-colour);
-    border-radius: 15px;
 }
 
 /* fixing friend icon */
@@ -764,13 +718,6 @@ div.da-listItem {
     background: var(--on-hover-transparency) !important;
 }
 
-/* correcting time location */
-/* time {
-    vertical-align: 0%;
-    margin-left: 5px !important;
-    margin-right: 1px;
-} */
-
 /* making bot tag in members list more centered */
 div.da-membersWrap span.da-botTagRegular.da-botTag.da-bot {
     margin-top: 5px;
@@ -784,16 +731,11 @@ h2.da-headerCozyMeta span.da-botTag {
 div.da-memberContent:only-child { margin-top: -2px; }
 div.da-memberContent:only-child span.da-botTag.da-bot{ margin-top: 1px !important; }
 
-/* removing on hover for edited messages */
-/*time, :not(.ml-edited) > .ml-edited, div.ml-deleted { pointer-events: none; }*/
-/* time { pointer-events: none; } */
-
-
 /* editing tool tips */
 /*.layer-v9HyYc.da-layer { display: inline !important; }*/
 .layer-v9HyYc.da-layer > div {
     color: var(--accent-colour) !important;
-    background: var(--dark-menu-colour);
+    /* background: var(--dark-menu-colour); */
 } div.tooltipPointer-3ZfirK {
     border-top-color: var(--dark-menu-colour) !important;
 }
@@ -908,11 +850,6 @@ h2.da-header:hover, img:hover + h2.da-header  {
     border-radius: 25% !important;
 }
 
-/* makes home button rainbow on hover -old *
-.wrapper-1Rf91z .scroller-2TZvBN:hover > div.listItem-2P_4kh:nth-child(1):hover {
-    animation: var(--unread-server-animation) 3s linear infinite;
-}
-
 /* home button rainbow new */
 nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem:hover {
     animation: var(--unread-server-animation) 3s linear infinite;
@@ -929,6 +866,7 @@ nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem:hover {
     animation: var(--unread-server-animation) 3s linear infinite;
     transition: 100ms ease all !important;
 }
+
 
 
 
@@ -984,12 +922,6 @@ div.da-mentioned {
     border-radius: 0 6px 6px 0;
 }
 
-/* make mentions clean *
-div.da-isMentioned > div.da-markup > span.mention,
-div.da-isMentioned > div.da-markup > span.mention:hover{
-    background: none !important;
-}
-
 /* changing the size of emotes */
 .emoji.jumboable {
     height: var(--normal-emote) !important;
@@ -1012,32 +944,6 @@ div.da-messagesWrapper div.da-scroller.da-systemPad {
     height: 99.2% !important;
 } 
 
-/* correcting New chat thing
-div.da-chatContent div.da-isUnread {
-    background-color: #F04747;
-    height: 1.1px;
-    left: 33% !important;
-    width: 60% !important;
-}
-
-/* making my line come from the center of the "new" tag*
-div.da-chatContent div.da-isUnread > span {
-    top: -7px !important;
-    right: -7% !important;
-}
-
-/* cleaning up date dividers *
-div.da-divider.da-hasContent > span { padding-bottom: 30px; }
-div.da-divider.da-hasContent {
-    padding-top: 25px;
-    margin-top: 60px;
-} div.da-chatContent div.da-divider.da-hasContent.da-isUnread span.da-content { margin-top: 25px; }
-div.da-chatContent div.da-divider.da-hasContent.da-isUnread span,
-div.da-chatContent div.da-divider.da-hasContent.da-isUnread {
-    padding-bottom: 0;
-    padding-top: 0;
-} */
-
 /* making the unread lines a bit cleaner */
 div.da-chatContent div.da-isUnread > span.da-unreadPill { display:none; }
 div.da-divider.da-hasContent > span.da-content { margin-top: 30px; }
@@ -1053,15 +959,6 @@ div.da-divider.da-hasContent {
 div.da-chat form.da-form {
     margin-top: 0;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1089,14 +986,7 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
 }
 
 /* server music icon */
-/* icon reposition *
-.upperBadge-2XnnGB {
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	top: -2px;
-	left: 26px;
-}  */
+/* icon reposition */
 .lowerBadge-29hYVK {
 	position: absolute;
 	width: auto;
@@ -1263,12 +1153,6 @@ div.da-tutorialContainer div.da-lowerBadge { display: none; }
 
 
 
-
-
-
-
-
-
 /*
     context menu modifications
 */
@@ -1324,23 +1208,7 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
     background: var(--light-menu-colour);
 }
 
-/* general context menus *
-[id ^= "popout_"] div.da-menu, div.da-layerContainer div.da-contextMenu,
-div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
-div.da-layerContainer div.da-selected, div.da-itemSlider:active,
-div.da-layerContainer div.da-contextMenu div.da-clickable:hover,
-div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
-[id ^= "popout_"] div.da-menu div.da-item, div.da-layerContainer div.da-contextMenu div.da-clickable,
-div[role="menu"] div.da-item {
-	margin-left: 0;
-	margin-right: 0;
-	width: 100%;
-	box-shadow: none !important;
-    border-radius: 0;
-    font-weight: 300;
-}
-
-/* temp */
+/* general context menus */
 [id ^= "popout_"] div.da-menu, div.da-layerContainer div.contextMenu-HLZMGh,
 div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
 div.da-layerContainer div.da-selected, div.da-itemSlider:active,
@@ -1361,13 +1229,7 @@ div[role="menu"] div.da-item:last-child { border-radius: 0 0 5px 5px !important;
 div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0 !important; margin-top: 0; }
 div.da-popout { box-shadow: none; }
 
-/* setting common design *
-[id ^= "popout_"] div.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
-div.da-layerContainer div.da-contextMenu div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
-div.da-layerContainer div.da-contextMenu div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
-div.da-itemBase div.da-label { font-weight: 400; }
-
-/* temp */
+/* setting common design */
 [id ^= "popout_"] div.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
 div.da-layerContainer div.contextMenu-HLZMGh div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
 div.da-layerContainer div.contextMenu-HLZMGh div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
@@ -1383,12 +1245,7 @@ div.da-itemBase div.da-label { font-weight: 400; }
 div.da-subMenuContext div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
 div.da-subMenuContext div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
 
-/* setting up scoll menu *
-div.da-scroller.da-contextMenu div.da-itemBase { margin: 0; }
-div.da-scroller.da-contextMenu div.da-itemBase:first-child { border-radius: 5px 0 0 0 !important;  }
-div.da-scroller.da-contextMenu div.da-itemBase:last-child { border-radius: 0 0 0 5px !important;  }
-
-/* temp */
+/* setting up scoll menu */
 div.da-scroller.contextMenu-HLZMGh div.da-itemBase { margin: 0; }
 div.da-scroller.contextMenu-HLZMGh div.da-itemBase:first-child { border-radius: 5px 0 0 0 !important;  }
 div.da-scroller.contextMenu-HLZMGh div.da-itemBase:last-child { border-radius: 0 0 0 5px !important;  }
@@ -1420,11 +1277,6 @@ div.da-userPopout div.da-activity div.da-headerText {
     font-weight: 600;
 }
 
-/* moving member list user popup a lil to the left */
-/* div.da-noArrow.da-noShadow.da-popout.popoutLeft-3aViER.arrowAlignmentTop-1yftWI div.da-userPopout {
-    transform: translateX( -6% ) translateY( var(--user-popout-top) ) !important;
-} */
-
 /* setting pop out bot tag*/
 div.da-userPopout div.da-headerTag span.da-botTag {
     margin-top: 0px !important;
@@ -1432,17 +1284,8 @@ div.da-userPopout div.da-headerTag span.da-botTag {
 
 /* custom status */
 /* custom status user popout text */
-/* div.da-userPopout div.da-customStatus { padding-top: 10px; } */
 div.da-userPopout div.da-customStatus span {
-    /* font-weight: var(--user-game-font-weight);
-    vertical-align: super; */
     color: #f2f2f2;
-}
-
-/* making the emote bigger *
-div.da-userPopout div.da-customStatus > img {
-    width: 35px;
-    height: 35px;
 }
 
 
@@ -1474,11 +1317,6 @@ div.da-modal div.da-root > div.da-body {
     height: 270px;
     padding-bottom: 10px;
     background: var(--dark-grey);
-    
-    /* --user-body  
-    
-    natural: rgba(33,33,33,.6)
-    */
 }
 
 div.da-modal div.da-topSectionNormal,
@@ -1815,8 +1653,7 @@ div.categories-1feg4n.da-categories {
 }
 
 
-  /* Emote Menu */
- /*            
+ /* Emote Menu */
 /* making emote menu taller  - tallemoto*/
 .emojiPicker-3m1S-j.da-emojiPicker { height: var(--emote-menu-height); }
 .emojiPicker-3m1S-j.da-emojiPicker .scrollerFade-1Ijw5y.da-scrollerFade.scrollerTrack-1ZIpsv.da-scrollerTrack > div { height: 100%; }
@@ -1974,15 +1811,8 @@ div.da-title.da-container div.da-topic.da-expandable {
     pointer-events: none;
 }
 
-/* editing context menu reactions *
-div.da-contextMenu div.da-wrapper > [aria-label^="Add Reaction:"] { background-color: transparent; }
-div.da-contextMenu div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-icon {
-    height: 28px;
-    width: 28px;
-}
-
-/* temp */
-div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] { background-color: transparent; }
+/* editing context menu reactions */
+diva.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] { background-color: transparent; }
 div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-icon {
     height: 28px;
     width: 28px;
@@ -1996,11 +1826,99 @@ div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-i
 }
 
 
+ /* Pins + Mentions */
+/* general pin/mention aesthetic */
+.da-messagesPopoutWrap .da-avatar { margin-top: 5px; }
+.da-messagesPopoutWrap path { color: var(--accent-colour); }
+.da-messagesPopoutWrap .da-scroller .da-header { margin-left: -65px; padding-left: 60px; }
+.da-messagesPopoutWrap .da-scroller { padding-left: 0; padding-top: 5px; }
+.da-messagesPopoutWrap .da-username { color: var(--DM-username-colour); }
+.da-messagesPopoutWrap > .da-header { padding: 9px 16px; }
+.da-recentMentionsPopout > .da-header { height: 36px; }
+.da-messagesPopoutWrap {
+    max-height: var(--pins-max-height) !important;
+    border-radius: var(--pins-borders);
+    width: var(--pins-width);
+    right: var(--pins-right);
+    top: 4px;
+}.da-recentMentionsPopout .da-guildIcon,
+.da-messagesPopoutWrap .da-metadataName,
+.da-messagesPopoutWrap .da-markup > .da-anchor,
+.da-messagesPopoutWrap .da-embedWrapper > .da-flex { display: none; }
 
 
+ /* pins design */
+/* working on outliers */
+.da-messagesPopoutWrap .da-messageGroupWrapper:only-child { 
+    background-color: var(--dark-menu-color) !important;
+    border: none; 
+}.da-messagesPopoutWrap .da-messageGroupWrapper:last-child {
+    border-radius: 0 8px 0 0; 
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin-bottom: 0; 
+} 
+
+/* pins header colour for some reason*/
+.da-messagesPopoutWrap .da-wrapper.da-base { color: var(--accent-colour); }
+
+/* pin container and buttons */
+.da-messagesPopoutWrap .da-messageGroupWrapper {
+    border: var(--borders);
+    border-radius: 8px;
+    margin-left: 8px;
+}.da-messagesPopoutWrap .da-jumpButton { background-color: transparent; }
+.da-messagesPopoutWrap .da-actionButtons {
+    padding-right: 30px;
+    margin-right: -30px;
+    padding-left: 5px;
+    display: flex;
+}
 
 
+/* mentions design*/
+.da-recentMentionsPopout .da-channelHeader { 
+    height: fit-content;
+    position: inherit; 
+    padding: 6px 0 0 15px;
+}.da-recentMentionsPopout { right: calc(var(--pins-right) + 8px); }
+.da-recentMentionsPopout .da-tab.da-selected  {
+    background-color: transparent !important;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
 
+/* correcting that dumb ass server info design */
+.da-recentMentionsPopout .da-button { padding: 0;}
+.da-recentMentionsPopout .da-channelNameSection { display: contents; }
+.da-recentMentionsPopout .da-subtextContainer { margin: 1px 15px -2px 15px; }
+.da-recentMentionsPopout .da-channelHeader > .da-jumpButton { right: 30px !important; }
+.da-recentMentionsPopout .da-channelHeader > .da-button {
+    position: absolute;
+    margin-top: 20px;
+    right: 0;
+}
+
+/* transparency + container */
+.da-recentMentionsPopout .da-button,
+.da-recentMentionsPopout .da-hasMore,
+.da-recentMentionsPopout .da-channelHeader,
+.da-recentMentionsPopout .da-messageContainer { background-color: transparent; }
+.da-recentMentionsPopout .da-container {
+    background-color: var(--pins-wrapper);
+    border-color: rgba(255,255,255,.1);
+    border: var(--borders);
+    margin-bottom: 6px;
+    border-radius: 8px;
+    margin-left: 8px;
+    padding: 0;
+}.da-recentMentionsPopout .da-hasMoreButton {
+    background-color: transparent;
+    color: var(--accent-colour);
+    border: none;
+}
 
 
 
@@ -2065,7 +1983,6 @@ div.da-autocompleteInner div.da-selector.da-selectable div div {
 
 
 
-
 /* transparency edit */
 div.da-base div.da-sidebar,
 div.da-base > div.da-content > div,
@@ -2073,7 +1990,6 @@ div.da-baseLayer div.da-wrapper.da-guilds,
 div.da-base > div.da-content > div.da-container {
     background-color: var(--main-transparency);
 }
-
 
 div.da-app,
 div.da-scrollerWrap,
@@ -2093,23 +2009,12 @@ div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* 
     Transparaency + Background
 */
 div.da-app > div.da-app {
     background-color: var(--background-image);
 }
-
 
 div.da-base div.da-sidebar,
 div.da-baseLayer div.da-wrapper.da-guilds {
@@ -2127,9 +2032,6 @@ div.da-app > div.da-spacer > div.da-baseLayer,
 div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
     background-color: rgba(0, 0, 0, 0);
 }
-
-
-
 
 
 
@@ -2286,19 +2188,6 @@ div.da-dividerRed.da-divider > span.da-dividerContent:before {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
     Settings design
 */
@@ -2349,14 +2238,6 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
     font-size: 13px;
     font-weight: 600;
 }
-
-/* changes the name colour of on clicked things 
-#app-mount .topPill-30KHOu .itemSelected-1qLhcL,
-#app-mount .side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ, 
-#app-mount .topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ,
-#app-mount #bd-settings-sidebar .ui-tab-bar-item.selected {
-  color: #f1f;
-} */
 
 /* selected object colour */
 #app-mount .button-mM-y8i,
@@ -2452,10 +2333,7 @@ div.ace_gutter div.ace_gutter-cell {
 	color:var(--secondary-color) !important;
 }
 
-/* normal inner CSS colours
-.ace_content { background: #292d30 !important; }
-.ace-monokai .ace_gutter-active-line { background: rgba(0,0,0,0.25) !important; }
-.ace-monokai .ace_marker-layer .ace_active-line { background: transparent !important; } */
+/* normal inner CSS colours */
 .ui-standard-sidebar-view #bd-customcss-attach-controls button,
 .bd-detached-css-editor #bd-customcss-attach-controls button,
 .standardSidebarView-3F1I7i #bd-customcss-attach-controls button {
@@ -2484,14 +2362,6 @@ div.ace_gutter div.ace_gutter-cell {
 #bd-customcss-detach-container .standardSidebarView-3F1I7i #bd-customcss-attach-controls {
     padding-left: 1% !important;
     transition: 350ms !important;
-}
-
-/*CSS outline Colour *
-.ace_gutter,
-.content-region #bd-customcss-attach-controls,
-#bd-customcss-detach-container #bd-customcss-attach-controls,
-.contentRegion-3nDuYy #bd-customcss-attach-controls {
-    background-color: #202225 !important;
 }
 
 /* Changelog */
@@ -2533,45 +2403,9 @@ a[href = "https://rubikpaladin.github.io/sakura-theme/server-base/main-base.css"
 
 
 
-
-
-
-
 /* 
     still dont know about member, chat & DM select 
 */
-
-/* setting member shape and size*
-.membersGroup-v9BXpm { padding: 20px 0 0 15px !important; }
-.content-3at_AU,
-.content-20Aix8,
-.content-OzHfo4,
-.memberOnline-1CIh-0,
-.memberOffline-2lN7gt {
-	width: 100%;
-	height: 40px;
-	margin: 0 !important;
-	padding: 0px;
-	border-radius: 0;
-}
-.content-3at_AU,
-.content-20Aix8 {
-    width: var(--chat-width) !important;
-    padding-left: var(--chat-padd-left);
-    margin-left: var(--chat-margin-left);
-}
-
-/* chat shape and on hover, is unsure of the design *
-.content-3at_AU:hover,
-.content-20Aix8:hover { background: var(--chat-name); }
-.content-3at_AU,
-.content-20Aix8 {	
-    height: 34px;
-	border-radius: 0 17px 17px 0;
-    padding-right: 9px;
-}
-
-
 
 /* Channel Aestethic */
 div.da-sidebar > nav.da-container div.da-containerDefault div.da-content {
@@ -2617,11 +2451,7 @@ div.da-sidebar > nav.da-privateChannels a:hover > div.da-layout div.da-subtext {
 }
 
 /* changing width to deal with weird scroll bar */
-section.da-panels { 
-    /* border-right: var(--borders);  */
-    border-top: var(--borders); 
-}
-/* div.da-base > div.da-content > div.da-sidebar > nav { border-right: var(--borders);  } */
+section.da-panels { border-top: var(--borders); }
 div.da-base > div.da-content > div.da-sidebar { width: 241px; }
 
 /* DM onHover*/
@@ -2699,82 +2529,6 @@ div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[a
     display: block;
 }
 
-
-/*div.da-sidebar div.da-containerDefault div.da-children svg[name = "Gear"]{*/
-/*    color: #f1f !important;*/
-/*}*/
-
-
-/* Mod/Admin Icons */
-/* editing the mod/admin icon locations + dealing with ping logic *
-div.content-3at_AU div.da-children div.da-mentionsBadge { right: 5px; }
-div.content-3at_AU:hover div.da-children div.da-mentionsBadge { display: none; }
-div.content-3at_AU div.da-children [aria-label = "Edit Channel"] { bottom: 8px; display: none; }
-div.content-3at_AU div.da-children > div:nth-child(2)[aria-label = "Edit Channel"] { 
-    bottom: 17px;
-    position: absolute !important;
-} div.content-3at_AU div.da-children [aria-label ~= "Invite"] { 
-    top: 8px; 
-    display: none; 
-}
-
-/* onHover corrections *
-div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label ~="Invite"],
-div.da-sidebar div.da-containerDefault > div:hover div.da-children [aria-label="Edit Channel"] { display: block; }
-div.da-sidebar div.da-containerDefault.da-selected > div:hover div.da-children,
-div.content-3at_AU div.da-children {
-    display: block;
-    margin-right: 2px;
-}
-
-/* making sure Mod/Admin options swap correctly *
-div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label="Edit Channel"],
-div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z div[aria-label ~= "Invite"] {
-    display: none;
-} div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label="Edit Channel"],
-  div.da-sidebar div.da-containerDefault div.da-wrapper.modeConnected-2IEL4z:hover div[aria-label ~= "Invite"] {
-    display: block;
-}
-
-/*
-div.da-sidebar div.da-containerDefault.da-selected div.da-children { display: none; }
-div.content-3at_AU div.da-children > div.da-iconItem:not(:only-child):last-child { bottom: 17px; }
-div.content-3at_AU div.da-children > div.da-iconItem:not(:only-child):first-child {
-    top: 17px;
-    left: 1px;
-}
-
-/* making mod/admin icons display in blocks *
-div.da-sidebar div.da-containerDefault.da-selected:hover div.da-children,
-div.content-3at_AU div.da-children {
-    display: block;
-    margin-right: 2px;
-}
-
-/* when only access to one item *
-div.content-3at_AU div.da-children > div:only-child {
-    bottom: 8px;
-    left: 2px;
-}
-
-/* basic aestethic *
-div.da-content div.da-membersWrap div.da-member div.da-layout{ padding: 0; }
-div.da-content div.da-membersWrap div.da-member {
-    border-radius: 0 8px 8px 0;
-	padding-left: 15px; 
-	margin: 0;
-}
-
-/* member hover colours *
-div.da-content div.da-membersWrap div.da-member:hover { background: var(--on-hover-transparency); }
-div.da-content div.da-membersWrap div.da-member.da-selected { background: var(--on-select-transparency); }
-div.da-content div.da-membersWrap div.da-member:hover > div.da-layout,
-div.da-content div.da-membersWrap div.da-member.da-selected > div.da-layout { background: none; }
-div.da-content div.da-membersWrap div.da-membersGroup {
-    margin-top: 5px !important;
-    font-weight: 500;
-}
-
 /* fixing member on Hover*/
 div.da-membersWrap div.da-member { padding: 0; }
 div.da-membersWrap div.da-member div.da-layout {
@@ -2793,7 +2547,6 @@ div.da-content div.da-membersWrap div.da-membersGroup {
     margin-top: 5px !important;
     font-weight: 500;
 }
-
 
 
 /* general custom activity in member list */
@@ -2830,13 +2583,6 @@ div.da-sidebar div.da-activity > svg{ display: none; }
 div.da-activity > div { font-size: var(--user-game-Playing) !important; }
 div.da-activity > div > strong { font-size: var(--user-game-size); font-weight: var(--user-game-font-weight); }
 
-/* for the current game activity *
-div.da-container div.da-panel {
-    border-top: var(--borders);
-    border-bottom: none;
-    background: none;
-}
-
 /* correcting weird weighting */
 div.da-container div.da-panel div.da-title,
 div.da-sidebar div.da-nameTag div.da-title {
@@ -2872,12 +2618,6 @@ div.da-streamPreviewWrapper div.da-streamPreview {
 div.da-tabBody div.da-nowPlayingColumn div.da-itemCard:hover {
     background: var(--on-hover-transparency);
 }
-
-
-
-
-
-
 
 
 
@@ -2931,6 +2671,7 @@ div.da-markup.da-isCompact span.da-botTag {
 
 
 
+
 /* Server Discovery page */
 /* correcting background fade */
 img.da-bg {
@@ -2940,6 +2681,7 @@ img.da-bg {
 
 /* correcting currently selected round button stuff */
 div.da-roundButton.da-pageButton.da-activeButton { background: var(--light-menu-colour); }
+
 
 
 
@@ -3085,10 +2827,6 @@ div.da-searchBar button.da-searchBarComponent {
 
 
 
-
-
-
-
 /* 
     Animated Status Picker 
 */
@@ -3105,142 +2843,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 
 
 /* previous selector #popout_2 status picker menu*/
-/* shape and size of the box *
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu {
-    position: fixed;
-	left: -8px;
-	bottom: -3px;
-	width: var(--picker-width) !important;
-	top: initial !important;
-	margin-bottom: var(--margin-bottom);
-	z-index: 99 !important;
-    border-radius: 0 !important;
-    padding: 0;
-    cursor: initial;
-}
-
-
-
-/* status picker box colour *
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-separator { display: none; }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu, .listeningAlong-13-Udx {
-    border-top: var(--borders);
-    /* border-right: var(--borders); */
-    /* border-left: var(--borders);  */
-    /* background: #111114 !important;   trans-fail*
-    
-    background-image: var(--status-picker-bg);
-    background-color: var(--status-picker-color) !important;
-    background-blend-mode: var(--status-picker-blend-mode) !important;
-}
-
-/* box colours and size of individual options *
-.listeningAlong-13-Udx { margin: 0 !important; }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem {
-    margin: 0;
-	position: relative;
-	display: inline-block;
-	width: var(--option-width);
-	height: var(--option-height);
-	vertical-align: middle;
-	background: transparent;
-	overflow: hidden;
-	animation: var(--status-anim) 70ms var(--default-animation) backwards;
-}
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(1) { animation-delay: 0ms !important; }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(3) { animation-delay: 15ms !important; }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(4) { animation-delay: 30ms !important; }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(5) { animation-delay: 45ms !important; }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:hover .status-3Kz6VS { transform: scale(2.8); }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem .status-3Kz6VS,
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem .statusIconText-3b4TkH {
-	position: absolute;
-	width: 30px !important;
-	height: 30px !important;
-	transform: scale(1);
-	top: 0 !important;
-	left: 0 !important;
-	right: 0 !important;
-	bottom: 0 !important;
-	margin: auto !important;
-	border-radius: 50% !important;
-	transition: 70ms var(--default-animation);
-}
-
-
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem .status-3Kz6VS { box-shadow: none !important; }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:hover foreignObject:after {
-	opacity: 1;
-	visibility: visible;
-}
-
-/* giving each item its icon *
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(1) foreignObject:after { background: rgb(67, 181, 129); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMjEsN0w5LDE5TDMuNSwxMy41TDQuOTEsMTIuMDlMOSwxNi4xN0wxOS41OSw1LjU5TDIxLDdaIiAvPjwvc3ZnPg==); }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(3) foreignObject:after { background: rgb(250, 166, 26); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIsMjBBNyw3IDAgMCwxIDUsMTNBNyw3IDAgMCwxIDEyLDZBNyw3IDAgMCwxIDE5LDEzQTcsNyAwIDAsMSAxMiwyME0xMiw0QTksOSAwIDAsMCAzLDEzQTksOSAwIDAsMCAxMiwyMkE5LDkgMCAwLDAgMjEsMTNBOSw5IDAgMCwwIDEyLDRNMTIuNSw4SDExVjE0TDE1Ljc1LDE2Ljg1TDE2LjUsMTUuNjJMMTIuNSwxMy4yNVY4TTcuODgsMy4zOUw2LjYsMS44NkwyLDUuNzFMMy4yOSw3LjI0TDcuODgsMy4zOU0yMiw1LjcyTDE3LjQsMS44NkwxNi4xMSwzLjM5TDIwLjcxLDcuMjVMMjIsNS43MloiIC8+PC9zdmc+); }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(4) foreignObject:after { background: rgb(240, 71, 71); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTksMTNINVYxMUgxOVYxM1oiIC8+PC9zdmc+); }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem:nth-child(5) foreignObject:after { background: rgb(116, 127, 141); background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHptMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjMmYzMTM2IiBkPSJNMTIgNmMzLjc5IDAgNy4xNyAyLjEzIDguODIgNS41LS41OSAxLjIyLTEuNDIgMi4yNy0yLjQxIDMuMTJsMS40MSAxLjQxYzEuMzktMS4yMyAyLjQ5LTIuNzcgMy4xOC00LjUzQzIxLjI3IDcuMTEgMTcgNCAxMiA0Yy0xLjI3IDAtMi40OS4yLTMuNjQuNTdsMS42NSAxLjY1QzEwLjY2IDYuMDkgMTEuMzIgNiAxMiA2em0tMS4wNyAxLjE0TDEzIDkuMjFjLjU3LjI1IDEuMDMuNzEgMS4yOCAxLjI4bDIuMDcgMi4wN2MuMDgtLjM0LjE0LS43LjE0LTEuMDdDMTYuNSA5LjAxIDE0LjQ4IDcgMTIgN2MtLjM3IDAtLjcyLjA1LTEuMDcuMTR6TTIuMDEgMy44N2wyLjY4IDIuNjhDMy4wNiA3LjgzIDEuNzcgOS41MyAxIDExLjUgMi43MyAxNS44OSA3IDE5IDEyIDE5YzEuNTIgMCAyLjk4LS4yOSA0LjMyLS44MmwzLjQyIDMuNDIgMS40MS0xLjQxTDMuNDIgMi40NSAyLjAxIDMuODd6bTcuNSA3LjVsMi42MSAyLjYxYy0uMDQuMDEtLjA4LjAyLS4xMi4wMi0xLjM4IDAtMi41LTEuMTItMi41LTIuNSAwLS4wNS4wMS0uMDguMDEtLjEzem0tMy40LTMuNGwxLjc1IDEuNzVjLS4yMy41NS0uMzYgMS4xNS0uMzYgMS43OCAwIDIuNDggMi4wMiA0LjUgNC41IDQuNS42MyAwIDEuMjMtLjEzIDEuNzctLjM2bC45OC45OGMtLjg4LjI0LTEuOC4zOC0yLjc1LjM4LTMuNzkgMC03LjE3LTIuMTMtOC44Mi01LjUuNy0xLjQzIDEuNzItMi42MSAyLjkzLTMuNTN6Ii8+PC9zdmc+); }
-
-
-/* items base settings *
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem foreignObject:after {
-	content: " ";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-    margin-left: var(--status-left);
-    margin-right: var(--status-right);
-    margin-top: var(--status-top);
-    margin-bottom: var(--status-bottom);
-	background-size: var(--status-picker-bgsize) !important;
-	background-repeat: no-repeat !important;
-    background-position: var(--icon-x-axis) var(--icon-y-axis) !important;
-	opacity: 1;
-	visibility: visible;
-	transition: 20ms var(--default-animation); 
-}
-
-/* removing old menu information *
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem div.da-statusIconText div:not(.status-3Kz6VS) { display: none; }
-div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu div.da-statusItem div.da-helper { display: none; }
-
-/* designing new custom status *
-div.da-layerContainer div.da-menu div.da-menuItem:last-child {
-    border-radius: 0 !important;
-    margin: 0;
-    padding: 5px 15px;
-    /*position: absolute;         these where to make it above the other options */
-    /*bottom: 52px;*
-    background-color: var(--on-hover-transparency);
-    filter: brightness(70%);
-}
-
-/* custom status on hover *
-div.da-layerContainer div.da-menu div.da-menuItem:last-child:hover{
-    /*background-color: var(--light-menu-colour);*
-    background-color: var(--on-hover-transparency);
-    filter: brightness(100%);
-}
-
-/* setting up most of the user panels (bottom left) *
-section.da-panels div.da-container {
-    border-bottom: none;
-    background: transparent;
-    border-top: var(--borders);
-}
-
-/* making the user card slightly taller *
-section.da-panels div.da-container:last-child {
-	height: 60px !important;
-	top: 0;
-	margin: 0;
-	z-index: 100 !important;
-}
-
-
-/*  */
+/* shape and size of the box */
 #status-picker {
     position: fixed;
 	left: -8px;
@@ -3254,33 +2857,22 @@ section.da-panels div.da-container:last-child {
     cursor: initial;
 }
 
-
-/*div[id^="popout_"][style$="left: 9px; bottom: 57.0972px;"] div.da-menu svg.da-icon {*/
-/*    width: 100% !important;*/
-/*    height: 100% !important;*/
-/*}*/
-
-
+/* hidding that dumb ass status scroller */
 #status-picker div.da-scroller {
     overflow-y:hidden;
     padding: 0;
 }
 
-
+/* removing dumb text */
 #status-picker div.da-description,
+#status-picker div.da-separator,
 #status-picker div.da-status {
     display: none;
 }
 
-
 /* status picker box colour */
-#status-picker div.da-separator { display: none; }
 #status-picker, .listeningAlong-13-Udx {
     border-top: var(--borders);
-    /* border-right: var(--borders); */
-    /* border-left: var(--borders);  */
-    /* background: #111114 !important;   trans-fail*/ 
-    
     background-image: var(--status-picker-bg);
     background-color: var(--status-picker-color) !important;
     background-blend-mode: var(--status-picker-blend-mode) !important;
@@ -3369,118 +2961,6 @@ section.da-panels div.da-container:last-child {
 }
 
 
-/* designing new custom status *
-
-#status-picker-custom-status {
-    border-radius: 0 !important;
-    margin: 0;
-    padding: 5px 15px;
-    width: 100%;
-    height: fit-content;
-    margin-bottom: 20px;
-    /*position: absolute;         these where to make it above the other options *
-    /*bottom: 52px;*
-    background-color: var(--on-hover-transparency);
-    filter: brightness(70%);
-}
-
-/* custom status on hover *
-#status-picker-custom-status:hover{
-    /*background-color: var(--light-menu-colour);*
-    background-color: var(--on-hover-transparency);
-    filter: brightness(100%);
-}
-
-
-
-
-
-
-
-
-/* CALL TO UPDATE MESSAGE *
-div.da-base main.da-chatContent::after {
-    content: "  please update your theme file:                                               Days Untill Legacy Support is Dropped:  2 \a\a   go to settings > themes > click 'Theme Page' \a   download the updated SakuraHorizontal.theme.css or SakuraVertical.theme.css";
-    display: block;
-    line-height:13px;
-    font-size:14px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    font-weight: 500;
-    margin-top:-10px;
-    margin-left: 15px;
-    white-space: pre;
-    color: var(--secondary-color);
-	padding: 2px;
-	background: #11f;
-	margin-right: 15px;
-}
-
-
-
-
-
-
-/* this will write Nailed itDiscord in the top left
-.wordmark-2iDDfm {
-	width: auto;
-	height: 22px;
-	padding: 0 0 0 4px;
-	line-height: 22px;
-	font-size: 0.925em;
-	color: #fff;
-	text-transform: uppercase;
-}
-
-.wordmark-2iDDfm:before,
-.wordmark-2iDDfm:after {
-	position: relative;
-	width: auto;
-	height: 22px;
-}
-
-/* first half of custom word *
-.wordmark-2iDDfm:before {
-	content: var(--custom-watermark);
-	font-weight: 700;
-} 
-/* second half of custom word *
-.wordmark-2iDDfm:after {
-	content: "Discord";
-}
-*/
-
-
-
-
-
-
-/* various stles of design for elements, includes gradients  */
-/*background-color: rgba(200,150,200,0.3);  old dark pink
-	background-image: -webkit-linear-gradient(top,
-											  rgba(200,150,200,.5) 0%,
-											  rgba(193,145,96, .2) 25%,
-											  rgba(193,145,96, .2) 75%,
-											  rgba(200,150,200,.5) 100%);*/
-/*  rgba(63, 32, 0, .5) 20%,
-	background-image: -webkit-linear-gradient(90deg,
-	                                          rgba(200,150,200,0.5) 25%,
-											  transparent 25%,
-											  transparent 50%,
-											  rgba(200,150,200,0.5) 50%,
-											  rgba(200,150,200,0.5) 75%,
-											  transparent 75%,
-											  transparent)
-											  
-											  
-	background-image: -webkit-linear-gradient(90deg,
-										  transparent,
-										  rgba(193,145,96, .3) 70%,
-										  transparent,
-										  transparent)
-											  */
-
-
 
 
 
@@ -3508,7 +2988,6 @@ div.da-base main.da-chatContent::after {
 .wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem {
 	padding-right: 10px !important;
 }
-
 
 
 /* message log plugs are not officially supported by to plugin comunity */
@@ -3551,8 +3030,6 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
 }
 
 
-    
-
 
 /* Translator Menu */
 .popout-2iWAc-.popout-googletranslate .themedPopout-1TrfdI {
@@ -3592,8 +3069,6 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
 
 
 
-
-
 /* char counter plugin */
 #charcounter {
     left: var(--counter-left);
@@ -3606,12 +3081,9 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
 /* removing char counter in channel settinges where it already has one */
 #app-mount > div.app-19_DXt div.layers-3iHuyZ div.contentRegion-3nDuYy.da-contentRegion div.contentColumn-2hrIYH.da-contentColumn.contentColumnDefault-1VQkGM.da-contentColumnDefault div.inputMaxLength-1vRluy.da-inputMaxLength > span {
     display: none;
-}
-
-.wrapper-1Rf91z.foldercontent .scroller-2TZvBN:hover > div.listItem-2P_4kh:nth-child(1):hover {
+}.wrapper-1Rf91z.foldercontent .scroller-2TZvBN:hover > div.listItem-2P_4kh:nth-child(1):hover {
     animation: none !important;
 }
-
 
 
 
@@ -3633,7 +3105,6 @@ div.BE-badge.BE-badge-chat:not(.BE-badge-CurrentGuildBoost) { top: 4px; }
     height: 90% !important;
     width: 90% !important;
 }
-
 
 
 /* image details plug */
@@ -3661,8 +3132,6 @@ div.ml-deleted .image-details:after {
 
 
 
-
-
 /* char counter primary modifications */
 #charcounter.over2k { color: var(--deleted-text) !important; }
 div.da-contentCozy.da-content div.da-channelTextArea { margin-top: 12px; }
@@ -3686,212 +3155,6 @@ div.da-contentCozy.da-content #charcounter {
     opacity: 0.85;
 }
 
-
 /* correcting role member plugin */
 div.da-popouts div.role-members-popout { background: var(--context-menu-colour); }
 div.da-popouts div.role-members-popout div.role-member:hover { background: var(--menu-item-hover); }
-
-
-/* server folders correcting distance *
-.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller {
-    padding-left: calc(var(--HSL-size) + 14px) !important;
-}
-
-/* TODO pill edits */
-/* correcting rainbow anim speed *
-.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem .da-pill span { transition: 100ms ease all !important; }
-.wrapper-1Rf91z.foldercontent .da-scrollerWrap .da-scroller .da-listItem .da-pill span[style*="opacity: 0.7; height: 8px;"] {
-    transition: 50ms ease all !important;
-    opacity: 1 !important;
-}
-
-/* pill shape modifications *
-#app-mount .wrapper-1Rf91z.foldercontent .listItem-2P_4kh div[class*='pill'] span {
-    width: 50% !important;
-    transform: none !important; 
-    left: 25% !important;
-    transition: 50ms ease all !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  Errors/Annoyances 
-
-    note:   dont forget to `save` and  `update` after making changes 
-            and CTRL + F works inside the CUSTOM CSS EDITOR in better discord
-            each word I use should have no other uses, so press enter repeatedly to flick
-            back and fourth from this text to code location
-     
-
-
-            
-
-    - custom background or friend images not changing? 
-    check to make sure ur image URL ends in a proper image format like .png .jpg or .gif
-    my default ones are 
-
-    wallpaper: https://i.imgur.com/hLulxgq.png
-    home/messages/friend icon: https://i.imgur.com/DPgNZ46.png 
-
-
-    if u want to have an image from ur PC ull needa put it online and get the appropriate link for it
-    I upload images I want to imgur.com... if u upload urs ull need to get a specific link
-    do *not* copy that obvious link
-        1. click the down arrow
-        2. select "Get Shared Links"
-        3. select "BBCode (Forums)"
-    
-    copy that into the URL and remember.... u *must* remove the [img] tags at both ends of the image
-    the links should look very similar to my default ones after that
-
-
-
-
-
-    
-    - User Popups blurry? 
-    if user popups seem a little blurry
-    CTRL + F = "blurd" and modify the `user-popout-right` and `user-popout-top`
-    its a trial and error thing, u need to match the top and right to the dp val ur screens have
-    
-    14px font, is translated to DP (display pixels) which adds ur monitors specific pixel density 
-    to the equation to account for various design elements, but moving objects changes how pixels are shown
-    weird values make it appear blurry, as it blurs lines to make it "appear" to be half a pixel
-    u cant have half a pixel, so it does one full colour pixel and one blurred to "fake" it
-    in normal images this works well; in text... not so much
-    
-
-
-
-    
-
-    - Status Picker Transparency looks fucked up?
-    this is because, what I did was *not* true transparency, its fake
-    i dont know how to make the references i would need for real transparency
-    so i got the background-image mode, and combined it with the main-transparency 
-    that will work for alot of simple images, but for detailed full iamge... nope
-    
-    if u want to change it go CTRL + F = "trans-fail"
-    ull see `background: #111114 !important;` commented out
-    thats the default picker colour, feel free to delete all the other background related lines there
-    and re-add that or change it, if u type `background: transparent !important;` ull see the issue with how it is right now
-
-
-
-
-
-     
-    - "user volume bar shape is too smol and annoying, i miss the ball or want it to be bigger"
-    u may reshape it at ur own digression, CTRL + f = "volbal" 
-    follow that, above it there is the instructions for making it a ball again should u wish to
-    but be careful the ball location is dependant on a size/location relation ~discords fault~
-
-    modification will require u to change its location 
-    i have added `--slider-display-left` as its own variable to make this easier
-    but, if u make it taller ull need to manually update the value
-
-
-
-
-
-
-    - username onhover is weird after I've clicked on a user
-    if this happens thats likely, because u have a plugin that adds something to in chat usernames
-    something like "Devilbro's BadgesEverywhere" plugin, it's size and location make the on hover jump to different locations sometimes
-    if ur using his plugin and that error is happening, try modify the "discord badges" variables
-    if that doesn't work, the CSS has been updated and is no longer supported, if u are confident in looking at code
-    i recommend opening his plugin.js in notepad++ or VSC and look for the CSS section as of v1.2.3 its on line 19 at the top there super obvious
-
-    for another plugin my advice is similar, if its worth it for u, open the plugin up and find the CSS and play with it inside the Custom CSS tab in discord
-    its likely that everything u write will need to have `!important;` on the end of it
-    to find the correct reference id usually use `background: #f1f !important;` that makes the background of the object ur modifying *bright purple*
-    so its easy to spot if the reference is correct, and the one u want
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Code for Better Role Colours Modification -
-place this anywhere *outside* of a method
-but usually i would place it directly below     getMember(userId, guild = "") {
-
-        isTooDark(color) {
-
-            //section modified by Rubiko~
-            //Convert HEX to RGB: http://gist.github.com/983661
-            color = +("0x" + color.slice(1).replace( 
-            color.length < 5 && /./g, '$&$&'));
-            const r = color >> 16, g = color >> 8 & 255, b = color & 255;
-
-            // HSP grey scale equation from http://alienryderflex.com/hsp.html
-            const hsp = Math.sqrt(
-                0.299 * (r * r) +
-                0.587 * (g * g) +
-                0.114 * (b * b)
-            );
-
-            //checking color shade, dark returns true making user default colour via return/continue
-            return (hsp < 80);
-        }
-
-
-then add this into the sections u want to have visible black names
-add it right after if(!member) or if(!username)
-
-
-
-        //checking color shade, section modified by Rubiko~
-        if( this.isTooDark(member.colorString) ) return;
-
-
-
-        this goes in `patchMentions()`
-        make sure u delete the original style variables
-
-        //checking color shade, section modified by Rubiko~
-        if( this.isTooDark(member.colorString) ) return;
-        const defaultStyle = { color: member.colorString, background: ColorConverter.rgbToAlpha(member.colorString, 0) };
-        const hoverStyle = { color: "var(--role-onhover)", background: "var(--role-onhover-background)" };
-
-
-
-
-        tpying users is done in a loop
-        this code is not exact use it as a guide 
-        i.e inside the for loop, right after `member` check
-
-
-        for (let m = 0; m < typingUsers.length; m++) {
-                    if (!member) continue;
-
-                    //checking color shade, section modified by Rubiko~
-                    if( this.isTooDark(member.colorString) ) continue;
-*/
