@@ -12,9 +12,6 @@
     
     /* sets the sidebar width - should 'automagically' scale most things for u */
     --side-bar-width: 260px;
-
-	/* status-picker variables - feel free to adjust them for a different feel
-	--picker-width: 241px; */
     
     /* folder spacing from edge */
     --folder-left: 4px;   /* calc(var(--HSL-size) + 21px); */
@@ -138,22 +135,4 @@ div.da-wrapper > span.da-expandedFolderBackground {
     height: 95%;
     width: 70% !important;
 }
-
-/* Animated Status Picker */
-/* shape and size of the box *
-#popout_3 div.da-menu {
-    position: fixed;
-	left: -8px;
-	bottom: -3px;
-	width: var(--picker-width) !important;
-	top: initial !important;
-	margin-bottom: var(--margin-bottom);
-	z-index: 99 !important;
-    border-radius: 0 !important;
-    padding: 0;
-    cursor: initial;
-}
-
-
-
 

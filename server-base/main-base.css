@@ -728,15 +728,14 @@ h2.da-headerCozyMeta span.da-botTag {
 }
 
 /* correcting member + bot tag with no activity */
-div.da-memberContent:only-child { margin-top: -2px; }
-div.da-memberContent:only-child span.da-botTag.da-bot{ margin-top: 1px !important; }
+.da-memberContent:only-child { margin-top: -2px; }
+.da-memberContent:only-child .da-botTag.da-bot{ margin-top: 1px !important; }
 
 /* editing tool tips */
-/*.layer-v9HyYc.da-layer { display: inline !important; }*/
-.layer-v9HyYc.da-layer > div {
+.da-layer .da-tooltip {
     color: var(--accent-colour) !important;
-    /* background: var(--dark-menu-colour); */
-} div.tooltipPointer-3ZfirK {
+    background: var(--dark-menu-colour);
+}.da-tooltipPointer {
     border-top-color: var(--dark-menu-colour) !important;
 }
  
