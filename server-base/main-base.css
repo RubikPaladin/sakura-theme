@@ -689,7 +689,10 @@ div.da-wrapper > span.da-expandedFolderBackground {
     border-radius: 15px 15px 24px 24px;
 }
 
-/* fixing friend icon */
+
+/* fixing friend icon *
+.da-tutorialContainer .da-listItemWrapper > .da-wrapper
+
 nav.da-wrapper:not(.foldercontent) div.da-childWrapper {
     background: var(--friends-icon) !important;
     background-position: var(--friends-icon-position) !important;
