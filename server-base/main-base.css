@@ -88,11 +88,12 @@
 
 
 	/* new messages colour */
-	--new-messages-bar: rgba(100,60,100, .9); 	/* basically scroll bar color, but more vis*/
-	--new-messages-hover: rgba(120,80,120, .9);
+    --new-messages-bar: rgba(163, 114, 154, .99);	/* basically scroll bar color, but more vis*/
+    --new-messages-hover: rgba(143,94,134, .99);
 	--new-unread: var(--new-messages-bar);
 	--new-unread-hover: var(--new-messages-hover);
-	--to-present-bar: var(--new-messages-bar);
+    --to-present-bar: var(--new-messages-bar);
+    --to-present-bar-hover: var(--new-messages-hover);
 	--notification-bar: var(--new-messages-bar);
 	--bar-radius: 8px; 						/* 12 - 15 my usual (0 for dem right angles) */
 	
@@ -2076,6 +2077,7 @@ div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
 }
 
 /* changing colour setting to left size */
+.da-jumpToPresentBar:hover { background: var(--to-present-bar-hover) !important; }
 .da-jumpToPresentBar {
 	background: var(--to-present-bar) !important;
     border-radius: 0 var(--bar-radius) var(--bar-radius) 0;
