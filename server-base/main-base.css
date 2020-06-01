@@ -53,7 +53,7 @@
 	--rainbow-seed: rgba(255,120,255, .4);/* default: --main-color or --title-color; */
 	
 	
-
+    
 	
 	
 	/*
@@ -232,6 +232,7 @@
     --slider-background: #aaa;
     --slider-foreground: var(--slider-background);
     --audio-animation-scale: 4px; 					/* size of the largest animation the others scale */
+    --max-submenu-height: 400px;
 
     
     /* sets picker things */
@@ -286,7 +287,7 @@
 
     /* emote sizes */
     --small-emote: 18px;
-    --normal-emote: 45px;  /* Default: 32 - if u have an emote plugin change these sizes to match better*/
+    --normal-emote: 45px;  /* Default: 38 - if u have an emote plugin u can change these sizes to match better or override it*/
 
     /* discords server folder when opened */
     --opened-folder-colour: var(--on-hover-transparency);
@@ -1219,14 +1220,18 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
     background: var(--light-menu-colour);
 }
 
+
 /* general context menus */
-[id ^= "popout_"] div.da-menu, div.da-layerContainer div.contextMenu-HLZMGh,
-div[role="menu"] { background-color: var(--context-menu-colour) !important; padding: 0; box-shadow: none !important; }
+.da-menu, div.da-layerContainer div.contextMenu-HLZMGh { 
+    background-color: var(--context-menu-colour) !important; 
+    box-shadow: none !important; 
+    padding: 0; 
+}
 div.da-layerContainer div.da-selected, div.da-itemSlider:active,
 div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable:hover,
-div[role="menu"] div.da-item:hover { background-color: var(--menu-item-hover) !important; }
-[id ^= "popout_"] div.da-menu div.da-item, div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable,
-div[role="menu"] div.da-item {
+.da-menu div.da-item:hover { background-color: var(--menu-item-hover) !important; }
+.da-menu div.da-item, div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable,
+.da-menu div.da-item {
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%;
@@ -1235,28 +1240,36 @@ div[role="menu"] div.da-item {
     font-weight: 300;
 }
 
+/* hiding normal menu scroll, since u dont need it */
+.da-menu .da-scroller {
+    overflow-y:hidden;
+    padding: 0; 
+}
+
 /* correcting smol context menu rounding + shadow dumb */
-div[role="menu"] div.da-item:last-child { border-radius: 0 0 5px 5px !important; margin-bottom: 0; }
-div[role="menu"] div.da-item:first-child { border-radius: 5px 5px 0 0 !important; margin-top: 0; }
+.da-menu [role="group"]:first-child .da-item:first-child { border-radius: 5px 5px 0 0 !important; margin-top: 0; }
+.da-menu [role="group"]:last-child .da-item:last-child { border-radius: 0 0 5px 5px !important; margin-bottom: 0; }
 div.da-popout { box-shadow: none; }
 
 /* setting common design */
-[id ^= "popout_"] div.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
+.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
 div.da-layerContainer div.contextMenu-HLZMGh div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
 div.da-layerContainer div.contextMenu-HLZMGh div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
 div.da-itemBase div.da-label { font-weight: 400; }
 
 
 /* correcting minor errors in server right click */
-[id ^= "popout_"] div.da-menu div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important; padding-top: 8px; }
-[id ^= "popout_"] div.da-menu div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important; padding-bottom: 8px; }
-[id ^= "popout_"] div.da-menu > div.da-separator { height: 2px; }
+.da-menu > div.da-separator { height: 2px; }
 
 /* setting up general submenu */
-div.da-subMenuContext div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
-div.da-subMenuContext div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
+.da-submenu { background-color: var(--context-menu-colour); max-height: var(--max-submenu-height); }
+.da-submenu .da-item:first-child { border-radius: 5px 0 0 0 !important; margin-top: 0; }
+.da-submenu .da-item:last-child { border-radius: 0 0 0 5px !important; margin-bottom: 0; }
+.da-submenuPaddingContainer { margin-left: -7px; }
+.da-submenu .da-scroller { overflow-y:scroll; max-height: var(--max-submenu-height); }
 
-/* setting up scoll menu */
+
+/* setting up scoll menu *
 div.da-scroller.contextMenu-HLZMGh div.da-itemBase { margin: 0; }
 div.da-scroller.contextMenu-HLZMGh div.da-itemBase:first-child { border-radius: 5px 0 0 0 !important;  }
 div.da-scroller.contextMenu-HLZMGh div.da-itemBase:last-child { border-radius: 0 0 0 5px !important;  }
