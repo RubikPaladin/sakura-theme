@@ -63,6 +63,7 @@
 	/* scroll bar - control colour*/
     --scroll-bar-color: rgba(200,150,200, .35); 		/* default: rgba(255,255,255, .15);*/
     --chat-scroll-bar-color: rgba(200,150,200, .2); 	/* chat scroll bar is a bit brighter cause CSS layers dumb, so it's a darker shade to match*/
+    --chat-scroll-size: 15px;                             /* chat scroll bar width*/
 	
 	
 	/* ping colors*/
@@ -79,7 +80,7 @@
 
 
     /* sets the time visual thang - if set to `none` it will display the time when u hover on usernames
-                                    if u want the normal mode, remove none and leave it empty (or mis-speel it like I have  #Cabbage)*/
+                                    if u want the normal mode, remove none and leave it empty, set it to 'inline-block' (or mis-speel it like I have  #Cabbage)*/
     --time-display: none;
 
 
@@ -285,7 +286,7 @@
 
     /* emote sizes */
     --small-emote: 18px;
-    --normal-emote: 32px;  /* Default: 32 - if u have an emote plugin change these sizes to match better*/
+    --normal-emote: 45px;  /* Default: 32 - if u have an emote plugin change these sizes to match better*/
 
     /* discords server folder when opened */
     --opened-folder-colour: var(--on-hover-transparency);
