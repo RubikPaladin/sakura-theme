@@ -87,7 +87,9 @@
     --DM-username-colour: #fa7; /* copy the var name and CTRL + F search it, and change the line of code to    color: var(--DM-username-colour) !important; */
 
 
-	/* new messages colour */
+    /* new messages colour */
+    /* --new-messages-bar: rgba(100,60,100, .9);
+    --new-messages-hover: rgba(120,80,120, .9); */
     --new-messages-bar: rgba(163, 114, 154, .99);	/* basically scroll bar color, but more vis*/
     --new-messages-hover: rgba(143,94,134, .99);
 	--new-unread: var(--new-messages-bar);
@@ -188,6 +190,11 @@
 	--pins-colour: var(--dark-menu-colour);            /* default: rgba(33,33,33,.6); */
 	--pins-colour: var(--dark-menu-colour);            /* default: rgba(33,33,33,.6); */
     --pins-header-colour: var(--light-menu-colour); 
+    --pins-wrapper: rgba(0,0,0,.45);
+    --pins-width: 500px;
+    --pins-right: -64px;
+    --pins-borders: 8px 0 0 0;
+    --pins-max-height: 983px;  
 
     /* autocomplete menu colours */
     --autocomplete-menu-colour: rgba(10,5,3,.9); 
