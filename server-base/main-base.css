@@ -889,7 +889,7 @@ nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem:hover {
 
 
 /* 
-    in Chat Mark up edits
+    in Chat/Mark up edits
 */
 
 /* setting regular code block sections */
@@ -970,6 +970,14 @@ div.da-divider.da-hasContent {
 /* stopping that dumb ass textarea chat overhang */
 div.da-chat form.da-form {
     margin-top: 0;
+}
+
+/* changing message option buttons  Default: rgba(0,0,0,0.4) */
+.da-cozyMessage .da-buttons .da-wrapper,
+.da-cozyMessage .da-buttons .da-button:hover,
+.da-cozyMessage .da-buttons .da-button.da-selected {
+    background: var(--on-hover-transparency);
+    box-shadow: none;
 }
 
 
