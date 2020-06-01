@@ -63,7 +63,7 @@
 	/* scroll bar - control colour*/
     --scroll-bar-color: rgba(200,150,200, .35); 		/* default: rgba(255,255,255, .15);*/
     --chat-scroll-bar-color: rgba(200,150,200, .2); 	/* chat scroll bar is a bit brighter cause CSS layers dumb, so it's a darker shade to match*/
-    --chat-scroll-size: 15px;                             /* chat scroll bar width*/
+    --chat-scroll-size: 14px;                             /* chat scroll bar width*/
 	
 	
 	/* ping colors*/
@@ -1227,6 +1227,7 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-queryContainer.da
     box-shadow: none !important; 
     padding: 0; 
 }
+.da-menu .da-focused { background-color: var(--menu-item-hover); }
 div.da-layerContainer div.da-selected, div.da-itemSlider:active,
 div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable:hover,
 .da-menu div.da-item:hover { background-color: var(--menu-item-hover) !important; }
@@ -1244,6 +1245,15 @@ div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable:hover,
 .da-menu .da-scroller {
     overflow-y:hidden;
     padding: 0; 
+}
+
+/* editing context menu emotes */
+.da-menu .da-customItem .da-icon {
+    width: 30px;
+    height: 30px;
+} .da-menu .da-customItem .da-button {
+    background: transparent;
+    padding: 0;
 }
 
 /* correcting smol context menu rounding + shadow dumb */
