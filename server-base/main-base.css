@@ -2049,7 +2049,7 @@ div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
 */
 
 /* new messages bar colour */ 
-div.da-messagesWrapper div.da-newMessagesBar {
+.da-chat div.da-newMessagesBar {
     background-color: var(--new-messages-bar);
 	border-radius: 0 0 var(--bar-radius) 0;
 	z-index: 3;
@@ -2057,15 +2057,15 @@ div.da-messagesWrapper div.da-newMessagesBar {
 } 
 
 /* new message on hover */
-div.da-messagesWrapper div.da-newMessagesBar:hover {
+.da-chat div.da-newMessagesBar:hover {
     background: var(--new-messages-hover);
 }
 
 /* new message image + removes default message icon*/
 .da-chat .da-barButtonIcon { display: none; }
 .da-sidebar > .da-container > .da-container { height: 47px; }
-.da-messagesWrapper .da-newMessagesBar:active { padding: 0 !important; }
-.da-messagesWrapper .da-barButtonAlt {
+.da-chat .da-newMessagesBar:active { padding: 0 !important; }
+.da-chat .da-barButtonAlt {
 	width: 32px;
 	height: 26px;
 	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiICB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQogICA8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMC40MSwxMy40MUw2LDE5TDcuNDEsMTcuNThMMS44MywxMk0yMi4yNCw1LjU4TDExLjY2LDE2LjE3TDcuNSwxMkw2LjA3LDEzLjQxTDExLjY2LDE5TDIzLjY2LDdNMTgsN0wxNi41OSw1LjU4TDEwLjI0LDExLjkzTDExLjY2LDEzLjM0TDE4LDdaIiAvPg0KPC9zdmc+) !important;
