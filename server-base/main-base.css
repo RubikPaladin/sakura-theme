@@ -750,6 +750,7 @@ h2.da-headerCozyMeta span.da-botTag {
     background: var(--dark-menu-colour);
 }.da-tooltipPointer {
     border-top-color: var(--dark-menu-colour) !important;
+    margin-top: -1px;
 }
  
  
@@ -1263,6 +1264,16 @@ div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable:hover,
     background: transparent;
     padding: 0;
 }
+
+/* correcting chat context menu */
+.da-menu .da-scroller > .da-labelContainer:first-child {
+    border-radius: 5px 5px 0 0;
+    margin-top: 0;
+} .da-menu .da-scroller > .da-labelContainer:last-child {
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 0;
+}
+
 
 /* correcting smol context menu rounding + shadow dumb */
 .da-menu [role="group"]:first-child .da-item:first-child { border-radius: 5px 5px 0 0 !important; margin-top: 0; }
