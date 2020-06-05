@@ -74,9 +74,11 @@
     --ping-embed-colour: 1px solid #FFAAD4; 
 	
 	
-	/* code block edges */
+    /* code block stuff - markup is part of a code block */
+    --markup-background: var(--on-hover-transparency);
     --code-block-colour: rgba(255,200,150, 0.45); 	/* default: rgb(67, 181, 129); */
-	--code-block-width: 1px;
+    --code-block-width: 1px;
+    
 
 
     /* sets the time visual thang - if set to `none` it will display the time when u hover on usernames
@@ -98,7 +100,6 @@
     --to-present-bar: var(--new-messages-bar);
     --to-present-bar-hover: var(--new-messages-hover);
 	--notification-bar: var(--new-messages-bar);
-	--bar-radius: 8px; 						/* 12 - 15 my usual (0 for dem right angles) */
 	
 	/* DM and friend variables - default: 42px */
     --dm-height: 38px;
@@ -136,8 +137,15 @@
     
     /* colour of bot embeds, will add 40% opacity to background and 60% to border thoe */
     --embed-colour: 58,48,54;  /* Discord Default: 46,48,54 */
+    
+    /* This is the general standard used for all the curves in the theme, feel free to bake ur theme block by setting it to 0 */
+    --theme-border-radius: 8px;
+	--bar-radius: var(--theme-border-radius); 						/* 12 - 15 my usual (0 for dem right angles) */
+    --markup-radius: var(--theme-border-radius);
+    --menu-radius: 5px;
+    
 	
-	
+    
 	
 	
 	/*
@@ -150,7 +158,7 @@
     --settings-title-color: var(--title-color); 
 	
 	/* general hover colours */
-    --category-hover-colour: rgba(152, 116, 95, 1); /* rgba(255,170,212, .4);
+    --category-hover-colour: rgba(142, 106, 85, 1); /* rgba(255,170,212, .4);
     
     /* unread colours*/
     --unread-dot: var(--accent-colour); /* rgba(255,170,212, .8); */
@@ -232,7 +240,7 @@
     --slider-background: #aaa;
     --slider-foreground: var(--slider-background);
     --audio-animation-scale: 4px; 					/* size of the largest animation the others scale */
-    --max-submenu-height: 400px;
+    --max-submenu-height: 450px;
 
     
     /* sets picker things */
@@ -386,7 +394,9 @@
     --changelog-content: "Using Rubii'z Theme... I see we have a cultured cutie"; /*"Using Rubiko's Theme...\a\a I see we have a cultured boio";*/
 
     /* message onConnectionSevered */
-    --offline-content: "You have been disconnected from Discord!  Rubik's suppressing the full screen takeover!";
+    --offline-content: "You have been disconnected from Discord, Rubik is suppressing the full screen takeover while you wait";
+    --offline-background: var(--accent-colour);
+    --offline-text-colour: var(--dark-grey);
 
 
 
@@ -534,7 +544,7 @@ div.da-container div.da-sidebar { width: var(--side-bar-width) !important; }
 div.da-animatedContainer { height: var(--side-bar-banner-height); }
 div.da-sidebar > nav [aria-label="Channels"] > div:nth-child(2) { padding-top: calc(var(--side-bar-banner-height) - 115px); }
 div.da-bannerImage { 
-    border-radius: 8px 8px 0 0; 
+    border-radius: var(--theme-border-radius) var(--theme-border-radius) 0 0; 
     width: 100%;
     height: 100%;
 }
@@ -579,9 +589,9 @@ div.da-sidebar div.da-hasBanner:hover > header.da-header {
 
 /* banner on hover */
 div.da-container.da-selected header.da-header,
-div.da-sidebar div.container-2Rl01u.da-clickable header.da-header { border-radius: 0 8px 0 0; }
+div.da-sidebar div.container-2Rl01u.da-clickable header.da-header { border-radius: 0 var(--theme-border-radius) 0 0; }
 div.da-hasBanner.da-bannerVisible header.da-header {
-    border-radius: 0 8px 0 0;
+    border-radius: 0 var(--theme-border-radius) 0 0;
     border: none;
 }
 
@@ -621,6 +631,13 @@ div.da-containerDefault[role="listitem"] > div:hover h2 {
 .nameUnreadText-DfkrI4:hover, .nameUnreadVoice-EVo-wI:hover {
     color: var(--unread-text-hover);
 }
+
+/* new correcting chat hover */
+#channels .wrapper-CU3qI5 path { color: var(--title-color); }
+#channels .wrapper-CU3qI5:hover > .da-name {
+    color: var(--category-hover-colour) !important;
+}
+
 
 /* Scroll bar colours */
 .theme-dark .scrollerThemed-2oenus.themeGhostHairline-DBD-2d .scroller-2FKFPG::-webkit-scrollbar-thumb,
@@ -800,7 +817,7 @@ h2.da-header > span.popout-open > span { display: inline-flex; }
 /* user name header */
 div.da-contents > h2{
     display: inline-block;
-    border-radius: 0 12px 12px 0;
+    border-radius: 0 calc(var(--theme-border-radius) + 4px) calc(var(--theme-border-radius) + 4px) 0;
     padding-right: 7px;
     padding-left: 80px;
     margin-left: -80px;
@@ -894,12 +911,16 @@ nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem:hover {
 */
 
 /* setting regular code block sections */
-div.da-contents > div.da-markup pre,
-div.da-embed div.da-markup pre {
+/* div.da-contents > div.da-markup pre, */
+/* div.da-embed div */
+.da-markup code { 
+    border-radius: var(--markup-radius); 
+    background-color: var(--markup-background) !important;
+} .da-markup pre {
     border: var(--borders);
     border-color: var(--code-block-colour);
     border-width: var(--code-block-width);
-    border-radius: 3px;
+    border-radius: var(--markup-radius);
     max-width: 95%;
 }
 
@@ -910,7 +931,7 @@ blockquote {
     padding-left: 5px !important;
     padding-bottom: 2px !important;
     margin-left: 1px !important;
-    border-radius: 0 4px 4px 0;
+    /* border-radius: 0 calc(var(--theme-border-radius) / 2) calc(var(--theme-border-radius)/2) 0; */
     width: 100%;
     background: none;
     /* background-color: var(--ping-inline-colour); */
@@ -923,7 +944,7 @@ div.da-blockquoteDivider {
     bottom: 0 !important;
     width: 1px !important;
     content: " " !important;
-    border-radius: 3px 0 0 3px !important;
+    border-radius: 0 !important;
     margin-left: -5px !important;
     border-left: var(--ping-embed-colour) !important;
 }
@@ -932,7 +953,7 @@ div.da-blockquoteDivider {
 div.da-mentioned:before { border: var(--ping-embed-colour) !important; } 
 div.da-mentioned { 
     background: var(--ping-inline-colour) !important; 
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 var(--theme-border-radius) var(--theme-border-radius) 0;
 }
 
 /* changing the size of emotes */
@@ -1035,7 +1056,7 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
 /* VC settings */
 /* correcting voice user outline and onHover*/
 div.da-sidebar div.da-voiceUser { margin-top: 1px; }
-div.da-sidebar div.da-voiceUser > div {  border-radius: 8px !important; }
+div.da-sidebar div.da-voiceUser > div {  border-radius: var(--theme-border-radius) !important; }
 div.da-sidebar div.da-voiceUser > div.da-content { height: 32px !important; }
 div.da-sidebar div.da-voiceUser div.da-content {  padding-left: 0 !important; }
 div.da-sidebar div.da-voiceUser div.da-icons {  display: block; margin-right: 6px; margin-bottom: 2px;}
@@ -1200,7 +1221,7 @@ div.da-popout > div.da-container.da-elevationBorderHigh div.da-header {
 
 /* making the surch bar curved */
 div.da-search > div.da-searchBar {
-    border-radius: 6px;
+    border-radius: var(--theme-border-radius);
 }
 
 /* changing serach option design + compactness */
@@ -1267,23 +1288,23 @@ div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable:hover,
 
 /* correcting chat context menu */
 .da-menu .da-scroller > .da-labelContainer:first-child {
-    border-radius: 5px 5px 0 0;
+    border-radius: var(--menu-radius) var(--menu-radius) 0 0;
     margin-top: 0;
 } .da-menu .da-scroller > .da-labelContainer:last-child {
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 var(--menu-radius) var(--menu-radius);
     margin-bottom: 0;
 }
 
 
 /* correcting smol context menu rounding + shadow dumb */
-.da-menu [role="group"]:first-child .da-item:first-child { border-radius: 5px 5px 0 0 !important; margin-top: 0; }
-.da-menu [role="group"]:last-child .da-item:last-child { border-radius: 0 0 5px 5px !important; margin-bottom: 0; }
+.da-menu [role="group"]:first-child .da-item:first-child { border-radius: var(--menu-radius) var(--menu-radius) 0 0 !important; margin-top: 0; }
+.da-menu [role="group"]:last-child .da-item:last-child { border-radius: 0 0 var(--menu-radius) var(--menu-radius) !important; margin-bottom: 0; }
 div.da-popout { box-shadow: none; }
 
 /* setting common design */
-.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: 5px; }
-div.da-layerContainer div.contextMenu-HLZMGh div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: 5px 5px 0 0 !important;  }
-div.da-layerContainer div.contextMenu-HLZMGh div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 5px 5px !important;  }
+.da-menu, div.da-subMenuContext, div.da-layerContainer div.da-contextMenu { border-radius: var(--menu-radius); }
+div.da-layerContainer div.contextMenu-HLZMGh div.da-itemGroup:first-child div.da-itemBase:first-child { border-radius: var(--menu-radius) var(--menu-radius) 0 0 !important;  }
+div.da-layerContainer div.contextMenu-HLZMGh div.da-itemGroup:last-child div.da-itemBase:last-child { border-radius: 0 0 var(--menu-radius) var(--menu-radius) !important;  }
 div.da-itemBase div.da-label { font-weight: 400; }
 
 
@@ -1292,8 +1313,8 @@ div.da-itemBase div.da-label { font-weight: 400; }
 
 /* setting up general submenu */
 .da-submenu { background-color: var(--context-menu-colour); max-height: var(--max-submenu-height); }
-.da-submenu .da-item:first-child { border-radius: 5px 0 0 0 !important; margin-top: 0; }
-.da-submenu .da-item:last-child { border-radius: 0 0 0 5px !important; margin-bottom: 0; }
+.da-submenu .da-item:first-child { border-radius: var(--menu-radius) 0 0 0 !important; margin-top: 0; }
+.da-submenu .da-item:last-child { border-radius: 0 0 0 var(--menu-radius) !important; margin-bottom: 0; }
 .da-submenuPaddingContainer { margin-left: -7px; }
 .da-submenu .da-scroller { overflow-y:scroll; max-height: var(--max-submenu-height); }
 
@@ -1490,8 +1511,8 @@ form.da-modal div.da-footer div.da-minorAction {
 
 
 /* menu aesthetic for server folder settings */
-div.da-layer div.da-root { border-radius: 8px; }
-div.da-layer div.da-root > div.da-header { border-radius: 8px 8px 0 0; }
+div.da-layer div.da-root { border-radius: var(--theme-border-radius); }
+div.da-layer div.da-root > div.da-header { border-radius: var(--theme-border-radius) var(--theme-border-radius) 0 0; }
 div.da-layer div.da-root > div.da-content { border-radius: 0; }
 div.da-layer div.da-root > div.da-header,
 div.da-layer div.da-root > div.da-content {
@@ -1501,7 +1522,7 @@ div.da-layer div.da-root > div.da-content {
 /* footer */
 div.da-layer div.da-root > div.da-footer {
     background: var(--light-menu-colour) !important;
-	border-radius: 0 0 8px 8px;
+	border-radius: 0 0 var(--theme-border-radius) var(--theme-border-radius);
 	padding-top: 12.5px !important;
 	padding-bottom: 12.5px !important;
 }
@@ -1511,7 +1532,7 @@ div.da-layer div.da-root > div.da-footer > button[type="submit"]:hover { backgro
 div.da-layer div.da-root > div.da-footer > button[type="submit"] {
 	background-color: rgba(255,255,255, .15) !important;
 	color: white !important;
-    border-radius: 5px;
+    border-radius: var(--theme-border-radius);
 }
 
 
@@ -1906,7 +1927,7 @@ div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-i
     background-color: var(--dark-menu-color) !important;
     border: none; 
 }.da-messagesPopoutWrap .da-messageGroupWrapper:last-child {
-    border-radius: 0 8px 0 0; 
+    border-radius: var(--theme-border-radius) var(--theme-border-radius) 0 0; 
     border-bottom: none;
     padding-bottom: 10px;
     margin-bottom: 0; 
@@ -1918,7 +1939,7 @@ div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-i
 /* pin container and buttons */
 .da-messagesPopoutWrap .da-messageGroupWrapper {
     border: var(--borders);
-    border-radius: 8px;
+    border-radius: var(--theme-border-radius);
     margin-left: 8px;
 }.da-messagesPopoutWrap .da-jumpButton { background-color: transparent; }
 .da-messagesPopoutWrap .da-actionButtons {
@@ -1960,11 +1981,11 @@ div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-i
 .da-recentMentionsPopout .da-channelHeader,
 .da-recentMentionsPopout .da-messageContainer { background-color: transparent; }
 .da-recentMentionsPopout .da-container {
+    border-radius: var(--theme-border-radius);
     background-color: var(--pins-wrapper);
     border-color: rgba(255,255,255,.1);
     border: var(--borders);
     margin-bottom: 6px;
-    border-radius: 8px;
     margin-left: 8px;
     padding: 0;
 }.da-recentMentionsPopout .da-hasMoreButton {
@@ -2086,6 +2107,9 @@ div.da-app > div.da-spacer > div.da-baseLayer > div.da-container {
     background-color: rgba(0, 0, 0, 0);
 }
 
+.da-perksModalContentWrapper {
+    background: var(--main-transparency);
+}
 
 
 
@@ -2199,27 +2223,32 @@ div.da-flex.da-base > div.da-flexChild > div > div.da-noticeDefault.da-notice {
     margin-right: 0;
 }
 
-/* redesigning the offline message */
-div.da-app div.da-container.da-fixClipping > div.da-content  { display: none; }
-div.da-app div.da-container.da-fixClipping > div.da-problems { padding: 0; }
-div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText + div {  display: none; }
-div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { font-size: 0; }
-div.da-app div.da-container.da-fixClipping {
-    display: inline-table;
-    z-index: 999999;
-    width: 100%;
-    left: -90px;
-    height: 7px;
-    top: -27px;
-    position: inherit;
-}
 
+/* redesigning the offline message */
+.da-fixClipping > .da-problems { padding: 0; }
+.da-fixClipping > .da-content  { display: none; }
+.da-fixClipping .da-problemsText { font-size: 0; }
+.da-fixClipping .da-problemsText + div {  display: none; }
+.da-fixClipping {
+    background-color: var(--offline-background);
+    width: calc(100% - var(--side-bar-width));
+    left: var(--side-bar-width);
+    display: inline-table;
+    position: absolute;
+    z-index: 999999;
+    top: inherit;
+    height: 7px;
+    bottom: 0;
+}
 
 /* making the message smexy */
-div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText::before {
-    font-size: 14px;
+.da-fixClipping .da-problemsText::before {
+    color: var(--offline-text-colour);
     content: var(--offline-content);
+    font-size: 14.5px;
+    font-weight: 400;
 }
+
 
 /* new messages red divider */
 div.da-dividerRed.da-divider > span.da-dividerContent:after,
@@ -2461,7 +2490,7 @@ div.da-sidebar > nav.da-container div.da-containerDefault div.da-content {
     width: 100% !important;
 	margin: 0 !important;
 	padding: 0px;
-	border-radius: 0 8px 8px 0;
+	border-radius: 0 var(--theme-border-radius) var(--theme-border-radius) 0;
 	height: 34px;
     padding-left: var(--chat-padd-left);
     margin-left: var(--chat-margin-left);
@@ -2477,13 +2506,13 @@ div.da-sidebar > nav.da-privateChannels a {
     margin-left: var(--chat-margin-left);
 	margin: 0 !important;
 	padding: 0px;
-	border-radius: 0 8px 8px 0;
+	border-radius: 0 var(--theme-border-radius) var(--theme-border-radius) 0;
     padding-right: -5px;
 }
 
 /* DM size and border radius */
 div.da-sidebar > nav.da-privateChannels a > div.da-layout {
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 var(--theme-border-radius) var(--theme-border-radius) 0;
     width: 100% !important;
 }
 
@@ -2584,7 +2613,7 @@ div.da-membersWrap div.da-member div.da-layout {
     width: 97%;
     margin-left: -10px;
     padding: 1px 0 !important;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 var(--theme-border-radius) var(--theme-border-radius) 0;
     padding-left: 18px !important;
 }
 
@@ -2864,7 +2893,7 @@ div.da-videoGridWrapper.da-minLayout {
 nav.da-privateChannels div.da-searchBar { box-shadow: none; }
 div.da-searchBar button.da-searchBarComponent {
     background-color: rgba(255,255,255,.15);
-    border-radius: 8px;
+    border-radius: var(--theme-border-radius);
 }
 
 
@@ -3094,7 +3123,7 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
     top: -1px !important;
     padding-top: 9px;
     padding-bottom: 8px;
-    border-radius: 7px 7px 0 0;
+    border-radius: var(--theme-border-radius) var(--theme-border-radius) 0 0;
 }
 
 /* correcting weird compact auto translate switch */
@@ -3104,7 +3133,7 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
     background: var(--dark-grey);
     margin-bottom: 0;
     margin-top: 10px;
-    border-radius: 0 0 7px 7px;
+    border-radius: 0 0 var(--theme-border-radius) var(--theme-border-radius);
     height: 20px;
     
 }
