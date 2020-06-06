@@ -34,8 +34,8 @@
 
 /* full correction of borders */
 div.da-container div.da-sidebar header.da-header { border-bottom: var(--borders); }
-div.da-container div.da-sidebar > nav { border-radius: 8px 8px 0 0 !important; }
-div.da-bannerImage { border-radius: 8px 8px 0 0; }
+div.da-container div.da-sidebar > nav { border-radius: var(--theme-border-radius) var(--theme-border-radius) 0 0 !important; }
+div.da-bannerImage { border-radius: var(--theme-border-radius) var(--theme-border-radius) 0 0; }
 div.da-container div.da-sidebar > nav,
 div.da-container div.da-sidebar > section {
     border-top: var(--borders);
@@ -44,7 +44,7 @@ div.da-container div.da-sidebar > section {
 } div.da-chat div.da-membersWrap {
     border-top: var(--borders);
     border-left: var(--borders);
-    border-radius: 8px 0 0 0 !important;
+    border-radius: var(--theme-border-radius) 0 0 0 !important;
 }
 
 /* he forgot the some border lines, so here they are (if u want to change their colour edit --border-lines-color as well)*/
