@@ -917,10 +917,10 @@ nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem:hover {
     border-radius: var(--markup-radius); 
     background-color: var(--markup-background) !important;
 } .da-markup pre {
-    border: var(--borders);
-    border-color: var(--code-block-colour);
+    border: var(--borders) !important;
+    border-color: var(--code-block-colour) !important;
     border-width: var(--code-block-width);
-    border-radius: var(--markup-radius);
+    border-radius: var(--markup-radius) !important;
     max-width: 95%;
 }
 
