@@ -111,14 +111,10 @@ span.da-botTag {
 	left: 29px;
 } 
 
-/* Offline Message Customizations */
-div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { font-size: 0; }
-div.da-app div.da-container.da-fixClipping {
-    display: inline-table;
-    width: 100%;
-    height: 7px;
-    top: var(--HSL-size); 
-    position: inherit;
+/* Offline Message Customizations *
+/* div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { font-size: 0; }  */
+.da-fixClipping {
+    left: var(--side-bar-width);
 }
 
 /* spacing the custom CSS container so i can still use nav buttons */

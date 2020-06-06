@@ -2247,7 +2247,7 @@ div.da-flex.da-base > div.da-flexChild > div > div.da-noticeDefault.da-notice {
 .da-fixClipping {
     background-color: var(--offline-background);
     width: calc(100% - var(--side-bar-width));
-    left: var(--side-bar-width);
+    /* left: var(--side-bar-width); */
     display: inline-table;
     position: absolute;
     z-index: 999999;
@@ -2261,7 +2261,7 @@ div.da-flex.da-base > div.da-flexChild > div > div.da-noticeDefault.da-notice {
     color: var(--offline-text-colour);
     content: var(--offline-content);
     font-size: 14.5px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 

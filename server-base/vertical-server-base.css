@@ -105,7 +105,7 @@ span.da-botTag {
 } 
 
 
-/* Offline Message Customization */
+/* Offline Message Customization *
 div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsText { 
     font-size: 0; 
     margin-bottom: 5px;
@@ -117,6 +117,11 @@ div.da-app div.da-container.da-fixClipping > div.da-problems > div.da-problemsTe
     height: 7px;
     top: -27px;
     position: inherit;
+}
+
+/* updating offline message */
+.da-fixClipping {
+    left: calc(var(--side-bar-width) + var(--HSL-size) + 20px);
 }
 
 /* fixing friend/home icon location */
