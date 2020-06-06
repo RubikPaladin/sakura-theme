@@ -136,7 +136,9 @@
     --friends-icon-brightness: 30%;
     
     /* colour of bot embeds, will add 40% opacity to background and 60% to border thoe */
-    --embed-colour: 58,48,54;  /* Discord Default: 46,48,54 */
+    --embed-colour: 40,30,35;  /* Discord Default: 46,48,54 */
+    --embed-transparency: 0.6;
+    --embed-border-colour: 60, 50, 55;
     
     /* This is the general standard used for all the curves in the theme, feel free to bake ur theme block by setting it to 0 */
     --theme-border-radius: 8px;
@@ -967,10 +969,10 @@ div.da-mentioned {
     width: var(--normal-emote) !important;
 }
 
-/* embed recolour */
-div.da-chatContent div.da-embed div.da-embedInner {
-    background-color: rgba(var(--embed-colour), .4) !important;
-    border-color: rgba(var(--embed-colour), .6) ;
+/* embed re-colour */
+.da-embed.da-markup {
+    background-color: rgba(var(--embed-colour), var(--embed-transparency));
+    border-color: rgba(var(--embed-border-colour), calc(var(--embed-transparency) + .4));
 }
 
 /*dicsords chat on hover stuff*/
