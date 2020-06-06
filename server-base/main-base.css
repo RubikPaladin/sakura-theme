@@ -76,7 +76,7 @@
 	
     /* code block stuff - markup is part of a code block */
     --markup-background: var(--on-hover-transparency);
-    --code-block-colour: rgba(255,200,150, 0.45); 	/* default: rgb(67, 181, 129); */
+    --code-block-colour: rgba(255,200,150, .45); 	/* default: rgb(67, 181, 129); */
     --code-block-width: 1px;
     
 
@@ -188,7 +188,7 @@
     --server-banner-fade: 5%; /* sets where the fade begins to transition */
     --server-banner-opacity: .80;
     --server-banner-default: linear-gradient(black var(--server-banner-fade), transparent 100%);
-    --side-bar-banner-height: calc(var(--side-bar-width) * 0.562);
+    --side-bar-banner-height: calc(var(--side-bar-width) * .562);
 
     /*  allows the override of banner fade settings */
     --banner-fade: none; 
@@ -270,8 +270,8 @@
 
 
 	/* colour for selected chats */
-    --selected-background: rgba(255,255,255,0.1);
-    --selected-foreground: rgba(250,190,140, 0.8);
+    --selected-background: rgba(255,255,255,.1);
+    --selected-foreground: rgba(250,190,140, .8);
     --current-colour: var(--selected-foreground);
     --selected-server: none; /* will use rainbow anim, but changing this would perma set the colour of ur current server */
     
@@ -361,7 +361,7 @@
     --space: 2px;
     
 	/* default anim */
-	--default-animation: cubic-bezier(0.4,0,0.2,1);
+	--default-animation: cubic-bezier(.4, 0, .2, 1);
     
     /* text in the top left can be set, but i have it commented out at the bottom */
     --custom-watermark: "Nailed it";
@@ -375,7 +375,7 @@
     --toast-left: calc(var(--max-width) / 2 + var(--margins) + 150px);
 	
 	/* in text emote thang*/
-	--emote-animation: cubic-bezier(0.4,0,0.2,1);
+	--emote-animation: cubic-bezier(.4, 0, .2, 1);
 	--emote-anim-speed: 250ms;
 
     /* id u want to remove VS icons type "none" */
@@ -450,9 +450,9 @@
 
 /* animation telling u where sounds is coming from (the colours used are var(--new-messages-bar) modified*/
 @keyframes audio-flash {
-	0% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 0 0 0px rgba(100,60,100,.3); }
-	50% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 0 0 var(--audio-animation-scale) rgba(100,60,100,0.5); }
-	100% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 0 0 var(--audio-animation-scale) rgba(100,60,100,0); }
+	0% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2), 0 0 0 0px rgba(100,60,100,.3); }
+	50% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2), 0 0 0 var(--audio-animation-scale) rgba(100,60,100,.5); }
+	100% { box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2), 0 0 0 var(--audio-animation-scale) rgba(100,60,100,0); }
 }
 
 
@@ -806,7 +806,7 @@ span.da-botTag {
     position: fixed;
     left: var(--toast-left);
 	padding: 12px 16px !important;
-	background: rgba(60,60,60,0.9) !important;
+	background: rgba(60,60,60,.9) !important;
 	box-shadow: none !important;
 	border-radius: 18px !important;
 	font-size: 1em !important;
@@ -1064,7 +1064,7 @@ div.da-userPopout rect[mask|="url(#svg-mask-status"]{
 
 /* u guessed it, icon scale*/
 .icon-3s6X1M {
-	transform: scale(0.75);
+	transform: scale(.75);
 }
 
 /* VC settings */
@@ -1188,7 +1188,7 @@ div.da-guilds div.da-numberBadge.da-base { padding-left: 1px; }
 div.da-privateChannels div.da-numberBadge.da-base { padding-bottom: 1.5% !important; }
 div.da-container div.da-numberBadge.da-base {
     padding-right: 1.5px !important;
-    padding-bottom: 0.5%;
+    padding-bottom: .5%;
 }
 
 /* correcting server notifications and DM's */
@@ -1562,7 +1562,7 @@ div.da-layer div.da-root > div.da-footer > button[type="submit"] {
 	padding: 0 12px !important;
 	margin-top: 7px;
 	line-height: 34px !important;
-	background: rgba(255,255,255,0.075) !important;
+	background: rgba(255,255,255,.075) !important;
 	border: none !important;
 	border-radius: 0 var(--bar-radius) var(--bar-radius) 0 !important;
 }
@@ -1664,7 +1664,7 @@ div.da-userPopout div.da-footer div.da-protip {
 	border: none;
 }
 .uploadModal-2ifh8j .inner-zqa7da {
-	background: rgba(255,255,255,0.075) !important;
+	background: rgba(255,255,255,.075) !important;
 	border-radius: 18px;
 }
 
@@ -1694,7 +1694,7 @@ div.da-modalOverhang div.da-modalHeader {
 div.da-modalOverhang > div.da-art { z-index: 999; }
 div.da-modalOverhang > div.da-modal { border-radius: 12px; }
 div.da-modalOverhang div.da-modalBody div.da-cardPrimaryEditable.da-card {
-	background: rgba(255,255,255,0.075) !important;
+	background: rgba(255,255,255,.075) !important;
 	border-radius: 20px;
 }
 
@@ -1761,7 +1761,7 @@ main.da-chatContent form.da-form div.da-drawerSizingWrapper button.da-navButtonA
 main.da-chatContent form.da-form div.da-drawerSizingWrapper button.da-navButton { border-radius: 5px 5px 0 0; }
 main.da-chatContent form.da-form div.da-drawerSizingWrapper nav.da-nav {
     background-color: var(--emote-footer);
-    opacity: 0.7;
+    opacity: .7;
 }
 
 /* content wrap edits, the padding is for the nav menu */
@@ -2368,7 +2368,7 @@ div.da-scroller.da-firefoxFixScrollFlex.da-systemPad.da-contentRegionScroller {
 	content: " ";
 	width: calc(100% + 12px);
 	height: 1px;
-	background: rgba(114,118,125,0.3);
+	background: rgba(114,118,125,.3);
 }
 
 /* menu width and position */
@@ -3093,7 +3093,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
     + extends colour changes */
 :not(.ml-edited) > .ml-edited,
 div.ml-edited:not(:last-child) > div {
-    color: rgba(255, 255, 255, 0.25) !important;
+    color: rgba(255, 255, 255, .25) !important;
 }
 
 /* changing size slightly */
@@ -3119,7 +3119,7 @@ div.ml-edited > .ml-edited:last-child .emoji {
 /* correcting multi-edit delete colour text*/
 div.ml-deleted div.ml-edited:not(:last-child) > div {
     color: var(--deleted-text) !important;
-    opacity: 0.6;
+    opacity: .6;
 }
 
 
@@ -3166,7 +3166,7 @@ div.ml-deleted div.ml-edited:not(:last-child) > div {
 #charcounter {
     left: var(--counter-left);
     top: var(--counter-top);
-    opacity: 0.5;
+    opacity: .5;
     color: var(--accent-colour);
     font-size: var(--counter-font) !important;
 }
@@ -3245,7 +3245,7 @@ div.da-contentCozy.da-content #charcounter {
     margin-bottom: -20px !important;
     margin-top: -5px !important;
     font-weight: 500;
-    opacity: 0.85;
+    opacity: .85;
 }
 
 /* correcting role member plugin */
