@@ -145,7 +145,7 @@
 	--bar-radius: var(--theme-border-radius); 						/* 12 - 15 my usual (0 for dem right angles) */
     --markup-radius: var(--theme-border-radius);
     --sidebar-radius: var(--theme-border-radius);
-    --textarea-radius: cal(var(--theme-border-radius) * 1.5);
+    --textarea-radius: calc(var(--theme-border-radius) * 1.5);
     --menu-radius: 5px;
     
 	
