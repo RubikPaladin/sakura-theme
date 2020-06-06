@@ -136,9 +136,9 @@
     --friends-icon-brightness: 30%;
     
     /* colour of bot embeds, will add 40% opacity to background and 60% to border thoe */
-    --embed-colour: 40,30,35;  /* Discord Default: 46,48,54 */
-    --embed-transparency: 0.6;
-    --embed-border-colour: 60, 50, 55;
+    --embed-colour: 7, 0, 7;  /* Discord Default: 46,48,54 */
+    --embed-transparency: .4;
+    --embed-border-colour: 20, 0, 5;
     
     /* This is the general standard used for all the curves in the theme, feel free to bake ur theme block by setting it to 0 */
     --theme-border-radius: 8px;
