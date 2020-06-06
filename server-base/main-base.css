@@ -142,6 +142,8 @@
     --theme-border-radius: 8px;
 	--bar-radius: var(--theme-border-radius); 						/* 12 - 15 my usual (0 for dem right angles) */
     --markup-radius: var(--theme-border-radius);
+    --sidebar-radius: var(--theme-border-radius);
+    --textarea-radius: cal(var(--theme-border-radius) * 1.5);
     --menu-radius: 5px;
     
 	
@@ -176,7 +178,8 @@
 	/* channel dimensions */
 	--chat-padd-left: 10px;      /*default: 5px*/
 	--chat-margin-left: 0px;    /* default: 0px*/
-	--chat-width: calc(var(--side-bar-width) - (var(--side-bar-width)/100) - 17px);		/* if u add margin-left, ull need to make width smaller default: 100%*/
+    --chat-width: calc(var(--side-bar-width) - (var(--side-bar-width)/100) - 17px);		/* if u add margin-left, ull need to make width smaller default: 100%*/
+    --textarea-colour: rgba(4, 0, 4, .5);
 
 
     /* server banner fade settings */
@@ -190,8 +193,10 @@
 
     /* context menus and user popout design */
 	/* menu colour - menu footers i use var(--dark-grey)*/
-	--light-menu-colour: rgba(122, 97, 118, 1); /* var(--scroll-bar-color); */
+	--light-menu-colour: rgba(122, 97, 118, 1);   /* var(--scroll-bar-color); */
     --dark-menu-colour: rgba(32,22,20, .99);
+    --menu-Fweight: 400;                            /* F means font, these are font settings */
+    --menu-Fsize: small;
     
     /* pins/uploads/mentions */
 	--upload-colour: var(--dark-menu-colour);
@@ -1002,6 +1007,13 @@ div.da-chat form.da-form {
     box-shadow: none;
 }
 
+/* setting chat text area border and color */
+.da-channelTextArea .da-attachWrapper { margin-left: -5px; }
+.da-channelTextArea > .da-webkit {
+    border-radius: var(--textarea-radius);
+    background-color: var(--textarea-colour);
+}
+
 
 
 
@@ -1318,11 +1330,11 @@ div.da-itemBase div.da-label { font-weight: 400; }
 .da-submenuPaddingContainer { margin-left: -7px; }
 .da-submenu .da-scroller { overflow-y:scroll; max-height: var(--max-submenu-height); }
 
-
-/* setting up scoll menu *
-div.da-scroller.contextMenu-HLZMGh div.da-itemBase { margin: 0; }
-div.da-scroller.contextMenu-HLZMGh div.da-itemBase:first-child { border-radius: 5px 0 0 0 !important;  }
-div.da-scroller.contextMenu-HLZMGh div.da-itemBase:last-child { border-radius: 0 0 0 5px !important;  }
+/* setting menu font information */
+.da-menu .da-label {
+    font-weight: var(--menu-Fweight);
+    font-size: var(--menu-Fsize);
+}
 
 
 /* changes colour of icons in the chat */
@@ -2005,11 +2017,12 @@ div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-i
 
 /* Readability Upgrade */
 time,
+.da-label,
 blockquote,
-button > div
-div.da-label,
-div.da-itemBase,
+button > div,
+.da-itemBase,
 span.da-username,
+.da-menu .da-label,
 div.ace_gutter-cell, 
 div.roleName-32vpEy,
 div.da-markup > span, 
