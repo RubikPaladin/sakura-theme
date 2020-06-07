@@ -146,7 +146,9 @@
     --markup-radius: var(--theme-border-radius);
     --sidebar-radius: var(--theme-border-radius);
     --textarea-radius: calc(var(--theme-border-radius) * 1.5);
+    --username-hover-radius: var(--theme-border-radius);
     --menu-radius: 5px;
+
     
 	
     
@@ -824,7 +826,7 @@ h2.da-header > span.popout-open > span { display: inline-flex; }
 /* user name header */
 div.da-contents > h2{
     display: inline-block;
-    border-radius: 0 calc(var(--theme-border-radius) + 4px) calc(var(--theme-border-radius) + 4px) 0;
+    border-radius: 0 var(--username-hover-radius) var(--username-hover-radius) 0;
     padding-right: 7px;
     padding-left: 80px;
     margin-left: -80px;
@@ -1014,6 +1016,13 @@ div.da-chat form.da-form {
 .da-channelTextArea > .da-webkit {
     border-radius: var(--textarea-radius);
     background-color: var(--textarea-colour);
+}
+
+/* changing message action button radius */
+.da-buttonContainer .da-button:first-child { border-radius: var(--theme-border-radius) 0 0 var(--theme-border-radius); }
+.da-buttonContainer .da-button:last-child { border-radius: 0 var(--theme-border-radius) var(--theme-border-radius) 0; }
+.da-buttonContainer .da-wrapper {
+    border-radius: var(--theme-border-radius);
 }
 
 
