@@ -1471,7 +1471,7 @@ form.da-modal {
 
 /* betterDiscord notification header */
 form.da-modal div.da-header {
-    background-color: var(--light-menu-color);
+    background-color: var(--light-menu-colour);
     border-radius: 10px 10px 0 0;
     padding: 10px 20px;
 }
@@ -1951,7 +1951,7 @@ div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-i
  /* pins design */
 /* working on outliers */
 .da-messagesPopoutWrap .da-messageGroupWrapper:only-child { 
-    background-color: var(--dark-menu-color) !important;
+    background-color: var(--dark-menu-colour) !important;
     border: none; 
 }.da-messagesPopoutWrap .da-messageGroupWrapper:last-child {
     border-radius: var(--theme-border-radius) var(--theme-border-radius) 0 0; 
