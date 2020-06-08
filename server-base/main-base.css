@@ -2256,11 +2256,10 @@ div.da-flex.da-base > div.da-flexChild > div > div.da-noticeDefault.da-notice {
 .da-fixClipping {
     background-color: var(--offline-background);
     width: calc(100% - var(--side-bar-width));
-    /* left: var(--side-bar-width); */
+    top: inherit !important;
     display: inline-table;
     position: absolute;
     z-index: 999999;
-    top: inherit;
     height: 7px;
     bottom: 0;
 }
