@@ -163,8 +163,9 @@
     --member-color: var(--title-color); 
     --settings-title-color: var(--title-color); 
 	
-	/* general hover colours */
-    --category-hover-colour: rgba(142, 106, 85, 1); /* rgba(255,170,212, .4);
+	/* general hover colours *
+    --category-hover-colour: rgba(142, 106, 85, 1); /* rgba(255,170,212, .4);*/
+    --category-hover-colour: var(--title-color);
     
     /* unread colours*/
     --unread-dot: var(--accent-colour); /* rgba(255,170,212, .8); */
@@ -182,7 +183,7 @@
 	/* channel dimensions */
 	--chat-padd-left: 10px;      /*default: 5px*/
 	--chat-margin-left: 0px;    /* default: 0px*/
-    --chat-width: calc(var(--side-bar-width) - (var(--side-bar-width)/100) - 17px);		/* if u add margin-left, ull need to make width smaller default: 100%*/
+    --chat-width: calc(var(--side-bar-width) - (var(--side-bar-width)/100) - 16px); /* if u add margin-left, ull need to make width smaller default: 100%*/
     --textarea-colour: rgba(4, 0, 4, .5);
 
 
@@ -308,6 +309,9 @@
 
     /* discords server folder when opened */
     --opened-folder-colour: var(--on-hover-transparency);
+
+    /* background colour of user names when u hover over them */
+    --username-on-hover: var(--on-hover-transparency);
 
 
 
