@@ -926,7 +926,7 @@ nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem:hover {
 /* setting regular code block sections */
 /* div.da-contents > div.da-markup pre, */
 /* div.da-embed div */
-.da-markup code { 
+.da-markup pre > code { 
     border-radius: var(--markup-radius); 
     background-color: var(--markup-background) !important;
 } .da-markup pre {
