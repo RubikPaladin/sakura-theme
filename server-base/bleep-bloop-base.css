@@ -57,7 +57,7 @@
 --user-game-font-weight:600;
 --chat-padd-left:10px;
 --chat-margin-left:0px;
---chat-width:calc(var(--side-bar-width) - (var(--side-bar-width)/100) - 16px)
+--chat-width:calc(var(--side-bar-width) - (var(--side-bar-width)/100) - 16px);
 --textarea-colour:rgba(4,0,4,.5);
 --server-banner-fade:5%;
 --server-banner-opacity:.80;
