@@ -2907,9 +2907,9 @@ div.da-friendsTable div.da-friendsRow:hover {
 }
 
 /* adding bottom border to calls and videos */
-div.da-chat.da-inCall div.da-videoHeight > div { border-bottom: var(--borders); }
-div.da-chat.da-inCall div.da-videoHeight.da-animated { padding-bottom: 2px; }
-div.da-chat div.da-videoHeight { border-bottom: var(--borders); }
+.da-chat > .da-video { border-bottom: var(--borders); }
+/* div.da-chat.da-inCall div.da-videoHeight.da-animated { padding-bottom: 2px; } */
+/* div.da-chat div.da-videoHeight { border-bottom: var(--borders); } */
 
 /* adding chat border  */
 div.da-videoGridWrapper.da-minLayout {
