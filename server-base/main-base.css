@@ -232,8 +232,8 @@
 								/* and delete the backshalsh from it and save the file, that will set emote menu to default height */
 
     /* user */
-    --user-body: rgba(25, 21, 17, .99);	/* user-edition edit */
-    --user-header: #A783A4; /* rgba(255, 200, 255, 0.3);	/* user header shade, where pfp sits*/
+    --user-body: var(--dark-menu-colour); /* rgba(25, 21, 17, .99);	/* user-edition edit */
+    --user-header: var(--light-menu-colour); /*#A783A4;  or  rgba(255, 200, 255, 0.3);	/* user header shade, where pfp sits*/
     --user-playing: var(--light-menu-colour); /* rgba(255, 200, 255, 0.45); 	/* now playing background shade */
     --user-popout-right: -290px;				/* these move the user popup 290px*/
     --user-popout-left: 30px;					/* to make it seem more spacious  */
@@ -281,10 +281,10 @@
     /* on hover shades */
     --on-hover-transparency: rgba(255, 200, 255, .075); /* rgba(255, 200, 255, 0.02); */
     --on-select-transparency: var(--on-hover-transparency); /*rgba(255, 210, 255, 0.03); */
-    --username-on-hover: rgba(255, 200, 255, .15);
+    --username-on-hover: var(--on-hover-transparency); /* rgba(255, 200, 255, .15);
 	
 	/* status-picker variables - feel free to adjust them for a different feel */
-	--picker-width: calc(var(--side-bar-width) - (var(--side-bar-width)/100));
+	--picker-width: calc(var(--side-bar-width) - 2px);
 	--option-height: 52px;
 	--margin-bottom: 0px;
 	--option-width: calc(var(--picker-width) / 4); /*cause 4 options + 1px border */
@@ -1002,7 +1002,8 @@ div.da-divider.da-hasContent {
     margin-top: 25px;
 }
 
-/* stopping that dumb ass textarea chat overhang */
+/* stopping that dumb ass textarea chat overhang + weird ::before gradient */
+.da-form::before { display: none; }
 div.da-chat form.da-form {
     margin-top: 0;
 }
@@ -1300,7 +1301,7 @@ div.da-layerContainer div.contextMenu-HLZMGh div.da-clickable:hover,
 
 /* hiding normal menu scroll, since u dont need it */
 .da-menu .da-scroller {
-    overflow-y:hidden;
+    overflow-y:hidden !important;
     padding: 0; 
 }
 
@@ -1927,7 +1928,7 @@ div.contextMenu-HLZMGh div.da-wrapper > [aria-label^="Add Reaction:"] > img.da-i
 /* correcting the "more" menu */
 #message-actions div.da-focused { background: var(--menu-item-hover); }
 #message-actions div.da-scroller { 
-    overflow-y:hidden;
+    overflow-y:hidden !important;
     padding: 0; 
 }
 
@@ -2969,7 +2970,7 @@ div.noArrow-2foL9g.da-noArrow.popout-2iWAc-.da-popout.popoutTopLeft-3B0mFf.arrow
 
 /* hidding that dumb ass status scroller */
 #status-picker div.da-scroller {
-    overflow-y:hidden;
+    overflow-y:hidden !important;
     padding: 0;
 }
 
