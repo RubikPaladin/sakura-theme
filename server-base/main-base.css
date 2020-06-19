@@ -60,10 +60,11 @@
 		Those Little things that make u feel warm inside
 	*/
 	
-	/* scroll bar - control colour*/
+    /* scroll bar - control colour*/
+    --scrollbar-size: 10px;
+    --chat-scroll-size: calc(var(--scrollbar-size) + (var(--scrollbar-size) / 1.8));
     --scroll-bar-color: rgba(200,150,200, .35); 		/* default: rgba(255,255,255, .15);*/
     --chat-scroll-bar-color: rgba(200,150,200, .2); 	/* chat scroll bar is a bit brighter cause CSS layers dumb, so it's a darker shade to match*/
-    --chat-scroll-size: 14px;                             /* chat scroll bar width*/
 	
 	
 	/* ping colors*/
@@ -660,11 +661,15 @@ div.da-containerDefault[role="listitem"] > div:hover h2 {
 }
 
 /* hidding track, setting chat scrollbar size */
-div.da-scroller::-webkit-scrollbar-track { visibility: hidden; }
-div.da-scroller::-webkit-scrollbar, 
-div.da-scroller::-webkit-scrollbar-thumb {
+.da-scroller::-webkit-scrollbar-track { visibility: hidden; }
+.da-scroller::-webkit-scrollbar, 
+.da-scroller::-webkit-scrollbar-thumb {
     width: var(--chat-scroll-size);
 }
+
+/* correcting scroll width */
+.da-chat .da-scroller::-webkit-scrollbar { width: var(--chat-scroll-size) !important; }
+.da-scroller::-webkit-scrollbar { width: var(--scrollbar-size) !important; }
 
 /* selected channel colours - also changes the event text channels onHover colour for some reason*/
 .nameSelectedText-sp_EUw, 
@@ -1343,7 +1348,7 @@ div.da-itemBase div.da-label { font-weight: 400; }
 .da-submenu .da-item:first-child { border-radius: var(--menu-radius) 0 0 0 !important; margin-top: 0; }
 .da-submenu .da-item:last-child { border-radius: 0 0 0 var(--menu-radius) !important; margin-bottom: 0; }
 .da-submenuPaddingContainer { margin-left: -7px; }
-.da-submenu .da-scroller { overflow-y:scroll; max-height: var(--max-submenu-height); }
+.da-submenu .da-scroller { overflow-y:scroll !important; max-height: var(--max-submenu-height); }
 
 /* setting menu font information */
 .da-menu .da-label {
