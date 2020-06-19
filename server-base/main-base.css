@@ -1788,12 +1788,17 @@ main.da-chatContent form.da-form div.da-drawerSizingWrapper div.da-contentWrappe
 
 /* header settings */
 main.da-chatContent form.da-form div.da-drawerSizingWrapper div.da-header { padding-top: 5px; }
-div.da-emojiPicker div.da-header {
+div.da-emojiPicker > div.da-header {
     background-color: var(--light-menu-colour)
 }
 
+/* category background colour */
+.da-emojiPicker .da-categorySection > .da-wrapper {
+    background-color: transparent !important;
+    position: initial;
+}
+
 /* category/server menu background colour */
-div.da-emojiPicker .da-categoryWrapper,
 div.da-emojiPicker + div.da-categoryList div.da-scrollerWrap  {
     background-color: var(--emote-menu) !important;
 }
@@ -1831,11 +1836,11 @@ div.da-emojiPicker div.da-noSearchResultsContainer {
 #gif-picker-tab-panel div.da-wrapper div.da-sadImage,
 div.da-emojiPicker div.da-wrapper div.da-sadImage { background-image: url("https://i.imgur.com/YmHhtZd.png"); }
 #gif-picker-tab-panel div.da-wrapper > div,
-div.da-emojiPicker div.da-wrapper > div { font-size: 0; }
-div.da-emojiPicker div.da-wrapper > div:not(.da-sadImage)::before {
+.da-emojiPicker div.da-wrapper > div { font-size: 0; }
+.da-emojiPicker .da-noSearchResultsContainer .da-wrapper > :not(.da-sadImage)::before {
     font-size: 16px;
     color: var(--accent-colour);
-    content: "No Emoji Match Your Search Fam";
+    content: "No Emoji Match agsdssd";
 } #gif-picker-tab-panel div.da-wrapper > div:not(.da-sadImage)::before {
     font-size: 16px;
     color: var(--accent-colour);
@@ -2907,7 +2912,7 @@ div.da-friendsTable div.da-friendsRow:hover {
 }
 
 /* adding bottom border to calls and videos */
-.da-chat > .da-video { border-bottom: var(--borders); }
+.da-chat > .da-wrapper { border-bottom: var(--borders); }
 /* div.da-chat.da-inCall div.da-videoHeight.da-animated { padding-bottom: 2px; } */
 /* div.da-chat div.da-videoHeight { border-bottom: var(--borders); } */
 
