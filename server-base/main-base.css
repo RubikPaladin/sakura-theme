@@ -1836,11 +1836,11 @@ div.da-emojiPicker div.da-noSearchResultsContainer {
 #gif-picker-tab-panel div.da-wrapper div.da-sadImage,
 div.da-emojiPicker div.da-wrapper div.da-sadImage { background-image: url("https://i.imgur.com/YmHhtZd.png"); }
 #gif-picker-tab-panel div.da-wrapper > div,
-.da-emojiPicker div.da-wrapper > div { font-size: 0; }
+.da-emojiPicker .da-noSearchResultsContainer .da-wrapper > div { font-size: 0; }
 .da-emojiPicker .da-noSearchResultsContainer .da-wrapper > :not(.da-sadImage)::before {
     font-size: 16px;
     color: var(--accent-colour);
-    content: "No Emoji Match agsdssd";
+    content: "No Emoji Match Your Search Fam";
 } #gif-picker-tab-panel div.da-wrapper > div:not(.da-sadImage)::before {
     font-size: 16px;
     color: var(--accent-colour);
