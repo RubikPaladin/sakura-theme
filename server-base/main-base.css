@@ -3267,12 +3267,11 @@ div.da-contentCozy.da-content #charcounter {
 
 /* member count plugin */
 #MemberCount {
-    position: relative;
+    position: relative !important;
     background: transparent !important;
-    text-align: left !important;
+    text-align: right !important;
     margin-bottom: -20px !important;
     margin-top: -5px !important;
-    font-weight: 500;
     opacity: .85;
 }
 
