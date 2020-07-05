@@ -570,6 +570,11 @@ div.da-bannerImage {
     opacity: var(--server-banner-opacity) !important;
 }
 
+/* correcting first child serverchannel list item on side bar scale */
+.da-hasBanner ~ .da-scroller .da-listContent > :first-child {
+    height: calc(var(--side-bar-banner-height) - 45px) !important;
+}
+
 /* transparency fades for appstore*/
 div.da-applicationStore div.da-heroCarousel > span {
     -webkit-mask: var(--server-banner-default);
