@@ -885,8 +885,6 @@ h2.da-header:hover, img:hover + h2.da-header  {
 
 
 /* server bar corrections */
-/* removing weird list item + weird top + 10px = left 10px  */
-.wrapper-1Rf91z { padding-left: 10px; }
 .da-tutorialContainer + .da-listItem { display: none; }
 
 /* selected server anim stuffz */
@@ -3233,7 +3231,16 @@ div.BE-badge.BE-badge-chat:not(.BE-badge-CurrentGuildBoost) { top: 4px; }
 }
 
 
+
 /* image details plug */
+.details-1t6Zms { margin:0; }
+.da-cozyMessage:hover .details-1t6Zms > .da-flexChild  { opacity: .6; }
+.details-1t6Zms > .da-flexChild { 
+    font-size: 11px !important; 
+    opacity: 0;
+}
+
+/* image details plug *
 .image-details, 
 .image-details .image-details-size,
 .image-details .image-details-dimensions { font-size: 11px !important; }
@@ -3243,7 +3250,7 @@ div.BE-badge.BE-badge-chat:not(.BE-badge-CurrentGuildBoost) { top: 4px; }
     margin-bottom: 3px;
 }
 
-/* image detail display modifications */
+/* image detail display modifications *
 .image-details { display: none; }
 .image-details-wrapper { margin-top: 20px; }
 .image-details-wrapper:hover { margin-top: 0px; }
