@@ -861,6 +861,13 @@ h2.da-header:hover, img:hover + h2.da-header  {
     background-color: var(--username-on-hover);
 }
 
+/* correcting weird header shit */
+.da-cozyMessage .da-header { width: fit-content; }
+.da-timestamp {
+    padding: 0 5px;
+    vertical-align: text-top !important;
+}
+
 /* removes that darken thing discord does on user pfp hover, so my on hover looks nicer */
 .avatar-17mtNa:hover { opacity: 1 !important; }
 
@@ -2606,14 +2613,14 @@ div.content-3at_AU div.da-children svg {
 }
 
 /*colour chat octothropes*/
-div.da-sidebar div.da-content svg path{
+div.da-sidebar div.content-3at_AU svg path{
     color: var(--channels-default);
 }
 
 /* colouring the unread octothropes */
 div.da-sidebar div.da-selected svg path,
 div.da-sidebar div.da-selected svg path,
-div.da-sidebar div.da-content:hover svg path,
+div.da-sidebar div.content-3at_AU:hover svg path,
 div.da-sidebar div.da-unread + div.content-3at_AU svg > path {
     display: var(--VC-icons);
     color: var(--VC-icon-colour);   
