@@ -164,8 +164,7 @@
     --member-color: var(--title-color); 
     --settings-title-color: var(--title-color); 
 	
-	/* general hover colours *
-    --category-hover-colour: rgba(142, 106, 85, 1); /* rgba(255,170,212, .4);*/
+	/* general hover colours */
     --category-hover-colour: var(--title-color);
     
     /* unread colours*/
@@ -555,7 +554,7 @@ nav.da-wrapper div.da-scroller { padding-top: 10px; }
 /* basic scaling */
 div.da-container div.da-sidebar { width: var(--side-bar-width) !important; }
 div.da-animatedContainer { height: var(--side-bar-banner-height); }
-div.da-sidebar > nav [aria-label="Channels"] > div:nth-child(2) { padding-top: calc(var(--side-bar-banner-height) - 115px); }
+#channels .da-containerDefault:nth-child(2){ padding-top: calc(var(--side-bar-banner-height) - 115px); }
 div.da-bannerImage { 
     border-radius: var(--theme-border-radius) var(--theme-border-radius) 0 0; 
     width: 100%;
@@ -652,7 +651,8 @@ div.da-containerDefault[role="listitem"] > div:hover h2 {
 
 /* new correcting chat hover */
 #channels .wrapper-CU3qI5 path { color: var(--title-color); }
-#channels .wrapper-CU3qI5:hover > .da-name {
+#channels .wrapper-PY0fhH:hover .da-name {
+    filter: sepia() saturate() hue-rotate() brightness(1);
     color: var(--category-hover-colour) !important;
 }
 
@@ -907,21 +907,41 @@ h2.da-header:hover, img:hover + h2.da-header  {
     animation: var(--unread-server-animation) 3s linear infinite;
 }
 
-/* home button rainbow new */
+/* friend/home icon colour and display  */
+.da-wrapper .da-listItem .da-guildSeparator { display: none !important; }
+.da-wrapper .da-tutorialContainer .da-listItem:hover {
+    animation: var(--unread-server-animation) 3s linear infinite;
+}
+
+/* home button rainbow new *
 nav.da-wrapper div.tutorialContainer-1v44GL div.da-listItem:hover {
     animation: var(--unread-server-animation) 3s linear infinite;
 }
 
-/* Unread Bar */
+/* Unread Bar *
 .wrapper-1Rf91z .da-scroller .da-listItem .da-pill span[style*="opacity: 0.7; height: 8px;"] {
     transition: 50ms ease all !important;
 }
 
 /* correcting rainbow anim */
+.da-wrapper .da-listItem .da-pill span {
+    background: var(--rainbow-seed);
+    animation: var(--unread-server-animation) 3s linear infinite;
+    transition: 100ms ease all !important;
+}
+
+/* correcting rainbow anim *
 .wrapper-1Rf91z .da-scroller .da-listItem .da-pill span {
     background: var(--rainbow-seed);
     animation: var(--unread-server-animation) 3s linear infinite;
     transition: 100ms ease all !important;
+}
+
+/* for horizontal theme only - maybe, idk yet, edits height of a couple things  */
+nav.da-wrapper div.da-scroller::-webkit-scrollbar-thumb { display: none; }
+#app-mount .da-base .da-sidebar,
+#app-mount .da-base .da-chat {
+    padding-top: 15px;
 }
 
 
@@ -2613,11 +2633,24 @@ div.content-3at_AU div.da-children svg {
 }
 
 /*colour chat octothropes*/
-div.da-sidebar div.content-3at_AU svg path{
+#channels .content-1x5b-n path {
     color: var(--channels-default);
 }
 
 /* colouring the unread octothropes */
+#channels .da-selected path,
+#channels .content-1x5b-n:hover path,
+#channels .da-unread + .da-content path {
+    display: var(--VC-icons);
+    color: var(--VC-icon-colour);   
+}
+
+/*colour chat octothropes*
+div.da-sidebar div.content-3at_AU svg path{
+    color: var(--channels-default);
+}
+
+/* colouring the unread octothropes *
 div.da-sidebar div.da-selected svg path,
 div.da-sidebar div.da-selected svg path,
 div.da-sidebar div.content-3at_AU:hover svg path,
